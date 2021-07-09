@@ -26,7 +26,7 @@ export default function DoorPage() {
 
     const handlePush = (e: any) =>{
         setPushed(true)
-        setTimeout(()=> history.push('shadow'), 4000);
+        setTimeout(()=> history.push('main'), 4000);
     }
 
     return (

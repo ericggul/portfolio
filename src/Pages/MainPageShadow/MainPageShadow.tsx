@@ -34,8 +34,6 @@ function MainPageShadow() {
   }, [])
 
 
-
-
   const SubjectRender = (props : any) => {
 
     const i = props.index;
@@ -75,7 +73,12 @@ function MainPageShadow() {
               `}}
             />
           </div>
-          <div className="subject-card">
+          <div 
+            className="subject-card"
+            style={{
+              marginLeft: `${165-elementPosition.width/2}px`
+            }}
+          >
               <div className="title">
               
                 {subject.description.name}
