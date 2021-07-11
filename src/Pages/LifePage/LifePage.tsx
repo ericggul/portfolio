@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import './LifePage.scss';
-
+import Zarathustra from "../../assets/Zarathustra.mp3";
 
 function LifePage() {
+
+  const [volume, setVolume] = useState(1);
+  
+  const audio: HTMLAudioElement = new Audio(Zarathustra);
+  
+  useEffect(()=>{
+    
+  }, [])
 
   const [text, setText] = useState(0);
   const [color, setColor] = useState(0);
@@ -39,14 +47,29 @@ function LifePage() {
     '#0E3F89',"#A30E0B"
   ]
 
-  useEffect(()=>{
-    const timer = setTimeout(()=>{
+  const handleClick = () => {
+    if(text==0){
       setText(1)
       setColor(1)
-    }, 3000)
-    return () => clearTimeout(timer);
+    }
 
-  }, [])
+    setTimeout(()=>{
+      history.push('/door')
+    }, 9000)
+
+    audio.currentTime = 3;
+    audio.volume = volume;
+    var playPromise = audio.play();
+
+    if(playPromise!== undefined){
+      playPromise.then(_ => {
+        console.log('playing')
+      })
+      .catch(err => {
+        console.log(err);
+      })
+    }
+  }
 
   useEffect(()=>{
     const utterance = new SpeechSynthesisUtterance(text_set[text])
@@ -54,14 +77,11 @@ function LifePage() {
     speechSynthesis.speak(utterance);
   }, [text])
 
-  setTimeout(()=>{
-    history.push('/door')
-  }, 10000)
 
   return (
     <div className="App">
-      <div className="terminal" style={{background: `${color_set[color]}`}}>
-        <div className={`text ${text>0 && 'animation'}`}>
+      <div className={`terminal ${text>0 && 'termi-animation'}`} style={{background: `${color_set[color]}`, cursor: `${color===0 ? "pointer" : "wait"}`}}>
+        <div className={`text ${text>0 && 'animation'}`} onClick={handleClick}>
           {text_set[text]}
         </div>
       </div>

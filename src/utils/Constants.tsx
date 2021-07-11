@@ -1,6 +1,6 @@
 
 import {
-    Project1, Project2, Project3, Project4, Project5, Project6
+    Project1, Project2, Project3, Project4, Project5, Project6, Project7
 } from './Project';
 
 
@@ -10,6 +10,7 @@ import Project3Img from '../assets/Project3.png';
 import Project4Img from '../assets/Project4.png';
 import Project5Img from '../assets/Project5.png';
 import Project6Img from '../assets/Project6.png';
+import Project7Img from '../assets/Project7.png';
 
 interface Project {
     id: number;
@@ -35,6 +36,9 @@ const Projects = [
     },
     {
         id: 6, image: Project6Img, description: Project6
+    },
+    {
+        id: 7, image: Project7Img, description: Project7
     },
 ]
 

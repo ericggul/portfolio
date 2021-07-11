@@ -93,16 +93,14 @@ function MainPageShadow() {
     )
   }
 
-  const handleScroll = () => {
+  const handleScroll = (e: any) => {
+    console.log(e);
     const position = window;
-    console.log(position)
+    console.log(position, position.pageXOffset)
   }
   useEffect(()=>{
-    window.addEventListener('click', handleScroll)
-
-    return ()=>{
-      window.removeEventListener('click', handleScroll)
-    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
 

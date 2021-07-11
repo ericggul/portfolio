@@ -30,9 +30,12 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  animation: fadeout 5s linear forwards;
-  animation-delay: 5s;
 
+}
+
+.termi-animation{
+  animation: fadeout 5s linear forwards;
+  animation-delay: 2s;
 }
 
 .text{
