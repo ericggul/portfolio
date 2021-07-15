@@ -93,7 +93,7 @@ export default function DoorPage() {
                     }}
                     transition = {transition}
                     className={pushed ? "right-door-pushed" : "right-door"}
-                    style = {{cursor: `${sec===0 ? "pointer" : "wait"}`}}
+                    style = {{cursor: `${script >4 ? "pointer" : "wait"}`}}
                     onClick={handlePush}
                 >
                     <div className="push-box">
