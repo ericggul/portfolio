@@ -1,6 +1,12 @@
 
+@font-face{
+  font-family: "Univers";
+  src: url('../../fonts/Univers_67_Condensed_Bold.ttf');
+}
+
 *{
-    font-family: "Univers"
+    font-family: "Univers";
+
 }
 
 .App{
@@ -42,6 +48,7 @@
   color: white;
   font-size: calc(min(8vw, 10.4vh));
   letter-spacing: calc(max(-0.2vw, -0.26vh));
+  padding: 5vw;
   text-transform: uppercase;
 
   font-family: 'Univers';

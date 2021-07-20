@@ -37,7 +37,8 @@ function LifePage() {
 
 
   const text_set = [
-    `good ${timeConverter(hour)} ${city_array[Math.floor(Math.random()*4)]}`,
+    // `good ${timeConverter(hour)} ${city_array[Math.floor(Math.random()*4)]}`,
+    `good ${timeConverter(hour)} Linz`,
     "please turn on the music",
   ]
 

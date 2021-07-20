@@ -2,11 +2,11 @@ import  { useState, useEffect } from 'react';
 import  useWindowDimensions from './useWindowDimensions';
 
 const useTouchPosition  = () => {
-    const { width, height} = useWindowDimensions();
-    const [touchPosition, settouchPosition] = useState({touchX: width/2, touchY: height/2});
+
+    const [touchPosition, settouchPosition] = useState({touchX: 100, touchY: 100});
 
     const updatetouchPosition = (e : any) => {
-        settouchPosition({ touchX: e.clientX, touchY: e.clientY})
+        settouchPosition({ touchX: e.changedTouches[0].clientX, touchY: e.changedTouches[0].clientY})
     }
 
     useEffect(()=>{

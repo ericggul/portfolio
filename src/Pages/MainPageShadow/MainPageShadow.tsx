@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import Projects from '../../utils/Constants';
 
 import useMousePosition from '../../hooks/useMousePosition';
-import useTouchPosition from '../../hooks/useTouchPosition';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
 
@@ -13,27 +12,26 @@ function MainPageShadow() {
   const isMobile = useMemo(()=> window.innerWidth< 600, [window.innerWidth])
 
   const { mouseX, mouseY } = useMousePosition();
-  const { touchX, touchY } = useTouchPosition();
-  const posX = isMobile ? touchX : mouseX;
-  const posY = isMobile ? touchY : mouseY;
-
-  
+  const { height, width } = useWindowDimensions();
   const mainRef = useRef<any>();
   const subjectWrapperRef = useRef<any>();
 
 
+  const createNode = (x: number, y: number) => {
+    const n = document.createElement('div');
+    const width = Math.random()*5 + 2;
+    n.className = 'mouse-star';
+    n.setAttribute('style',
+      `left: ${x}px; top: ${y}px; width: ${width}px; height: ${width}px; filter: blur(${width/3}px)`
+    )
+    mainRef.current.appendChild(n);
+  }
+
   //Add Star Component
   const addStarMouse = (e: any) =>{
-    function createNode() {
-      const n = document.createElement('div');
-      const width = Math.random()*5 + 2;
-      n.className = 'mouse-star';
-      n.setAttribute('style',
-        `left: ${e.pageX}px; top: ${e.pageY}px; width: ${width}px; height: ${width}px; filter: blur(${width/3}px)`
-      )
-      mainRef.current.appendChild(n);
+    if(!isMobile){
+      createNode(e.x, e.y);
     }
-    createNode();
   }
 
   useEffect(()=>{
@@ -41,14 +39,18 @@ function MainPageShadow() {
     return () => window.removeEventListener('click', addStarMouse)
   }, [])
 
+  useEffect(()=>{
+    const interval = setInterval(()=>{
+      createNode(Math.random()*width, Math.random()*height)
+    }, 2000)
+    return () => clearInterval(interval)
+  }, [])
 
   const SubjectRender = (props : any) => {
 
     const i = props.index;
     const subject = props.subject;
-
     const imgRef = useRef<any>();
-
 
     const [ elementPosition, setElementPosition ] = useState<any>({});
     const [ elementRect, setElementRect ] = useState<DOMRect | undefined>();
@@ -66,11 +68,21 @@ function MainPageShadow() {
     
     // const left = useMemo(()=> 450* i + 225, []); 
     // const top = useMemo(()=> height/2-525/2 + 173, [height]);
-    var shadowX = useMemo(()=> elementRect && (elementRect.left + elementRect.width/2 -posX)/10, [elementRect, posX])
-    var shadowY = useMemo(()=> elementRect && (elementRect.top + elementRect.height/2 -posY)/10, [elementRect, posY])
-    var shadowLength = useMemo(()=> elementRect &&  Math.sqrt((elementRect.top + elementRect.height/2 -posY) ** 2 + (elementRect.left + elementRect.width/2-posX) ** 2)/20 + 80, [elementRect, posX, posY])
 
+    var shadowX = useMemo(()=> !isMobile && elementRect && (elementRect.left + elementRect.width/2 -mouseX)/10, [elementRect, mouseX])
+    var shadowY = useMemo(()=> !isMobile && elementRect && (elementRect.top + elementRect.height/2 -mouseY)/10, [elementRect, mouseY])
+    var shadowLength = useMemo(()=> !isMobile && elementRect &&  Math.sqrt((elementRect.top + elementRect.height/2 -mouseY) ** 2 + (elementRect.left + elementRect.width/2-mouseY) ** 2)/20 + 80, [elementRect, mouseX, mouseY])
 
+    const [a, setA] = useState(0);
+
+    useEffect(()=>{
+      setTimeout(()=>{
+        setA(a+1)
+      }, 50)
+    }, [])
+
+    console.log(a);
+ 
     return(
       <div className="subject" >
         <div className="cards-wrapper">
@@ -79,15 +91,16 @@ function MainPageShadow() {
               ref={imgRef}
               src={subject.image} 
               alt={subject.description.name}
-              style={{ boxShadow : `
-                ${shadowX}px ${shadowY}px ${shadowLength}px #888
+              style={{ boxShadow : `${
+                isMobile ? `0 0 25vw #AAA` : `${shadowX}px ${shadowY}px ${shadowLength}px #888` 
+              }
               `}}
             />
           </div>
           <div 
             className="subject-card"
             style={{
-              marginLeft: `${ elementRect && 165-elementRect.width/2}px`
+              marginLeft: `${ !isMobile && elementRect ? 165-elementRect.width/2 : 'auto'}px`
             }}
           >
               <div className="title">
@@ -95,7 +108,7 @@ function MainPageShadow() {
                 {subject.description.name}
               </div>
               <div className="description">
-                  <div>{subject.description.type}</div>
+                  <div>{subject.description.type}{elementRect ? elementRect.width : 'null'}</div>
                   <div>{subject.description.detail}</div>
               </div>
           </div>

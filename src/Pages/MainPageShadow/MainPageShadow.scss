@@ -16,6 +16,15 @@
     padding: 0;
 }
 
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
 /* .shadow{
     position: fixed;
     width: 100%;
@@ -26,6 +35,7 @@
 } */
 
 .subject-list{
+    animation: appear 10s forwards;
     position: relative;
     height: 100%;
     width: 100%;
@@ -111,7 +121,6 @@
             left: 0;
             right: 0;
             background: rgba(1,1,1,0);
-
         }
     }
     
@@ -174,11 +183,32 @@
 
 @media screen and (max-width: 600px){
 
+
+    .subject{
+        margin: 0;
+        width: 80vw;
+        padding: 10vw;
+    }
+
+
     .subject-list{
-        scroll-snap-type: x mandatory;
+
         .subject-wrapper{
             scroll-snap-type: x mandatory;
         }
+    }
+
+    .cards-wrapper{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .subject-card{
+        left: 0;
+        right: 0;
+        margin: auto;
+        text-align: center;
     }
 
 

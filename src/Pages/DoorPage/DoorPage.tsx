@@ -6,7 +6,7 @@ import Zarathustra from "../../assets/Zarathustra.mp3";
 
 import SoundAdjuster from '../../components/SoundAdjuster/SoundAdjuster';
 
-const transition = {duration: 3}
+const transition = {duration: 2}
 
 const reducer = (sec: any, action: any) => {
     switch(action.type){
@@ -30,7 +30,7 @@ export default function DoorPage() {
         "Represents the human evolution on Stanley Kubrick's film",
         "This Nietzsche-tic representation of evolution should be well replicated",
         "When highlighting the functionality of semiotics in the modern civilization.",
-        "2022 MHCI Candidate, Jeanyoon Choi",
+        "Ars Electronica Festival University Candidate, Jeanyoon Choi",
         "Push the right door to enter"
     ];
 
@@ -67,32 +67,40 @@ export default function DoorPage() {
     }, [])
 
     const handlePush = (e: any) =>{
-        if(sec > 60){
+        setOpacity(0)
+        if(sec > 0){
             setPushed(true)
-            setTimeout(()=> history.push('main'), 0);
+            setTimeout(()=> history.push('main'), 2000);
         }
     }
+
+    const [opacity, setOpacity] = useState(1);
 
     return (
         <motion.div 
             className="App"
             initial='initial'
-            animate='animate'
             exit='exit'
+            transition = {transition}
         >
 
-            <div className="door-container left-door" />
+            <motion.div 
+                animate={{
+                    opacity: opacity
+                }}
+                transition = {transition}
+                className="door-container left-door" 
+            />
             <div 
                 className="door-container right-container"
-                style={{background: pushed ? 'white': '0' }}
+                
             >
                 <motion.div 
-                    exit={{ 
-                        width: '100%',
-                        opacity: 0 
+                    animate={{
+                        opacity: opacity
                     }}
                     transition = {transition}
-                    className={pushed ? "right-door-pushed" : "right-door"}
+                    className={"right-door"}
                     style = {{cursor: `${script >4 ? "pointer" : "wait"}`}}
                     onClick={handlePush}
                 >

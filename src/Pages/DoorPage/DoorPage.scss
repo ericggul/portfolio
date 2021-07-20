@@ -72,7 +72,7 @@
         0 0 7vw #888,
         0 0 11vw #999, 
         0 0 18vw #888,
-        0 0 27vw #999;
+        0 0 30vw #999;
     }
 }
 
@@ -119,20 +119,6 @@
         0 0 30vw #888;
     }
 }
-
-.right-door-pushed{
-    width: calc(min(28vw, 36vh));
-    height: calc(min(20vw, 25.7vh));
-    background: #222;
-    position: relative;
-    animation: pushed 1s cubic-bezier(0.06, 1.1, 1, 1);
-
-    box-shadow: 0 0 3vw white;
-    box-shadow: 0 0 6vw #888;
-    box-shadow: 0 0 13vw #888;
-}
-
-
 
 
 
@@ -185,14 +171,6 @@
     }
 }
 
-@keyframes pushed{
-    0%{
-        height: 63vw;
-    }
-    100%{
-        height: 20vw;
-    }
-}
 
 @media screen and (max-width: 500px){
     .door-container{
@@ -218,7 +196,7 @@
         
     }
     .push-text{
-        font-size: 0.1vw;
+        font-size: 8px;
 
         text-shadow: 
             0 0 0.1vw #ffffff,
@@ -251,8 +229,11 @@
     color: white;
     position: absolute;
     bottom: 3vh;
-    left: 50vw;
-    transform: translateX(-50%);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
     z-index: 100;
     animation: blink 1s infinite;
     animation-delay: 73s;

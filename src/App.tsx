@@ -8,6 +8,7 @@ import { AnimatePresence } from 'framer-motion';
 import DoorPage from './Pages/DoorPage/DoorPage';
 import LifePage from './Pages/LifePage/LifePage';
 import MainPageShadow from './Pages/MainPageShadow/MainPageShadow';
+import DetailPage from './Pages/DetailPage/DetailPage';
 
 import Project1 from './Projects/Project1/Project1';
 
@@ -20,11 +21,11 @@ function App() {
         <AnimatePresence exitBeforeEnter>
           <Switch>
             <Route 
-              exact path="/door" 
+              exact path="/monolith" 
               render={()=> <DoorPage />}
             />
             <Route 
-              exact path="/life" 
+              exact path="/intro" 
               render={()=> <LifePage />}
             />
 
@@ -37,7 +38,11 @@ function App() {
               exact path="/project1" 
               render={()=> <Project1 />}
             />
-            <Redirect exact to="/life"/>
+            <Route 
+              exact path="/detail/:id" 
+              render={()=> <DetailPage />}
+            />
+            <Redirect exact to="/intro"/>
           </Switch>
         </AnimatePresence>
       )} />
