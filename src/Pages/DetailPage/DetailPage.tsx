@@ -2,32 +2,181 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './DetailPage.scss';
 import { motion } from 'framer-motion';
+import { useHistory } from 'react-router-dom';
 import Projects from '../../utils/Constants';
 
 
 function DetailPage() {
 
+  const history = useHistory();
   type Params = {id: any}
   const {id} = useParams<Params>();
   console.log(id);
   const project = Projects.filter(project => project.id == id)[0]
-  
-  return (
-    <div className="main">
-      <div className="body">
-        1
-      </div>
-      <div className="body">
-        2
-      </div>
-      <div className="body">
-        3
-      </div>
-      {/* <img 
-        src={project?.image} 
-        alt={project?.description.name}
-      /> */}
+
+  const backToMain = (
+    <div className="back" onClick={()=>history.push({pathname: '/main'})}>
+      Back to Main
     </div>
+  )
+
+  const CurrentPage = () => {
+    const i = 3;
+    return(
+      <div className="current">
+        {project?.description.name}
+        &nbsp;
+        &nbsp;
+        {`${i}/${project?.description.Images.length}`}
+      </div>
+    )
+  }
+
+  interface CaptionProps {
+    list: any;
+  }
+
+  const Caption = ({list}: CaptionProps) => {
+    return(
+      <div className="stacks">
+        {list.map((el: any, i: any) => (
+          <div className="body">
+            {el}
+          </div>
+        ))}
+      </div>
+    )
+  }
+
+  interface TTTProps {
+    list: any;
+  }
+
+  const TTT = ({list} : TTTProps) => {
+    return(
+      <div className="ttt-container">
+        {
+          list.map((el: any, i: any)=>(
+            <div className="ttt-sector">
+              <div className="header">{el[0]}</div>
+              <div className="body">{el[1]}</div>
+            </div>
+          ))
+        }
+      </div>
+    )
+  }
+
+  interface ParaProps {
+    header: string;
+    body: string;
+  }
+
+  const Paragraph = ({header, body}: ParaProps) => {
+    return(
+      <div className="paragraph">
+        <div className="header">
+          {header}
+        </div>
+        <div className="body">
+          {body}
+        </div>
+      </div>
+    )
+  }
+
+  const textParser = (string: string) => {
+    return string.split('\n')
+  }
+  
+  const DetailElement1 = () => {
+    console.log(project?.description.Images[1] )
+    return(
+      <div className="detail-element">
+          <div className="image">
+            <div className="image-container">
+              <img 
+                src={project?.description.Images[0]} 
+                alt={project?.description.name}
+              />
+            </div>
+            <Caption list={project?.description.Captions[0]} />
+          </div>
+          <div className="description">
+            <div className="title">
+              {project?.description.name}
+              <div className="sub">
+                {project?.description?.Subtitles[0]}
+              </div>
+            </div>
+            <TTT list={project?.description.TTT}/>
+          </div>
+        </div>
+    )
+  }
+
+  interface DetailElement2Props {
+    image: any;
+    title: any;
+    contents: any;
+    index: number;
+  }
+
+  const DetailElement2 = ({image, title, contents, index}: DetailElement2Props) => {
+    return(
+      <div className="detail-element">
+          <div className="image">
+            <div className="image-container">
+              <img 
+                src={project?.description.Images[index+1]} 
+                alt={project?.description.name}
+              />
+            </div>
+            <Caption list={project?.description.Captions[index+1]} />
+          </div>
+          <div className="description">
+            <div className="title">
+              {title}
+              <div className="sub">
+                {project?.description?.Subtitles[index+1]}
+              </div>
+        
+            </div>
+            {contents.map((v: any,i: any)=>(
+              <Paragraph
+                header={v[0]}
+                body = {v[1]}
+              />
+            ))}
+          </div>
+        </div>
+    )
+  }
+  
+
+  return (
+    <>
+      <div className="mainbox">
+        <DetailElement1 />
+        {
+          project?.description.Paragraphs.map((e: any,i) => {
+            console.log(Object.entries(e)[0][1])
+            return(
+            <DetailElement2 
+              image={project?.image} 
+              title={Object.keys(e)[0]} 
+              contents={Object.entries(e)[0][1]}
+              index ={i}
+              key={i}
+            />
+            )
+            
+          })
+        }
+      </div>
+      {backToMain}
+      <CurrentPage />
+    </>
   );
 }
 

@@ -12,6 +12,8 @@ import Project5Img from '../assets/Project5.png';
 import Project6Img from '../assets/Project6.png';
 import Project7Img from '../assets/Project7.png';
 
+import project1Img2 from '../assets/Project1/Project1-Img2.png';
+
 interface Project {
     id: number;
     image: string;

@@ -108,7 +108,7 @@ function MainPageShadow() {
                 {subject.description.name}
               </div>
               <div className="description">
-                  <div>{subject.description.type}{elementRect ? elementRect.width : 'null'}</div>
+                  <div>{subject.description.type}</div>
                   <div>{subject.description.detail}</div>
               </div>
           </div>
