@@ -2,13 +2,17 @@ import React, { useState, useEffect, useLayoutEffect, useRef, useMemo } from 're
 import './MainPageShadow.scss';
 import { motion } from 'framer-motion';
 import Projects from '../../utils/Constants';
-
+import { useHistory } from 'react-router-dom';
 import useMousePosition from '../../hooks/useMousePosition';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
 
+const transition = {
+  duration: .6, ease: [.43, .13, 0.23, 0.96]
+}
 
 function MainPageShadow() {
 
+  const history = useHistory();
   const isMobile = useMemo(()=> window.innerWidth< 600, [window.innerWidth])
 
   const { mouseX, mouseY } = useMousePosition();
@@ -29,7 +33,7 @@ function MainPageShadow() {
 
   //Add Star Component
   const addStarMouse = (e: any) =>{
-    if(!isMobile){
+    if(!isMobile && mainRef.current){
       createNode(e.x, e.y);
     }
   }
@@ -42,7 +46,7 @@ function MainPageShadow() {
   useEffect(()=>{
     const interval = setInterval(()=>{
       createNode(Math.random()*width, Math.random()*height)
-    }, 2000)
+    }, 3000)
     return () => clearInterval(interval)
   }, [])
 
@@ -84,10 +88,12 @@ function MainPageShadow() {
     console.log(a);
  
     return(
-      <div className="subject" >
+      <div className="subject"  onClick={()=>history.push(`/detail/${i+1}`)}>
         <div className="cards-wrapper">
           <div className="image-card" >
-            <img 
+            <motion.img 
+              exit={{opacity: 0}}
+              transition = {transition}
               ref={imgRef}
               src={subject.image} 
               alt={subject.description.name}
@@ -126,17 +132,22 @@ function MainPageShadow() {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
+  const handleSubjectClick = (i: number) => {
+
+  }
 
 
 
   return (
-    <div className="main" ref={mainRef}>
+    <div className="main" 
+      ref={mainRef}
+    >
       <div className="shadow" />
       <div className="subject-list">
         <div className="subject-wrapper" ref={subjectWrapperRef}>
           {
             Projects.map((subject, i) =>(
-              <SubjectRender subject={subject} index={i} key={i} />
+              <SubjectRender subject={subject} index={i} key={i}/>
             ))
           }
         </div>

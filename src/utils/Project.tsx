@@ -12,6 +12,20 @@ import project2Img4 from '../assets/Project2/Project2-Img4.png';
 import project3Img1 from '../assets/Project3/Project3-Img1.png';
 import project3Img2 from '../assets/Project3/Project3-Img2.png';
 import project3Img3 from '../assets/Project3/Project3-Img3.png';
+import project3Img4 from '../assets/Project3/Project3-Img4.png';
+import project3Img5 from '../assets/Project3/Project3-Img5.png';
+
+import project4Img1 from '../assets/Project4/Project4-Img1.png';
+import project4Img2 from '../assets/Project4/Project4-Img2.png';
+import project4Img3 from '../assets/Project4/Project4-Img3.png';
+
+import project5Img1 from '../assets/Project5/Project5-Img1.png';
+import project5Img2 from '../assets/Project5/Project5-Img2.png';
+import project5Img3 from '../assets/Project5/Project5-Img3.png';
+import project5Img4 from '../assets/Project5/Project5-Img4.png';
+import project5Img5 from '../assets/Project5/Project5-Img5.png';
+
+
 
 export const Project1 = {
     name: 'On Sale',
@@ -134,6 +148,69 @@ export const Project2 = {
 };
 
 export const Project3 = {
+    name: 'Laboratory Occupied',
+    type: 'HTML Art',
+    detail: 'ReactJS + Sass',
+    TTT: [
+        ['The Problem', 'No human being had yet explored to the very extreme possibility of how recursive and dynamic programming can create a powerful images.'],
+        ['The Purpose', 'Web-based media art focused on creating a random combination of repetitive images, where no two images are the same.'],
+        ['Target Audience', 'The public, artists and art critics.']
+    ],
+    Images: [
+        project3Img1,
+        project3Img2,
+        project3Img3, 
+        project3Img4,
+        project3Img5,
+    ],
+    Captions: [
+        ['Individual Project(Jul 2020 - Onwards)', 'Artist, Developer'],
+        ['Square 9(2021)', 'CSS, Javascript on HTML', 'Responsive'],
+        ['Neon 5(2021)', 'CSS, Javascript on HTML', 'Responsive'],
+        ['Straight(2021)', 'CSS, Javascript on HTML', 'Responsive'],
+        ['Depth 2(2021)', 'CSS, Javascript on HTML', 'Responsive'],
+    ],
+    Subtitles: [
+        'Web Experiment exploring the limitations of visual elements',
+        '12 Series',
+        'Observing the characteristic of HTML',
+        '375 * 840, or 1280 * 720',
+        'A new field yet to be observed'
+    ],
+    Paragraphs: [
+        {
+            'Squares': [
+                ['A perfect geometric shape', 'The Series <Square> constructs the most fundamental part of the project Laboratory Occupied. It observes the possibility of the most primitive and artificial shape that can be conducted using CSS.'],
+                ['Repetition', 'Recursive or Iterative repetition is the power of the computer: No effective algorithm, including Neural Networks in modern AI, can operate without the repetitive calculation. This project had also advantaged from the repetitive use of elements, defining the computational methodology of creating the images.'],
+            ]
+        },
+        {
+            'Randomness': [
+                ['Unintended', 'The location, the color, the angle, the opacity, and all the other css forms are decided by the random function. This creates an unintended image.'],
+                ['Intended', 'The structure of the code, the components, the range of the randomness is what the author intends for what the image should look like.'],
+                ['Mutability', 'Every time the viewer refreshes the page, they should face the different image, as no two computational results can be statistically the same.'],
+            ]
+        },
+        {
+            'Screen': [
+                ['An Unique Medium', 'Just like as canvas has its unique characteristic of an incompatible flatness, web screen shares such flatness, and thus, should not be confused with the other forms of media and technology art. HTML art should fully understand its flatness, and the infinite images that can be created on top of its flatness.'],
+                ['An Oasis for the Internet World', 'Hyper-connected internet world is full with moving and transferring images and signs. Contemplative artworks can offer a place to rest, just like how the museums and artspaces function in the real world cities.'],
+                ['Responsiveness', 'Many of the artworks had considered the responsive feature of webpages.'],
+            ]
+        },
+        {
+            'Interaction': [
+                ['Mouse Move', 'Leveraging the mouse position is the most elementary form of interaction.'],
+                ['Click', `Click is done with the user's strong desire of action: It can be caused from the curiosity, it can be caused from the nervousness, it can be caused from the boredness, it can be caused from the incognitive action called as habits.`],
+                ['Touch', 'This unique functionality on mobile devices is placed somewhere between the click and the mousemove. '],
+                ['Camera', 'Using camera can be primarily used on leveraging Augmented Reality, or can be combined with technologies such as Face Recognition.'],
+            ]
+        },
+
+    ]
+};
+
+export const Project4 = {
     name: 'ISC Exhibition',
     type: 'End of Semester Exhibition',
     detail: 'ReactJS Web Development',
@@ -143,12 +220,12 @@ export const Project3 = {
         ['Target Audience', 'Members or prospective members of ISC(Information Science and Culture) @Seoul National University.']
     ],
     Images: [
-        project3Img1,
-        project3Img2,
-        project3Img3, 
+        project4Img1,
+        project4Img2,
+        project4Img3, 
     ],
     Captions: [
-        ['ISC Exhibition Organization Committee' , '10 Teammates, Apr 2020 - Jun 2020', 'Frontend Developer'],
+        ['ISC Exhibition Organization Committee' , '10 Teammates, Apr 2020 - Jun 2020', 'My Role: Frontend Developer'],
         ['Responsive UI: Mobile Version Layout'],
         ['Responsive UI: Desktop Version Layout'],
     ],
@@ -176,61 +253,74 @@ export const Project3 = {
     ]
 };
 
-export const Project4 = {
-    name: 'Laboratory Occupied',
-    type: 'ReactJS Web Application',
-    detail: 'HCI Design Process + Swift',
-    subinfo: ['Individual Project(Apr 2020 - Jun 2020)', 'UX Researcher, Designer, APp Developer'],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-        'Late Stages',
-        'Applicating various HCI Theories',
-        'Quantitative & Qualitative Validation'
-    ],
+
+
+export const Project5 = {
+    name: 'Liberty St. & Ford Ave.',
+    type: 'Infographics',
+    detail: 'Adobe Illustrator',
     TTT: [
-        ['The Problem', 'At offline supermarkets, promotional speeches delivered to the customers'],
-        ['The Purpose', 'Hello WOrld'],
-        ['Target User', 'Hello WOrld']
+        ['The Problem', 'In crowded suburbs of the Seoul Metropolitan, New Towns are build in order to mass product housings, thus to stabilize the price: However, the real estate price had recently rose after the construction of new towns.'],
+        ['The Purpose', `Anti-Liberty, Distorted Fordism: Emphasize how the life of mass-produced new towns are limiting the citizens' liberty, while analyzing how its similarity had paradoxically caused the massive increase in housing price, exactly opposite of what the constructions of New Towns had intended.`],
+        ['Target User', 'The Korean Public and New Town Residents, Social Critics.']
     ],
     Images: [
-        project1Img1,
-        project1Img2,
-        project1Img3, 
-        project1Img4,
-        project1Img5,
+        project5Img1,
+        project5Img2,
+        project5Img3, 
+        project5Img4,
+        project5Img5,
     ],
     Captions: [
-        ['Individual Project(Apr 2020 - Jun 2020)', 'UX Researcher, Designer, App Developer'],
-        ['Brainstorming Process'],
-        ['Developing Prototype Interface'],
-        ['Hi-Fi Prototype, developed with Swift'],
-        ['Speech Playing Screen Example'],
+        ['Individual Project(Apr 2020 - May 2020)', 'Researcher, Designer'],
+        ['Early trial-and-errors'],
+        ['Unjung, Misa, Gimpo, Wirye, Dongtan, Gwangyo City'],
+        ['How lifestyles in new towns are limited and identical'],
+        ['How Mass Production had paradoxically lead the increase in price'],
+    ],
+    Subtitles: [
+        'Social Critical Infographics, influenced from Baudrillard',
+        'Layout which highlights the repetitive nature of New Towns.',
+        '6 New Towns in Seoul Metropolitan Area',
+        'Anti-Liberty',
+        'Distorted Fordism'
     ],
     Paragraphs: [
         {
-            'Deisgn Process': [
-                ['Step 1', 'At offline'],
-                ['Step 2', 'Brainstorming'],
-                ['Step 3', 'Think Aloud'],
-                ['4. Low-Fi Prototyping', 'Low-Fi Prototyping']
+            'Searching for a Layout': [
+                ['1st Attempt: An apartment', 'Even though this layout had well emphasized the repetitive fordistic nature, there was a significant difficulty to effectively deliver the information to the audience.'],
+                ['2nd Attempt: Apartments Complex', 'Faced limitation of possible narratives using each apartment as a visual component.'],
+                ['3rd Attempt: City Map', 'Overcame the apartment layout, by selecting the city map as a visual hook, which gives a different perspective with repetitive visual feature.'],
             ]
         },
         {
-            'Evaluation & Validation': [
-                ['Main Screen', 'At offline'],
-                ['Information Chunking', 'Brainstorming'],
-                ['Categorical vs. ', 'Think Aloud'],
-                ['Feedback', 'Low-Fi Prototyping']
+            'Revised Layout': [
+                ['Repetition of cities', 'Rather than using just one map as a visual hook, repeating the cities had created more unforgettable visual element which highlights the homogeneous nature of the cities.'],
+                ['Smallest Marginal Difference', 'These homogenous nature signifies that those cities are the same, except for the smallest marginal difference, caused from the difference in location.'],
+                ['Liberty St. & Ford Ave.', 'Liberty Street and Ford Avenue are the common name given to new towns where there is no significant regional characteristic.'],
             ]
         },
-
+        {
+            'Liberty Avenue': [
+                ['Limited Transportation', 'The freedom of movement is limited in new town, due to the high density of population but relatively few options of public and road transportation.'],
+                ['Identical Education', 'From the graph: The number of English Academies and Math Academies are highly correlated in all the 6 cities.'],
+                ['Modern Leisure', 'Same Cinemas, Same Lake Parks, Same Starbucks. Drink the same, Eat the same, Watch the same, Think the same.'],
+            ]
+        },
+        {
+            'Ford Street': [
+                ['Mass-Produced Names', 'The way apartments brand their name is similar to the way they produce the housings: Mass produced silly names, following the recent trends.'],
+                ['Apartments as Money', 'In Korea, the identical feature of apartments had made it easy for them to be exchangeable, enabling them the function as a monetary sign.'],
+                ['A Modern Paradox', 'This monetary transition of housings, caused from the fordistic mass-producing approach, does paradoxically result in the increase of the housing price.'],
+            ]
+        },
     ]
+  
 };
 
-export const Project5 = {
+export const Project6 = {
     name: 'Born, Live and Die',
-    type: 'iOS Application',
+    type: 'Abstracted Small Multiples',
     detail: 'HCI Design Process + Swift',
     subinfo: ['Individual Project(Apr 2020 - Jun 2020)', 'UX Researcher, Designer, APp Developer'],
     Subtitles: [
@@ -299,7 +389,7 @@ export const Project5 = {
 };
 
 
-export const Project6 = {
+export const Project7 = {
     name: 'In Coin We Trust',
     type: 'iOS Application',
     detail: 'HCI Design Process + Swift',
@@ -351,7 +441,7 @@ export const Project6 = {
   
 };
 
-export const Project7 = {
+export const Project8 = {
     name: 'Tril.ogy',
     type: 'iOS Application',
     detail: 'HCI Design Process + Swift',

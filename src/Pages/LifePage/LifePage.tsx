@@ -55,7 +55,7 @@ function LifePage() {
     }
 
     setTimeout(()=>{
-      history.push('/door')
+      history.push('/monolith')
     }, 9000)
 
     audio.currentTime = 3;

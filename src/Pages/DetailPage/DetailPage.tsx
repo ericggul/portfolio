@@ -95,9 +95,11 @@ function DetailPage() {
       <div className="detail-element">
           <div className="image">
             <div className="image-container">
-              <img 
+              <motion.img 
                 src={project?.description.Images[0]} 
                 alt={project?.description.name}
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
               />
             </div>
             <Caption list={project?.description.Captions[0]} />
@@ -155,8 +157,13 @@ function DetailPage() {
   
 
   return (
-    <>
-      <div className="mainbox">
+    <div className="container">
+      <motion.div 
+        className="mainbox"
+        initial = {{opacity: 0}}
+        animate = {{opacity: 1}}
+        exit = 'exit'
+      >
         <DetailElement1 />
         {
           project?.description.Paragraphs.map((e: any,i) => {
@@ -173,10 +180,10 @@ function DetailPage() {
             
           })
         }
-      </div>
+      </motion.div>
       {backToMain}
       <CurrentPage />
-    </>
+    </div>
   );
 }
 
