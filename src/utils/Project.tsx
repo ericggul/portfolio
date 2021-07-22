@@ -25,13 +25,20 @@ import project5Img3 from '../assets/Project5/Project5-Img3.png';
 import project5Img4 from '../assets/Project5/Project5-Img4.png';
 import project5Img5 from '../assets/Project5/Project5-Img5.png';
 
+import project6Img1 from '../assets/Project6/Project6-Img1.png';
+import project6Img2 from '../assets/Project6/Project6-Img2.png';
+import project6Img3 from '../assets/Project6/Project6-Img3.png';
+import project6Img4 from '../assets/Project6/Project6-Img4.png';
+import project6Img5 from '../assets/Project6/Project6-Img5.png';
 
+import project7Img1 from '../assets/Project7/Project7-Img1.png';
+import project8Img1 from '../assets/Project8/Project8-Img1.png';
 
 export const Project1 = {
     name: 'On Sale',
     type: 'iOS Application',
     detail: 'HCI Design Process + Swift',
-    subinfo: ['Individual Project(Apr 2020 - Jun 2020)', 'UX Researcher, Designer, App Developer'],
+    link: [],
     Subtitles: [
         'TTS based iOS Application',
         'Early Stages',
@@ -95,7 +102,8 @@ export const Project1 = {
 export const Project2 = {
     name: 'Scent of a Tulip',
     type: 'Data Visualization',
-    detail: 'Stock Price Time Series Visualization',
+    detail: 'Processing + Adobe Illustrator',
+    link: ['https://ericggul.github.io/plz/#/Summary/2'],
     TTT: [
         ['The Problem', `Traditional Time Series Data forces the audience to project the future in inductive manner: That the recent trend will continue to the future. Hence in reality, such projection may turned out to be fatally incorrect in wild and unexpected environment of stock market.`],
         ['The Purpose', 'Redesign the Time Series Data in way that user can interpret in regressive manner. Display the recent 5 years of stock data of FAANG companies, and argue that the current price is exaggerated compared to the overall average of recent years.'],
@@ -151,10 +159,10 @@ export const Project3 = {
     name: 'Laboratory Occupied',
     type: 'HTML Art',
     detail: 'ReactJS + Sass',
+    link: ['http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/lobby'],
     TTT: [
         ['The Problem', 'No human being had yet explored to the very extreme possibility of how recursive and dynamic programming can create a powerful images.'],
         ['The Purpose', 'Web-based media art focused on creating a random combination of repetitive images, where no two images are the same.'],
-        ['Target Audience', 'The public, artists and art critics.']
     ],
     Images: [
         project3Img1,
@@ -214,6 +222,7 @@ export const Project4 = {
     name: 'ISC Exhibition',
     type: 'End of Semester Exhibition',
     detail: 'ReactJS Web Development',
+    link: ['https://iscexhibition.com/main'],
     TTT: [
         ['The Problem', 'Each semester, ISC(Information Science and Culture) presents an end of semester exhibition. This year, it was unable to held an offline End of Semester Exhibition due to the Covid-19.'],
         ['The Purpose', `A web version of the exhibition, which can still help the ISC members to interact with each other's works.`],
@@ -259,6 +268,7 @@ export const Project5 = {
     name: 'Liberty St. & Ford Ave.',
     type: 'Infographics',
     detail: 'Adobe Illustrator',
+    link: ['https://ericggul.github.io/plz/#/Summary/1'],
     TTT: [
         ['The Problem', 'In crowded suburbs of the Seoul Metropolitan, New Towns are build in order to mass product housings, thus to stabilize the price: However, the real estate price had recently rose after the construction of new towns.'],
         ['The Purpose', `Anti-Liberty, Distorted Fordism: Emphasize how the life of mass-produced new towns are limiting the citizens' liberty, while analyzing how its similarity had paradoxically caused the massive increase in housing price, exactly opposite of what the constructions of New Towns had intended.`],
@@ -321,65 +331,62 @@ export const Project5 = {
 export const Project6 = {
     name: 'Born, Live and Die',
     type: 'Abstracted Small Multiples',
-    detail: 'HCI Design Process + Swift',
-    subinfo: ['Individual Project(Apr 2020 - Jun 2020)', 'UX Researcher, Designer, APp Developer'],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-        'Late Stages',
-        'Applicating various HCI Theories',
-        'Quantitative & Qualitative Validation'
-    ],
+    detail: 'Adobe Illustrator + HTML',
+    link: ['https://ericggul.github.io/DTC/P1/'],
     TTT: [
-        ['The Problem', 'At offline supermarkets, promotional speeches delivered to the customers'],
-        ['The Purpose', 'Hello WOrld'],
-        ['Target User', 'Hello WOrld']
+        ['The Problem', `Anti-Platonism: Abstractness can be derived from the outer world of logics.`],
+        ['The Purpose', 'Eternal Recurrence: Of the continuous repetition of day and night.'],
     ],
     Images: [
-        project1Img1,
-        project1Img2,
-        project1Img3, 
-        project1Img4,
-        project1Img5,
+        project6Img1,
+        project6Img2,
+        project6Img3, 
+        project6Img4,
+        project6Img5,
     ],
     Captions: [
         ['Individual Project(Apr 2020 - Jun 2020)', 'UX Researcher, Designer, App Developer'],
-        ['Brainstorming Process'],
-        ['Developing Prototype Interface'],
-        ['Hi-Fi Prototype, developed with Swift'],
-        ['Speech Playing Screen Example'],
+        ['Early Drafts of geometrical shapes'],
+        [],
+        [],
+        [],
+    ],
+    Subtitles: [
+        'Geometrically Abstracted Small Multiples',
+        'Early Stages',
+        'The Beginning of the Day',
+        'What goes up must go down',
+        'Series of pure abstract shapes'
     ],
     Paragraphs: [
         {
             'Deisgn Process': [
-                ['Step 1', 'At offline'],
-                ['Step 2', 'Brainstorming'],
-                ['Step 3', 'Think Aloud'],
-                ['4. Low-Fi Prototyping', 'Low-Fi Prototyping']
+                ['Geometrical Shapes', 'These geometrical shapes should fulfill the following two requirements: First, to reflect the abstracted theories or lemmas, second, to create a unique visual impulse.'],
+                ['Constructing the Storyline', `The journey of a day, from the sun's rise to the sun's fall, back to the sun's rise.`],
             ]
         },
         {
-            'Deisgn Process(Continued)': [
-                ['Step 1', 'At offline'],
-                ['Step 2', 'Brainstorming'],
-                ['Step 3', 'Think Aloud'],
-                ['4. Low-Fi Prototyping', 'Low-Fi Prototyping']
+            '6:37 - 12:07': [
+                ['The Rise(6:37)', 'A circle situated between two lines express the rise of the sun.'],
+                ['The Power(9:14)', 'Powerful perpendicular line breaking through the semicircle.'],
+                ['The Euphorion(10:58)', `Inspired from Goethe's Faust, unfulfilled willingness of youth to go forward.`],
+                ['Harmony of Daytime(12:07)', 'Circle and surrounding lines blended harmonically.']
             ]
         },
         {
-            'Interface Consdierations': [
-                ['Main Screen', 'At offline'],
-                ['Information Chunking', 'Brainstorming'],
-                ['Categorical vs. ', 'Think Aloud'],
-                ['Feedback', 'Low-Fi Prototyping']
+            '14:12 - 19:08': [
+                ['Disputation(14:12)', 'Surrounded by confusing Geometrical lines and circles.'],
+                ['Pressure and Agony(16:26)', 'Outer circles represent pressure, inner lines represent agony.'],
+                ['Apocalypse(18:47)', 'Sun setting down with its own agony.'],
+                ['The sign of Absence(19:08)', 'A magical hour coming just after the sunset.']
             ]
         },
         {
-            'Evaluation & Validation': [
-                ['Main Screen', 'At offline'],
-                ['Information Chunking', 'Brainstorming'],
-                ['Categorical vs. ', 'Think Aloud'],
-                ['Feedback', 'Low-Fi Prototyping']
+            '21:33 - 5:23': [
+                ['Stability of Nighttime(21:33)', 'Perpendicular lines and tangent circles giving balanced impression.'],
+                ['Lunar Dream I(23:47)', 'A geometrical fantasy.'],
+                ['Lunar Dream II(2:03)', 'Shape on its transition to the circle.'],
+                ['Rebirth(5:23)', 'Circle leaves the rectangle, preparing its rebirth.']
             ]
         },
 
@@ -390,107 +397,47 @@ export const Project6 = {
 
 
 export const Project7 = {
-    name: 'In Coin We Trust',
-    type: 'iOS Application',
-    detail: 'HCI Design Process + Swift',
-    subinfo: ['Individual Project(Apr 2020 - Jun 2020)', 'UX Researcher, Designer, APp Developer'],
+    name: 'In Coin We Trust (Beta)',
+    type: 'Data Visualization',
+    detail: 'Processing + Adobe Illustrator',
+    link: ['https://ericggul.github.io/plz/#/Summary/3'],
     Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-        'Late Stages',
-        'Applicating various HCI Theories',
-        'Quantitative & Qualitative Validation'
+        'Data Visualization',
     ],
     TTT: [
-        ['The Problem', 'At offline supermarkets, promotional speeches delivered to the customers'],
-        ['The Purpose', 'Hello WOrld'],
-        ['Target User', 'Hello WOrld']
+
     ],
     Images: [
-        project1Img1,
-        project1Img2,
-        project1Img3, 
-        project1Img4,
-        project1Img5,
+        project7Img1,
     ],
     Captions: [
-        ['Individual Project(Apr 2020 - Jun 2020)', 'UX Researcher, Designer, App Developer'],
-        ['Brainstorming Process'],
-        ['Developing Prototype Interface'],
-        ['Hi-Fi Prototype, developed with Swift'],
-        ['Speech Playing Screen Example'],
+        ['Individual Project(Jun 2020)', 'Designer, Developer'],
     ],
     Paragraphs: [
-        {
-            'Deisgn Process': [
-                ['Step 1', 'At offline'],
-                ['Step 2', 'Brainstorming'],
-                ['Step 3', 'Think Aloud'],
-                ['4. Low-Fi Prototyping', 'Low-Fi Prototyping']
-            ]
-        },
-        {
-            'Evaluation & Validation': [
-                ['Main Screen', 'At offline'],
-                ['Information Chunking', 'Brainstorming'],
-                ['Categorical vs. ', 'Think Aloud'],
-                ['Feedback', 'Low-Fi Prototyping']
-            ]
-        },
+
     ]
   
 };
 
 export const Project8 = {
-    name: 'Tril.ogy',
-    type: 'iOS Application',
-    detail: 'HCI Design Process + Swift',
-    subinfo: ['Individual Project(Apr 2020 - Jun 2020)', 'UX Researcher, Designer, APp Developer'],
+    name: 'Tril.ogy (Beta)',
+    type: 'Personal Web Portfolio',
+    detail: 'Figma + ReactJS',
+    link: ['https://ericggul.github.io/plz/'],
     Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-        'Late Stages',
-        'Applicating various HCI Theories',
-        'Quantitative & Qualitative Validation'
+        'Personal Web Portfolio',
     ],
     TTT: [
-        ['The Problem', 'At offline supermarkets, promotional speeches delivered to the customers'],
-        ['The Purpose', 'Hello WOrld'],
-        ['Target User', 'Hello WOrld']
+
     ],
     Images: [
-        project1Img1,
-        project1Img2,
-        project1Img3, 
-        project1Img4,
-        project1Img5,
+        project8Img1,
     ],
     Captions: [
-        ['Individual Project(Apr 2020 - Jun 2020)', 'UX Researcher, Designer, App Developer'],
-        ['Brainstorming Process'],
-        ['Developing Prototype Interface'],
-        ['Hi-Fi Prototype, developed with Swift'],
-        ['Speech Playing Screen Example'],
+        ['Individual Project(Jun 2020)', 'Designer, Developer'],
     ],
     Paragraphs: [
-        {
-            'Deisgn Process': [
-                ['Step 1', 'At offline'],
-                ['Step 2', 'Brainstorming'],
-                ['Step 3', 'Think Aloud'],
-                ['4. Low-Fi Prototyping', 'Low-Fi Prototyping']
-            ]
-        },
-        {
-            'Evaluation & Validation': [
-                ['Main Screen', 'At offline'],
-                ['Information Chunking', 'Brainstorming'],
-                ['Categorical vs. ', 'Think Aloud'],
-                ['Feedback', 'Low-Fi Prototyping']
-            ]
-        },
 
     ]
+  
 };
-
-

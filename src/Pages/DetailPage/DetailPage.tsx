@@ -2,16 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './DetailPage.scss';
 import { motion } from 'framer-motion';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import Projects from '../../utils/Constants';
-
+import useScrollPosition from '../../hooks/useScrollPosition';
 
 function DetailPage() {
 
   const history = useHistory();
+  const scrollLoc = useScrollPosition();
   type Params = {id: any}
   const {id} = useParams<Params>();
-  console.log(id);
+
   const project = Projects.filter(project => project.id == id)[0]
 
   const backToMain = (
@@ -27,7 +28,7 @@ function DetailPage() {
         {project?.description.name}
         &nbsp;
         &nbsp;
-        {`${i}/${project?.description.Images.length}`}
+        {`${scrollLoc}/${project?.description.Images.length}`}
       </div>
     )
   }
@@ -40,7 +41,7 @@ function DetailPage() {
     return(
       <div className="stacks">
         {list.map((el: any, i: any) => (
-          <div className="body">
+          <div className="body" key={i}>
             {el}
           </div>
         ))}
@@ -57,7 +58,7 @@ function DetailPage() {
       <div className="ttt-container">
         {
           list.map((el: any, i: any)=>(
-            <div className="ttt-sector">
+            <div className="ttt-sector" key={i}>
               <div className="header">{el[0]}</div>
               <div className="body">{el[1]}</div>
             </div>
@@ -88,25 +89,30 @@ function DetailPage() {
   const textParser = (string: string) => {
     return string.split('\n')
   }
+
+  const link = project?.description.link.length > 0 ? project?.description.link[0] : undefined;
   
   const DetailElement1 = () => {
-    console.log(project?.description.Images[1] )
     return(
       <div className="detail-element">
           <div className="image">
             <div className="image-container">
-              <motion.img 
-                src={project?.description.Images[0]} 
-                alt={project?.description.name}
-                initial={{opacity: 0}}
-                animate={{opacity: 1}}
-              />
+              <a href={link}>
+                <motion.img 
+                  src={project?.description.Images[0]} 
+                  alt={project?.description.name}
+                  initial={{opacity: 0}}
+                  animate={{opacity: 1}}
+                />
+              </a>
             </div>
             <Caption list={project?.description.Captions[0]} />
           </div>
           <div className="description">
             <div className="title">
-              {project?.description.name}
+              <a href={link} style={{textDecoration: 'none', color: 'white'}}>
+                {project?.description.name}
+              </a>
               <div className="sub">
                 {project?.description?.Subtitles[0]}
               </div>
@@ -148,6 +154,7 @@ function DetailPage() {
               <Paragraph
                 header={v[0]}
                 body = {v[1]}
+                key={i}
               />
             ))}
           </div>
@@ -167,7 +174,6 @@ function DetailPage() {
         <DetailElement1 />
         {
           project?.description.Paragraphs.map((e: any,i) => {
-            console.log(Object.entries(e)[0][1])
             return(
             <DetailElement2 
               image={project?.image} 
