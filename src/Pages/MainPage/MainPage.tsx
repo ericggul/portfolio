@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useLayoutEffect, useRef, useMemo } from 'react';
-import './MainPageShadow.scss';
+import './MainPage.scss';
 import { motion } from 'framer-motion';
 import Projects from '../../utils/Constants';
 import { useHistory } from 'react-router-dom';
@@ -10,7 +10,7 @@ const transition = {
   duration: .6, ease: [.43, .13, 0.23, 0.96]
 }
 
-function MainPageShadow() {
+function MainPage() {
 
   const history = useHistory();
   const isMobile = useMemo(()=> window.innerWidth< 600, [window.innerWidth])
@@ -61,6 +61,7 @@ function MainPageShadow() {
     
     useLayoutEffect(()=>{
       const { width, height, offsetTop } = imgRef.current;
+      console.log(width, height);
       const rect = imgRef.current.getBoundingClientRect();
       setElementRect(rect)
       console.log(i, rect);
@@ -68,29 +69,16 @@ function MainPageShadow() {
     }, [imgRef])
 
 
-    // const { width, height } = useWindowDimensions();
-    
-    // const left = useMemo(()=> 450* i + 225, []); 
-    // const top = useMemo(()=> height/2-525/2 + 173, [height]);
-
     var shadowX = useMemo(()=> !isMobile && elementRect && (elementRect.left + elementRect.width/2 -mouseX)/10, [elementRect, mouseX])
     var shadowY = useMemo(()=> !isMobile && elementRect && (elementRect.top + elementRect.height/2 -mouseY)/10, [elementRect, mouseY])
     var shadowLength = useMemo(()=> !isMobile && elementRect &&  Math.sqrt((elementRect.top + elementRect.height/2 -mouseY) ** 2 + (elementRect.left + elementRect.width/2-mouseY) ** 2)/20 + 80, [elementRect, mouseX, mouseY])
 
-    const [a, setA] = useState(0);
+    console.log(i,  elementRect && elementRect.width);
 
-    useEffect(()=>{
-      setTimeout(()=>{
-        setA(a+1)
-      }, 50)
-    }, [])
-
-    console.log(a);
- 
     return(
       <div className="subject"  onClick={()=>history.push(`/detail/${i+1}`)}>
         <div className="cards-wrapper">
-          <div className="image-card" >
+          <div className="image-card" onClick={()=>history.push(`/detail/${i+1}`)}>
             <motion.img 
               exit={{opacity: 0}}
               transition = {transition}
@@ -103,20 +91,14 @@ function MainPageShadow() {
               `}}
             />
           </div>
-          <div 
-            className="subject-card"
-            style={{
-              marginLeft: `${ !isMobile && elementRect ? 165-elementRect.width/2 : 'auto'}px`
-            }}
-          >
-              <div className="title">
-              
-                {subject.description.name}
-              </div>
-              <div className="description">
-                  <div>{subject.description.type}</div>
-                  <div>{subject.description.detail}</div>
-              </div>
+          <div className="subject-card">
+            <div className="title">
+              {subject.description.name}
+            </div>
+            <div className="description">
+                <div>{subject.description.type}</div>
+                <div>{subject.description.detail}</div>
+            </div>
           </div>
         </div>
       </div>
@@ -124,9 +106,7 @@ function MainPageShadow() {
   }
 
   const handleScroll = (e: any) => {
-    console.log(e);
     const position = window;
-    console.log(position, position.pageXOffset)
   }
   useEffect(()=>{
     window.addEventListener('scroll', handleScroll)
@@ -142,9 +122,22 @@ function MainPageShadow() {
     <div className="main" 
       ref={mainRef}
     >
-      <div className="shadow" />
       <div className="subject-list">
-        <div className="subject-wrapper" ref={subjectWrapperRef}>
+        <div className="subject-row" ref={subjectWrapperRef}>
+          {
+            Projects.map((subject, i) =>(
+              <SubjectRender subject={subject} index={i} key={i}/>
+            ))
+          }
+        </div>
+        <div className="subject-row" ref={subjectWrapperRef}>
+          {
+            Projects.map((subject, i) =>(
+              <SubjectRender subject={subject} index={i} key={i}/>
+            ))
+          }
+        </div>
+        <div className="subject-row" ref={subjectWrapperRef}>
           {
             Projects.map((subject, i) =>(
               <SubjectRender subject={subject} index={i} key={i}/>
@@ -159,4 +152,4 @@ function MainPageShadow() {
   );
 }
 
-export default MainPageShadow;
+export default MainPage;

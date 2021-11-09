@@ -7,7 +7,7 @@ import { AnimatePresence } from 'framer-motion';
 
 import DoorPage from './Pages/DoorPage/DoorPage';
 import LifePage from './Pages/LifePage/LifePage';
-import MainPageShadow from './Pages/MainPageShadow/MainPageShadow';
+import MainPage from './Pages/MainPage/MainPage';
 import DetailPage from './Pages/DetailPage/DetailPage';
 
 import Project1 from './Projects/Project1/Project1';
@@ -31,7 +31,7 @@ function App() {
 
             <Route 
               exact path="/main" 
-              render={()=> <MainPageShadow />}
+              render={()=> <MainPage />}
             />
 
             <Route 

@@ -4,12 +4,10 @@ import './DetailPage.scss';
 import { motion } from 'framer-motion';
 import { useHistory, Link } from 'react-router-dom';
 import Projects from '../../utils/Constants';
-import useScrollPosition from '../../hooks/useScrollPosition';
 
 function DetailPage() {
 
   const history = useHistory();
-  const scrollLoc = useScrollPosition();
   type Params = {id: any}
   const {id} = useParams<Params>();
 
@@ -26,9 +24,6 @@ function DetailPage() {
     return(
       <div className="current">
         {project?.description.name}
-        &nbsp;
-        &nbsp;
-        {`${scrollLoc}/${project?.description.Images.length}`}
       </div>
     )
   }
