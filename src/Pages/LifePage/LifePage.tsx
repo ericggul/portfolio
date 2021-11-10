@@ -1,9 +1,25 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import './LifePage.scss';
 import Zarathustra from "../../assets/Zarathustra.mp3";
 
+const UNI_CONVERTER = [
+  {university: 'UAL', city: 'London'},
+  {university: 'Goldsmiths', city: 'London'},
+  {university: 'MIT', city: 'Boston'},
+  {university: 'NYU', city: 'New York'},
+  {university: 'GATech', city: 'Atlanta'},
+  {university: 'CMU', city: 'Pittsburgh'},
+]
+
+
 function LifePage() {
+
+  const history = useHistory();
+  type Params = {uni: any}
+  const { uni } = useParams<Params>();
+  
+  const selectedCity = UNI_CONVERTER.filter(entity => entity.university === uni)[0] ? UNI_CONVERTER.filter(entity => entity.university === uni)[0].city : 'London';
 
   const [volume, setVolume] = useState(1);
   
@@ -15,7 +31,6 @@ function LifePage() {
 
   const [text, setText] = useState(0);
   const [color, setColor] = useState(0);
-  const history = useHistory();
 
   const hour = new Date().getHours();
   
@@ -31,14 +46,9 @@ function LifePage() {
     }
   }
 
-  const city_array = [
-    'Seoul', 'Pittsburgh', 'New York', 'Atlanta', 'London'
-  ]
-
 
   const text_set = [
-    // `good ${timeConverter(hour)} ${city_array[Math.floor(Math.random()*4)]}`,
-    `good ${timeConverter(hour)} Linz`,
+    `good ${timeConverter(hour)} ${selectedCity}`,
     "please turn on the music",
   ]
 
@@ -55,7 +65,7 @@ function LifePage() {
     }
 
     setTimeout(()=>{
-      history.push('/monolith')
+      history.push(`/monolith/${uni}`)
     }, 9000)
 
     audio.currentTime = 3;

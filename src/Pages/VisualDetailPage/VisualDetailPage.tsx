@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import './DetailPage.scss';
+import { useParams } from 'react-router-dom';
+import './VisualDetailPage.scss';
 import { motion } from 'framer-motion';
-import { useHistory, useParams } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { Normal } from '../../utils/Constants';
 
-function DetailPage() {
+function VisualDetailPage() {
 
   const history = useHistory();
   type Params = {id: any}
-  const { id } = useParams<Params>();
+  const {id} = useParams<Params>();
 
-  console.log(id);
-  const project = Normal.filter(prj => prj.id == id)[0]
-  console.log(project);
+  const project = Normal.filter(project => project.id == id)[0]
 
   const backToMain = (
     <div className="back" onClick={()=>history.push({pathname: '/main'})}>
@@ -145,6 +144,7 @@ function DetailPage() {
               <div className="sub">
                 {project?.description?.Subtitles[index+1]}
               </div>
+        
             </div>
             {contents.map((v: any,i: any)=>(
               <Paragraph
@@ -189,4 +189,4 @@ function DetailPage() {
   );
 }
 
-export default DetailPage;
+export default VisualDetailPage;

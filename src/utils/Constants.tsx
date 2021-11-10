@@ -45,15 +45,16 @@ import Lobby2Img from '../assets/Lobby/Lobby2.png';
 import Lobby3Img from '../assets/Lobby/Lobby3.png';
 
 import {
-    LowerLobby1,  LowerLobby2,  LowerLobby3,  LowerLobby4,  LowerLobby5,  LowerLobby6,
+    LowerLobby1,  LowerLobby2,  LowerLobby3,  LowerLobby4,  LowerLobby5,  LowerLobby6, LowerLobby7,
 } from './LowerLobby';
 
 import LowerLobby1Img from '../assets/LowerLobby/LowerLobby1.jpg';
 import LowerLobby2Img from '../assets/LowerLobby/LowerLobby2.png';
 import LowerLobby3Img from '../assets/LowerLobby/LowerLobby3.png';
 import LowerLobby4Img from '../assets/LowerLobby/LowerLobby4.png';
-import LowerLobby5Img from '../assets/LowerLobby/LowerLobby5.jpeg';
-import LowerLobby6Img from '../assets/LowerLobby/LowerLobby6.png';
+import LowerLobby5Img from '../assets/LowerLobby/LowerLobby5.png';
+import LowerLobby6Img from '../assets/LowerLobby/LowerLobby6.jpeg';
+import LowerLobby7Img from '../assets/LowerLobby/LowerLobby7.png';
 
 import Project1Img from '../assets/Project1.png';
 import Project2Img from '../assets/Project2.png';
@@ -174,6 +175,9 @@ const LowerLobby = [
     },
     {
         id: 6, image: LowerLobby6Img, description: LowerLobby6
+    },
+    {
+        id: 7, image: LowerLobby7Img, description: LowerLobby7
     },
 ]
 

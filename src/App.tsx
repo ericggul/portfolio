@@ -21,19 +21,17 @@ function App() {
         <AnimatePresence exitBeforeEnter>
           <Switch>
             <Route 
-              exact path="/monolith" 
+              exact path="/monolith/:uni" 
               render={()=> <DoorPage />}
             />
             <Route 
-              exact path="/intro" 
+              exact path="/intro/:uni" 
               render={()=> <LifePage />}
             />
-
             <Route 
               exact path="/main" 
               render={()=> <MainPage />}
             />
-
             <Route 
               exact path="/project1" 
               render={()=> <Project1 />}
@@ -42,7 +40,7 @@ function App() {
               exact path="/detail/:id" 
               render={()=> <DetailPage />}
             />
-            <Redirect exact to="/intro"/>
+            <Redirect exact to="/intro/UAL"/>
           </Switch>
         </AnimatePresence>
       )} />

@@ -1,35 +1,44 @@
 import React, { useState, useEffect, useReducer } from 'react';
 import './DoorPage.scss';
 import { motion } from 'framer-motion';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
 import Zarathustra from "../../assets/Zarathustra.mp3";
 
 
 const transition = {duration: 2}
 
-const reducer = (sec: any, action: any) => {
-    switch(action.type){
-        case "Increment":
-            return sec + 1;
-        default: 
-            return sec;
-    }
-}
+
+const UNI_CONVERTER = [
+    {university: 'UAL', phase: 'UAL MRes Creative Computing'},
+    {university: 'Goldsmiths', phase: 'Goldsmiths Computational Art'},
+    {university: 'MIT', phase: 'MIT Media Arts and Science'},
+    {university: 'NYU', phase: 'NYU MSC IDM'},
+    {university: 'GATech', phase: 'GATech MSHCI'},
+    {university: 'CMU', phase: 'CMU MHCI'},
+]
+  
 
 export default function DoorPage() {
 
     const history = useHistory();
+    type Params = {uni: any}
+    const { uni } = useParams<Params>();
+
+    const selectedPhase = UNI_CONVERTER.filter(e => e.university === uni)[0] ? UNI_CONVERTER.filter(e => e.university === uni)[0].phase : 'UAL MRes Creative Computing'
+
     const [pushed, setPushed] = useState(false);
     const [volume, setVolume] = useState(1);
     const [script, setScript] = useState(0);
 
+
+
     const script_array = [
         "",
         "Monolith, a perfect geometrical structure",
-        "Represents the human evolution on Stanley Kubrick's film",
+        "Represents the human evolution in the Stanley Kubrick's film",
         "This Nietzsche-tic representation of evolution should be well replicated",
         "When highlighting the functionality of semiotics in the modern civilization.",
-        "Ars Electronica Festival University Candidate, Jeanyoon Choi",
+        `${selectedPhase} Candidate, Jeongyoon Choi`,
         "Push the right door to enter"
     ];
 
@@ -55,22 +64,10 @@ export default function DoorPage() {
     }, [])
 
 
-
-    //Second Calculation
-    const [sec, dispatch] = useReducer(reducer, 0);
-
-    useEffect(()=>{
-        setInterval(()=> {
-            dispatch({type: "Increment"})
-        }, 1000)
-    }, [])
-
     const handlePush = (e: any) =>{
-        setOpacity(0)
-        if(sec > 0){
-            setPushed(true)
-            setTimeout(()=> history.push('main'), 2000);
-        }
+        setOpacity(0);
+        setPushed(true);
+        setTimeout(()=> history.push('/main'), 2000);
     }
 
     const [opacity, setOpacity] = useState(1);
@@ -112,7 +109,6 @@ export default function DoorPage() {
             </div>
 
             <div className="subtitle">
-                {/* {sec} */}
                 {script_array[script]}
             </div>
         </motion.div>
