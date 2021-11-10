@@ -9,6 +9,7 @@ import DoorPage from './Pages/DoorPage/DoorPage';
 import LifePage from './Pages/LifePage/LifePage';
 import MainPage from './Pages/MainPage/MainPage';
 import DetailPage from './Pages/DetailPage/DetailPage';
+import VisualDetailPage from './Pages/VisualDetailPage/VisualDetailPage';
 
 import Project1 from './Projects/Project1/Project1';
 
@@ -39,6 +40,10 @@ function App() {
             <Route 
               exact path="/detail/:id" 
               render={()=> <DetailPage />}
+            />
+            <Route 
+              exact path="/visual-detail/:indicator" 
+              render={()=> <VisualDetailPage />}
             />
             <Redirect exact to="/intro/UAL"/>
           </Switch>

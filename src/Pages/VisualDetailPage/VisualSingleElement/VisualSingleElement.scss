@@ -1,25 +1,26 @@
-.header{
-    font-size: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
-}
 
-.body{
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    opacity: 1;
-    color: #AAA;
-}
 
-.container{
-    background: black;
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
 }
 
 .mainbox{
     color: white;
 
     height: 100vh;
+    width: 100vw;
+    position: fixed;
 
     scroll-snap-type: y proximity;
 
@@ -35,7 +36,6 @@
 
     .detail-element{
         scroll-snap-align: start;
-        font-size: 4rem;
         height: 100vh;
         width: 100vw;
 
@@ -44,49 +44,77 @@
         align-items: center;
 
         .image{
-            width: 35vw;
-            margin-left: 8vw;
-            margin-right: 7vw;
+            width: calc(min(55vw, 100vh));
+            margin-left: 5vw;
+            margin-right: 0;
             height: 70vh;
             position: relative;
 
-            .image-container{
-                height: 55vh;
-                position: relative;
-                img{
-                    position: absolute;
-                    max-height: 100%;
-                    max-width: 100%;
-                    margin: auto;
-                    display: block;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            .carousel{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .loc-guider{
+                margin-top: 1rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                
+                .dot{
+                    cursor: pointer;
+                    width: .8rem;
+                    height: .8rem;
+                    border-radius: 50%;
+                    margin: .4rem;
+                    transition: background-color .5s;
                 }
             }
 
-            .stacks{
+            .image-container{
+                width: 100%;
+                height: calc(min(38.5vw, 70vh));
+                position: relative;
+                img{
+                    max-width: 100%;
+                    object-fit: contain;
+                    height: auto;
+                    max-height: 100%;
+                    border-radius: .4rem;
+                    transition: opacity .5s linear;
+                }
+
+                .darken{
+                    opacity: 0;
+                    transition: opacity .5s linear;
+                }
+            }
+
+            .captions{
                 margin-top: 5vh;
                 text-align: center;
                 font-weight: bold;
-                .body{
-                    opacity: 1;
-                }
+                font-size: 1rem;
             }
-
         }
         .description{
-            width: 45vw;
-            margin-right: 5vw;
-            max-height: 90vh;
-            overflow-y: scroll;
-            -ms-overflow-style: none; 
-            word-break: keep-all;
+            width: 30vw;
+            margin-left: 4vw;
+            margin-right: 6vw;
 
             .title{
+                font-size: 3rem;
                 .sub{
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                     opacity: 0.8;
                     font-weight: normal;
                 }
@@ -99,83 +127,29 @@
                 display: flex;
                 flex-direction: column;
             }
-            
-            .name-box{
-                display: flex;
-                flex-direction: row;
-                margin-bottom: 1rem;
-                
-                .project-name{
-                    font-size: 4rem;
-                    margin-right: 2rem;
-                    max-width: 20vw;
-                    
-                }
-            }
+        
             .ttt-container{
                 display: flex;
-                width: 45vw;
-                flex-direction: row;
+                width: 30vw;
+                flex-direction: column;
 
                 .ttt-sector{
-                    width: 13vw;
-                    margin-right: 2vw;
+                    width: 30vw;
                 }
             }
 
             
-        }
-
-        .description::--webkit-scrollbar{
-            display: none;
-        }
-        .description ::--webkit-scrollbar{
-            display: none;
         }
     }
 }
 
-.back{
-    position: fixed;
-    top: 5vh;
-    left: 3vw;
-    font-size: 1rem;
-    color: white;
-    cursor: pointer;
-}
 
 
-.current{
-    position: fixed;
-    top: 5vh;
-    right: 3vw;
-    font-size: 1rem;
-    color: white;
-    cursor: pointer;
-}
 
 
 @media screen and (max-width: 700px){
 
-    .header{
-        font-size: 1.3rem;
-        margin-top: .5rem;
-        margin-bottom: .2rem;
-        font-weight: bold;
-    }
-    
-    .body{
-        font-size: .8rem;
-        margin-bottom: .5rem;
-        opacity: 1;
-        color: #AAA;
-    }
-
     .mainbox{
-    color: white;
-
-    height: 100vh;
-
     .detail-element{
         scroll-snap-align: start;
         font-size: 4rem;
@@ -188,34 +162,25 @@
         align-items: center;
 
         .image{
-            width: 90vw;
+            width: calc(min(90vw, 60vh));
+            
             margin-left: 5vw;
             margin-right: 5vw;
             margin-top: 2vh;
             margin-bottom: 3vh;
-            height: 33vh;
             position: relative;
 
             .image-container{
-                height: 33vh;
                 position: relative;
+                width: 100%;
+                height: calc(min(63vw, 42vh));
                 img{
-                    position: absolute;
-                    max-height: 100%;
                     max-width: 100%;
-                    margin: auto;
-                    display: block;
-                    top: 0;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
+                    height: auto;
+                    max-height: 100%;
+                    object-fit: contain;
                 }
             }
-
-            .stacks{
-                display: none;
-            }
-
         }
         .description{
             width: 86vw;
@@ -254,26 +219,14 @@
             .ttt-container{
                 display: flex;
                 width: 90vw;
-                flex-direction: row;
+                flex-direction: column;
 
                 .ttt-sector{
-                    width: 27vw;
-                    margin-right: 3vw;
+                    width: 90vw;
                 }
             }
-
-            
         }
     }
-}
-
-.back{
-    display: none;
-}
-
-
-.current{
-    display: none;
 }
 
 }
