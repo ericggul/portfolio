@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useHistory } from 'react-router-dom';
 import Zarathustra from "../../assets/Zarathustra.mp3";
 
-import SoundAdjuster from '../../components/SoundAdjuster/SoundAdjuster';
 
 const transition = {duration: 2}
 
@@ -116,8 +115,6 @@ export default function DoorPage() {
                 {/* {sec} */}
                 {script_array[script]}
             </div>
-{/* 
-            <SoundAdjuster /> */}
         </motion.div>
     )
 }

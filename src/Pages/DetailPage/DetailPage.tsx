@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import './DetailPage.scss';
 import { motion } from 'framer-motion';
 import { useHistory, Link } from 'react-router-dom';
-import Projects from '../../utils/Constants';
+import { Normal } from '../../utils/Constants';
 
 function DetailPage() {
 
@@ -11,7 +11,7 @@ function DetailPage() {
   type Params = {id: any}
   const {id} = useParams<Params>();
 
-  const project = Projects.filter(project => project.id == id)[0]
+  const project = Normal.filter(project => project.id == id)[0]
 
   const backToMain = (
     <div className="back" onClick={()=>history.push({pathname: '/main'})}>
@@ -101,7 +101,8 @@ function DetailPage() {
                 />
               </a>
             </div>
-            <Caption list={project?.description.Captions[0]} />
+            {project?.description.Captions && <Caption list={project?.description.Captions[0]} />}
+
           </div>
           <div className="description">
             <div className="title">
@@ -135,7 +136,7 @@ function DetailPage() {
                 alt={project?.description.name}
               />
             </div>
-            <Caption list={project?.description.Captions[index+1]} />
+            {project?.description.Captions && <Caption list={project?.description.Captions[index + 1]} />}
           </div>
           <div className="description">
             <div className="title">
