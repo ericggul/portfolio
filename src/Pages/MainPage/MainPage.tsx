@@ -76,7 +76,7 @@ function MainPage() {
             <Topic i={idx} />
             {
               Projects[idx].map((subject, i) =>(
-                <Subject subject={subject} index={i} key={i}/>
+                <Subject subject={subject} index={i} key={i} idx={idx} />
               ))
             }
           </div>

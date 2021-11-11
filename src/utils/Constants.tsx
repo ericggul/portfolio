@@ -48,8 +48,8 @@ import {
     LowerLobby1,  LowerLobby2,  LowerLobby3,  LowerLobby4,  LowerLobby5,  LowerLobby6, LowerLobby7,
 } from './LowerLobby';
 
-import LowerLobby1Img from '../assets/LowerLobby/LowerLobby1.jpg';
-import LowerLobby2Img from '../assets/LowerLobby/LowerLobby2.png';
+import LowerLobby1Img from '../assets/LowerLobby/LowerLobby1.png';
+import LowerLobby2Img from '../assets/LowerLobby/LowerLobby2.jpg';
 import LowerLobby3Img from '../assets/LowerLobby/LowerLobby3.png';
 import LowerLobby4Img from '../assets/LowerLobby/LowerLobby4.png';
 import LowerLobby5Img from '../assets/LowerLobby/LowerLobby5.png';
@@ -178,6 +178,30 @@ const LowerLobby = [
     },
     {
         id: 7, image: LowerLobby7Img, description: LowerLobby7
+    },
+]
+
+export const OriginalPages = [
+    {
+        id: 21, image: Trilogy1Img, description: Trilogy1
+    },
+    {
+        id: 22, image: Trilogy2Img, description: Trilogy2
+    },
+    {
+        id: 23, image: Trilogy3Img, description: Trilogy3
+    },
+    {
+        id: 24, image: Trilogy4Img, description: Trilogy4
+    },
+    {
+        id: 31, image: Lobby1Img, description: Lobby1
+    },
+    {
+        id: 32, image: Lobby2Img, description: Lobby2
+    },
+    {
+        id: 33, image: Lobby3Img, description: Lobby3
     },
 ]
 

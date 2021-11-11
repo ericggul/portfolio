@@ -1,4 +1,4 @@
-import React, {useState, useRef, useLayoutEffect} from 'react';
+import React, {useState, useRef, useLayoutEffect, useCallback, useMemo} from 'react';
 import { useHistory } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import './SubjectRender.scss';
@@ -9,7 +9,7 @@ const transition = {
 
 function Subject(props : any) {
     const history = useHistory();
-    const i = props.index;
+    const i = useMemo(()=> props.index , [props]);
     const subject = props.subject;
     const imgRef = useRef<any>();
     const [ elementRect, setElementRect ] = useState<DOMRect | undefined>();
@@ -19,11 +19,22 @@ function Subject(props : any) {
       const rect = imgRef.current.getBoundingClientRect();
       setElementRect(rect)
     }, [imgRef])
+
+    const handleLinkClick = useCallback(()=>{
+      if(props.idx === 0 || props.idx === 1 || props.idx === 4){
+        history.push({
+          pathname: `/visual-detail/${props.idx}`,
+          state: { projectIdx: props.index },
+        });
+      } else{
+        history.push(`/detail/${props.idx}${props.index +1}`);
+      }
+    }, [props])
     
     return(
-      <div className="subject" onClick={()=>history.push(`/detail/${i+1}`)}>
+      <div className="subject" onClick={handleLinkClick}>
         <div className="cards-wrapper">
-          <div className="image-card" onClick={()=>history.push(`/detail/${i+1}`)}>
+          <div className="image-card" onClick={handleLinkClick}>
             <motion.img 
               exit={{opacity: 0}}
               transition = {transition}

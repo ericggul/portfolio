@@ -2,17 +2,20 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import './VisualDetailPage.scss';
-import { useHistory, Link } from 'react-router-dom';
+import { useHistory, Link, useLocation } from 'react-router-dom';
 import VisualSingleElement from './VisualSingleElement/VisualSingleElement';
 import { Projects, Topics } from '../../utils/Constants';
+
 
 function VisualDetailPage() {
 
   const history = useHistory();
-  type Params = {indicator: any}
+  type LocationState = {projectIdx: number};
+  const location = useLocation<LocationState>();
+  type Params = {indicator: any};
   const {indicator} = useParams<Params>();
 
-  const [currentProject, setCurrentProject] = useState(0);
+  const [currentProject, setCurrentProject] = useState(location?.state?.projectIdx);
 
   console.log(currentProject, Projects[indicator])
 

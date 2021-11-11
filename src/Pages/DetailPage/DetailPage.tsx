@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './DetailPage.scss';
 import { motion } from 'framer-motion';
 import { useHistory, useParams } from 'react-router-dom';
-import { Normal } from '../../utils/Constants';
+import { OriginalPages } from '../../utils/Constants';
 
 function DetailPage() {
 
@@ -11,7 +11,7 @@ function DetailPage() {
   const { id } = useParams<Params>();
 
   console.log(id);
-  const project = Normal.filter(prj => prj.id == id)[0]
+  const project = OriginalPages.filter(prj => prj.id == id)[0]
   console.log(project);
 
   const backToMain = (
@@ -21,7 +21,6 @@ function DetailPage() {
   )
 
   const CurrentPage = () => {
-    const i = 3;
     return(
       <div className="current">
         {project?.description.name}

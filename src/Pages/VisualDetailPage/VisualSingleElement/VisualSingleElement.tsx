@@ -44,13 +44,18 @@ function VisualSingleElement( props : any) {
     const [transition, setTransition] = useState(true);
 
     useEffect(()=>{
-      const interval = setInterval(() => setCurrentImage(idx => (idx + 1)%(props.imgList.length)), 5000);
-      const timeOut1 = setTimeout(()=> setTransition(false), 500);
-      const timeOut2 = setTimeout(()=> setTransition(true), 4500);
-      return () => {
-        clearInterval(interval)
-        clearTimeout(timeOut1)
-        clearTimeout(timeOut2)
+      if(props.imgList.length > 1){
+        const interval = setInterval(() => setCurrentImage(idx => (idx + 1)%(props.imgList.length)), 5000);
+        const timeOut1 = setTimeout(()=> setTransition(false), 500);
+        const timeOut2 = setTimeout(()=> setTransition(true), 4500);
+        return () => {
+          clearInterval(interval)
+          clearTimeout(timeOut1)
+          clearTimeout(timeOut2)
+        }
+      } else{
+        const timeOut1 = setTimeout(()=> setTransition(false), 500);
+        return () => clearTimeout(timeOut1);
       }
     }, [currentImage]);
 
@@ -83,11 +88,11 @@ function VisualSingleElement( props : any) {
     <div className="detail-element">
       <div className="image">
         <ImageCarousel imgList={project?.description.Images} />
-        <a href={link} style={{textDecoration: 'none', color: 'white'}}>
+        {link && <a href={link} style={{textDecoration: 'none', color: 'white'}}>
           <div className="captions">
             Visit Link
           </div>
-        </a>
+        </a>}
       </div>
       <div className="description">
         <div className="title">
