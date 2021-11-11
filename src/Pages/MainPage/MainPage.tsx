@@ -15,8 +15,7 @@ function MainPage() {
 
   const history = useHistory();
   const isMobile = useMemo(()=> window.innerWidth< 600, [window.innerWidth])
-
-  const { mouseX, mouseY } = useMousePosition();
+  
   const { height, width } = useWindowDimensions();
   const starRef = useRef<any>();
   const subjectWrapperRef = useRef<any>();
