@@ -30,19 +30,26 @@ function Subject(props : any) {
         history.push(`/detail/${props.idx}${props.index +1}`);
       }
     }, [props])
+
+    const SubjectImage = () => {
+      const [loaded, setLoaded] = useState(false);
+
+      return(
+        <img 
+          ref={imgRef}
+          src={subject.image} 
+          alt={subject.description.name}
+          style={{ filter : `drop-shadow(0 0 3rem #AAA)`, opacity: `${loaded ? '1' : '0'}` }}
+          onLoad={() => setLoaded(true)}
+        />
+      )
+    }
     
     return(
       <div className="subject" onClick={handleLinkClick}>
         <div className="cards-wrapper">
           <div className="image-card" onClick={handleLinkClick}>
-            <motion.img 
-              exit={{opacity: 0}}
-              transition = {transition}
-              ref={imgRef}
-              src={subject.image} 
-              alt={subject.description.name}
-              style={{ filter : `drop-shadow(0 0 3rem #AAA)` }}
-            />
+            <SubjectImage />
           </div>
           <div className="subject-card">
             <div className="title">
