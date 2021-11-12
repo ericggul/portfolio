@@ -2,9 +2,11 @@ import React, { useState, useEffect, useLayoutEffect, useRef, useMemo } from 're
 import './MainPage.scss';
 import { motion } from 'framer-motion';
 import { Topics, Projects } from '../../utils/Constants';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import useMousePosition from '../../hooks/useMousePosition';
 import useWindowDimensions from '../../hooks/useWindowDimensions';
+import BlueDanube from "../../assets/mp3/BlueDanube.mp3";
+import AudioVisualization from '../../components/AudioVisualization/AudioVisualization';
 import Subject from '../../components/SubjectRender/SubjectRender';
 
 const transition = {
@@ -14,12 +16,16 @@ const transition = {
 function MainPage() {
 
   const history = useHistory();
-  const isMobile = useMemo(()=> window.innerWidth< 600, [window.innerWidth])
-  
+  type LocationState = {audioPlaying: boolean};
+  const location = useLocation<LocationState>();
+  console.log(location?.state?.audioPlaying);
+  const [audioPlaying, setAudioPlaying] = useState(location?.state?.audioPlaying !== undefined ? location?.state?.audioPlaying : true);
+
+  const isMobile = useMemo(()=> window.innerWidth< 600, [window.innerWidth]);
+
   const { height, width } = useWindowDimensions();
   const starRef = useRef<any>();
   const subjectWrapperRef = useRef<any>();
-
 
   const createNode = (x: number, y: number) => {
     const n = document.createElement('div');
@@ -68,6 +74,7 @@ function MainPage() {
 
   return (
     <div className="main">
+      <AudioVisualization audioPlaying={audioPlaying}/>
       <div className="star" ref={starRef} />
       <div className="subject-list">
         {new Array(5).fill(0).map((e, idx) => 

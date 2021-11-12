@@ -1,0 +1,67 @@
+
+.mainbox{
+    color: white;
+
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+
+    scroll-snap-type: y proximity;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    -ms-overflow-style: none; 
+
+    scrollbar-width: none;
+    & ::--webkit-scrollbar{
+        display: none;
+    }
+
+    .detail-element{
+        scroll-snap-align: start;
+        height: 100vh;
+        width: 100vw;
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .title-section{
+            .large-title{
+
+            }
+            .small-title{
+
+            }
+        }
+
+        
+
+
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 700px){
+
+    .mainbox{
+    .detail-element{
+        scroll-snap-align: start;
+        font-size: 4rem;
+        height: 100vh;
+        width: 100vw;
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+}
+
+}

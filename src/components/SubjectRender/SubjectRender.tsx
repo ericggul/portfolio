@@ -39,7 +39,9 @@ function Subject(props : any) {
           ref={imgRef}
           src={subject.image} 
           alt={subject.description.name}
-          style={{ filter : `drop-shadow(0 0 3rem #AAA)`, opacity: `${loaded ? '1' : '0'}` }}
+          style={{
+            opacity: `${loaded ? '1' : '0'}`
+          }}
           onLoad={() => setLoaded(true)}
         />
       )

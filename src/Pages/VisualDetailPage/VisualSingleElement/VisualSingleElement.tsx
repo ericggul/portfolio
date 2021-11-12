@@ -62,13 +62,11 @@ function VisualSingleElement( props : any) {
     return(
       <div className="carousel">
         <div className="image-container">
-            <a href={link}>
-              <img 
-                src={props.imgList[currentImage]} 
-                alt={project?.description.name}
-                className={transition ? 'darken' : ''}
-              />
-            </a>
+          <img 
+            src={props.imgList[currentImage]} 
+            alt={project?.description.name}
+            className={transition ? 'darken' : ''}
+          />
         </div>
         <div className="loc-guider">
           {props.imgList.map((img: any, idx: number) => 
@@ -88,7 +86,7 @@ function VisualSingleElement( props : any) {
     <div className="detail-element">
       <div className="image">
         <ImageCarousel imgList={project?.description.Images} />
-        {link && <a href={link} style={{textDecoration: 'none', color: 'white'}}>
+        {link && <a href={link} style={{textDecoration: 'none', color: 'white'}} target="_blank">
           <div className="captions">
             Visit Link
           </div>
@@ -96,7 +94,7 @@ function VisualSingleElement( props : any) {
       </div>
       <div className="description">
         <div className="title">
-          <a href={link} style={{textDecoration: 'none', color: 'white'}}>
+          <a href={link} style={{textDecoration: 'none', color: 'white'}} target="_blank">
             {project?.description.name}
           </a>
           <div className="sub">

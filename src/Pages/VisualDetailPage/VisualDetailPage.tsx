@@ -15,7 +15,7 @@ function VisualDetailPage() {
   type Params = {indicator: any};
   const {indicator} = useParams<Params>();
 
-  const [currentProject, setCurrentProject] = useState(location?.state?.projectIdx);
+  const [currentProject, setCurrentProject] = useState(location?.state?.projectIdx ? location?.state?.projectIdx : 0);
 
   console.log(currentProject, Projects[indicator])
 
@@ -23,8 +23,18 @@ function VisualDetailPage() {
     setCurrentProject(current => current > 0 || dir === 1 ? (current + dir) % Projects[indicator].length : Projects[indicator].length-1);
   }, [currentProject, indicator]);
 
+
+
   const BackToMain = () => (
-    <div className="back" onClick={()=>history.push({pathname: '/main'})}>
+    <div 
+      className="back" 
+      onClick={()=>
+        history.push({
+          pathname: `/main`,
+          state: { audioPlaying: true },
+        })
+      }
+    >
       Back to Main
     </div>
   )

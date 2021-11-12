@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
 import './LifePage.scss';
-import Zarathustra from "../../assets/Zarathustra.mp3";
+import Zarathustra from "../../assets/mp3/Zarathustra.mp3";
 
 const UNI_CONVERTER = [
   {university: 'UAL', city: 'London'},

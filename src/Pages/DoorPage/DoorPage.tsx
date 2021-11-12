@@ -67,7 +67,12 @@ export default function DoorPage() {
     const handlePush = (e: any) =>{
         setOpacity(0);
         setPushed(true);
-        setTimeout(()=> history.push('/main'), 2000);
+        setTimeout(() => 
+            history.push({
+                pathname: `/main`,
+                state: { audioPlaying: false },
+            }),
+        2000);
     }
 
     const [opacity, setOpacity] = useState(1);

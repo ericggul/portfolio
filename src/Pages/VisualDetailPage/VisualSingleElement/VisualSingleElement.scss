@@ -95,6 +95,11 @@
             margin-left: 4vw;
             margin-right: 6vw;
 
+            scrollbar-width: none;
+            & ::--webkit-scrollbar{
+                display: none;
+            }
+
             .title{
                 font-size: 3rem;
                 .sub{
