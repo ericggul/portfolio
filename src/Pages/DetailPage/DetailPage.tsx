@@ -4,18 +4,21 @@ import { motion } from 'framer-motion';
 import { useHistory, useParams } from 'react-router-dom';
 import { OriginalPages } from '../../utils/Constants';
 
-function DetailPage() {
 
-  const history = useHistory();
-  type Params = {id: any}
-  const { id } = useParams<Params>();
+interface Props {
+  id: number;
+  handlePopupClose: any;
+}
+
+
+function DetailPage({id, handlePopupClose}: Props) {
 
   console.log(id);
   const project = OriginalPages.filter(prj => prj.id == id)[0]
   console.log(project);
 
   const backToMain = (
-    <div className="back" onClick={()=>history.push({pathname: '/main'})}>
+    <div className="back" onClick={handlePopupClose}>
       Back to Main
     </div>
   )

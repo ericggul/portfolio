@@ -45,13 +45,13 @@ function VisualSingleElement( props : any) {
 
     useEffect(()=>{
       if(props.imgList.length > 1){
-        const interval = setInterval(() => setCurrentImage(idx => (idx + 1)%(props.imgList.length)), 5000);
+        const interval = setTimeout(() => setCurrentImage(idx => (idx + 1)%(props.imgList.length)), 5000);
         const timeOut1 = setTimeout(()=> setTransition(false), 500);
         const timeOut2 = setTimeout(()=> setTransition(true), 4500);
         return () => {
-          clearInterval(interval)
-          clearTimeout(timeOut1)
-          clearTimeout(timeOut2)
+          clearTimeout(interval);
+          clearTimeout(timeOut1);
+          clearTimeout(timeOut2);
         }
       } else{
         const timeOut1 = setTimeout(()=> setTransition(false), 500);

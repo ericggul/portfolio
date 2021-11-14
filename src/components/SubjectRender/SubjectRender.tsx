@@ -21,14 +21,15 @@ function Subject(props : any) {
     }, [imgRef])
 
     const handleLinkClick = useCallback(()=>{
-      if(props.idx === 0 || props.idx === 1 || props.idx === 4){
-        history.push({
-          pathname: `/visual-detail/${props.idx}`,
-          state: { projectIdx: props.index },
-        });
-      } else{
-        history.push(`/detail/${props.idx}${props.index +1}`);
-      }
+      props.sendToDetail(props.idx, props.index);
+      // if(props.idx === 0 || props.idx === 1 || props.idx === 4){
+      //   history.push({
+      //     pathname: `/visual-detail/${props.idx}`,
+      //     state: { projectIdx: props.index },
+      //   });
+      // } else{
+      //   history.push(`/detail/${props.idx}${props.index +1}`);
+      // }
     }, [props])
 
     const SubjectImage = () => {

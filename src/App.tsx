@@ -37,14 +37,14 @@ function App() {
               exact path="/project1" 
               render={()=> <Project1 />}
             />
-            <Route 
+            {/* <Route 
               exact path="/detail/:id" 
               render={()=> <DetailPage />}
-            />
-            <Route 
+            /> */}
+            {/* <Route 
               exact path="/visual-detail/:indicator" 
               render={()=> <VisualDetailPage />}
-            />
+            /> */}
             <Redirect exact to="/intro/UAL"/>
           </Switch>
         </AnimatePresence>

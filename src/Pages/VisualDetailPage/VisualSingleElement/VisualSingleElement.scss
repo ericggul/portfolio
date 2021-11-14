@@ -96,9 +96,8 @@
             margin-right: 6vw;
 
             scrollbar-width: none;
-            & ::--webkit-scrollbar{
-                display: none;
-            }
+            --webkit-scrollbar: none;
+            -ms-overflow-style: none; 
 
             .title{
                 font-size: 3rem;
@@ -121,10 +120,15 @@
                 display: flex;
                 width: 30vw;
                 flex-direction: column;
+                scrollbar-width: none;
+                -ms-overflow-style: none; 
 
                 .ttt-sector{
                     width: 30vw;
                 }
+            }
+            .ttt-container::-webkit-scrollbar{
+                display: none;
             }
 
             

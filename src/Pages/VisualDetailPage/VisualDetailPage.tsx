@@ -6,17 +6,24 @@ import { useHistory, Link, useLocation } from 'react-router-dom';
 import VisualSingleElement from './VisualSingleElement/VisualSingleElement';
 import { Projects, Topics } from '../../utils/Constants';
 
+interface Props {
+  indicator: number;
+  projectIdx: number;
+  handlePopupClose: any;
+}
 
-function VisualDetailPage() {
+function VisualDetailPage({indicator, projectIdx, handlePopupClose}: Props) {
 
-  const history = useHistory();
-  type LocationState = {projectIdx: number};
-  const location = useLocation<LocationState>();
-  type Params = {indicator: any};
-  const {indicator} = useParams<Params>();
+  // const history = useHistory();
+  // type LocationState = {projectIdx: number};
+  // const location = useLocation<LocationState>();
+  // type Params = {indicator: any};
+  // const {indicator} = useParams<Params>();
 
-  const [currentProject, setCurrentProject] = useState(location?.state?.projectIdx ? location?.state?.projectIdx : 0);
+  // const [currentProject, setCurrentProject] = useState(location?.state?.projectIdx ? location?.state?.projectIdx : 0);
 
+  const [currentProject, setCurrentProject] = useState(projectIdx);
+  
   console.log(currentProject, Projects[indicator])
 
   const navigatorClick = useCallback((dir: number) => {
@@ -28,12 +35,7 @@ function VisualDetailPage() {
   const BackToMain = () => (
     <div 
       className="back" 
-      onClick={()=>
-        history.push({
-          pathname: `/main`,
-          state: { audioPlaying: true },
-        })
-      }
+      onClick={handlePopupClose}
     >
       Back to Main
     </div>
@@ -54,7 +56,7 @@ function VisualDetailPage() {
 
 
   return (
-    <div className="container">
+    <div className="detail-container">
       <VisualSingleElement project={Projects[indicator][currentProject]} topic={Topics[indicator]} />
       <BackToMain />
       <CurrentPage />

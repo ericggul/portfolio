@@ -7,7 +7,14 @@ import { useHistory, Link } from 'react-router-dom';
 import { Projects, Topics } from '../../utils/Constants';
 import BlueDanubeAudio from "../../assets/mp3/BlueDanube.mp3";
 
-function getRandom(a: number, b: number)  {return Math.random() * (b-a) + a}
+const getRandom = (a: number, b: number) => Math.random() * (b-a) + a;
+
+declare global {
+    interface Window {
+        AudioContext: typeof AudioContext;
+        webkitAudioContext: typeof AudioContext;
+    }
+}
 
 function shuffle(length: any){
   var array = [];
@@ -24,13 +31,20 @@ function shuffle(length: any){
   return array;
 }
 
+function randomPosArray(length: any, pos: any){
+    var array = [];
+    for(var i=0; i<length; i++){
+        array.push({x: `${getRandom(0, pos.width)}`, y: `${getRandom(0, pos.height)}`})
+    }
+    return array;
+}
+
 
 function randomColorArray(length: any){
   var array = [];
   for(var i=0; i<length; i++){
       const color = getRandom(200, 250);
-      array.push(`rgba(${color},${color},${color},0.9)`)
-    //   array.push(`rgba(20, ${getRandom(120,155)}, ${getRandom(120,255)}, 0.2)`);
+      array.push(`rgba(${color},${color},${color},0.9)`);
   }
   return array;
 }
@@ -55,9 +69,9 @@ function AudioVisualization( props : any) {
   useEffect(()=>{
     wave = new App(audio);
     wave.audioCtx.resume();
-    if(!props.audioPlaying){
+    // if(!props.audioPlaying){
         wave.audioElement.play();
-    }
+    // }
   }, [props]);
 
   return(
@@ -92,7 +106,9 @@ class App {
   cellSize: any;
 
   shuffledArray: any;
+  randomPosArray: any;
   randomColorArray: any;
+
 
   time: any;
   
@@ -129,6 +145,7 @@ class App {
       this.sizeCalculator();
 
       this.shuffledArray = shuffle(1025);
+      this.randomPosArray = randomPosArray(1025, {width: this.stageWidth, height: this.stageHeight});
       this.randomColorArray = randomColorArray(1025);
 
       this.canvas.width = this.stageWidth;
@@ -176,9 +193,11 @@ class App {
       this.data.forEach((value: any, i: number) => {
           const shuffledNumber = this.shuffledArray[i];
 
-          const xCenter = (shuffledNumber%this.columnNums) * this.columnWidth + this.columnWidth/2;
-          const yCenter = Math.floor(shuffledNumber/this.columnNums) * this.rowHeight + this.rowHeight/2;
-          const size = value /255 * this.cellSize ;
+        //   const xCenter = (shuffledNumber%this.columnNums) * this.columnWidth + this.columnWidth/2;
+        //   const yCenter = Math.floor(shuffledNumber/this.columnNums) * this.rowHeight + this.rowHeight/2;
+        const xCenter = this.randomPosArray[i].x;
+        const yCenter = this.randomPosArray[i].y;
+          const size = value /255 * this.cellSize * 0.7 ;
 
           this.ctx.beginPath();
 

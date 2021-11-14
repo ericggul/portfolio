@@ -14,6 +14,13 @@
 
 .container{
     background: black;
+    position: fixed;
+    z-index: 5;
+    background: black;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
 }
 
 .mainbox{
@@ -84,6 +91,13 @@
             -ms-overflow-style: none; 
             word-break: keep-all;
 
+            scrollbar-width: none;
+            & ::--webkit-scrollbar{
+                display: none;
+            }
+            -ms-overflow-style: none; 
+        
+
             .title{
                 .sub{
                     font-size: 2rem;
@@ -116,6 +130,9 @@
                 display: flex;
                 width: 45vw;
                 flex-direction: row;
+                scrollbar-width: none;
+                --webkit-scrollbar: none;
+                -ms-overflow-style: none; 
 
                 .ttt-sector{
                     width: 13vw;

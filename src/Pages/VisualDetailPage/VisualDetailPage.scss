@@ -10,10 +10,14 @@
     color: #AAA;
 }
 
-.container{
+.detail-container{
+    position: fixed;
+    z-index: 5;
     background: black;
     width: 100vw;
     height: 100vh;
+    top: 0;
+    left: 0;
 }
 
 
