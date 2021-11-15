@@ -2,10 +2,6 @@ import React, { useState, useEffect, useCallback, useRef, useMemo } from 'react'
 import './MainPage.scss';
 import { motion } from 'framer-motion';
 import { Topics, Projects } from '../../utils/Constants';
-import { useHistory, useLocation } from 'react-router-dom';
-import useMousePosition from '../../hooks/useMousePosition';
-import useWindowDimensions from '../../hooks/useWindowDimensions';
-import BlueDanube from "../../assets/mp3/BlueDanube.mp3";
 import AudioVisualization from '../../components/AudioVisualization/AudioVisualization';
 import Subject from '../../components/SubjectRender/SubjectRender';
 import VisualDetailPage from '../VisualDetailPage/VisualDetailPage';
@@ -17,15 +13,8 @@ const transition = {
 
 function MainContainer() {
 
-  const history = useHistory();
-  // type LocationState = {audioPlaying: boolean};
-  // const location = useLocation<LocationState>();
-  // console.log(location?.state?.audioPlaying);
-  // const [audioPlaying, setAudioPlaying] = useState(location?.state?.audioPlaying !== undefined ? location?.state?.audioPlaying : true);
-
   const isMobile = useMemo(()=> window.innerWidth< 600, [window.innerWidth]);
 
-  const { height, width } = useWindowDimensions();
   const starRef = useRef<any>();
   const subjectWrapperRef = useRef<any>();
 
@@ -50,13 +39,6 @@ function MainContainer() {
     window.addEventListener('click', addStarMouse)
     return () => window.removeEventListener('click', addStarMouse)
   }, []);
-
-  // useEffect(()=>{
-  //   const interval = setInterval(()=>{
-  //     createNode(Math.random()*width, Math.random()*height)
-  //   }, 3000)
-  //   return () => clearInterval(interval)
-  // }, []);
 
 
   const Topic = (props: any) => {

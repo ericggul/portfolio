@@ -51,7 +51,6 @@
         align-items: center;
 
         .image{
-            width: 35vw;
             margin-left: 8vw;
             margin-right: 7vw;
             height: 70vh;
@@ -84,7 +83,6 @@
 
         }
         .description{
-            width: 45vw;
             margin-right: 5vw;
             margin-top: 1rem;
             max-height: 90vh;
@@ -129,7 +127,6 @@
             }
             .ttt-container{
                 display: flex;
-                width: 45vw;
                 flex-direction: column;
                 scrollbar-width: none;
                 --webkit-scrollbar: none;
@@ -270,7 +267,7 @@
             }
             .ttt-container{
                 display: flex;
-                width: 90vw;
+                width: 86vw;
                 flex-direction: column;
                 padding-bottom: 1rem;
 

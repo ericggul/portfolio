@@ -26,7 +26,7 @@ export const Festival1 = {
     TTT: [
         ['Online Festival', 'Due to the Covid-19 lockdown, the official Seoul National University festival was organized online. I had participated as a lead developer, programming a ReactJS web.'],
         ['Night', 'Web space is independent from the real world time frame. We tried to design a website which is always a night, the best time of the day for an any festival.'],
-        ['Campus', 'We wanted students to recall their memory at the campus, a place where they miss. Our Main Screen of the Festival Web had specific spots of the campus.'],
+        ['Campus', 'We wanted students to recall their memory at the campus, a place where they miss. Our Main Screen of the Festival Web displays specific spots of the campus.'],
     ],
     Images: [
         Festival1Img,
@@ -42,14 +42,12 @@ export const Festival2 = {
     type: '10 different interpretation of lights',
     detail: 'ReactJS',
     link: ['https://snufestival.com/activity/group'],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
     TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
+        ['The Mission', 'Users of the website are asked to found 10 different lights, which are spread all around the festival website.'],
+        ['A Background', 'First picture shows a moment when a normal background is transisted into a dark background with full of lights, creating a wonderful illumination.'],
+        ['A Text', 'A light can be also represented as a text itself.'],
+        ['A Cyclical Behaviour', 'When each light component animates independently with a different cyclicality, it creates an unique random swarm behaviour.'],
+        ['Also Sprach Zarathustra', 'Some of the animations are directly influenced from the Nietzsche and Johan Strauss, just as this portfolio website.']
     ],
     Images: [
         Festival2Img,
@@ -62,17 +60,13 @@ export const Festival2 = {
 
 export const Festival3 = {
     name: 'Character Dressing',
-    type: 'Metavers-ized Web',
+    type: 'Metaverse Concepts',
     detail: 'ReactJS',
     link: ['https://snufestival.com/clothing'],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
     TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
+        ['A Second Identity', 'One of the most unique experience that character dressing can offer is that it allows users to create their second identity, apart from their real world space. We thought that the festival also shares a common experience, as a moment of an escape from the ordinary life.'],
+        ['1,380 Billion Options', '33 Accessories, 35 Bottomwears, 10 Eyebrows, 31 Eyes, 43 Hairs, 17 Lips, 8 Noses, 15 Shoes, 44 Topwears.'],
+        ['Character throughout the festival', 'After dressing the character, it will appear throughout the festival website, creating a unique metaverse inside the virtual festival.'],
     ],
     Images: [
         Festival3Img,
@@ -85,14 +79,10 @@ export const Festival4 = {
     type: 'Criticism on the personality labeling',
     detail: 'ReactJS',
     link: ['https://snufestival.com/jabti'],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
     TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
+        ['', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
+        ['Criticism on Labeling', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
+        ['5k Users', 'This campaign had soley accumulated over 5k users.'],
     ],
     Images: [
         Festival4Img,
@@ -106,10 +96,6 @@ export const Festival5 = {
     type: 'Tilting famous UIs',
     detail: 'ReactJS',
     link: ['https://snufestival.com/fortune'],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
     TTT: [
         ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
         ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
@@ -127,10 +113,6 @@ export const Festival6 = {
     type: 'Creative usecases of APIs',
     detail: 'ReactJS',
     link: ['https://snufestival.com/activity/mini/handwriting'],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
     TTT: [
         ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
         ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],

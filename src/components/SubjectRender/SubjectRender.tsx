@@ -1,6 +1,4 @@
 import React, {useState, useRef, useLayoutEffect, useCallback, useMemo} from 'react';
-import { useHistory } from 'react-router-dom';
-import { motion } from 'framer-motion';
 import './SubjectRender.scss';
 
 function Subject(props : any) {

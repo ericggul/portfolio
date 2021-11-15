@@ -91,7 +91,7 @@
             }
         }
         .description{
-            width: 30vw;
+            width: 45vw;
             margin-left: 4vw;
             margin-right: 6vw;
 
@@ -118,14 +118,10 @@
         
             .ttt-container{
                 display: flex;
-                width: 30vw;
+                width: 35vw;
                 flex-direction: column;
                 scrollbar-width: none;
                 -ms-overflow-style: none; 
-
-                .ttt-sector{
-                    width: 30vw;
-                }
             }
             .ttt-container::-webkit-scrollbar{
                 display: none;
@@ -211,11 +207,11 @@
             }
             .ttt-container{
                 display: flex;
-                width: 90vw;
+                width: 86vw;
                 flex-direction: column;
 
                 .ttt-sector{
-                    width: 90vw;
+                    width: 86vw;
                 }
             }
         }
