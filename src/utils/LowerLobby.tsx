@@ -21,14 +21,9 @@ export const LowerLobby1 = {
     type: 'Series of Live Coding Sketches',
     detail: 'Hydra',
     link: [],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
     TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
+        ['Hydra Ojack', 'Hydra is a Javascript based live coding framework, which utilises oscillative behaviour to render a visual element.'],
+        ['Computational Characteristic', `Each of the basic modules supported in Hydra is inspired from the physical conceptions and functions, highlighting the computer's computational characteristic throughout its output.`],
     ],
     Images: [
         LowerLobby1Img,
@@ -46,14 +41,9 @@ export const LowerLobby2 = {
     type: 'Self-Given Award',
     detail: 'Award, Performance',
     link: [],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
     TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
+        ['Award and Established Society', 'An award is originally supposed to reward the good, but its metaphysical purpose is now titlted in an advanced modern society, acting as a signifier dividing the enclosed inner circle.'],
+        ['Criticizing the Metaphysics', 'Thus, this self-given award is given to criticize this metaphysical attempts, challenging the signifier of an award, attacking the authority behind it.']
     ],
     Images: [
         LowerLobby2Img,
@@ -65,14 +55,10 @@ export const LowerLobby3 = {
     type: 'Slow Reading Assistor around the Web',
     detail: 'Chrome Extension',
     link: [],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
     TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
+        ['Hypertext Environment', 'Modern web environment is heavily influencing our literal habits: Now my colleagues have difficulty reading a book with hundred pages.'],
+        ['Slow Reading', 'This chrome extension is introduced to limit the scroll speed throughout the web space, thus enforcing a habit of slow reading and slow scrolling.'],
+        ['70 px/s', 'Everytime the user exceeds this scroll speed, an alert will automatically pop out, immediately halting and disturbing the scroll event.'],
     ],
     Images: [
         LowerLobby3Img,
@@ -84,14 +70,10 @@ export const LowerLobby4 = {
     type: 'Returns a random number as a result',
     detail: 'ReactJS',
     link: ['http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/calculator'],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
     TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
+        ['2X2 = 5', `This project had started from the Dostoevsky's declarement that 2X2 can be 5.`],
+        ['Blindful belief', 'We tend to believe that there exists an answer or the most optimized solution for certain question, when in reality it does not.'],
+        ['Over reliance on Technology', 'Under that belief, we tend to rely on latest technology, notably an AI to give us an answer, when in fact they just reproduce inside the pre-existent domain.']
     ],
     Images: [
         LowerLobby4Img,
@@ -103,14 +85,10 @@ export const LowerLobby5 = {
     type: 'Accelerates and deaccelerates randomly',
     detail: 'ReactJS',
     link: ['http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/clock'],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
     TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
+        ['A perception', `Human's perception is not capable of reckoning the exact time: An established time frame does not represent the perecptual time.`],
+        ['Established Frame', 'Our society assigns an absolute authority to it, so that we can calculate the time in a Descartian way.'],
+        ['Efficiency and well-being', 'Advanced Technology is forcing us to adjust our own time into this Descartian standard. We justify this sacrifice under a name of efficiency, but we had not asked if this efficiency would also be good for our well-being.'],
     ],
     Images: [
         LowerLobby5Img,
@@ -122,36 +100,13 @@ export const LowerLobby6 = {
     type: 'Installation inside the University',
     detail: 'Temporary Land Installation',
     link: [],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
     TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
+        ['Cookies', 'Fortune Cookies lying on the stairs had a bigger impact in acquiring students than any other display. This trail of cookies had acted as a signifier guding a trail leading to a certain site.'],
+        ['Lights', 'Lights act as a finishing point of this trail, an end goal where somebody would like to reach for. It also guides people to not step on the electrical equipments.'],
     ],
     Images: [
         LowerLobby6Img,
     ],
 };
 
-export const LowerLobby7 = {
-    name: '$',
-    type: 'The price equals with the contents',
-    detail: 'NFT',
-    link: [],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
-    TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
-    ],
-    Images: [
-        LowerLobby7Img,
-    ],
-};
 

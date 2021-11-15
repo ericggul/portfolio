@@ -20,17 +20,13 @@ import Festival62 from '../assets/SNUFestival/Festival62.png';
 
 export const Festival1 = {
     name: 'Festival Main',
-    type: 'Mapping Offline to Online',
+    type: `Designing a 'Festival UX'`,
     detail: 'ReactJS',
     link: ['https://snufestival.com'],
-    Subtitles: [
-        'TTS based iOS Application',
-        'Early Stages',
-    ],
     TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
+        ['Online Festival', 'Due to the Covid-19 lockdown, the official Seoul National University festival was organized online. I had participated as a lead developer, programming a ReactJS web.'],
+        ['Night', 'Web space is independent from the real world time frame. We tried to design a website which is always a night, the best time of the day for an any festival.'],
+        ['Campus', 'We wanted students to recall their memory at the campus, a place where they miss. Our Main Screen of the Festival Web had specific spots of the campus.'],
     ],
     Images: [
         Festival1Img,

@@ -41,11 +41,18 @@ function VisualSingleElement( props : any) {
 
   const ImageCarousel = (props: any) => {
     const [currentImage, setCurrentImage] = useState(0);
+    const [loaded, setLoaded] = useState(false);
     const [transition, setTransition] = useState(true);
-
+    const [imgList, setImgList] = useState([]);
     useEffect(()=>{
-      if(props.imgList.length > 1){
-        const interval = setTimeout(() => setCurrentImage(idx => (idx + 1)%(props.imgList.length)), 5000);
+      setImgList(props.imgList)
+    }, [props.imgList]);
+    useEffect(()=>{
+      if(loaded && imgList.length > 1){
+        const interval = setTimeout(() => {
+          setCurrentImage(idx => (idx + 1)%(imgList.length));
+          setLoaded(false);
+        }, 5000);
         const timeOut1 = setTimeout(()=> setTransition(false), 500);
         const timeOut2 = setTimeout(()=> setTransition(true), 4500);
         return () => {
@@ -57,15 +64,16 @@ function VisualSingleElement( props : any) {
         const timeOut1 = setTimeout(()=> setTransition(false), 500);
         return () => clearTimeout(timeOut1);
       }
-    }, [currentImage]);
+    }, [currentImage, loaded]);
 
     return(
       <div className="carousel">
         <div className="image-container">
           <img 
+            onLoad={() => setLoaded(true)}
             src={props.imgList[currentImage]} 
             alt={project?.description.name}
-            className={transition ? 'darken' : ''}
+            className={transition || !loaded ? 'darken' : ''}
           />
         </div>
         <div className="loc-guider">
@@ -100,7 +108,7 @@ function VisualSingleElement( props : any) {
           <div className="sub">
             {props.topic.name}
             <br />
-            {props.topic.description}
+            {project?.description.type}
           </div>
         </div>
         <TTT list={project?.description.TTT}/>
