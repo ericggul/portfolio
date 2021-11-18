@@ -122,7 +122,7 @@ export const Project2 = {
         'Criticizing the Stock price of 6 major IT companies: FAANG + Microsoft.',
     ],
     Captions: [
-        ['Individual Project(May 2020 - Jun 2020)', 'Designer, Processing(Java) Developer'],
+        ['Individual Project(May 2020 - Jun 2020)', 'Designer, Processing Developer'],
         ['Three steps of redesigning the traditional stock graph'],
         ['X-Axis: Dollar-Axis', 'Y-Axis: Longevity of certain price', 'Color: Time(Red: Present Time)'],
         ['From Top-Left:', 'Facebook, Amazon, Apple', 'Netflix, Microsoft, Google'],
@@ -345,7 +345,7 @@ export const Project6 = {
         project6Img5,
     ],
     Captions: [
-        ['Individual Project(Apr 2020 - Jun 2020)', 'UX Researcher, Designer, App Developer'],
+        ['Individual Project(Apr 2020 - Jun 2020)', 'Designer, Developer'],
         ['Early Drafts of geometrical shapes'],
         [],
         [],

@@ -24,9 +24,9 @@ export const Festival1 = {
     detail: 'ReactJS',
     link: ['https://snufestival.com'],
     TTT: [
-        ['Online Festival', 'Due to the Covid-19 lockdown, the official Seoul National University festival was organized online. I had participated as a lead developer, programming a ReactJS web.'],
-        ['Night', 'Web space is independent from the real world time frame. We tried to design a website which is always a night, the best time of the day for an any festival.'],
-        ['Campus', 'We wanted students to recall their memory at the campus, a place where they miss. Our Main Screen of the Festival Web displays specific spots of the campus.'],
+        ['Online Festival', 'Due to the Covid-19 lockdown, the official Seoul National University festival was organized online. Participated as a lead developer, I had programmed this ReactJS website, which had extensively focused on animated components to deliver an unique Festival UX.'],
+        ['Night', 'Web space is independent from the real world time frame. We tried to design a website which is always at night, the best time of the day for any festival.'],
+        ['Campus', 'We wanted students to recall their memories of the campus, a place where they miss. Our Main Screen of the Festival Web displays specific spots of the campus.'],
     ],
     Images: [
         Festival1Img,
@@ -38,16 +38,16 @@ export const Festival1 = {
 
 
 export const Festival2 = {
-    name: 'Conceptual Lights',
-    type: '10 different interpretation of lights',
+    name: 'Conceptual Lightings',
+    type: '10 different interpretation of lightings',
     detail: 'ReactJS',
     link: ['https://snufestival.com/activity/group'],
     TTT: [
-        ['The Mission', 'Users of the website are asked to found 10 different lights, which are spread all around the festival website.'],
-        ['A Background', 'First picture shows a moment when a normal background is transisted into a dark background with full of lights, creating a wonderful illumination.'],
-        ['A Text', 'A light can be also represented as a text itself.'],
-        ['A Cyclical Behaviour', 'When each light component animates independently with a different cyclicality, it creates an unique random swarm behaviour.'],
-        ['Also Sprach Zarathustra', 'Some of the animations are directly influenced from the Nietzsche and Johan Strauss, just as this portfolio website.']
+        ['The Mission', 'Users of the website are asked to find 10 different lightings, which are spread all around the festival website.'],
+        ['A Background', 'Normal background is suddenly translated into a dark background full of lights, creating a gorgeous illumination.'],
+        ['A Text', `Text 'Light' itself represents part of a progress in search of lightings.`],
+        ['Cyclical Behaviour', 'Influenced from the <Laboratory Occupied>, some of the lightings are expressed as a combination of independent light elements. These collective cycle movements creates an unique swarm behaviour.'],
+        ['Also Sprach Zarathustra', 'Directly influenced from Nietzsche and Johan Strauss, just like this portfolio website.']
     ],
     Images: [
         Festival2Img,
@@ -64,9 +64,9 @@ export const Festival3 = {
     detail: 'ReactJS',
     link: ['https://snufestival.com/clothing'],
     TTT: [
-        ['A Second Identity', 'One of the most unique experience that character dressing can offer is that it allows users to create their second identity, apart from their real world space. We thought that the festival also shares a common experience, as a moment of an escape from the ordinary life.'],
-        ['1,380 Billion Options', '33 Accessories, 35 Bottomwears, 10 Eyebrows, 31 Eyes, 43 Hairs, 17 Lips, 8 Noses, 15 Shoes, 44 Topwears.'],
-        ['Character throughout the festival', 'After dressing the character, it will appear throughout the festival website, creating a unique metaverse inside the virtual festival.'],
+        ['The Second Identity', 'One of the most unique experience that character dressing can offer is on allowing users to create their second identity. As a festival, this offer the users a moment of an escape from an ordinary life.'],
+        ['1.38 Trillion Options', '33 Accessories, 35 Bottomwears, 10 Eyebrows, 31 Eyes, 43 Hairs, 17 Lips, 8 Noses, 15 Shoes, 44 Topwears.'],
+        ['Character throughout the festival', 'Dressed character will appear throughout the festival website, creating a metaverse for the festival.'],
     ],
     Images: [
         Festival3Img,
@@ -76,13 +76,14 @@ export const Festival3 = {
 
 export const Festival4 = {
     name: `Pseudo-MBTI`,
-    type: 'Criticism on the personality labeling',
+    type: 'Anti-labeling',
     detail: 'ReactJS',
     link: ['https://snufestival.com/jabti'],
     TTT: [
-        ['', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['Criticism on Labeling', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['5k Users', 'This campaign had soley accumulated over 5k users.'],
+        ['MBTI and labeling', 'Having worked shortly for the personality marketing startup, I had acknowledged the limitation of personality labeling tests, notably the MBTI test which were phemonologically popular in Korea.'],
+        ['Psychology behind the Psychology Tests', `Modern Koreans lack self-confidence in clarifying who themselves are. Thus, they rely on the personality labelings. However, if they can't clarify themselves for who they are, how will they be able to go through the course of creating by evaluating something else? In this sense, these personality tests reveals the fragile personalities of modern citizens.`],
+        ['Korean Pun', 'This Pseudo-MBTI uses a funny Korean Syllabus to create a Pun, and combines four syllabus pun as a result, instead of the MBTI labeling in four English letters. This combination creates a hilarious sound, even more emphasizing ridisculousness of the MBTI labeling.'],
+        ['5k Users', 'This campaign had soley accumulated over 5k users, proving the validity of such a criticism on the labeling tests.'],
     ],
     Images: [
         Festival4Img,
@@ -93,13 +94,13 @@ export const Festival4 = {
 
 export const Festival5 = {
     name: `I'm Feeling Lucky!`,
-    type: 'Tilting famous UIs',
+    type: 'Tilting famous interfaces',
     detail: 'ReactJS',
     link: ['https://snufestival.com/fortune'],
     TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
+        ['Fortune Cookie', 'This page is part of the Fortune Cookie event, where users check their lucky number inside the cookie.'],
+        [`Search Box`, `Google's unique search box, and it's notoriously famous words 'I'm Feeling Lucky!' guides the users to a trembling 2-seconds journey of checking their lucky numbers.`],
+        ['Modern Platforms', 'This event had simply verified the social awareness of modern platforms. I would like to develop further works on tilting the pre-established digital platforms, as an extension of this simple experiment.']
     ],
     Images: [
         Festival5Img,
@@ -114,9 +115,8 @@ export const Festival6 = {
     detail: 'ReactJS',
     link: ['https://snufestival.com/activity/mini/handwriting'],
     TTT: [
-        ['The Problem', 'At offline supermarkets, merchandisers go over repetitive task of delivering promotional speeches to the customers.'],
-        ['The Purpose', 'Create iOS Application where supermarket merchandisers can easily create a natural and dynamic speeches instantly.'],
-        ['Target User', 'Supermarket Merchandisers who should minimize the daily inventory of variety range of fresh products.']
+        ['Tilting the metaphysics',  `We tried to investigate the various possible usecases of public frontend APIs, apart from its assigned usecases. This is an another exmample of liberating an object from its pre-defined metaphysical usage.`],
+        ['Speech Synthesizer',  `The website had extensively used Speech Synthesizer for a live user experience, creating silly voices with pitch and speed adjusted.`],
     ],
     Images: [
         Festival6Img,
