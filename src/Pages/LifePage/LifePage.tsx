@@ -18,16 +18,14 @@ function LifePage() {
   const history = useHistory();
   type Params = {uni: any}
   const { uni } = useParams<Params>();
-  
-  const selectedCity = UNI_CONVERTER.filter(entity => entity.university === uni)[0] ? UNI_CONVERTER.filter(entity => entity.university === uni)[0].city : 'London';
+
+  console.log(uni);
+
+  const [city, setCity] = useState(UNI_CONVERTER.filter(entity => entity.university === uni)[0] ? UNI_CONVERTER.filter(entity => entity.university === uni)[0].city : null);
 
   const [volume, setVolume] = useState(1);
   
   const audio: HTMLAudioElement = new Audio(Zarathustra);
-  
-  useEffect(()=>{
-    
-  }, [])
 
   const [text, setText] = useState(0);
   const [color, setColor] = useState(0);
@@ -47,10 +45,11 @@ function LifePage() {
   }
 
 
-  const text_set = [
-    `good ${timeConverter(hour)} ${selectedCity}`,
-    "please turn on the music",
-  ]
+  const [texts, setTexts] = useState(city ? 
+      [`good ${timeConverter(hour)} ${city}`,
+      "please turn on the music",] : 
+      ['Enter']
+    )
 
 
 
@@ -59,6 +58,14 @@ function LifePage() {
   ]
 
   const handleClick = () => {
+    if(city){
+      goToMonolith();
+    } else{
+      goToMain();
+    }
+  }
+
+  const goToMonolith = () => {
     if(text==0){
       setText(1)
       setColor(1)
@@ -80,10 +87,15 @@ function LifePage() {
         console.log(err);
       })
     }
+  };
+
+  const goToMain = () => {
+    history.push('/main');
   }
 
+
   useEffect(()=>{
-    const utterance = new SpeechSynthesisUtterance(text_set[text])
+    const utterance = new SpeechSynthesisUtterance(texts[text])
     utterance.lang = 'en-US';
     speechSynthesis.speak(utterance);
   }, [text])
@@ -93,7 +105,7 @@ function LifePage() {
     <div className="App">
       <div className={`terminal ${text>0 && 'termi-animation'}`} style={{background: `${color_set[color]}`, cursor: `${color===0 ? "pointer" : "wait"}`}}>
         <div className={`text ${text>0 && 'animation'}`} onClick={handleClick}>
-          {text_set[text]}
+          {texts[text]}
         </div>
       </div>
     </div>

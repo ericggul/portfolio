@@ -31,11 +31,12 @@
 }
 
 
-.current{
+.current-back{
     position: fixed;
-    top: 5vh;
+    top: 3vh;
     right: 3vw;
-    font-size: 1rem;
+
+    font-size: 3rem;
     color: white;
     cursor: pointer;
 }

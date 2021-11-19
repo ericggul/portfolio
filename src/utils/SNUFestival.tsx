@@ -24,6 +24,7 @@ export const Festival1 = {
     detail: 'ReactJS',
     link: ['https://snufestival.com'],
     TTT: [
+        ['Technical Stack: ReactJS + Firebase', 'This project used ReactJS for the frontend and Firebase Database/Hosting for the backend and server. This project reveals my latest web programming skills and techniques I had acquired from the past year of study.'],
         ['Online Festival', 'Due to the Covid-19 lockdown, the official Seoul National University festival was organized online. Participated as a lead developer, I had programmed this ReactJS website, which had extensively focused on animated components to deliver an unique Festival UX.'],
         ['Night', 'Web space is independent from the real world time frame. We tried to design a website which is always at night, the best time of the day for any festival.'],
         ['Campus', 'We wanted students to recall their memories of the campus, a place where they miss. Our Main Screen of the Festival Web displays specific spots of the campus.'],
@@ -66,7 +67,7 @@ export const Festival3 = {
     TTT: [
         ['The Second Identity', 'One of the most unique experience that character dressing can offer is on allowing users to create their second identity. As a festival, this offer the users a moment of an escape from an ordinary life.'],
         ['1.38 Trillion Options', '33 Accessories, 35 Bottomwears, 10 Eyebrows, 31 Eyes, 43 Hairs, 17 Lips, 8 Noses, 15 Shoes, 44 Topwears.'],
-        ['Character throughout the festival', 'Dressed character will appear throughout the festival website, creating a metaverse for the festival.'],
+        ['Character throughout the festival: Metaverse', 'Dressed character will appear throughout the festival website, creating a metaverse for the festival.'],
     ],
     Images: [
         Festival3Img,
@@ -100,7 +101,7 @@ export const Festival5 = {
     TTT: [
         ['Fortune Cookie', 'This page is part of the Fortune Cookie event, where users check their lucky number inside the cookie.'],
         [`Search Box`, `Google's unique search box, and it's notoriously famous words 'I'm Feeling Lucky!' guides the users to a trembling 2-seconds journey of checking their lucky numbers.`],
-        ['Modern Platforms', 'This event had simply verified the social awareness of modern platforms. I would like to develop further works on tilting the pre-established digital platforms, as an extension of this simple experiment.']
+        ['Modern Platforms', 'This event is verifying the significant social awareness of modern web platforms. I would like to develop further works on tilting the pre-established digital platforms, as an extension of this simple experiment.']
     ],
     Images: [
         Festival5Img,

@@ -42,8 +42,8 @@ function VisualDetailPage({indicator, projectIdx, handlePopupClose}: Props) {
   )
 
   const CurrentPage = () => (
-    <div className="current">
-      {Projects[indicator][currentProject]?.description.name}
+    <div className="current-back" onClick={handlePopupClose}>
+      &#215;
     </div>
   )
 

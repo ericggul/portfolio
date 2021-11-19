@@ -69,9 +69,7 @@ function AudioVisualization( props : any) {
   useEffect(()=>{
     wave = new App(audio);
     wave.audioCtx.resume();
-    // if(!props.audioPlaying){
-        wave.audioElement.play();
-    // }
+    wave.audioElement.play();
   }, [props]);
 
   return(
@@ -197,7 +195,7 @@ class App {
         //   const yCenter = Math.floor(shuffledNumber/this.columnNums) * this.rowHeight + this.rowHeight/2;
         const xCenter = this.randomPosArray[i].x;
         const yCenter = this.randomPosArray[i].y;
-          const size = value /255 * this.cellSize * 0.7 ;
+          const size = value /255 * this.cellSize * 0.6 ;
 
           this.ctx.beginPath();
 
