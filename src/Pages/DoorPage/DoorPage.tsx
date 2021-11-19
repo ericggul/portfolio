@@ -35,9 +35,11 @@ export default function DoorPage() {
     const script_array = [
         "",
         "Monolith, a perfect geometrical structure",
-        "Represents the human evolution in the Stanley Kubrick's film",
+        "Represents the human evolution in Stanley Kubrick's film",
         "This Nietzsche-tic representation of evolution should be well replicated",
-        "When highlighting the functionality of semiotics in the modern civilization.",
+        "When presenting where our civilization should be heading for next decades.",
+        "Influenced from Nietzsche, Dostoevsky and Warhol,",
+        "Imagining the future of humanity is the point where I'd like to focus during the graduate study.",
         `${selectedPhase} Candidate, Jeongyoon Choi`,
         "Push the right door to enter"
     ];
@@ -45,21 +47,27 @@ export default function DoorPage() {
     useEffect(()=> {
         setTimeout(()=> {
             setScript(1)
-        }, 30000)
+        }, 25000)
         setTimeout(()=> {
             setScript(2)
-        }, 40000)
+        }, 33000)
         setTimeout(()=> {
             setScript(3)
-        }, 47000)
+        }, 40000)
         setTimeout(()=> {
             setScript(4)
-        }, 54000)
+        }, 47000)
         setTimeout(()=> {
             setScript(5)
-        }, 63000)
+        }, 53000)
         setTimeout(()=> {
             setScript(6)
+        }, 58000)
+        setTimeout(()=> {
+            setScript(7)
+        }, 65000)
+        setTimeout(()=> {
+            setScript(8)
         }, 73000)
     }, [])
 
