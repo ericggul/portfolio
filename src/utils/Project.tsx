@@ -124,7 +124,7 @@ export const Project2 = {
     Captions: [
         ['Individual Project(May 2020 - Jun 2020)', 'Designer, Processing Developer'],
         ['Three steps of redesigning the traditional stock graph'],
-        ['X-Axis: Dollar-Axis', 'Y-Axis: Longevity of certain price', 'Color: Time(Red: Present Time)'],
+        ['X-Axis: Dollar-Axis', 'Y-Axis: Longevity of certain price', 'Colour: Time(Red: Present Time)'],
         ['From Top-Left:', 'Facebook, Amazon, Apple', 'Netflix, Microsoft, Google'],
     ],
     Paragraphs: [
@@ -140,7 +140,7 @@ export const Project2 = {
                 ['Stock Price Distribution', `This newly designed graph can be interpreted as a stock price distribution, showing the distribution of the Amazon's stock price for the past 5 years.`],
                 ['X-Axis shows the price', 'In this graph, x-axis shows that the price had increased about five times fold from the initial price 5 years ago.'],
                 ['Y-Axis shows the Period of Time', 'There are three main y-axis peaks in this graph: Approximately on $700, $1500 and $3000, insisting the price had stayed long on that range.'],
-                ['Color shows the Point of Time', 'Darker the red, closer to the present time. Strong correlation between the color mapping and the dollar axis shows that the price had consistently increased throughout the past years.']
+                ['Colour shows the Point of Time', 'Darker the red, closer to the present time. Strong correlation between the colour mapping and the dollar axis shows that the price had consistently increased throughout the past years.']
             ]
         },
         {
@@ -194,14 +194,14 @@ export const Project3 = {
         },
         {
             'Randomness': [
-                ['Unintended', 'The location, the color, the angle, the opacity, and all the other css forms are decided by the random function. This creates an unintended image.'],
+                ['Unintended', 'The location, the colour, the angle, the opacity, and all the other css forms are decided by the random function. This creates an unintended image.'],
                 ['Intended', 'The structure of the code, the components, the range of the randomness is what the author intends for what the image should look like.'],
                 ['Mutability', 'Every time the viewer refreshes the page, they should face the different image, as no two computational results can be statistically the same.'],
             ]
         },
         {
             'Screen': [
-                ['An Unique Medium', 'Just like as canvas has its unique characteristic of an incompatible flatness, web screen shares such flatness, and thus, should not be confused with the other forms of media and technology art. HTML art should fully understand its flatness, and the infinite images that can be created on top of its flatness.'],
+                ['A Unique Medium', 'Just like as canvas has its unique characteristic of an incompatible flatness, web screen shares such flatness, and thus, should not be confused with the other forms of media and technology art. HTML art should fully understand its flatness, and the infinite images that can be created on top of its flatness.'],
                 ['An Oasis for the Internet World', 'Hyper-connected internet world is full with moving and transferring images and signs. Contemplative artworks can offer a place to rest, just like how the museums and artspaces function in the real world cities.'],
                 ['Responsiveness', 'Many of the artworks had considered the responsive feature of webpages.'],
             ]

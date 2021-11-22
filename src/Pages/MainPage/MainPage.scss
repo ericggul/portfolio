@@ -4,6 +4,14 @@
     padding: 0;
 }
 
+body::-webkit-scrollbar{
+    display: none;
+}
+
+#root::-webkit-scrollbar{
+    display: none;
+}
+
 .main{
     /* background: #EFEFEF; */
     background: transparent;
@@ -49,11 +57,15 @@
     scrollbar-width: none;
 }
 
-.subject-list::--webkit-scrollbar{
+.main::-webkit-scrollbar{
     display: none;
 }
 
-.subject-row::--webkit-scrollbar{
+.subject-list::-webkit-scrollbar{
+    display: none;
+}
+
+.subject-row::-webkit-scrollbar{
     display: none;
 }
 

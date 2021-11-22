@@ -178,7 +178,7 @@ export const Trilogy3 = {
     Captions: [
         ['Individual Project(May 2020 - Jun 2020)', 'Designer, Processing Developer'],
         ['Three steps of redesigning the traditional stock graph'],
-        ['X-Axis: Dollar-Axis', 'Y-Axis: Longevity of certain price', 'Color: Time(Red: Present Time)'],
+        ['X-Axis: Dollar-Axis', 'Y-Axis: Longevity of certain price', 'Colour: Time(Red: Present Time)'],
         ['From Top-Left:', 'Facebook, Amazon, Apple', 'Netflix, Microsoft, Google'],
     ],
     Paragraphs: [
@@ -194,7 +194,7 @@ export const Trilogy3 = {
                 ['Stock Price Distribution', `This newly designed graph can be interpreted as a stock price distribution, showing the distribution of the Amazon's stock price for the past 5 years.`],
                 ['X-Axis shows the price', 'In this graph, x-axis shows that the price had increased about five times fold from the initial price 5 years ago.'],
                 ['Y-Axis shows the Period of Time', 'There are three main y-axis peaks in this graph: Approximately on $700, $1500 and $3000, insisting the price had stayed long on that range.'],
-                ['Color shows the Point of Time', 'Darker the red, closer to the present time. Strong correlation between the color mapping and the dollar axis shows that the price had consistently increased throughout the past years.']
+                ['Colour shows the Point of Time', 'Darker the red, closer to the present time. Strong correlation between the color mapping and the dollar axis shows that the price had consistently increased throughout the past years.']
             ]
         },
         {

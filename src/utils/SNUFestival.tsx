@@ -24,10 +24,10 @@ export const Festival1 = {
     detail: 'ReactJS',
     link: ['https://snufestival.com'],
     TTT: [
-        ['Technical Stack: ReactJS + Firebase', 'This project used ReactJS for the frontend and Firebase Database/Hosting for the backend and server. This project reveals my latest web programming skills and techniques I had acquired from the past year of study.'],
-        ['Online Festival', 'Due to the Covid-19 lockdown, the official Seoul National University festival was organized online. Participated as a lead developer, I had programmed this ReactJS website, which had extensively focused on animated components to deliver an unique Festival UX.'],
+        ['Technical Stack: ReactJS + Firebase', 'This project used ReactJS for the frontend and Firebase Database/Hosting for the backend and server. Participated as a lead developer, this project reveals my latest web programming skills and techniques I had acquired from the past year of study.'],
+        ['Online Festival', 'Due to the Covid-19 lockdown, the official Seoul National University festival was organized online. Thus this website had extensively focused on animated components to deliver a unique Festival UX.'],
         ['Night', 'Web space is independent from the real world time frame. We tried to design a website which is always at night, the best time of the day for any festival.'],
-        ['Campus', 'We wanted students to recall their memories of the campus, a place where they miss. Our Main Screen of the Festival Web displays specific spots of the campus.'],
+        ['Campus', 'We wanted students to recall their memories of the campus, a place where they miss during the time of lockdowns. Our Main Screen of the Festival Web displays specific spots of the campus, relating them as one of the menus.'],
     ],
     Images: [
         Festival1Img,
@@ -44,10 +44,10 @@ export const Festival2 = {
     detail: 'ReactJS',
     link: ['https://snufestival.com/activity/group'],
     TTT: [
-        ['The Mission', 'Users of the website are asked to find 10 different lightings, which are spread all around the festival website.'],
+        [`Users' Mission`, 'Users of the website are asked to find 10 different lightings, which are spread all around the festival website.'],
         ['A Background', 'Normal background is suddenly translated into a dark background full of lights, creating a gorgeous illumination.'],
         ['A Text', `Text 'Light' itself represents part of a progress in search of lightings.`],
-        ['Cyclical Behaviour', 'Influenced from the <Laboratory Occupied>, some of the lightings are expressed as a combination of independent light elements. These collective cycle movements creates an unique swarm behaviour.'],
+        ['Cyclical Behaviour', 'Influenced from the <Laboratory Occupied>, some of the lightings are expressed as a combination of independent light elements. These collective cycle movements creates a unique swarm behaviour.'],
         ['Also Sprach Zarathustra', 'Directly influenced from Nietzsche and Johan Strauss, just like this portfolio website.']
     ],
     Images: [
@@ -65,9 +65,9 @@ export const Festival3 = {
     detail: 'ReactJS',
     link: ['https://snufestival.com/clothing'],
     TTT: [
-        ['The Second Identity', 'One of the most unique experience that character dressing can offer is on allowing users to create their second identity. As a festival, this offer the users a moment of an escape from an ordinary life.'],
-        ['1.38 Trillion Options', '33 Accessories, 35 Bottomwears, 10 Eyebrows, 31 Eyes, 43 Hairs, 17 Lips, 8 Noses, 15 Shoes, 44 Topwears.'],
-        ['Character throughout the festival: Metaverse', 'Dressed character will appear throughout the festival website, creating a metaverse for the festival.'],
+        ['The Second Identity', 'One of the most unique experience that character dressing can offer is on allowing users to create their second identity. As a festival, creating second and ideal identity offer users a moment of a relaxation from an ordinary life.'],
+        ['1.38 Trillion Options', 'Users can dress their character within the following 1.38 Trillion Combinations: 33 Accessories, 35 Bottomwears, 10 Eyebrows, 31 Eyes, 43 Hairs, 17 Lips, 8 Noses, 15 Shoes, 44 Topwears.'],
+        ['Character throughout the festival: Metaverse', 'Once the character is fully dressed, it will appear throughout the festival website, creating a metaverse experience inside the festival website.'],
     ],
     Images: [
         Festival3Img,

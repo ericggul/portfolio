@@ -14,7 +14,7 @@
     -ms-overflow-style: none; 
 
     scrollbar-width: none;
-    & ::--webkit-scrollbar{
+    & ::-webkit-scrollbar{
         display: none;
     }
 
@@ -96,7 +96,7 @@
             margin-right: 6vw;
 
             scrollbar-width: none;
-            --webkit-scrollbar: none;
+            -webkit-scrollbar: none;
             -ms-overflow-style: none; 
 
             .title{
@@ -129,6 +129,11 @@
 
             
         }
+
+        .description::-webkit-scrollbar{
+            display: none;
+        }
+        
     }
 }
 

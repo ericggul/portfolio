@@ -195,7 +195,7 @@ class App {
         //   const yCenter = Math.floor(shuffledNumber/this.columnNums) * this.rowHeight + this.rowHeight/2;
         const xCenter = this.randomPosArray[i].x;
         const yCenter = this.randomPosArray[i].y;
-          const size = value /255 * this.cellSize * 0.6 ;
+          const size = value /255 * this.cellSize * 0.5 ;
 
           this.ctx.beginPath();
 

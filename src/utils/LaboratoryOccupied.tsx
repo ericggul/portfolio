@@ -44,11 +44,11 @@ export const Lab1 = {
     detail: 'ReactJS',
     link: ['http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/whitemonumentstest'],
     TTT: [
-        ['Border Radius', 'Situated somewhere between the circle and the square, an elementary geometric element used in this sculpture is an adjusted square with CSS border-radius parameters.'],
-        ['Sine and Cosine', 'The placement of each circle is based on the calculated result of sine and cosine function. Parameters of these functions are adjusted, consequently affecting the magnitude and cyclicality.'],
-        ['Continuous Evolvement', 'This series of works shows the continuous evolution in terms of complexity and aesthetic expression.'],
-        ['3-Dimensional Illusion', 'The first work displayed on the left side shows how these sets of adjusted squares can create a three-dimensional illusion, a vividly interactive sculpture.'],
-        ['Further Research', 'Further research can be developed in two directions: First, on exploring through different mathematical functions such as log, ReLU, Gamma, etc., to position each element. Second, on exploring the 3-dimensional illusions.'],
+        ['Border Radius', `Situated somewhere between the circle and the square, an elementary geometric element used in this sculpture is an adjusted square, with it's shape is adjusted by the CSS border-radius parameters.`],
+        ['Sine and Cosine', 'The placement of each circle is based on the calculated result of the sine and cosine functions. Parameters of these sines and cosines are adjusted, consequently affecting the magnitude and cyclicality of the final output.'],
+        ['Continuous Evolvement', 'This series of works shows the continuous evolution of my artistic attempts in terms of complexity and aesthetic expression.'],
+        ['3-Dimensional Illusion', 'The first work displayed on the left side shows how these sets of two-dimensional adjusted squares can create a three-dimensional illusion, resulting in a vividly interactive sculpture.'],
+        ['Further Research', 'Further research can be developed in two directions: First, on exploring through different mathematical functions such as log, ReLU, Gamma, etc., in a replacement of sine and cosine functions. Second, on further exploring the 3-dimensional illusions, or even sketching inside the three-dimensional domain.'],
     ],
     Images: [
         Lab1Img,
@@ -72,9 +72,9 @@ export const Lab2 = {
         'Early Stages',
     ],
     TTT: [
-        ['Mouse Position', 'Thanks to Javascript Eventlistener, we can create unlimited aesthetic expressions, apart from the simulative cause-and-effect relationship of clicking buttons or scrolling. This project is an example of how mouse position can create such an aesthetic impression.'],
-        ['Verfremdungseffekt', `This project is also related to the theme of the 'distancing effect', leading users to reflect on the habits of mouse positioning and scrolling, activating their consciousness out of such an unconscious behaviour.`],
-        ['Further Research', `Each of the Javascript Eventlistener can record a user's activity as a plane-time coordinate (x,y,t). These three variables can interconnect with each other to create some expressions that we hadn't explored yet.`]
+        ['Mouse Position', 'Thanks to the Javascript Eventlistener, we can create unlimited number of interactive shapes. Apart from the simulative cause-and-effect relationship of clicking buttons or scrolling, this project shows an example how mouse position can create a new type of impression.'],
+        ['Verfremdungseffekt', `This project is also related to the theme of the 'distancing effect', leading users to reflect their daily habits of positioning the mouse over the web plane, activating their consciousness out of such an unconscious behaviour.`],
+        ['Further Research', `Each of the Javascript Eventlistener can record and translate user's activity into a plane-time coordinate (x,y,t). These spatial-temporal variables can interconnect with each other to create some expressions that we hadn't explored yet.`]
     ],
     Images: [
         Lab2Img,
@@ -92,11 +92,11 @@ export const Lab3 = {
         'Early Stages',
     ],
     TTT: [
-        ['Lines and Texture', 'A set of thousands of lines in a random position, rotation and color creates a unique texture out of the two dimensional plane.'],
-        ['Two-layers Randomness', 'The position and rotation of each line is not determined fully randomly, but rather, subject to one of the parent layers, which assigns the degree of randomness for each child component. More detail on the foundation of this concept can be found from the Square Series. '],
-        ['Range of Randomness', 'The color is also restricted, as a random value from the designated color range, either a single range or a set of multiple ranges.'],
-        ['Efficient Manufacturing', `It only takes 20 seconds to create a new piece. This enables us to efficiently 'manufacture' numbers of pieces in a short time, in a faster speed than the Warhol's silk paintings.`],
-        ['Further Research',`I would like to fully automate the manufacturing process, letting an algorithm design the layers and range of randomness on its own. If this attempt is possible, now we will be able to successfully analogue this work with Warhol's Campbell Soups: My work represents the production in the Computational Era, while Campbell Soups represents the production in the Post-War Industrial Era.`],
+        ['Lines and Texture', 'A set of thousands of lines in a random position, rotation and colour creates a unique texture out of the two dimensional plane.'],
+        ['Two-layers Structure of Randomness', 'The position and rotation of each line is not determined fully randomly. Rather, each of their randomness is subject to one of the parent layers, as each parent layer assigns the degree of randomness for each child component. More detail on the foundation of this concept can be found from the explanation for the Square Series. '],
+        ['Range of Randomness', `The range of colour is also restricted. Each of the line's colours is a random value derived from the designated colour ranges. These ranges can be represented as either a single range or a set of multiple ranges.`],
+        ['Efficient Generation', `It only takes 20 seconds to create a new piece, as it can be created by only adjusting the two-layers structure and the degree of randomness. This enables us to efficiently 'manufacture' numbers of pieces in a short time, in a faster speed than Warhol's silk paintings.`],
+        ['Further Research',`I would like to fully automate the generating process, letting algorithms to design the layers and the range of randomness on its own. If this is possible, now we will be able to successfully analogue this work with the Warhol's Campbell's Soup Cans: My work represents the production in the Computational Era, while Campbell's Soup Cans represents the production in the Post-War Industrial Era.`],
     ],
     Images: [
         Lab31,
@@ -122,8 +122,8 @@ export const Lab4 = {
         'Early Stages',
     ],
     TTT: [
-        ['Tilting Grids', 'All of these series are based on tilting the pre-established concepts of grids, one of the most fundamental visual elements which is widely applied in modern design and architecture.'],
-        ['Aesthetical Grids', 'Within the boundary of physical gridness, these sets of projects aim to go beyond the geometric shape and create a perceptual impression, which might not be considered as a grid. This results in a practical expression of aesthetics, which helps us to create an artistic impression within the realistic consideration of efficiency.'],
+        ['Tilting Grids', 'All of these series are based on tilting the pre-established concepts of grids, as grid layouts are considered as one of the most fundamental visual elements with their various applications in modern design and architecture.'],
+        ['Aesthetical Grids', 'Within the boundary of physical gridness, these sets of projects aim to go beyond the geometric shape and create a perceptual impression, powerful enough to not be considered as a grid anymore. This results in a practical and efficient generation of aesthetical grids, which helps us to create an artistic impression within the realistic constraints in terms of cost of generation.'],
         ['Further Research', 'Each of the element developed in this project can have various applications in modern design and architecture, which heavily relies on grid layout.'],
     ],
     Images: [
@@ -141,9 +141,9 @@ export const Lab5 = {
     detail: 'ReactJS',
     link: ['http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/241'],
     TTT: [
-        ['Prime Numbers', 'This project starts from the unique characteristic of prime numbers, that any two prime numbers only share 1 as their common dividers.'],
-        ['Cyclicality', 'Each of the elements is assigned to 3-5 cycle movements, where the cycle time of each movement is a prime number. This creates a vivid impression, far more dynamic than an uniform cycle time can create.'],
-        ['Swarm Behaivour', 'As each movement shares a cycle time of prime number, it creates a swarm behaviour which moves in a certain direction.'],
+        ['Prime Numbers', 'This project starts from the unique characteristic of the prime numbers. Any of the two prime numbers only share 1 as their common dividers.'],
+        ['Cyclicality', `Each of the elements' movement is constrained to 3-5 cycle movements, where the cycle time of each movement is a prime number. As least common multiplier of any two prime number is always their multiplier itself, this extensive usage of prime numbers creates a vivid impression, far more dynamic than an uniform cycle time can create.`],
+        ['Swarm Behaivour', 'As each movement shares a cycle time of prime number, it creates a swarm behaviour which is controlled yet dynamic.'],
         ['Further Research', 'Further research can be developed in two directions: First, on further developing the unique characteristic of numbers mathematically, Second, on applying this characteristic of prime numbers in the other context.'],
     ],
     Images: [
@@ -184,7 +184,7 @@ export const Lab7 = {
     TTT: [
         ['Most elementric unit', 'Square is the most elementric two-dimensional shape in the Computational and the Euclidian domain. It was not a coincidence that the project Laboratory Occupied had started from experimenting through this elementric shape, a square.'],
         ['Position, Rotation', `This series focuses on randomising the position and rotation of squares. However, it is not randomised in the sense that each individual element's position and rotation can enjoy a full degree of randomness.`],
-        ['Two-layers Randomness',  `Every square's randomness is bounded by its parent layer, which regulates the position and rotation of each element bounded by a certain range. Each of the paintings are made of 5-100 parent layers, and repetitively each parent layer consists of 5-100 child elements. This two-layers structure can generate more organised yet dynamic visual elements.`],
+        ['Two-layers Structure of Randomness',  `Every square's randomness is bounded by its parent layer, which regulates the position and rotation of each element bounded by a certain range. Each of the paintings are made of 5-100 parent layers, and repetitively each parent layer consists of 5-100 child elements. This two-layers structure can generate more organised yet dynamic visual elements.`],
         ['Further Research',  `It will be interesting to work on multiple-layer randomness, in an analogy with the CNN architecture. However, the philosophical standpoint of this multiple-layer and randomness and the CNN architecture will be strictly separated.`],
     ],
     Images: [
