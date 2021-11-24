@@ -75,6 +75,22 @@ function MainContainer() {
     setDetailPopupOpened(false);
   }, []);
 
+  const handleIdChange = useCallback((dir)=>{
+    setDetailPopupStatus(id => {
+      if(id+dir<21){
+        return 24
+      } else if (id<30 && id+dir>24){
+        return 21
+      } else if (id>30 && id+dir<31){
+        return 33
+      } else if (id+dir>33){
+        return 31
+      } else{
+        return id + dir
+      }
+    });
+  }, [detailPopupStatus]);
+
   return (
     <>
       <div className="main">
@@ -102,6 +118,7 @@ function MainContainer() {
         <DetailPage 
           id={detailPopupStatus}
           handlePopupClose={handlePopupClose}
+          handleIdChange={handleIdChange}
         />}
     </>
   );

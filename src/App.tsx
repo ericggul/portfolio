@@ -45,7 +45,7 @@ function App() {
               exact path="/visual-detail/:indicator" 
               render={()=> <VisualDetailPage />}
             /> */}
-            <Redirect exact to="/intro/UAL"/>
+            <Redirect exact to="/intro/default"/>
           </Switch>
         </AnimatePresence>
       )} />

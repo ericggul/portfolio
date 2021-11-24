@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import './AudioVisualization.scss';
@@ -62,15 +62,28 @@ const PI2 = Math.PI * 2;
 function AudioVisualization( props : any) {
   const audio: HTMLAudioElement = new Audio(BlueDanubeAudio);
   var wave: any;
-
-  console.log(props.audioPlaying);
-
+  const [audioPlayed, setAudioPlayed] = useState(false);
 
   useEffect(()=>{
     wave = new App(audio);
-    wave.audioCtx.resume();
-    wave.audioElement.play();
-  }, [props]);
+  }, []);
+
+  useEffect(()=>{
+    document.addEventListener('click', playAudio);
+    return () => document.removeEventListener('click', playAudio);
+    // wave.audioCtx.resume();
+    // console.log('play');
+    // wave.audioElement.play();
+  }, [props, audioPlayed]);
+
+  const playAudio = useCallback(() => {
+    if(!audioPlayed){
+        wave.audioCtx.resume();
+        console.log('play');
+        wave.audioElement.play();
+        setAudioPlayed(true);
+    }
+  }, [audioPlayed]);
 
   return(
     <>
@@ -108,14 +121,11 @@ class App {
   randomColorArray: any;
 
 
-  time: any;
-  
   constructor(audioElement: any){
       this.canvas = document.createElement('canvas');
       this.ctx = this.canvas.getContext('2d');
       this.wrapper = document.getElementById('CanvasWrapper')
       this.wrapper.appendChild(this.canvas);
-      this.time = 0;
 
       this.audioElement = audioElement;
       var AudioContext = window.AudioContext || window.webkitAudioContext;
@@ -152,25 +162,25 @@ class App {
   }
 
   sizeCalculator(){
-      if(this.space > 3 ){
-          this.columnNums = 64;
-          this.rowNums = 16;
-      } else if (this.space > 1.4 ){
-          this.columnNums = 40;
-          this.rowNums = 25;
-      } else if (this.space > 0.75){
-          this.columnNums = 32;
-          this.rowNums = 32;
-      } else if (this.space > 0.34){
-          this.columnNums = 25;
-          this.rowNums = 40;
-      } else{
-          this.columnNums = 16;
-          this.rowNums = 64;
-      }
-      this.columnWidth = this.stageWidth / this.columnNums;
-      this.rowHeight = this.stageHeight / this.rowNums;
-      this.cellSize = Math.min(this.columnWidth, this.rowHeight);
+    //   if(this.space > 3 ){
+    //       this.columnNums = 64;
+    //       this.rowNums = 16;
+    //   } else if (this.space > 1.4 ){
+    //       this.columnNums = 40;
+    //       this.rowNums = 25;
+    //   } else if (this.space > 0.75){
+    //       this.columnNums = 32;
+    //       this.rowNums = 32;
+    //   } else if (this.space > 0.34){
+    //       this.columnNums = 25;
+    //       this.rowNums = 40;
+    //   } else{
+    //       this.columnNums = 16;
+    //       this.rowNums = 64;
+    //   }
+    //   this.columnWidth = this.stageWidth / this.columnNums;
+    //   this.rowHeight = this.stageHeight / this.rowNums;
+      this.cellSize = this.stageWidth < 700 ? 6 : 10;
   }
 
   init(){
@@ -178,7 +188,6 @@ class App {
   }
 
   loopingFunction(){
-      this.time ++;
       requestAnimationFrame(this.loopingFunction.bind(this))
       this.analyser.getByteFrequencyData(this.data);
       this.draw(this.data);
@@ -195,7 +204,7 @@ class App {
         //   const yCenter = Math.floor(shuffledNumber/this.columnNums) * this.rowHeight + this.rowHeight/2;
         const xCenter = this.randomPosArray[i].x;
         const yCenter = this.randomPosArray[i].y;
-          const size = value /255 * this.cellSize * 0.5 ;
+          const size = value /255 * this.cellSize;
 
           this.ctx.beginPath();
 

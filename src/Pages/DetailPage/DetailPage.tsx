@@ -8,14 +8,13 @@ import { OriginalPages } from '../../utils/Constants';
 interface Props {
   id: number;
   handlePopupClose: any;
+  handleIdChange: any;
 }
 
 
-function DetailPage({id, handlePopupClose}: Props) {
+function DetailPage({id, handlePopupClose, handleIdChange}: Props) {
 
-  console.log(id);
   const project = OriginalPages.filter(prj => prj.id == id)[0]
-  console.log(project);
 
   const backToMain = (
     <div className="back" onClick={handlePopupClose}>
@@ -160,6 +159,13 @@ function DetailPage({id, handlePopupClose}: Props) {
     )
   }
   
+  const ProjectNavigator = (props: any) => (
+    <div className="whole-screen">
+      <div className="side-navigator" onClick={() => props.handleClick(-1)}>{'<'}</div>
+      <div className="side-navigator" onClick={() => props.handleClick(1)}>{'>'}</div>
+    </div>
+  )
+
 
   return (
     <div className="container">
@@ -187,6 +193,7 @@ function DetailPage({id, handlePopupClose}: Props) {
       </motion.div>
       {backToMain}
       <CurrentPage />
+      <ProjectNavigator handleClick={handleIdChange} />
     </div>
   );
 }

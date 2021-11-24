@@ -6,13 +6,13 @@ import { useHistory, Link, useLocation } from 'react-router-dom';
 import VisualSingleElement from './VisualSingleElement/VisualSingleElement';
 import { Projects, Topics } from '../../utils/Constants';
 
-interface Props {
+interface DetailProps {
   indicator: number;
   projectIdx: number;
   handlePopupClose: any;
 }
 
-function VisualDetailPage({indicator, projectIdx, handlePopupClose}: Props) {
+function VisualDetailPage({indicator, projectIdx, handlePopupClose}: DetailProps) {
 
   // const history = useHistory();
   // type LocationState = {projectIdx: number};
