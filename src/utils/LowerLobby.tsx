@@ -42,7 +42,8 @@ export const LowerLobby2 = {
     link: [],
     TTT: [
         ['Award and Society', 'Award is originally supposed to reward the good, but its metaphysical purpose is now titlted in an advanced modern society, acting as a signifier dividing the enclosed inner circle.'],
-        ['Criticizing the Metaphysics', 'This self-given award criticizes and tilts the metaphysics behind the modern recognition system, attacking an authoritized and enclosed society.']
+        ['Criticizing the Metaphysics', 'This self-given award criticizes and tilts the metaphysics behind the modern recognition system, attacking an authoritized and enclosed pre-established society.'],
+        ['Simulation(Baudrillard)', 'The modern recognition system is also a representative of the simulative world, where signs(Award) had replaced a reality(Reward), resulting in a meaningless and nihilistic system.']
     ],
     Images: [
         LowerLobby2Img,

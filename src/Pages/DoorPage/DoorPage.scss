@@ -35,7 +35,7 @@
     position: absolute;
     left: calc(max(14vw, 42vw - 36vh));
     
-    animation: flash-left 1.7s linear infinite, left-door-animation 57s cubic-bezier(0, 0, 0.65, 0.97) backwards;
+    animation: left-door-animation 57s cubic-bezier(0, 0, 0.65, 0.97) backwards;
     animation-delay: 5s;
 }
 
@@ -53,22 +53,6 @@
     }
 }
 
-@keyframes flash-left{
-    0%{
-        box-shadow: 
-        0 0 7vw #888,
-        0 0 11vw #888, 
-        0 0 20vw #888,
-        0 0 30vw #888;
-    }
-    50%{
-        box-shadow: 
-        0 0 7vw #888,
-        0 0 11vw #999, 
-        0 0 18vw #888,
-        0 0 30vw #999;
-    }
-}
 
 .right-container{
     position: absolute;
@@ -176,7 +160,6 @@
  
         left: 10vw;
         animation: 
-             flash-left 1.7s linear infinite, 
             left-door-mobile-animation 60s cubic-bezier(0, 0, 0.65, 0.97) backwards;
     }
 
