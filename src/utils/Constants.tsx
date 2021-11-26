@@ -4,7 +4,7 @@ import {
 } from './Project';
 
 import {
-    Lab1, Lab2, Lab3, Lab4, Lab5, Lab6, Lab7
+    Lab1, Lab2, Lab3, Lab4, Lab5, Lab6, Lab7, Lab8, Lab9
 } from './LaboratoryOccupied';
 
 import Lab1Img from '../assets/LaboratoryOccupied/Lab1.png';
@@ -14,6 +14,8 @@ import Lab4Img from '../assets/LaboratoryOccupied/Lab4.png';
 import Lab5Img from '../assets/LaboratoryOccupied/Lab5.png';
 import Lab6Img from '../assets/LaboratoryOccupied/Lab6.png';
 import Lab7Img from '../assets/LaboratoryOccupied/Lab7.png';
+import Lab8Img from '../assets/LaboratoryOccupied/Lab8.png';
+import Lab9Img from '../assets/LaboratoryOccupied/Lab9.png';
 
 import {
     Festival1, Festival2, Festival3, Festival4, Festival5, Festival6
@@ -105,6 +107,12 @@ const LaboratoryOccpuied = [
     },
     {
         id: 7, image: Lab7Img, description: Lab7
+    },
+    {
+        id: 8, image: Lab8Img, description: Lab8
+    },
+    {
+        id: 9, image: Lab9Img, description: Lab9
     },
 ]
 

@@ -8,6 +8,8 @@ import Lab4Img from '../assets/LaboratoryOccupied/Lab4.png';
 import Lab5Img from '../assets/LaboratoryOccupied/Lab5.png';
 import Lab6Img from '../assets/LaboratoryOccupied/Lab6.png';
 import Lab7Img from '../assets/LaboratoryOccupied/Lab7.png';
+import Lab8Img from '../assets/LaboratoryOccupied/Lab8.png';
+import Lab9Img from '../assets/LaboratoryOccupied/Lab9.png';
 import Lab11 from '../assets/LaboratoryOccupied/Lab11.png';
 import Lab12 from '../assets/LaboratoryOccupied/Lab12.png';
 import Lab13 from '../assets/LaboratoryOccupied/Lab13.png';
@@ -37,6 +39,13 @@ import Lab71 from '../assets/LaboratoryOccupied/Lab71.png';
 import Lab72 from '../assets/LaboratoryOccupied/Lab72.png';
 import Lab73 from '../assets/LaboratoryOccupied/Lab73.png';
 import Lab74 from '../assets/LaboratoryOccupied/Lab74.png';
+import Lab81 from '../assets/LaboratoryOccupied/Lab81.png';
+import Lab82 from '../assets/LaboratoryOccupied/Lab82.png';
+import Lab83 from '../assets/LaboratoryOccupied/Lab83.png';
+import Lab91 from '../assets/LaboratoryOccupied/Lab91.png';
+import Lab92 from '../assets/LaboratoryOccupied/Lab92.png';
+import Lab93 from '../assets/LaboratoryOccupied/Lab93.png';
+import Lab94 from '../assets/LaboratoryOccupied/Lab94.png';
 
 export const Lab1 = {
     name: 'White Monuments',
@@ -193,5 +202,36 @@ export const Lab7 = {
         Lab72,
         Lab73,
         Lab74,
+    ],
+};
+
+export const Lab8 = {
+    name: 'Ball Series (Beta)',
+    type: 'Responsive',
+    detail: 'ReactJS',
+    link: [''],
+    TTT: [
+        ['Beta Project', ''],
+    ],
+    Images: [
+        Lab81,
+        Lab82,
+        Lab83,
+    ],
+};
+
+export const Lab9 = {
+    name: 'Audio Visualization (Beta)',
+    type: 'Responsive',
+    detail: 'ReactJS',
+    link: ['http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/ragethenight'],
+    TTT: [
+        ['Beta Project', ''],
+    ],
+    Images: [
+        Lab91,
+        Lab92,
+        Lab93,
+        Lab94,
     ],
 };

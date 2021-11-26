@@ -143,8 +143,8 @@ export const Lobby2 = {
 
 
 export const Lobby3 = {
-    name: 'ISC Exhibition',
-    type: 'End of Semester Exhibition',
+    name: 'ISC Showcase',
+    type: 'Undergraduate Showcase Website',
     detail: 'ReactJS Web Development',
     link: ['https://iscexhibition.com/main'],
     TTT: [

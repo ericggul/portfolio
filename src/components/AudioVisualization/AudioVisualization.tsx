@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import { useHistory, Link } from 'react-router-dom';
 import { Projects, Topics } from '../../utils/Constants';
 import BlueDanubeAudio from "../../assets/mp3/BlueDanube.mp3";
+import ValkyriesAudio from "../../assets/mp3/Valkyries.mp3";
 
 const getRandom = (a: number, b: number) => Math.random() * (b-a) + a;
 
@@ -60,7 +61,7 @@ function activation(a: any){
 const PI2 = Math.PI * 2;
 
 function AudioVisualization( props : any) {
-  const audio: HTMLAudioElement = new Audio(BlueDanubeAudio);
+  const audio: HTMLAudioElement = new Audio(ValkyriesAudio);
   var wave: any;
   const [audioPlayed, setAudioPlayed] = useState(false);
 
