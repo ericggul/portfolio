@@ -41,8 +41,8 @@ export const LowerLobby2 = {
     detail: 'Award, Performance',
     link: [],
     TTT: [
-        ['Award and Society', 'Award is originally supposed to reward the good, but its metaphysical purpose is now titlted in an advanced modern society, acting as a signifier dividing the enclosed inner circle.'],
-        ['Criticizing the Metaphysics', 'This self-given award criticizes and tilts the metaphysics behind the modern recognition system, attacking an authoritized and enclosed pre-established society.'],
+        ['Award and Society', `Award is originally supposed to reward the good, but it's metaphysical purpose is now tilted in an advanced modern society, acting as a signifier dividing the enclosed inner circle.`],
+        ['Criticizing the Metaphysics', 'This self-given award criticizes and tilts the metaphysics behind the modern recognition system, attacking an authorized and enclosed pre-established society.'],
         ['Simulation(Baudrillard)', 'The modern recognition system is also a representative of the simulative world, where signs(Award) had replaced a reality(Reward), resulting in a meaningless and nihilistic system.']
     ],
     Images: [
@@ -71,8 +71,8 @@ export const LowerLobby4 = {
     detail: 'ReactJS',
     link: ['http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/calculator'],
     TTT: [
-        ['2X2 = 5', `This project had started from the Dostoevsky's declarement that twice two makes five can be 'equally charming' as twice two makes four.`],
-        ['Blindful belief', 'We tend to believe that there exists an answer or the most optimized solution for certain question, when in reality it does not.'],
+        ['2X2 = 5', `This project had started from Dostoevsky's declaration that twice two makes five can be 'equally charming' as twice two makes four.`],
+        ['Blindful belief', 'We tend to believe that there exists an answer or the most optimized solution for a certain question, when in reality it does not.'],
         ['Over reliance on Technology', 'Under that belief, we tend to rely on latest technology, notably an AI to give us an answer, when in fact they just reproduce inside the pre-existent domain.']
     ],
     Images: [
@@ -82,13 +82,13 @@ export const LowerLobby4 = {
 
 export const LowerLobby5 = {
     name: 'Accurate Clock',
-    type: 'Accelerates and deaccelerates randomly',
+    type: 'Accelerates and decelerates randomly',
     detail: 'ReactJS',
     link: ['http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/clock'],
     TTT: [
-        ['A perception', `Human's perception is not capable of reckoning the exact time: An established time frame does not represent the perecptual time.`],
+        ['A perception', `Human's perception is not capable of reckoning the exact time: An established time frame does not represent the perceptual time.`],
         ['Established Frame', 'Our society assigns an absolute authority to the established frame, should it be time frame, geological frame, or even the political frame, so that we can calculate inside those frames in a Descartian way.'],
-        ['Efficiency and well-being', 'Advanced Technology is forcing us to adjust our own time into this Descartian standard. We justify this sacrifice under a name of efficiency, but we had not asked enough if this efficiency will also do good for our well-being.'],
+        ['Efficiency and well-being', 'Advanced Technology is forcing us to adjust our own time into this Descartian standard. We justify this sacrifice under the name of efficiency, but we had not asked enough if this efficiency will also do good for our well-being.'],
     ],
     Images: [
         LowerLobby5Img,
@@ -101,7 +101,7 @@ export const LowerLobby6 = {
     detail: 'Temporary Land Installation',
     link: [],
     TTT: [
-        ['Cookies & Lights', 'Fortune Cookies lying on the stairs had a bigger impact in acquiring students than any other display. This trail of cookies had acted as a signifier guding a trail leading to a certain site. Lights act as a terminal point of this trail.'],
+        ['Cookies & Lights', 'Fortune Cookies lying on the stairs had a bigger impact in acquiring students than any other display. This trail of cookies had acted as a signifier guiding a trail leading to a certain site. Lights act as a terminal point of this trail.'],
     ],
     Images: [
         LowerLobby6Img,

@@ -40,14 +40,14 @@ export const Festival1 = {
 
 export const Festival2 = {
     name: 'Conceptual Lightings',
-    type: '10 different interpretation of lightings',
+    type: '10 different interpretations of lightings',
     detail: 'ReactJS',
     link: ['https://snufestival.com/activity/group'],
     TTT: [
         [`Users' Mission`, 'Users of the website are asked to find 10 different lightings, which are spread all around the festival website.'],
         ['A Background', 'Normal background is suddenly translated into a dark background full of lights, creating a gorgeous illumination.'],
         ['A Text', `Text 'Light' itself represents part of a progress in search of lightings.`],
-        ['Cyclical Behaviour', 'Influenced from the <Laboratory Occupied>, some of the lightings are expressed as a combination of independent light elements. These collective cycle movements creates a unique swarm behaviour.'],
+        ['Cyclical Behaviour', 'Influenced from the <Laboratory Occupied>, some of the lightings are expressed as a combination of independent light elements. These collective cycle movements create a unique swarm behaviour.'],
         ['Also Sprach Zarathustra', 'Directly influenced from Nietzsche and Johan Strauss, just like this portfolio website.']
     ],
     Images: [
@@ -65,8 +65,8 @@ export const Festival3 = {
     detail: 'ReactJS',
     link: ['https://snufestival.com/clothing'],
     TTT: [
-        ['The Second Identity', 'One of the most unique experience that character dressing can offer is on allowing users to create their second identity. As a festival, creating second and ideal identity offer users a moment of a relaxation from an ordinary life.'],
-        ['1.38 Trillion Options', 'Users can dress their character within the following 1.38 Trillion Combinations: 33 Accessories, 35 Bottomwears, 10 Eyebrows, 31 Eyes, 43 Hairs, 17 Lips, 8 Noses, 15 Shoes, 44 Topwears.'],
+        ['The Second Identity', 'One of the most unique experiences that character dressing can offer is on allowing users to create their second identity. As a festival, creating a second and ideal identity offers users a moment of a relaxation from an ordinary life.'],
+        ['1.38 Trillion Options', 'Users can dress their character within the following 1.38 Trillion Combinations: 33 Accessories, 35 Bottom Wears, 10 Eyebrows, 31 Eyes, 43 Hairs, 17 Lips, 8 Noses, 15 Shoes, 44 Topwears.'],
         ['Character throughout the festival: Metaverse', 'Once the character is fully dressed, it will appear throughout the festival website, creating a metaverse experience inside the festival website.'],
     ],
     Images: [
@@ -81,9 +81,9 @@ export const Festival4 = {
     detail: 'ReactJS',
     link: ['https://snufestival.com/jabti'],
     TTT: [
-        ['MBTI and labeling', 'Having worked shortly for the personality marketing startup, I had acknowledged the limitation of personality labeling tests, notably the MBTI test which were phemonologically popular in Korea.'],
-        ['Psychology behind the Psychology Tests', `Modern Koreans lack self-confidence in clarifying who themselves are. Thus, they rely on the personality labelings. However, if they can't clarify themselves for who they are, how will they be able to go through the course of creating by evaluating something else? In this sense, these personality tests reveals the fragile personalities of modern citizens.`],
-        ['Korean Pun', 'This Pseudo-MBTI uses a funny Korean Syllabus to create a Pun, and combines four syllabus pun as a result, instead of the MBTI labeling in four English letters. This combination creates a hilarious sound, even more emphasizing ridisculousness of the MBTI labeling.'],
+        ['MBTI and labeling', 'Having worked shortly for the personality marketing startup, I had acknowledged the limitation of personality labeling tests, notably the MBTI test which were phenomenologically popular in Korea.'],
+        ['Psychology behind the Psychology Tests', `Modern Koreans lack self-confidence in clarifying who themselves are. Thus, they rely on the personality labelings. However, if they can't clarify themselves for who they are, how will they be able to go through the course of creating by evaluating something else? In this sense, these personality tests reveal the fragile personalities of modern citizens.`],
+        ['Korean Pun', 'This Pseudo-MBTI uses a funny Korean Syllabus to create a Pun, and combines four syllabus pun as a result, instead of the MBTI labeling in four English letters. This combination creates a hilarious sound, even more emphasizing the ridiculousness of the MBTI labeling.'],
         ['5k Users', 'This campaign had soley accumulated over 5k users, proving the validity of such a criticism on the labeling tests.'],
     ],
     Images: [
@@ -112,11 +112,11 @@ export const Festival5 = {
 
 export const Festival6 = {
     name: 'X. Try Again',
-    type: 'Creative usecases of APIs',
+    type: 'Creative use cases of APIs',
     detail: 'ReactJS',
     link: ['https://snufestival.com/activity/mini/handwriting'],
     TTT: [
-        ['Tilting the metaphysics',  `We tried to investigate the various possible usecases of public frontend APIs, apart from its assigned usecases. This is an another exmample of liberating an object from its pre-defined metaphysical usage.`],
+        ['Tilting the metaphysics',  `We tried to investigate the various possible use cases of public frontend APIs, apart from their assigned use cases. This is another example of liberating an object from its pre-defined metaphysical usage.`],
         ['Speech Synthesizer',  `The website had extensively used Speech Synthesizer for a live user experience, creating silly voices with pitch and speed adjusted.`],
     ],
     Images: [

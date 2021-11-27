@@ -51,14 +51,14 @@ export const Trilogy1 = {
     ],
     Paragraphs: [
         {
-            'Deisgn Process': [
+            'Design Process': [
                 ['Geometrical Shapes', 'These geometrical shapes should fulfill the following two requirements: First, to reflect the abstracted theories or lemmas, second, to create a unique visual impulse.'],
                 ['Constructing the Storyline', `The journey of a day, from the sun's rise to the sun's fall, back to the sun's rise.`],
             ]
         },
         {
             '6:37 - 12:07': [
-                ['The Rise(6:37)', 'A circle situated between two lines express the rise of the sun.'],
+                ['The Rise(6:37)', 'A circle situated between two lines expresses the rise of the sun.'],
                 ['The Power(9:14)', 'Powerful perpendicular line breaking through the semicircle.'],
                 ['The Euphorion(10:58)', `Inspired from Goethe's Faust, unfulfilled willingness of youth to go forward.`],
                 ['Harmony of Daytime(12:07)', 'Circle and surrounding lines blended harmonically.']
@@ -93,7 +93,7 @@ export const Trilogy2 = {
     detail: 'Adobe Illustrator',
     link: ['https://ericggul.github.io/plz/#/Summary/1'],
     TTT: [
-        ['The Problem', 'In crowded suburbs of the Seoul Metropolitan, New Towns are build in order to mass product housings, thus to stabilize the price: However, the real estate price had recently rose after the construction of new towns.'],
+        ['The Problem', 'In crowded suburbs of the Seoul Metropolitan, New Towns are built in order to mass produce housings, thus to stabilize the price: However, the real estate price had recently risen after the construction of new towns.'],
         ['The Purpose', `Anti-Liberty, Distorted Fordism: Emphasize how the life of mass-produced new towns are limiting the citizens' liberty, while analyzing how its similarity had paradoxically caused the massive increase in housing price, exactly opposite of what the constructions of New Towns had intended.`],
         ['Target User', 'The Korean Public and New Town Residents, Social Critics.']
     ],
@@ -107,9 +107,9 @@ export const Trilogy2 = {
     Captions: [
         ['Individual Project(Apr 2020 - May 2020)', 'Researcher, Designer'],
         ['Early trial-and-errors'],
-        ['Unjung, Misa, Gimpo, Wirye, Dongtan, Gwangyo City'],
+        ['Unjung, Misa, Gimpo, Wirye, Dongtan, Gwanggyo City'],
         ['How lifestyles in new towns are limited and identical'],
-        ['How Mass Production had paradoxically lead the increase in price'],
+        ['How Mass Production had paradoxically led to the increase in price'],
     ],
     Subtitles: [
         'Social Critical Infographics, influenced from Baudrillard',
@@ -123,12 +123,12 @@ export const Trilogy2 = {
             'Searching for a Layout': [
                 ['1st Attempt: An apartment', 'Even though this layout had well emphasized the repetitive fordistic nature, there was a significant difficulty to effectively deliver the information to the audience.'],
                 ['2nd Attempt: Apartments Complex', 'Faced limitation of possible narratives using each apartment as a visual component.'],
-                ['3rd Attempt: City Map', 'Overcame the apartment layout, by selecting the city map as a visual hook, which gives a different perspective with repetitive visual feature.'],
+                ['3rd Attempt: City Map', 'Overcame the apartment layout, by selecting the city map as a visual hook, which gives a different perspective with repetitive visual features.'],
             ]
         },
         {
             'Revised Layout': [
-                ['Repetition of cities', 'Rather than using just one map as a visual hook, repeating the cities had created more unforgettable visual element which highlights the homogeneous nature of the cities.'],
+                ['Repetition of cities', 'Rather than using just one map as a visual hook, repeating the cities had created a more unforgettable visual element which highlights the homogeneous nature of the cities.'],
                 ['Smallest Marginal Difference', 'These homogenous nature signifies that those cities are the same, except for the smallest marginal difference, caused from the difference in location.'],
                 ['Liberty St. & Ford Ave.', 'Liberty Street and Ford Avenue are the common name given to new towns where there is no significant regional characteristic.'],
             ]
@@ -159,8 +159,8 @@ export const Trilogy3 = {
     detail: 'Processing',
     link: ['https://ericggul.github.io/plz/#/Summary/2'],
     TTT: [
-        ['The Problem', `Traditional Time Series Data forces the audience to project the future in inductive manner: That the recent trend will continue to the future. Hence in reality, such projection may turned out to be fatally incorrect in wild and unexpected environment of stock market.`],
-        ['The Purpose', 'Redesign the Time Series Data in way that user can interpret in regressive manner. Display the recent 5 years of stock data of FAANG companies, and argue that the current price is exaggerated compared to the overall average of recent years.'],
+        ['The Problem', `Traditional Time Series Data forces the audience to project the future in an inductive manner: That the recent trend will continue to the future. Hence in reality, such a projection may turn out to be fatally incorrect in the wild and unexpected environment of the stock market.`],
+        ['The Purpose', 'Redesign the Time Series Data in a way that the user can interpret in a regressive manner. Display the recent 5 years of stock data of FAANG companies, and argue that the current price is exaggerated compared to the overall average of recent years.'],
         ['Target Audience', 'The public']
     ],
     Images: [
@@ -191,7 +191,7 @@ export const Trilogy3 = {
         },
         {
             'New Interpretation': [
-                ['Stock Price Distribution', `This newly designed graph can be interpreted as a stock price distribution, showing the distribution of the Amazon's stock price for the past 5 years.`],
+                ['Stock Price Distribution', `This newly designed graph can be interpreted as a stock price distribution, showing the distribution of Amazon's stock price for the past 5 years.`],
                 ['X-Axis shows the price', 'In this graph, x-axis shows that the price had increased about five times fold from the initial price 5 years ago.'],
                 ['Y-Axis shows the Period of Time', 'There are three main y-axis peaks in this graph: Approximately on $700, $1500 and $3000, insisting the price had stayed long on that range.'],
                 ['Colour shows the Point of Time', 'Darker the red, closer to the present time. Strong correlation between the color mapping and the dollar axis shows that the price had consistently increased throughout the past years.']

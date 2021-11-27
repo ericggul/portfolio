@@ -53,7 +53,7 @@ export const Lab1 = {
     detail: 'ReactJS',
     link: ['http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/whitemonumentstest'],
     TTT: [
-        ['Border Radius', `Situated somewhere between the circle and the square, an elementary geometric element used in this sculpture is an adjusted square, with it's shape is adjusted by the CSS border-radius parameters.`],
+        ['Border Radius', `Situated somewhere between the circle and the square, an elementary geometric element used in this sculpture is an adjusted square, with its shape adjusted by the CSS border-radius parameters.`],
         ['Sine and Cosine', 'The placement of each circle is based on the calculated result of the sine and cosine functions. Parameters of these sines and cosines are adjusted, consequently affecting the magnitude and cyclicality of the final output.'],
         ['Continuous Evolvement', 'This series of works shows the continuous evolution of my artistic attempts in terms of complexity and aesthetic expression.'],
         ['3-Dimensional Illusion', 'The first work displayed on the left side shows how these sets of two-dimensional adjusted squares can create a three-dimensional illusion, resulting in a vividly interactive sculpture.'],
@@ -81,9 +81,9 @@ export const Lab2 = {
         'Early Stages',
     ],
     TTT: [
-        ['Mouse Position', 'Thanks to the Javascript Eventlistener, we can create unlimited number of interactive shapes. Apart from the simulative cause-and-effect relationship of clicking buttons or scrolling, this project shows an example how mouse position can create a new type of impression.'],
+        ['Mouse Position', 'Thanks to the Javascript Eventlistener, we can create an unlimited number of interactive shapes. Apart from the simulative cause-and-effect relationship of clicking buttons or scrolling, this project shows an example how mouse position can create a new type of impression.'],
         ['Verfremdungseffekt', `This project is also related to the theme of the 'distancing effect', leading users to reflect their daily habits of positioning the mouse over the web plane, activating their consciousness out of such an unconscious behaviour.`],
-        ['Further Research', `Each of the Javascript Eventlistener can record and translate user's activity into a plane-time coordinate (x,y,t). These spatial-temporal variables can interconnect with each other to create some expressions that we hadn't explored yet.`]
+        ['Further Research', `Each of the Javascript Eventlistener can record and translate a user's activity into a plane-time coordinate (x,y,t). These spatial-temporal variables can interconnect with each other to create some expressions that we hadn't explored yet.`]
     ],
     Images: [
         Lab2Img,
@@ -133,7 +133,7 @@ export const Lab4 = {
     TTT: [
         ['Tilting Grids', 'All of these series are based on tilting the pre-established concepts of grids, as grid layouts are considered as one of the most fundamental visual elements with their various applications in modern design and architecture.'],
         ['Aesthetical Grids', 'Within the boundary of physical gridness, these sets of projects aim to go beyond the geometric shape and create a perceptual impression, powerful enough to not be considered as a grid anymore. This results in a practical and efficient generation of aesthetical grids, which helps us to create an artistic impression within the realistic constraints in terms of cost of generation.'],
-        ['Further Research', 'Each of the element developed in this project can have various applications in modern design and architecture, which heavily relies on grid layout.'],
+        ['Further Research', 'Each of the elements developed in this project can have various applications in modern design and architecture, which heavily relies on grid layout.'],
     ],
     Images: [
         Lab41,
@@ -150,9 +150,9 @@ export const Lab5 = {
     detail: 'ReactJS',
     link: ['http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/241'],
     TTT: [
-        ['Prime Numbers', 'This project starts from the unique characteristic of the prime numbers. Any of the two prime numbers only share 1 as their common dividers.'],
-        ['Cyclicality', `Each of the elements' movement is constrained to 3-5 cycle movements, where the cycle time of each movement is a prime number. As least common multiplier of any two prime number is always their multiplier itself, this extensive usage of prime numbers creates a vivid impression, far more dynamic than an uniform cycle time can create.`],
-        ['Swarm Behaivour', 'As each movement shares a cycle time of prime number, it creates a swarm behaviour which is controlled yet dynamic.'],
+        ['Prime Numbers', 'This project starts from the unique characteristics of the prime numbers. Any of the two prime numbers only share 1 as their common dividers.'],
+        ['Cyclicality', `Each of the elements' movement is constrained to 3-5 cycle movements, where the cycle time of each movement is a prime number. At least common multiplier of any two prime numbers is always their multiplier itself, this extensive usage of prime numbers creates a vivid impression, far more dynamic than an uniform cycle time can create.`],
+        ['Swarm Behaviour', 'As each movement shares a cycle time of prime number, it creates a swarm behaviour which is controlled yet dynamic.'],
         ['Further Research', 'Further research can be developed in two directions: First, on further developing the unique characteristic of numbers mathematically, Second, on applying this characteristic of prime numbers in the other context.'],
     ],
     Images: [
@@ -191,7 +191,7 @@ export const Lab7 = {
         'Early Stages',
     ],
     TTT: [
-        ['Most elementric unit', 'Square is the most elementric two-dimensional shape in the Computational and the Euclidian domain. It was not a coincidence that the project Laboratory Occupied had started from experimenting through this elementric shape, a square.'],
+        ['Most elementric unit', 'Square is the most elementric two-dimensional shape in the Computational and the Euclidean domain. It was not a coincidence that the project Laboratory Occupied had started from experimenting through this elementric shape, a square.'],
         ['Position, Rotation', `This series focuses on randomising the position and rotation of squares. However, it is not randomised in the sense that each individual element's position and rotation can enjoy a full degree of randomness.`],
         ['Two-layers Structure of Randomness',  `Every square's randomness is bounded by its parent layer, which regulates the position and rotation of each element bounded by a certain range. Each of the paintings are made of 5-100 parent layers, and repetitively each parent layer consists of 5-100 child elements. This two-layers structure can generate more organised yet dynamic visual elements.`],
         ['Further Research',  `It will be interesting to work on multiple-layer randomness, in an analogy with the CNN architecture. However, the philosophical standpoint of this multiple-layer and randomness and the CNN architecture will be strictly separated.`],
