@@ -2,7 +2,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import classNames from 'classnames';
 import './VisualDetailPage.scss';
-import { useHistory, Link, useLocation } from 'react-router-dom';
 import VisualSingleElement from './VisualSingleElement/VisualSingleElement';
 import { Projects, Topics } from '../../utils/Constants';
 
@@ -13,14 +12,6 @@ interface DetailProps {
 }
 
 function VisualDetailPage({indicator, projectIdx, handlePopupClose}: DetailProps) {
-
-  // const history = useHistory();
-  // type LocationState = {projectIdx: number};
-  // const location = useLocation<LocationState>();
-  // type Params = {indicator: any};
-  // const {indicator} = useParams<Params>();
-
-  // const [currentProject, setCurrentProject] = useState(location?.state?.projectIdx ? location?.state?.projectIdx : 0);
 
   const [currentProject, setCurrentProject] = useState(projectIdx);
   

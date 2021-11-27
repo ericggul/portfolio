@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
 import {
   Route, Switch, Redirect, HashRouter as Router, useLocation
@@ -10,8 +10,11 @@ import LifePage from './Pages/LifePage/LifePage';
 import MainPage from './Pages/MainPage/MainPage';
 import DetailPage from './Pages/DetailPage/DetailPage';
 import VisualDetailPage from './Pages/VisualDetailPage/VisualDetailPage';
+import UserAnalytics from './UserAnalytics';
 
 import Project1 from './Projects/Project1/Project1';
+
+const TRACKING_ID = 'G-EQ8SQ1G84X';
 
 function App() {
 
@@ -49,6 +52,7 @@ function App() {
           </Switch>
         </AnimatePresence>
       )} />
+      {TRACKING_ID && <UserAnalytics />}
     </Router>
   )
 }

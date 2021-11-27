@@ -4,18 +4,22 @@ import classNames from 'classnames';
 import './VisualSingleElement.scss';
 import { motion } from 'framer-motion';
 import { useHistory, Link } from 'react-router-dom';
+import { EventBehavior } from '../../../initializer/googleAnalytics';
+
 import { Projects, Topics } from '../../../utils/Constants';
 
 function VisualSingleElement( props : any) {
 
   const history = useHistory();
-  console.log(props);
   const project = props.project;
 
   console.log(project);
 
   const link = project?.description.link.length > 0 ? project?.description.link[0] : undefined;
 
+  useEffect(()=>{
+    EventBehavior('Activity', 'Viewed New Project', 'project view');
+  }, [props.project])
 
   interface TTTProps {
     list: any;
