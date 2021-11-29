@@ -10,6 +10,7 @@ const UNI_CONVERTER = [
   {university: 'NYU', city: 'New York'},
   {university: 'GATech', city: 'Atlanta'},
   {university: 'CMU', city: 'Pittsburgh'},
+  {university: 'RCA', city: 'London'},
 ]
 
 

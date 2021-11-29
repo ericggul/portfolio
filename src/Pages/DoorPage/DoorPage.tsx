@@ -15,6 +15,7 @@ const UNI_CONVERTER = [
     {university: 'NYU', phase: 'NYU IDM'},
     {university: 'GATech', phase: 'GATech MSHCI'},
     {university: 'CMU', phase: 'CMU MHCI'},
+    {university: 'RCA', phase: 'RCA IED'},
 ]
   
 
