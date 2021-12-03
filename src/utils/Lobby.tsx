@@ -48,7 +48,7 @@ export const Lobby1 = {
     Paragraphs: [
         {
             'Hidden Order': [
-                [`Art Council Korea's <Art Talk>`, `This sculpture was conducted as part of the Art Council Korea(ARKO)'s Emerging Artists Program, Art Talk. The theme of this program is to expand the boundary of artistic expression in a virtual environment. ARKO is a`],
+                [`Art Council Korea's <Art Talk>`, `This sculpture was conducted as part of the Art Council Korea(ARKO)'s Emerging Artists Program, Art Talk. The theme of this program is to expand the boundary of artistic expression in a virtual environment.`],
                 ['Hidden Order Platform', `Hidden Order is a Metaverse Platform, with its landscape setted as a Mars. Hidden Order is commonly used as a platform for virtual exhibitions, as it were for this time's ARKO Art Talk.`],
             ]
         },
