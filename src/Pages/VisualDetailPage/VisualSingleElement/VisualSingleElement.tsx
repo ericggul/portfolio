@@ -5,8 +5,6 @@ import "./VisualSingleElement.scss";
 import { motion } from "framer-motion";
 import { useHistory, Link } from "react-router-dom";
 import { EventBehavior } from "../../../initializer/googleAnalytics";
-import LoadingElement from "../../../components/LoadingElement/LoadingElement";
-
 import { Projects, Topics } from "../../../utils/Constants";
 
 function VisualSingleElement(props: any) {
@@ -74,7 +72,6 @@ function VisualSingleElement(props: any) {
     return (
       <div className="carousel">
         <div className="image-container">
-          {!setLoaded && <LoadingElement />}
           <img
             onLoad={() => setLoaded(true)}
             src={props.imgList[currentImage]}

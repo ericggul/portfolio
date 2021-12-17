@@ -5,7 +5,6 @@ import React, {
   useCallback,
   useMemo,
 } from "react";
-import LoadingElement from "../LoadingElement/LoadingElement";
 import "./SubjectRender.scss";
 
 function Subject(props: any) {
@@ -16,10 +15,9 @@ function Subject(props: any) {
     props.sendToDetail(props.idx, props.index);
   }, [props]);
 
-  const SubjectImage = ({ onLoaded }: any) => {
+  const SubjectImage = () => {
     const [loaded, setLoaded] = useState(false);
     const handleLoaded = () => {
-      onLoaded();
       setLoaded(true);
     };
     return (
@@ -35,17 +33,11 @@ function Subject(props: any) {
     );
   };
 
-  const [imgLoaded, setImgLoaded] = useState(false);
-  const onLoaded = () => {
-    setImgLoaded(true);
-  };
-
   return (
     <div className="subject" onClick={handleLinkClick}>
       <div className="cards-wrapper">
         <div className="image-card" onClick={handleLinkClick}>
-          <SubjectImage onLoaded={onLoaded} />
-          {!imgLoaded && <LoadingElement />}
+          <SubjectImage />
         </div>
         <div className="subject-card">
           <div className="title">{subject.description.name}</div>

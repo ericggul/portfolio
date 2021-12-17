@@ -17,7 +17,6 @@ import VisualDetailPage from "./Pages/VisualDetailPage/VisualDetailPage";
 import UserAnalytics from "./UserAnalytics";
 
 import Project1 from "./Projects/Project1/Project1";
-import LoadingElement from "./components/LoadingElement/LoadingElement";
 
 const TRACKING_ID = "G-EQ8SQ1G84X";
 
@@ -27,33 +26,14 @@ function App() {
       <Route
         render={() => (
           <AnimatePresence exitBeforeEnter>
-            <Suspense
-              fallback={
-                <div className="loading-wrapper">
-                  <LoadingElement />
-                </div>
-              }
-            >
-              <Switch>
-                <Route
-                  exact
-                  path="/monolith/:uni"
-                  render={() => <DoorPage />}
-                />
-                <Route exact path="/intro/:uni" render={() => <LifePage />} />
-                <Route exact path="/main" render={() => <MainPage />} />
-                <Route exact path="/project1" render={() => <Project1 />} />
-                {/* <Route 
-              exact path="/detail/:id" 
-              render={()=> <DetailPage />}
-            /> */}
-                {/* <Route 
-              exact path="/visual-detail/:indicator" 
-              render={()=> <VisualDetailPage />}
-            /> */}
-                <Redirect exact to="/intro/default" />
-              </Switch>
-            </Suspense>
+            <Switch>
+              <Route exact path="/monolith/:uni" render={() => <DoorPage />} />
+              <Route exact path="/intro/:uni" render={() => <LifePage />} />
+              <Route exact path="/main" render={() => <MainPage />} />
+              <Route exact path="/project1" render={() => <Project1 />} />
+
+              <Redirect exact to="/intro/default" />
+            </Switch>
           </AnimatePresence>
         )}
       />
