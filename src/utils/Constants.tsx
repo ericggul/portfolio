@@ -54,11 +54,13 @@ import Trilogy2Img from "../assets/Trilogy/Trilogy2.png";
 import Trilogy3Img from "../assets/Trilogy/Trilogy3.png";
 import Trilogy4Img from "../assets/Trilogy/Trilogy4.png";
 
-import { Lobby1, Lobby2, Lobby3 } from "./Lobby";
+import { Lobby1, Lobby2, Lobby3, Lobby4, Lobby5 } from "./Lobby";
 
 import Lobby1Img from "../assets/Lobby/Lobby1.png";
 import Lobby2Img from "../assets/Lobby/Lobby2.png";
 import Lobby3Img from "../assets/Lobby/Lobby3.png";
+import Lobby4Img from "../assets/Lobby/Lobby4.png";
+import Lobby5Img from "../assets/Lobby/Lobby5.png";
 
 import {
   LowerLobby1,
@@ -269,6 +271,16 @@ const Lobby = [
     image: Lobby3Img,
     description: Lobby3,
   },
+  // {
+  //   id: 4,
+  //   image: Lobby4Img,
+  //   description: Lobby4,
+  // },
+  // {
+  //   id: 5,
+  //   image: Lobby5Img,
+  //   description: Lobby5,
+  // },
 ];
 
 const LowerLobby = [

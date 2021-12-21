@@ -82,15 +82,23 @@ function MainContainer() {
     );
   };
 
-  const Row = ({ idx, expanded, handleRowExpansion }: any) => {
+  const Row = React.memo(({ idx, expanded, handleRowExpansion }: any) => {
+    const [expandedStatus, setExpandedStatus] = useState(false);
+
+    useEffect(() => {
+      if (expanded[idx] !== expandedStatus) {
+        setExpandedStatus(expanded[idx]);
+      }
+    }, [expanded, expandedStatus, idx]);
+
     return (
       <div className="subject-row" ref={subjectWrapperRef} key={idx}>
         <Topic
           i={idx}
-          expanded={expanded}
+          expanded={expandedStatus}
           handleExpand={() => handleRowExpansion(idx)}
         />
-        {expanded &&
+        {expandedStatus &&
           Projects[idx].map((subject, i) => (
             <Subject
               subject={subject}
@@ -100,21 +108,22 @@ function MainContainer() {
               sendToDetail={sendToDetail}
             />
           ))}
-        {!expanded && (
+        {!expandedStatus && (
           <Overview
             handleExpand={() => handleRowExpansion(idx)}
             item={SemiDescriptions[idx]}
           />
         )}
         <Expander
-          expanded={expanded}
+          expanded={expandedStatus}
           handleExpand={() => handleRowExpansion(idx)}
         />
       </div>
     );
-  };
+  });
 
   //ROW EXPANDED STATUS
+
   const [rowExpanded, setRowExpanded] = useState([
     false,
     false,
@@ -124,9 +133,9 @@ function MainContainer() {
   ]);
   const handleRowExpansion = useCallback(
     (idx) => {
-      let temp = rowExpanded;
-      temp[idx] = !rowExpanded[idx];
-      setRowExpanded([...temp]);
+      setRowExpanded((array) =>
+        array.map((bool, i) => (i === idx ? !bool : bool))
+      );
     },
     [rowExpanded]
   );
@@ -195,7 +204,7 @@ function MainContainer() {
           {new Array(5).fill(0).map((e, idx) => (
             <Row
               idx={idx}
-              expanded={rowExpanded[idx]}
+              expanded={rowExpanded}
               handleRowExpansion={handleRowExpansion}
             />
           ))}
