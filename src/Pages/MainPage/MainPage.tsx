@@ -18,12 +18,102 @@ const transition = {
   duration: 0.6,
   ease: [0.43, 0.13, 0.23, 0.96],
 };
+const Topic = (props: any) => {
+  return (
+    <div className="topic" onClick={props.handleExpand}>
+      <div className="topic-header">{Topics[props.i].name}</div>
+      <div className="topic-description">{Topics[props.i].description}</div>
+      <div className="topic-view-less">{props.expanded && "View Less"}</div>
+    </div>
+  );
+};
+
+const Overview = ({ handleExpand, item }: any) => {
+  return (
+    <div className="overview" onClick={handleExpand}>
+      <div className="overview-contents">
+        <div className="overview-type"> {item.type}</div>
+        {item.role && <div className="overview-role">{item.role}</div>}
+        <div className="overview-description">{item.description}</div>
+        <div className="overview-supp">{item.stacks}</div>
+        <div className="overview-supp">{item.period}</div>
+      </div>
+    </div>
+  );
+};
+
+const Expander = (props: any) => {
+  return (
+    <div className="expander" onClick={props.handleExpand}>
+      {props.expanded ? "View Less" : "View More"}
+    </div>
+  );
+};
+
+const Row = React.memo(
+  ({
+    idx,
+    setVisualPopupStatus,
+    setVisualPopupOpened,
+    setDetailPopupStatus,
+    setDetailPopupOpened,
+  }: any) => {
+    const [expanded, setExpanded] = useState(false);
+
+    const subjectWrapperRef = useRef<any>();
+
+    const sendToDetail = useCallback(
+      (indicator: number, projectIdx: number) => {
+        if (indicator === 0 || indicator === 1 || indicator === 4) {
+          setVisualPopupStatus({
+            indicator: indicator,
+            projectIdx: projectIdx,
+          });
+          setVisualPopupOpened(true);
+        } else {
+          setDetailPopupStatus(indicator * 10 + projectIdx + 1);
+          setDetailPopupOpened(true);
+        }
+      },
+      []
+    );
+
+    return (
+      <div className="subject-row" ref={subjectWrapperRef} key={idx}>
+        <Topic
+          i={idx}
+          expanded={expanded}
+          handleExpand={() => setExpanded((exp) => !exp)}
+        />
+        {expanded &&
+          Projects[idx].map((subject, i) => (
+            <Subject
+              subject={subject}
+              index={i}
+              key={i}
+              idx={idx}
+              sendToDetail={sendToDetail}
+            />
+          ))}
+        {!expanded && (
+          <Overview
+            handleExpand={() => setExpanded((exp) => !exp)}
+            item={SemiDescriptions[idx]}
+          />
+        )}
+        <Expander
+          expanded={expanded}
+          handleExpand={() => setExpanded((exp) => !exp)}
+        />
+      </div>
+    );
+  }
+);
 
 function MainContainer({ volume, onVolumeChange }: any) {
   const isMobile = useMemo(() => window.innerWidth < 600, [window.innerWidth]);
 
   const starRef = useRef<any>();
-  const subjectWrapperRef = useRef<any>();
 
   const createNode = (x: number, y: number) => {
     const n = document.createElement("div");
@@ -50,96 +140,6 @@ function MainContainer({ volume, onVolumeChange }: any) {
     return () => window.removeEventListener("click", addStarMouse);
   }, []);
 
-  const Topic = (props: any) => {
-    return (
-      <div className="topic" onClick={props.handleExpand}>
-        <div className="topic-header">{Topics[props.i].name}</div>
-        <div className="topic-description">{Topics[props.i].description}</div>
-        <div className="topic-view-less">{props.expanded && "View Less"}</div>
-      </div>
-    );
-  };
-
-  const Overview = ({ handleExpand, item }: any) => {
-    return (
-      <div className="overview" onClick={handleExpand}>
-        <div className="overview-contents">
-          <div className="overview-type"> {item.type}</div>
-          {item.role && <div className="overview-role">{item.role}</div>}
-          <div className="overview-description">{item.description}</div>
-          <div className="overview-supp">{item.stacks}</div>
-          <div className="overview-supp">{item.period}</div>
-        </div>
-      </div>
-    );
-  };
-
-  const Expander = (props: any) => {
-    return (
-      <div className="expander" onClick={props.handleExpand}>
-        {props.expanded ? "View Less" : "View More"}
-      </div>
-    );
-  };
-
-  const Row = React.memo(({ idx, expanded, handleRowExpansion }: any) => {
-    const [expandedStatus, setExpandedStatus] = useState(false);
-
-    useEffect(() => {
-      if (expanded[idx] !== expandedStatus) {
-        setExpandedStatus(expanded[idx]);
-      }
-    }, [expanded, expandedStatus, idx]);
-
-    return (
-      <div className="subject-row" ref={subjectWrapperRef} key={idx}>
-        <Topic
-          i={idx}
-          expanded={expandedStatus}
-          handleExpand={() => handleRowExpansion(idx)}
-        />
-        {expandedStatus &&
-          Projects[idx].map((subject, i) => (
-            <Subject
-              subject={subject}
-              index={i}
-              key={i}
-              idx={idx}
-              sendToDetail={sendToDetail}
-            />
-          ))}
-        {!expandedStatus && (
-          <Overview
-            handleExpand={() => handleRowExpansion(idx)}
-            item={SemiDescriptions[idx]}
-          />
-        )}
-        <Expander
-          expanded={expandedStatus}
-          handleExpand={() => handleRowExpansion(idx)}
-        />
-      </div>
-    );
-  });
-
-  //ROW EXPANDED STATUS
-
-  const [rowExpanded, setRowExpanded] = useState([
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
-  const handleRowExpansion = useCallback(
-    (idx) => {
-      setRowExpanded((array) =>
-        array.map((bool, i) => (i === idx ? !bool : bool))
-      );
-    },
-    [rowExpanded]
-  );
-
   //POPUP
   const [visualPopupOpened, setVisualPopupOpened] = useState(false);
   const [visualPopupStatus, setVisualPopupStatus] = useState({
@@ -148,16 +148,6 @@ function MainContainer({ volume, onVolumeChange }: any) {
   });
   const [detailPopupOpened, setDetailPopupOpened] = useState(false);
   const [detailPopupStatus, setDetailPopupStatus] = useState(10);
-
-  const sendToDetail = useCallback((indicator: number, projectIdx: number) => {
-    if (indicator === 0 || indicator === 1 || indicator === 4) {
-      setVisualPopupStatus({ indicator: indicator, projectIdx: projectIdx });
-      setVisualPopupOpened(true);
-    } else {
-      setDetailPopupStatus(indicator * 10 + projectIdx + 1);
-      setDetailPopupOpened(true);
-    }
-  }, []);
 
   const handlePopupClose = useCallback(() => {
     setVisualPopupOpened(false);
@@ -202,18 +192,20 @@ function MainContainer({ volume, onVolumeChange }: any) {
           <div className="CV" onClick={hanldePDFDown}>
             CV
           </div>
-          {"|"}
+          {/* {"|"}
           <div className="Volume" onClick={handleVolume}>
             Music
-          </div>
+          </div> */}
         </div>
         <div className="star" ref={starRef} />
         <div className="subject-list">
           {new Array(5).fill(0).map((e, idx) => (
             <Row
               idx={idx}
-              expanded={rowExpanded}
-              handleRowExpansion={handleRowExpansion}
+              setVisualPopupStatus={setVisualPopupStatus}
+              setVisualPopupOpened={setVisualPopupOpened}
+              setDetailPopupStatus={setDetailPopupStatus}
+              setDetailPopupOpened={setDetailPopupOpened}
             />
           ))}
         </div>
