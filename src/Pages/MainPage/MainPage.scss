@@ -38,12 +38,23 @@ body::-webkit-scrollbar {
 .info-sector {
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  right: 1rem;
   font-size: 1.2rem;
   z-index: 5;
+  display: flex;
+  flex-direction: center;
+  align-items: center;
+
   .bio {
   }
-  .cv {
+  .CV {
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+    cursor: pointer;
+  }
+  .Volume {
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
     cursor: pointer;
   }
 }

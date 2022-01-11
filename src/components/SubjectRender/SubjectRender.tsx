@@ -4,8 +4,10 @@ import React, {
   useLayoutEffect,
   useCallback,
   useMemo,
+  useEffect,
 } from "react";
 import "./SubjectRender.scss";
+import Loading from "../LoadingHelper/LoadingHelper";
 
 function Subject(props: any) {
   const subject = props.subject;
@@ -21,15 +23,18 @@ function Subject(props: any) {
       setLoaded(true);
     };
     return (
-      <img
-        onLoad={handleLoaded}
-        ref={imgRef}
-        src={subject.image}
-        alt={subject.description.name}
-        style={{
-          opacity: `${loaded ? "1" : "0"}`,
-        }}
-      />
+      <>
+        {!loaded && <Loading />}
+        <img
+          onLoad={handleLoaded}
+          ref={imgRef}
+          src={subject.image}
+          alt={subject.description.name}
+          style={{
+            opacity: `${loaded ? "1" : "0"}`,
+          }}
+        />
+      </>
     );
   };
 

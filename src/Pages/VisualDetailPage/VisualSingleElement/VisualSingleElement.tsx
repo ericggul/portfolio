@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useHistory, Link } from "react-router-dom";
 import { EventBehavior } from "../../../initializer/googleAnalytics";
 import { Projects, Topics } from "../../../utils/Constants";
+import Loading from "../../../components/LoadingHelper/LoadingHelper";
 
 function VisualSingleElement(props: any) {
   const history = useHistory();
@@ -72,6 +73,7 @@ function VisualSingleElement(props: any) {
     return (
       <div className="carousel">
         <div className="image-container">
+          {!loaded && <Loading />}
           <img
             onLoad={() => setLoaded(true)}
             src={props.imgList[currentImage]}

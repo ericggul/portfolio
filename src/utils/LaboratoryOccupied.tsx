@@ -35,6 +35,7 @@ import Lab52 from "../assets/LaboratoryOccupied/Lab52.png";
 import Lab53 from "../assets/LaboratoryOccupied/Lab53.png";
 import Lab54 from "../assets/LaboratoryOccupied/Lab54.png";
 import Lab61 from "../assets/LaboratoryOccupied/Lab61.png";
+import Lab62 from "../assets/LaboratoryOccupied/Lab62.png";
 import Lab71 from "../assets/LaboratoryOccupied/Lab71.png";
 import Lab72 from "../assets/LaboratoryOccupied/Lab72.png";
 import Lab73 from "../assets/LaboratoryOccupied/Lab73.png";
@@ -216,7 +217,7 @@ export const Lab6 = {
       "Clement Augustin had started from the Édouard Manet's famous Le dejeuner sur l'herbe, and is planning to expand to other French Impressionist's work as well.",
     ],
   ],
-  Images: [Lab6Img, Lab61],
+  Images: [Lab61, Lab62, Lab6Img],
 };
 
 export const Lab7 = {

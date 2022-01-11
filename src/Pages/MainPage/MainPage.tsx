@@ -19,7 +19,7 @@ const transition = {
   ease: [0.43, 0.13, 0.23, 0.96],
 };
 
-function MainContainer() {
+function MainContainer({ volume, onVolumeChange }: any) {
   const isMobile = useMemo(() => window.innerWidth < 600, [window.innerWidth]);
 
   const starRef = useRef<any>();
@@ -191,12 +191,20 @@ function MainContainer() {
     link.click();
   };
 
+  const handleVolume = useCallback(() => {
+    onVolumeChange(0.5);
+  }, [volume]);
+
   return (
     <>
       <div className="main">
         <div className="info-sector">
           <div className="CV" onClick={hanldePDFDown}>
             CV
+          </div>
+          {"|"}
+          <div className="Volume" onClick={handleVolume}>
+            Music
           </div>
         </div>
         <div className="star" ref={starRef} />
@@ -229,10 +237,19 @@ function MainContainer() {
 }
 
 function MainPage() {
+  const [volume, setVolume] = useState(1);
+  const initializeAudioVolume = (initVolume: any) => {
+    setVolume(initVolume);
+  };
+
   return (
     <>
-      <AudioVisualization audioPlaying={false} />
-      <MainContainer />
+      <AudioVisualization
+        audioPlaying={false}
+        initializeVolume={initializeAudioVolume}
+        volume={volume}
+      />
+      <MainContainer volume={volume} onVolumeChange={setVolume} />
     </>
   );
 }
