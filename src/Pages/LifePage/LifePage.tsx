@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import "./LifePage.scss";
 import Zarathustra from "../../assets/mp3/Zarathustra.mp3";
+import { LoadImages } from "../../utils/Constants";
 
 const UNI_CONVERTER = [
   { university: "UAL", city: "London" },
@@ -15,6 +16,10 @@ const UNI_CONVERTER = [
 ];
 
 function LifePage() {
+  useEffect(() => {
+    LoadImages();
+  }, []);
+
   const history = useHistory();
   type Params = { uni: any };
   const { uni } = useParams<Params>();

@@ -87,6 +87,44 @@ import Project6Img from "../assets/Project6.png";
 import Project7Img from "../assets/Project7.png";
 import Project8Img from "../assets/Project8.png";
 
+function preloadImage(url: any) {
+  const image = new Image();
+  image.src = url;
+}
+
+export function LoadImages() {
+  [
+    Lab1Img,
+    Lab2Img,
+    Lab3Img,
+    Lab4Img,
+    Lab5Img,
+    Lab6Img,
+    Lab7Img,
+    Lab8Img,
+    Lab9Img,
+    Festival1Img,
+    Festival2Img,
+    Festival3Img,
+    Festival4Img,
+    Festival5Img,
+    Festival6Img,
+    Trilogy1Img,
+    Trilogy2Img,
+    Trilogy3Img,
+    Trilogy4Img,
+    Lobby1Img,
+    Lobby2Img,
+    Lobby3Img,
+    LowerLobby1Img,
+    LowerLobby2Img,
+    LowerLobby3Img,
+    LowerLobby4Img,
+    LowerLobby5Img,
+    LowerLobby6Img,
+  ].forEach(preloadImage);
+}
+
 export const Topics = [
   {
     id: 1,

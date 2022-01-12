@@ -9,10 +9,7 @@ import { Projects, Topics } from "../../../utils/Constants";
 import Loading from "../../../components/LoadingHelper/LoadingHelper";
 
 function VisualSingleElement(props: any) {
-  const history = useHistory();
   const project = props.project;
-
-  console.log(project);
 
   const link =
     project?.description.link.length > 0

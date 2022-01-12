@@ -1,64 +1,67 @@
-.header{
-    font-size: 2rem;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+.header {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.body {
+  font-size: 1rem;
+  color: #aaa;
+}
+
+.detail-container {
+  position: fixed;
+  z-index: 5;
+  background: black;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+
+.back {
+  position: fixed;
+  top: 5vh;
+  left: 3vw;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.current-back {
+  position: fixed;
+  top: 3vh;
+  right: 3vw;
+
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+}
+
+.whole-screen {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+
+  .side-navigator {
     font-weight: bold;
-}
-
-.body{
-    font-size: 1rem;
-    color: #AAA;
-}
-
-.detail-container{
-    position: fixed;
-    z-index: 5;
-    background: black;
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-}
-
-
-.back{
-    position: fixed;
-    top: 5vh;
-    left: 3vw;
-    font-size: 1rem;
     color: white;
+    font-size: 2rem;
+    margin: 2vw;
+    z-index: 2;
+    pointer-events: auto;
     cursor: pointer;
+  }
 }
 
-
-.current-back{
-    position: fixed;
-    top: 3vh;
-    right: 3vw;
-
-    font-size: 3rem;
-    color: white;
-    cursor: pointer;
+@media screen and (max-width: 700px) {
+  .detail-container {
+    height: auto;
+    min-height: 100vh;
+  }
 }
-
-
-.whole-screen{
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    pointer-events: none;
-    
-    .side-navigator{
-        font-weight: bold;
-        color: white;
-        font-size: 2rem;
-        margin: 2vw;
-        z-index: 2;
-        pointer-events: auto;
-        cursor: pointer;
-    }
-}
-

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useReducer } from "react";
 import "./DoorPage.scss";
 import { motion } from "framer-motion";
 import { useHistory, useParams } from "react-router-dom";
+import { LoadImages } from "../../utils/Constants";
 import Zarathustra from "../../assets/Zarathustra.mp3";
 
 const transition = { duration: 2 };
@@ -18,6 +19,10 @@ const UNI_CONVERTER = [
 ];
 
 export default function DoorPage() {
+  useEffect(() => {
+    LoadImages();
+  }, []);
+
   const history = useHistory();
   type Params = { uni: any };
   const { uni } = useParams<Params>();
