@@ -4,7 +4,7 @@ import classNames from "classnames";
 import "./AudioVisualization.scss";
 import { motion } from "framer-motion";
 import { useHistory, Link } from "react-router-dom";
-import { Projects, Topics } from "../../utils/Constants";
+import { Projects, Topics } from "../../static/Constants";
 import BlueDanubeAudio from "../../assets/mp3/BlueDanube.mp3";
 import ValkyriesAudio from "../../assets/mp3/Valkyries.mp3";
 

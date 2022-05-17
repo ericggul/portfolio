@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { useHistory, useParams } from "react-router-dom";
 import "./LifePage.scss";
 import Zarathustra from "../../assets/mp3/Zarathustra.mp3";
-import { LoadImages } from "../../utils/Constants";
 
 const UNI_CONVERTER = [
   { university: "UAL", city: "London" },
@@ -13,22 +12,16 @@ const UNI_CONVERTER = [
   { university: "CMU", city: "Pittsburgh" },
   { university: "RCA", city: "London" },
   { university: "ZER01NE", city: "ZER01NE" },
+  { university: "SAC", city: "Seoul" },
+  { university: "BeomSeon", city: "Busan" },
 ];
 
 function LifePage() {
-  useEffect(() => {
-    LoadImages();
-  }, []);
-
   const history = useHistory();
   type Params = { uni: any };
   const { uni } = useParams<Params>();
 
-  const [city, setCity] = useState(
-    UNI_CONVERTER.filter((entity) => entity.university === uni)[0]
-      ? UNI_CONVERTER.filter((entity) => entity.university === uni)[0].city
-      : null
-  );
+  const [city, setCity] = useState(UNI_CONVERTER.filter((entity) => entity.university === uni)[0] ? UNI_CONVERTER.filter((entity) => entity.university === uni)[0].city : null);
 
   const [volume, setVolume] = useState(1);
 
@@ -51,11 +44,7 @@ function LifePage() {
     }
   };
 
-  const [texts, setTexts] = useState(
-    city
-      ? [`good ${timeConverter(hour)} ${city}`, "please turn on the music"]
-      : ["Enter"]
-  );
+  const [texts, setTexts] = useState(city ? [`good ${timeConverter(hour)} ${city}`, "please turn on the music"] : ["Enter"]);
 
   const color_set = ["#0E3F89", "#A30E0B"];
 
@@ -111,10 +100,7 @@ function LifePage() {
           cursor: `${color === 0 ? "pointer" : "wait"}`,
         }}
       >
-        <div
-          className={`text ${text > 0 && "animation"}`}
-          onClick={handleClick}
-        >
+        <div className={`text ${text > 0 && "animation"}`} onClick={handleClick}>
           {texts[text]}
         </div>
       </div>

@@ -5,16 +5,13 @@ import "./VisualSingleElement.scss";
 import { motion } from "framer-motion";
 import { useHistory, Link } from "react-router-dom";
 import { EventBehavior } from "../../../initializer/googleAnalytics";
-import { Projects, Topics } from "../../../utils/Constants";
+import { Projects, Topics } from "../../../static/Constants";
 import Loading from "../../../components/LoadingHelper/LoadingHelper";
 
 function VisualSingleElement(props: any) {
   const project = props.project;
 
-  const link =
-    project?.description.link.length > 0
-      ? project?.description.link[0]
-      : undefined;
+  const link = project?.description.link.length > 0 ? project?.description.link[0] : undefined;
 
   useEffect(() => {
     EventBehavior("Activity", "Viewed New Project", "project view");
@@ -71,12 +68,7 @@ function VisualSingleElement(props: any) {
       <div className="carousel">
         <div className="image-container">
           {!loaded && <Loading />}
-          <img
-            onLoad={() => setLoaded(true)}
-            src={props.imgList[currentImage]}
-            alt={project?.description.name}
-            className={transition || !loaded ? "darken" : ""}
-          />
+          <img onLoad={() => setLoaded(true)} src={props.imgList[currentImage]} alt={project?.description.name} className={transition || !loaded ? "darken" : ""} />
         </div>
         <div className="loc-guider">
           {props.imgList.map((img: any, idx: number) => (
@@ -99,22 +91,14 @@ function VisualSingleElement(props: any) {
       <div className="image">
         <ImageCarousel imgList={project?.description.Images} />
         {link && (
-          <a
-            href={link}
-            style={{ textDecoration: "none", color: "white" }}
-            target="_blank"
-          >
+          <a href={link} style={{ textDecoration: "none", color: "white" }} target="_blank">
             <div className="captions">Visit Link</div>
           </a>
         )}
       </div>
       <div className="description">
         <div className="title">
-          <a
-            href={link}
-            style={{ textDecoration: "none", color: "white" }}
-            target="_blank"
-          >
+          <a href={link} style={{ textDecoration: "none", color: "white" }} target="_blank">
             {project?.description.name}
           </a>
           <div className="sub">
@@ -129,12 +113,7 @@ function VisualSingleElement(props: any) {
   );
 
   return (
-    <motion.div
-      className="mainbox"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit="exit"
-    >
+    <motion.div className="mainbox" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit="exit">
       <DetailElement />
     </motion.div>
   );

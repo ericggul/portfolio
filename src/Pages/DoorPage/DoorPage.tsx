@@ -2,8 +2,7 @@ import React, { useState, useEffect, useReducer } from "react";
 import "./DoorPage.scss";
 import { motion } from "framer-motion";
 import { useHistory, useParams } from "react-router-dom";
-import { LoadImages } from "../../utils/Constants";
-import Zarathustra from "../../assets/Zarathustra.mp3";
+import { LoadImages } from "../../static/Constants";
 
 const transition = { duration: 2 };
 
@@ -16,6 +15,8 @@ const UNI_CONVERTER = [
   { university: "CMU", phase: "CMU MHCI" },
   { university: "RCA", phase: "RCA IED" },
   { university: "ZER01NE", phase: "ZER01NE Creator" },
+  { university: "SAC", phase: "Seoul Arts Center Youth Artist Shop" },
+  { university: "BeomSeon", phase: "2022 Lotte Young Artist Art Fair" },
 ];
 
 export default function DoorPage() {
@@ -27,9 +28,7 @@ export default function DoorPage() {
   type Params = { uni: any };
   const { uni } = useParams<Params>();
 
-  const selectedPhase = UNI_CONVERTER.filter((e) => e.university === uni)[0]
-    ? UNI_CONVERTER.filter((e) => e.university === uni)[0].phase
-    : "UAL MRes Creative Computing";
+  const selectedPhase = UNI_CONVERTER.filter((e) => e.university === uni)[0] ? UNI_CONVERTER.filter((e) => e.university === uni)[0].phase : "UAL MRes Creative Computing";
 
   const [pushed, setPushed] = useState(false);
   const [volume, setVolume] = useState(1);
@@ -82,12 +81,7 @@ export default function DoorPage() {
   const [opacity, setOpacity] = useState(1);
 
   return (
-    <motion.div
-      className="App"
-      initial="initial"
-      exit="exit"
-      transition={transition}
-    >
+    <motion.div className="App" initial="initial" exit="exit" transition={transition}>
       <motion.div
         animate={{
           opacity: opacity,

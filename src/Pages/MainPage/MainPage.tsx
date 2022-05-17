@@ -1,13 +1,7 @@
-import React, {
-  useState,
-  useEffect,
-  useCallback,
-  useRef,
-  useMemo,
-} from "react";
+import React, { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import "./MainPage.scss";
 import { motion } from "framer-motion";
-import { Topics, SemiDescriptions, Projects } from "../../utils/Constants";
+import { Topics, SemiDescriptions, Projects } from "../../static/Constants";
 import AudioVisualization from "../../components/AudioVisualization/AudioVisualization";
 import Subject from "../../components/SubjectRender/SubjectRender";
 import VisualDetailPage from "../VisualDetailPage/VisualDetailPage";
@@ -50,65 +44,33 @@ const Expander = (props: any) => {
   );
 };
 
-const Row = React.memo(
-  ({
-    idx,
-    setVisualPopupStatus,
-    setVisualPopupOpened,
-    setDetailPopupStatus,
-    setDetailPopupOpened,
-  }: any) => {
-    const [expanded, setExpanded] = useState(false);
+const Row = React.memo(({ idx, setVisualPopupStatus, setVisualPopupOpened, setDetailPopupStatus, setDetailPopupOpened }: any) => {
+  const [expanded, setExpanded] = useState(false);
 
-    const subjectWrapperRef = useRef<any>();
+  const subjectWrapperRef = useRef<any>();
 
-    const sendToDetail = useCallback(
-      (indicator: number, projectIdx: number) => {
-        if (indicator === 0 || indicator === 1 || indicator === 4) {
-          setVisualPopupStatus({
-            indicator: indicator,
-            projectIdx: projectIdx,
-          });
-          setVisualPopupOpened(true);
-        } else {
-          setDetailPopupStatus(indicator * 10 + projectIdx + 1);
-          setDetailPopupOpened(true);
-        }
-      },
-      []
-    );
+  const sendToDetail = useCallback((indicator: number, projectIdx: number) => {
+    if (indicator === 0 || indicator === 1 || indicator === 4) {
+      setVisualPopupStatus({
+        indicator: indicator,
+        projectIdx: projectIdx,
+      });
+      setVisualPopupOpened(true);
+    } else {
+      setDetailPopupStatus(indicator * 10 + projectIdx + 1);
+      setDetailPopupOpened(true);
+    }
+  }, []);
 
-    return (
-      <div className="subject-row" ref={subjectWrapperRef} key={idx}>
-        <Topic
-          i={idx}
-          expanded={expanded}
-          handleExpand={() => setExpanded((exp) => !exp)}
-        />
-        {expanded &&
-          Projects[idx].map((subject, i) => (
-            <Subject
-              subject={subject}
-              index={i}
-              key={i}
-              idx={idx}
-              sendToDetail={sendToDetail}
-            />
-          ))}
-        {!expanded && (
-          <Overview
-            handleExpand={() => setExpanded((exp) => !exp)}
-            item={SemiDescriptions[idx]}
-          />
-        )}
-        <Expander
-          expanded={expanded}
-          handleExpand={() => setExpanded((exp) => !exp)}
-        />
-      </div>
-    );
-  }
-);
+  return (
+    <div className="subject-row" ref={subjectWrapperRef} key={idx}>
+      <Topic i={idx} expanded={expanded} handleExpand={() => setExpanded((exp) => !exp)} />
+      {expanded && Projects[idx].map((subject, i) => <Subject subject={subject} index={i} key={i} idx={idx} sendToDetail={sendToDetail} />)}
+      {!expanded && <Overview handleExpand={() => setExpanded((exp) => !exp)} item={SemiDescriptions[idx]} />}
+      <Expander expanded={expanded} handleExpand={() => setExpanded((exp) => !exp)} />
+    </div>
+  );
+});
 
 function MainContainer({ volume, onVolumeChange }: any) {
   const isMobile = useMemo(() => window.innerWidth < 600, [window.innerWidth]);
@@ -119,12 +81,7 @@ function MainContainer({ volume, onVolumeChange }: any) {
     const n = document.createElement("div");
     const width = Math.random() * 5 + 2;
     n.className = "mouse-star";
-    n.setAttribute(
-      "style",
-      `left: ${x}px; top: ${y}px; width: ${width}px; height: ${width}px; filter: blur(${
-        width / 3
-      }px)`
-    );
+    n.setAttribute("style", `left: ${x}px; top: ${y}px; width: ${width}px; height: ${width}px; filter: blur(${width / 3}px)`);
     starRef.current.appendChild(n);
   };
 
@@ -210,20 +167,8 @@ function MainContainer({ volume, onVolumeChange }: any) {
           ))}
         </div>
       </div>
-      {visualPopupOpened && (
-        <VisualDetailPage
-          indicator={visualPopupStatus.indicator}
-          projectIdx={visualPopupStatus.projectIdx}
-          handlePopupClose={handlePopupClose}
-        />
-      )}
-      {detailPopupOpened && (
-        <DetailPage
-          id={detailPopupStatus}
-          handlePopupClose={handlePopupClose}
-          handleIdChange={handleIdChange}
-        />
-      )}
+      {visualPopupOpened && <VisualDetailPage indicator={visualPopupStatus.indicator} projectIdx={visualPopupStatus.projectIdx} handlePopupClose={handlePopupClose} />}
+      {detailPopupOpened && <DetailPage id={detailPopupStatus} handlePopupClose={handlePopupClose} handleIdChange={handleIdChange} />}
     </>
   );
 }
@@ -236,11 +181,7 @@ function MainPage() {
 
   return (
     <>
-      <AudioVisualization
-        audioPlaying={false}
-        initializeVolume={initializeAudioVolume}
-        volume={volume}
-      />
+      <AudioVisualization audioPlaying={false} initializeVolume={initializeAudioVolume} volume={volume} />
       <MainContainer volume={volume} onVolumeChange={setVolume} />
     </>
   );
