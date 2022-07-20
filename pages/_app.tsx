@@ -4,6 +4,9 @@ import { useMemo } from "react";
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import type { AppProps } from "next/app";
 
+//pre-import css
+import "react-toastify/dist/ReactToastify.min.css";
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
