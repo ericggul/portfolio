@@ -1,15 +1,11 @@
-import project1Img1 from "../assets/Project1/Project1-Img1.png";
-import project1Img2 from "../assets/Project1/Project1-Img2.png";
-
 import Lab1Img from "../assets/LaboratoryOccupied/Lab1.png";
 import Lab2Img from "../assets/LaboratoryOccupied/Lab2.png";
-import Lab3Img from "../assets/LaboratoryOccupied/Lab3.png";
+
 import Lab4Img from "../assets/LaboratoryOccupied/Lab4.png";
 import Lab5Img from "../assets/LaboratoryOccupied/Lab5.png";
 import Lab6Img from "../assets/LaboratoryOccupied/Lab6.png";
 import Lab7Img from "../assets/LaboratoryOccupied/Lab7.png";
-import Lab8Img from "../assets/LaboratoryOccupied/Lab8.png";
-import Lab9Img from "../assets/LaboratoryOccupied/Lab9.png";
+
 import Lab11 from "../assets/LaboratoryOccupied/Lab11.png";
 import Lab12 from "../assets/LaboratoryOccupied/Lab12.png";
 import Lab13 from "../assets/LaboratoryOccupied/Lab13.png";
@@ -52,9 +48,7 @@ export const Lab1 = {
   name: "White Monuments",
   type: "Interactive, Responsive",
   detail: "ReactJS",
-  link: [
-    "http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/whitemonumentstest",
-  ],
+  link: ["http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/whitemonumentstest"],
   TTT: [
     [
       "Border Radius",
@@ -64,10 +58,7 @@ export const Lab1 = {
       "Sine and Cosine",
       "The placement of each circle is based on the calculated result of the sine and cosine functions. Parameters of these sines and cosines are adjusted, consequently affecting the magnitude and cyclicality of the final output.",
     ],
-    [
-      "Continuous Evolvement",
-      "This series of works shows the continuous evolution of my artistic attempts in terms of complexity and aesthetic expression.",
-    ],
+    ["Continuous Evolvement", "This series of works shows the continuous evolution of my artistic attempts in terms of complexity and aesthetic expression."],
     [
       "3-Dimensional Illusion",
       "The first work displayed on the left side shows how these sets of two-dimensional adjusted squares can create a three-dimensional illusion, resulting in a vividly interactive sculpture.",
@@ -84,9 +75,7 @@ export const Lab2 = {
   name: "Depth",
   type: "Interactive, Responsive",
   detail: "ReactJS",
-  link: [
-    "http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/depth2",
-  ],
+  link: ["http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/depth2"],
   Subtitles: ["TTS based iOS Application", "Early Stages"],
   TTT: [
     [
@@ -109,15 +98,10 @@ export const Lab3 = {
   name: "Straight Series",
   type: "Responsive",
   detail: "ReactJS",
-  link: [
-    "http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/straightblue",
-  ],
+  link: ["http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/straightblue"],
   Subtitles: ["TTS based iOS Application", "Early Stages"],
   TTT: [
-    [
-      "Lines and Texture",
-      "A set of thousands of lines in a random position, rotation and colour creates a unique texture out of the two dimensional plane.",
-    ],
+    ["Lines and Texture", "A set of thousands of lines in a random position, rotation and colour creates a unique texture out of the two dimensional plane."],
     [
       "Two-layers Structure of Randomness",
       "The position and rotation of each line is not determined fully randomly. Rather, each of their randomness is subject to one of the parent layers, as each parent layer assigns the degree of randomness for each child component. More detail on the foundation of this concept can be found from the explanation for the Square Series. ",
@@ -135,27 +119,14 @@ export const Lab3 = {
       `I would like to fully automate the generating process, letting algorithms to design the layers and the range of randomness on its own. If this is possible, now we will be able to successfully analogue this work with the Warhol's Campbell's Soup Cans: My work represents the production in the Computational Era, while Campbell's Soup Cans represents the production in the Post-War Industrial Era.`,
     ],
   ],
-  Images: [
-    Lab31,
-    Lab32,
-    Lab33,
-    Lab34,
-    Lab35,
-    Lab36,
-    Lab37,
-    Lab38,
-    Lab39,
-    Lab39b,
-  ],
+  Images: [Lab31, Lab32, Lab33, Lab34, Lab35, Lab36, Lab37, Lab38, Lab39, Lab39b],
 };
 
 export const Lab4 = {
   name: "Grid Series",
   type: "Responsive",
   detail: "ReactJS",
-  link: [
-    "http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/gridrose",
-  ],
+  link: ["http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/gridrose"],
   Subtitles: ["TTS based iOS Application", "Early Stages"],
   TTT: [
     [
@@ -166,10 +137,7 @@ export const Lab4 = {
       "Aesthetical Grids",
       "Within the boundary of physical gridness, these sets of projects aim to go beyond the geometric shape and create a perceptual impression, powerful enough to not be considered as a grid anymore. This results in a practical and efficient generation of aesthetical grids, which helps us to create an artistic impression within the realistic constraints in terms of cost of generation.",
     ],
-    [
-      "Further Research",
-      "Each of the elements developed in this project can have various applications in modern design and architecture, which heavily relies on grid layout.",
-    ],
+    ["Further Research", "Each of the elements developed in this project can have various applications in modern design and architecture, which heavily relies on grid layout."],
   ],
   Images: [Lab41, Lab42, Lab43, Lab44, Lab4Img],
 };
@@ -180,18 +148,12 @@ export const Lab5 = {
   detail: "ReactJS",
   link: ["http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/241"],
   TTT: [
-    [
-      "Prime Numbers",
-      "This project starts from the unique characteristics of the prime numbers. Any of the two prime numbers only share 1 as their common dividers.",
-    ],
+    ["Prime Numbers", "This project starts from the unique characteristics of the prime numbers. Any of the two prime numbers only share 1 as their common dividers."],
     [
       "Cyclicality",
       `Each of the elements' movement is constrained to 3-5 cycle movements, where the cycle time of each movement is a prime number. At least common multiplier of any two prime numbers is always their multiplier itself, this extensive usage of prime numbers creates a vivid impression, far more dynamic than an uniform cycle time can create.`,
     ],
-    [
-      "Swarm Behaviour",
-      "As each movement shares a cycle time of prime number, it creates a swarm behaviour which is controlled yet dynamic.",
-    ],
+    ["Swarm Behaviour", "As each movement shares a cycle time of prime number, it creates a swarm behaviour which is controlled yet dynamic."],
     [
       "Further Research",
       "Further research can be developed in two directions: First, on further developing the unique characteristic of numbers mathematically, Second, on applying this characteristic of prime numbers in the other context.",
@@ -204,18 +166,10 @@ export const Lab6 = {
   name: "Clement Augustin",
   type: "Responsive",
   detail: "ReactJS",
-  link: [
-    "http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/manet13",
-  ],
+  link: ["http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/manet13"],
   TTT: [
-    [
-      "Reconstruction of 19C Masterpieces",
-      `The Clement Augustin Series reconstructs and reorganizes the old masterpieces, destructing our familiar notion to these paintings.`,
-    ],
-    [
-      "Further Research",
-      "Clement Augustin had started from the Édouard Manet's famous Le dejeuner sur l'herbe, and is planning to expand to other French Impressionist's work as well.",
-    ],
+    ["Reconstruction of 19C Masterpieces", `The Clement Augustin Series reconstructs and reorganizes the old masterpieces, destructing our familiar notion to these paintings.`],
+    ["Further Research", "Clement Augustin had started from the Édouard Manet's famous Le dejeuner sur l'herbe, and is planning to expand to other French Impressionist's work as well."],
   ],
   Images: [Lab61, Lab62, Lab6Img],
 };
@@ -251,15 +205,8 @@ export const Lab8 = {
   name: "Texture Series",
   type: "Responsive",
   detail: "ReactJS",
-  link: [
-    "http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/texture1",
-  ],
-  TTT: [
-    [
-      "Continuous research on Texture",
-      "This series aims to continuously explore through the boundary of creating a unique texture out of the web plane, using repetitiveness and randomness.",
-    ],
-  ],
+  link: ["http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/texture1"],
+  TTT: [["Continuous research on Texture", "This series aims to continuously explore through the boundary of creating a unique texture out of the web plane, using repetitiveness and randomness."]],
   Images: [Lab81, Lab82, Lab83],
 };
 
@@ -267,9 +214,7 @@ export const Lab9 = {
   name: "Audio Visualization (Beta)",
   type: "Responsive",
   detail: "ReactJS",
-  link: [
-    "http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/ragethenight",
-  ],
+  link: ["http://laboratory-occupied.s3-website.us-east-2.amazonaws.com/ragethenight"],
   TTT: [["Beta Project", ""]],
   Images: [Lab91, Lab92, Lab93, Lab94],
 };

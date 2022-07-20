@@ -1,11 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { useParams } from "react-router-dom";
-import classNames from "classnames";
+
 import "./AudioVisualization.scss";
-import { motion } from "framer-motion";
-import { useHistory, Link } from "react-router-dom";
-import { Projects, Topics } from "../../static/Constants";
-import BlueDanubeAudio from "../../assets/mp3/BlueDanube.mp3";
+
 import ValkyriesAudio from "../../assets/mp3/Valkyries.mp3";
 
 const getRandom = (a: number, b: number) => Math.random() * (b - a) + a;
@@ -28,10 +24,7 @@ function shuffle(length: any) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex--;
 
-    [array[currentIndex], array[randomIndex]] = [
-      array[randomIndex],
-      array[currentIndex],
-    ];
+    [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
   }
   return array;
 }
@@ -228,14 +221,7 @@ class App {
 
       this.ctx.beginPath();
 
-      var gradient = this.ctx.createRadialGradient(
-        xCenter,
-        yCenter,
-        0,
-        xCenter,
-        yCenter,
-        size
-      );
+      var gradient = this.ctx.createRadialGradient(xCenter, yCenter, 0, xCenter, yCenter, size);
       // Add three color stops
       gradient.addColorStop(0, this.randomColorArray[i]);
       // gradient.addColorStop(0.5, this.randomColorArray[i+1]);

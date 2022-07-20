@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
 import "./DetailPage.scss";
 import { motion } from "framer-motion";
-import { useHistory, useParams } from "react-router-dom";
+
 import { OriginalPages } from "../../static/Constants";
 
 interface Props {

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import "./MainPage.scss";
-import { motion } from "framer-motion";
+
 import { Topics, SemiDescriptions, Projects } from "../../static/Constants";
 import AudioVisualization from "../../components/AudioVisualization/AudioVisualization";
 import Subject from "../../components/SubjectRender/SubjectRender";
@@ -38,8 +38,8 @@ const Overview = ({ handleExpand, item }: any) => {
 
 const Expander = (props: any) => {
   return (
-    <div className="expander" onClick={props.handleExpand}>
-      {props.expanded ? "View Less" : "View More"}
+    <div className="expander" onClick={props.idx === 0 ? () => window.open("https://laboratory-occupied.com/lobby", "_blank") : props.handleExpand}>
+      {props.expanded ? "View Less" : props.idx === 0 ? "Link" : "View More"}
     </div>
   );
 };
@@ -64,10 +64,10 @@ const Row = React.memo(({ idx, setVisualPopupStatus, setVisualPopupOpened, setDe
 
   return (
     <div className="subject-row" ref={subjectWrapperRef} key={idx}>
-      <Topic i={idx} expanded={expanded} handleExpand={() => setExpanded((exp) => !exp)} />
+      <Topic i={idx} expanded={expanded} handleExpand={() => (idx === 0 ? window.open("https://laboratory-occupied.com/lobby", "_blank") : setExpanded((exp) => !exp))} />
       {expanded && Projects[idx].map((subject, i) => <Subject subject={subject} index={i} key={i} idx={idx} sendToDetail={sendToDetail} />)}
-      {!expanded && <Overview handleExpand={() => setExpanded((exp) => !exp)} item={SemiDescriptions[idx]} />}
-      <Expander expanded={expanded} handleExpand={() => setExpanded((exp) => !exp)} />
+      {!expanded && <Overview handleExpand={() => (idx === 0 ? window.open("https://laboratory-occupied.com/lobby", "_blank") : setExpanded((exp) => !exp))} item={SemiDescriptions[idx]} />}
+      <Expander expanded={expanded} handleExpand={() => setExpanded((exp) => !exp)} idx={idx} />
     </div>
   );
 });

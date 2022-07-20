@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import classNames from "classnames";
+
 import "./VisualSingleElement.scss";
 import { motion } from "framer-motion";
-import { useHistory, Link } from "react-router-dom";
+
 import { EventBehavior } from "../../../initializer/googleAnalytics";
-import { Projects, Topics } from "../../../static/Constants";
+
 import Loading from "../../../components/LoadingHelper/LoadingHelper";
 
 function VisualSingleElement(props: any) {
