@@ -11,7 +11,7 @@ export const Container = styled.div<Level>`
   ${FlexCenterStyle}
   cursor: pointer;
 
-  ${({ level }) => level >= 3 && "background: black"};
+  ${({ level }) => level >= 5 && "background: hsl(0, 0%, 5%)"};
 `;
 
 const Level1 = css`
@@ -21,15 +21,20 @@ const Level1 = css`
   background-color: rgb(0, 1, 2);
 `;
 
-const Level2 = css`
-  width: ${({ theme }) => theme.windowHeight}px;
-  height: ${({ theme }) => theme.windowWidth}px;
-  color: white;
-  background: linear-gradient(hsl(256, 87%, 51%), hsl(151, 90%, 38%));
-  transform: rotate(90deg) scale(5);
+const Level3 = css`
+  transform: scale(1, -1);
 `;
 
-const Level3 = css`
+const Level5 = css`
+  width: ${({ theme }) => theme.windowWidth}px;
+  height: ${({ theme }) => theme.windowHeight}px;
+  color: white;
+  background: linear-gradient(hsl(256, 87%, 51%), hsl(151, 90%, 38%));
+  transform: rotate(90deg) scale(2);
+  transition: all 1s ease-out;
+`;
+
+const Level6 = css`
   ${Level1};
   opacity: 0;
   transition: all 1s ease-in;
@@ -39,14 +44,34 @@ export const Title = styled(animated.div)<Level>`
   font-size: 4rem;
   font-weight: bold;
   transition: all 0.4s ease-in;
+  position: relative;
+  height: 0;
 
   ${FlexCenterStyle};
   cursor: pointer;
 
   ${({ level }) => level === 1 && Level1};
-  ${({ level }) => level === 2 && Level2};
   ${({ level }) => level === 3 && Level3};
-  ${({ level }) => level >= 4 && "color: white"};
+  ${({ level }) => level === 5 && Level5};
+  ${({ level }) => level >= 6 && Level6};
+`;
+
+export const Overline = styled.div<Level>`
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 0;
+  height: 0.4rem;
+  background: hsl(0, 100%, 40%);
+  position: absolute;
+
+  ${({ level }) =>
+    level === 3 &&
+    `width: 10rem;
+  `}
+
+  transition: all .5s linear;
 `;
 
 interface SmallEl {
@@ -54,6 +79,7 @@ interface SmallEl {
   rotation: number;
   level: number;
   colorHue: any;
+  delay: number;
 }
 
 export const SmallEl = styled.div.attrs<SmallEl>((props) => ({
@@ -68,16 +94,28 @@ export const SmallEl = styled.div.attrs<SmallEl>((props) => ({
   },
 }))<SmallEl>`
   opacity: 0;
-  ${({ level }) => level >= 3 && "opacity: 1"};
+  ${({ level }) => level >= 6 && "opacity: 1"};
 
   font-family: Anton;
 
   position: absolute;
-  transition: all 0.3s ease-out;
+  transition: all 0.4s ease-out;
   font-size: 1.5rem;
   border-radius: 4rem;
   padding: 0.3rem 1rem;
   border: 0.3rem solid black;
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  animation: appear 1s both;
+  animation-delay: ${({ delay }) => delay}s;
 `;
 
 export const ButtonContainer = styled.div`

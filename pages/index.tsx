@@ -5,7 +5,7 @@ import Intro from "components/Intro";
 import TicTacToe from "components/TicTacToe";
 
 function Home() {
-  const [currentComponent, setCurrentComponent] = useState<string>("tictactoe");
+  const [currentComponent, setCurrentComponent] = useState<string>("intro");
 
   return (
     <>
