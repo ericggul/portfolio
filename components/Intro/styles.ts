@@ -4,6 +4,7 @@ import { animated } from "@react-spring/web";
 
 interface Level {
   level: number;
+  fadeOut: boolean;
 }
 
 export const Container = styled.div<Level>`
@@ -12,6 +13,7 @@ export const Container = styled.div<Level>`
   cursor: pointer;
 
   ${({ level }) => level >= 5 && "background: hsl(0, 0%, 5%)"};
+  opacity: 1;
 `;
 
 const Level1 = css`
@@ -80,13 +82,14 @@ interface SmallEl {
   level: number;
   colorHue: any;
   delay: number;
+  popOut: boolean;
 }
 
 export const SmallEl = styled.div.attrs<SmallEl>((props) => ({
   style: {
     top: `${props.pos.y}px`,
     left: `${props.pos.x}px`,
-    transform: `rotate(${props.rotation}turn)`,
+    transform: !props.popOut && `rotate(${props.rotation}turn)`,
     background: `hsl(${props.colorHue}, 100%, 50%)`,
     boxShadow: `0 0 .3rem white, 0 0 .5rem hsl(${(180 + props.colorHue) % 360}, 100%, 50%), 0 0 1rem hsl(${(180 + props.colorHue) % 360}, 100%, 50%), 0 0 2rem hsl(${
       (180 + props.colorHue) % 360
@@ -160,4 +163,53 @@ export const NoButton = styled.div`
   color: hsl(330, 91%, 57%);
   border: 0.1rem solid hsl(330, 91%, 57%);
   box-shadow: 0 0 0.5rem hsl(330, 91%, 57%), 0 0 1rem hsl(330, 91%, 57%);
+`;
+
+interface PopOut {
+  popOut: boolean;
+}
+
+export const YesContainer = styled.div<PopOut>`
+  position: absolute;
+  ${WholeContainer};
+  z-index: 2;
+  ${({ popOut }) => (!popOut ? "transform: translateY(-100%)" : "transform: translateY(0)")};
+  transition: all 0.4s;
+`;
+
+interface Pos {
+  pos: any;
+}
+
+export const YesText = styled.div.attrs<Pos>((props) => ({
+  style: {
+    top: `${props.pos.top}px`,
+    left: `${props.pos.left}px`,
+    fontSize: `${props.pos.size}rem`,
+    transform: `translate(-50%, -50%)`,
+  },
+}))<Pos>`
+  color: white;
+  position: absolute;
+  font-family: coming-soon;
+`;
+
+interface FadeOut {
+  fadeOut: boolean;
+}
+
+export const CoverageContainer = styled.div<FadeOut>`
+  position: absolute;
+  pointer-events: none;
+  ${WholeContainer};
+  opacity: 0;
+  z-index: 5;
+  ${({ fadeOut }) =>
+    fadeOut &&
+    `
+      backdrop-filter: blur(1rem);
+      background: #f3f3f3;
+      opacity: 1;
+  `}
+  transition: all 2.5s;
 `;

@@ -13,16 +13,52 @@ datasource db {
 model Project{
   id String @default(cuid()) @id
   title String
-  description String
+
+  shortDescription String?
+  longDescription String?
+  projectURL String?
+
+  imageURLs String[]
+  medium String @default("HTML")
   date String
-  
+  lat Float? @default(37.54648)
+  lng Float? @default(127.00609)
+
+  rating Float @default(4.45)
+  ratingCount Int @default(28)
+
+  land Land? @relation(fields: [landId], references: [id])
+  landId String? 
+
+  price Price[]
+
 }
+
+// model ProjectImage{
+//   id String @default(cuid()) @id
+//   imageURL String
+//   project Project @relation(fields: [projectId], references: [id])
+//   projectId String
+// }
+
+model Price{
+  id String @default(cuid()) @id
+  priceType String
+  price Float
+  project Project? @relation(fields: [projectId], references: [id])
+  projectId String?
+}
+
 
 model Land{
   id String @default(cuid()) @id
   title String
-
   medium String
   contributionType String
+
+  baseLandURL String?
+  baseImageURL String?
+
+  projects Project[]
 }
 

@@ -76,19 +76,44 @@ function Intro({ moveToNextComponent }: any) {
     }
   }, [level]);
 
+  const [popOut, setPopOut] = useState(new Array(5).fill(false));
+  const [fadeOut, setFadeOut] = useState(false);
   function yesButtonClick(e: any) {
     e.preventDefault();
-    moveToNextComponent();
+    setInterval(() => {
+      setPopOut((arr: any) => {
+        const newArr = [...arr];
+        let i = 0;
+        while (i < newArr.length) {
+          if (!newArr[i]) {
+            newArr[i] = true;
+            break;
+          }
+          i++;
+        }
+        return newArr;
+      });
+    }, 180);
+
+    setTimeout(() => {
+      setFadeOut(true);
+    }, 1500);
+
+    setTimeout(() => {
+      moveToNextComponent();
+    }, 4000);
   }
 
+  const yesTextPos = useMemo(() => new Array(50).fill(0).map((_) => ({ top: getRandom(0, windowHeight), left: getRandom(0, windowWidth), size: getRandom(3, 7) })), [windowWidth, windowHeight]);
+
   return (
-    <S.Container level={level} onClick={() => setLevel((l) => l + 1)}>
+    <S.Container level={level} onClick={() => setLevel((l) => l + 1)} fadeOut={fadeOut}>
       <S.Title level={level}>
         Enter
         <S.Overline level={level} />
       </S.Title>
       {smallEl.map((el: any, i: number) => (
-        <S.SmallEl key={el.key} pos={el.pos} rotation={level * getRandom(0.5, 2)} level={level} colorHue={el.colorHue} delay={el.delay}>
+        <S.SmallEl key={el.key} pos={el.pos} rotation={getRandom(-1, 1)} level={level} colorHue={el.colorHue} delay={el.delay} popOut={popOut[0]}>
           Enter
         </S.SmallEl>
       ))}
@@ -101,6 +126,17 @@ function Intro({ moveToNextComponent }: any) {
           </S.SingleSet>
         ))}
       </S.ButtonContainer>
+
+      {popOut.map((bool, j) => (
+        <S.YesContainer popOut={bool} key={j}>
+          {new Array(10).fill(0).map((_, i) => (
+            <S.YesText pos={yesTextPos[10 * j + i]} key={i}>
+              Yes I Do
+            </S.YesText>
+          ))}
+        </S.YesContainer>
+      ))}
+      <S.CoverageContainer fadeOut={fadeOut} />
     </S.Container>
   );
 }

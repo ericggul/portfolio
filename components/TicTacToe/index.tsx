@@ -2,9 +2,11 @@ import { useEffect, useState, useCallback, useRef } from "react";
 import * as S from "./styles";
 import { ToastContainer, toast } from "react-toastify";
 
-const TIMEOUT = 3000;
+const TIMEOUT = 500;
 
-export default function TicTacToe() {
+const getRandom = (min: number, max: number) => Math.random() * (max - min) + min;
+
+function TicTacToe({ handleShine, shine, goBackToIntro, handleWin }: any) {
   let TICTACTOE_SIZE = 5;
 
   //state:
@@ -14,24 +16,12 @@ export default function TicTacToe() {
   const [buttonState, setButtonState] = useState(new Array(TICTACTOE_SIZE ** 2).fill(0));
   const [playState, setPlayState] = useState(0);
 
-  const [shine, setShine] = useState(false);
   const [computerShouldPlay, setComputerShouldPlay] = useState(false);
-
-  //shine: visual effect
-  let shineTimeoutRef = useRef<any>(null);
-  useEffect(() => {
-    if (shine) {
-      shineTimeoutRef.current = setTimeout(() => {
-        setShine(false);
-      }, TIMEOUT);
-      return () => clearTimeout(shineTimeoutRef.current);
-    }
-  }, [shine]);
 
   //tic tac toe logic
   const handleButtonClick = useCallback(
     (idx: number) => {
-      if (playState === 0) {
+      if (playState === 0 && shine === "#f3f3f3") {
         if (buttonState[idx] !== 0) {
           return;
         }
@@ -40,11 +30,11 @@ export default function TicTacToe() {
           newState[idx] = 2;
           return newState;
         });
-        setShine(true);
+        handleShine("black");
         setComputerShouldPlay(true);
       }
     },
-    [playState, buttonState]
+    [playState, buttonState, shine]
   );
 
   const timeoutRef = useRef<any>(null);
@@ -80,17 +70,31 @@ export default function TicTacToe() {
   function checkGameStatus() {
     if (checkWin()) {
       if (checkWin() === 1) {
-        toast("You lose!");
+        toast("You lose! Your specie's intelligence is weaker than Computer haha!!", {
+          autoClose: 2000,
+        });
         setPlayState(1);
+        setTimeout(() => {
+          goBackToIntro();
+        }, 2000);
+
         return "end";
       } else {
-        toast("You win!");
+        toast("You won! What a great intelligence..", {
+          autoClose: 2000,
+        });
+        handleWin();
         setPlayState(2);
         return "end";
       }
     } else if (checkDraw()) {
-      toast("Draw!");
+      toast("Draw! How shame is that for human species.", {
+        autoClose: 2000,
+      });
       setPlayState(3);
+      setTimeout(() => {
+        goBackToIntro();
+      }, 2000);
       return "end";
     } else {
       return "continue";
@@ -127,16 +131,64 @@ export default function TicTacToe() {
   }, [buttonState]);
 
   return (
-    <S.Container shine={shine}>
-      <S.TicTacToe>
-        {buttonState.map((state: any, i: number) => (
-          <S.Button key={i} onClick={() => handleButtonClick(i)} evenIdx={i % 2 === 0}>
-            {state === 1 && "X"}
-            {state === 2 && "O"}
-          </S.Button>
-        ))}
-      </S.TicTacToe>
-      <ToastContainer />
-    </S.Container>
+    <S.TicTacToe>
+      {buttonState.map((state: any, i: number) => (
+        <S.Button key={i} onClick={() => handleButtonClick(i)} evenIdx={i % 2 === 0} delay={getRandom(0, 1)}>
+          {state === 1 && <S.Img src={"/assets/images/TicTacToe/brain-icon.svg"} />}
+          {state === 2 && "O"}
+        </S.Button>
+      ))}
+    </S.TicTacToe>
+  );
+}
+
+export default function TicTacToePage({ goBackToIntro, moveToNextComponent, currentComponent }: any) {
+  const [shine, setShine] = useState("#f3f3f3");
+  const [colorIdx, setColorIdx] = useState(0);
+
+  console.log(shine);
+
+  //shine: visual effect
+  let shineTimeoutRef = useRef<any>(null);
+  useEffect(() => {
+    if (shine !== "#f3f3f3") {
+      shineTimeoutRef.current = setTimeout(() => {
+        setShine("#f3f3f3");
+      }, TIMEOUT);
+      return () => clearTimeout(shineTimeoutRef.current);
+    }
+  }, [shine]);
+
+  function handleWin() {
+    let interval = setInterval(() => {
+      setColorIdx((idx) => idx + 1);
+    }, 50);
+
+    setTimeout(() => {
+      moveToNextComponent();
+    }, 1500);
+    setTimeout(() => {
+      clearInterval(interval);
+    }, 2500);
+    setTimeout(() => {
+      moveToNextComponent();
+    }, 2550);
+  }
+
+  const COLOR_ARRAY = ["#f3f3f3", "black"];
+
+  useEffect(() => {
+    setShine(COLOR_ARRAY[colorIdx % COLOR_ARRAY.length]);
+  }, [colorIdx]);
+
+  return (
+    <S.MovementContainer currentComponent={currentComponent}>
+      <S.Container shine={shine}>
+        <S.Text delay={1.5}>If you'd like to view portfolio</S.Text>
+        <TicTacToe handleShine={(color: any) => setShine(color)} shine={shine} goBackToIntro={goBackToIntro} handleWin={handleWin} />
+        <S.Text delay={2}>Win Tic Tac Toe against modern intelligence</S.Text>
+        <ToastContainer />
+      </S.Container>
+    </S.MovementContainer>
   );
 }
