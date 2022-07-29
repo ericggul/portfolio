@@ -10,9 +10,7 @@ export function getDistance(pointA: any, pointB: any) {
   return distance;
 }
 
-export default function useDistance({ lat, lng }: any) {
-  const { pos: currPos, permittedStatus } = useGeoLocation();
-
+export default function useDistance({ lat, lng, currPos, permittedStatus }: any) {
   const [distance, setDistance] = useState<any>(null);
   useEffect(() => {
     if (permittedStatus && currPos) {

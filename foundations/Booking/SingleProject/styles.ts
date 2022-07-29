@@ -41,17 +41,17 @@ export const Title = styled.h2``;
 
 export const ShortDescription = styled.p``;
 export const Medium = styled.p`
-  max-width: 70%;
+  max-width: 60%;
   font-weight: 300;
   font-size: 0.95rem;
-  color: #555;
+  color: #777;
 `;
 
 export const Distance = styled.p`
-  max-width: 70%;
+  max-width: 60%;
   font-weight: 300;
   font-size: 0.95rem;
-  color: #555;
+  color: #777;
 `;
 
 export const Rating = styled.div`
@@ -74,6 +74,6 @@ export const RatingText = styled.div`
   span {
     margin-left: 0.3rem;
     font-size: 0.85rem;
-    color: #555;
+    color: #777;
   }
 `;
