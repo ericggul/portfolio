@@ -1,12 +1,22 @@
 import styled from "styled-components";
 import { FlexCenterStyle, WholeContainer } from "styles/common";
 
-export const Container = styled.div`
+interface Visible {
+  visible: boolean;
+  move: boolean;
+  idx: number;
+}
+
+export const Container = styled.div<Visible>`
   margin: 0.9rem 0;
   display: flex;
   flex-direction: column;
   width: ${({ theme }) => (theme.windowWidth < 768 ? theme.windowWidth : Math.min(theme.windowWidth / 2, 500))}px;
   cursor: pointer;
+
+  ${({ visible, move, idx }) =>
+    visible ? (move ? `transform: rotateY(180deg); opacity: 1;` : `transform: translateX(0) rotateY(0); opacity: 1;`) : `transform: translateX(${idx % 2 ? -100 : 100}%); opacity: 0;`}
+  transition: transform 0.5s ease-out, opacity 1.0s ease-out;
 `;
 
 export const ImgContainer = styled.div`

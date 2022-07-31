@@ -2,6 +2,9 @@
 import { useState, useMemo, useEffect } from "react";
 import useResize from "utils/hooks/useResize";
 
+//router
+import { useRouter } from "next/router";
+
 //styles
 import * as S from "./styles";
 
@@ -41,7 +44,7 @@ function showButtonSet(idx: number, lv: number) {
   }
 }
 
-function Intro({ moveToNextComponent }: any) {
+function Intro() {
   const [level, setLevel] = useState(0);
   const [smallEl, setSmallEl] = useState<any>([]);
 
@@ -78,6 +81,7 @@ function Intro({ moveToNextComponent }: any) {
 
   const [popOut, setPopOut] = useState(new Array(5).fill(false));
   const [fadeOut, setFadeOut] = useState(false);
+  const router = useRouter();
   function yesButtonClick(e: any) {
     e.preventDefault();
     setInterval(() => {
@@ -100,8 +104,8 @@ function Intro({ moveToNextComponent }: any) {
     }, 1500);
 
     setTimeout(() => {
-      moveToNextComponent();
-    }, 4000);
+      router.push("/main");
+    }, 3300);
   }
 
   const yesTextPos = useMemo(() => new Array(50).fill(0).map((_) => ({ top: getRandom(0, windowHeight), left: getRandom(0, windowWidth), size: getRandom(3, 7) })), [windowWidth, windowHeight]);
