@@ -38,8 +38,8 @@ export default function SingleProject({ project, geolocation, idx }: any) {
   const [ratingDigit, setRatingDigit] = useState(1);
   useEffect(() => {
     const ratingDigitInterval = setInterval(() => {
-      setRatingDigit((ratingDigit) => (ratingDigit + 1) % 5);
-    }, 2000);
+      setRatingDigit((ratingDigit) => (ratingDigit + 1) % 4);
+    }, 3000);
     return () => clearInterval(ratingDigitInterval);
   }, []);
 

@@ -8,26 +8,13 @@ function TitleContainer({ project }: any) {
   return (
     <S.TitleContainer>
       <S.UpperInformation>
+        {new Array(6).fill(0).map((_, i) => (
+          <span key={i}>
+            {project.date} &#8226; {project.medium} &#8226; {project.land.title} &#8226; {`Produly made by JYC`} &#8226;{" "}
+          </span>
+        ))}
         <span>{project.date}</span>
-        <span>{project.medium}</span>
-        <span>{project.land.title}</span>
-        <span>{project.date}</span>
-        <span>{project.medium}</span>
-        <span>{project.land.title}</span>
-        <span>{project.date}</span>
-        <span>{project.medium}</span>
-        <span>{project.land.title}</span>
-        <span>{project.date}</span>
-        <span>{project.medium}</span>
-        <span>{project.land.title}</span>
-        <span>{project.date}</span>
-        <span>{project.medium}</span>
-        <span>{project.land.title}</span>
-        <span>{project.date}</span>
-        <span>{project.medium}</span>
-        <span>{project.land.title}</span>
       </S.UpperInformation>
-
       <h1>{project.title}</h1>
     </S.TitleContainer>
   );
@@ -37,16 +24,15 @@ function RatingContainer({ project }: any) {
   return (
     <S.RatingContainer>
       <S.StarContainer>
-        <S.Star src={"/assets/images/Booking/star-fill.svg"} alt="Star" />
-        <S.Star src={"/assets/images/Booking/star-fill.svg"} alt="Star" />
-        <S.Star src={"/assets/images/Booking/star-fill.svg"} alt="Star" />
-        <S.Star src={"/assets/images/Booking/star-fill.svg"} alt="Star" />
-        <S.Star src={"/assets/images/Booking/star.svg"} alt="Star" />
+        {new Array(5).fill(0).map((_, i) => (
+          <S.Star src={`/assets/images/Booking/star${Math.round(project.rating) >= i + 1 ? "-fill" : ""}.svg`} alt="Star" key={i} />
+        ))}
       </S.StarContainer>
 
       <p>
-        {project.rating} ({project.ratingCount} Ratings)
+        {project.rating} <span>({project.ratingCount} Ratings)</span>
       </p>
+      <S.AddRating> + Add Your Rating</S.AddRating>
     </S.RatingContainer>
   );
 }
@@ -59,12 +45,27 @@ function DescriptionContainer({ project }: any) {
   );
 }
 
+function LinkContainer({ project }: any) {
+  return (
+    <S.LinkContainer>
+      {new Array(30).fill(0).map((_, i) => (
+        <span key={i}>
+          <a href={project.land.baseLandURL ? project.land.baseLandURL + project.projectURL : project.projectURL} target="_blank" rel="noreferrer">
+            Visit Link
+          </a>{" "}
+        </span>
+      ))}
+    </S.LinkContainer>
+  );
+}
+
 export default function InfoSection({ project }: any) {
   return (
     <S.InfoSection>
       <TitleContainer project={project} />
       <RatingContainer project={project} />
       <DescriptionContainer project={project} />
+      {project.projectURL && <LinkContainer project={project} />}
     </S.InfoSection>
   );
 }

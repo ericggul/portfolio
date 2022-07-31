@@ -6,6 +6,7 @@ import ErrorPage from "next/error";
 import Project from "components/Project";
 
 export default function Title({ project }: any) {
+  console.log(project);
   return <>{project ? <Project project={project} /> : <ErrorPage statusCode={404} />}</>;
 }
 

@@ -2,9 +2,9 @@ import styled, { css } from "styled-components";
 import { FlexCenterStyle, WholeContainer } from "styles/common";
 
 export const Container = styled.div`
+  display: flex;
   ${FlexCenterStyle};
-
-  ${WholeContainer};
+  width: ${({ theme }) => theme.windowWidth}px;
   overflow: scroll;
   background: hsl(0, 0%, 95%);
 `;
@@ -16,7 +16,6 @@ export const Contents = styled.div`
   justify-content: space-between;
   flex-direction: column;
   width: ${({ theme }) => (theme.windowWidth < 768 ? theme.windowWidth : Math.min(theme.windowWidth / 2, 500))}px;
-  height: 100%;
 `;
 
 export const BackNavigator = styled.div`
@@ -28,6 +27,7 @@ export const BackNavigator = styled.div`
   font-size: 0.8rem;
   z-index: 2;
 
+  cursor: pointer;
   animation: vibrate 3s linear infinite;
 
   @keyframes vibrate {

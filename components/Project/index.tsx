@@ -35,7 +35,6 @@ export default function Project({ project }: any) {
         <Link href="/main">
           <S.BackNavigator>Go Back</S.BackNavigator>
         </Link>
-
         <ImageSection project={project} isItUpper={true} />
         <InfoSection project={project} />
         <ImageSection project={project} isItUpper={false} />
