@@ -7,28 +7,9 @@ import Image from "next/image";
 //containers
 import InfoSection from "foundations/Project/InfoSection";
 import ImageSection from "foundations/Project/ImageSection";
+import Recommendation from "foundations/Project/Recommendation";
 
 export default function Project({ project }: any) {
-  const carouselLength = useMemo(() => project.imageURLs.length, [project.imageURLs]);
-  const upperInterval = useMemo(() => ((new Date().getMinutes() % 6) + 3) * 500, []);
-  const lowerInterval = useMemo(() => ((new Date().getMinutes() % 6) + 3) * 250, []);
-  const [upperCarousel, setUpperCarousel] = useState(0);
-  const [lowerCarousel, setLowerCarousel] = useState(0);
-
-  useEffect(() => {
-    const upperSetInterval = setInterval(() => {
-      setUpperCarousel((upper) => (upper + 1) % carouselLength);
-    }, upperInterval);
-    const lowerSetInterval = setInterval(() => {
-      setLowerCarousel((lower) => (lower === 0 ? carouselLength - 1 : (lower - 1) % carouselLength));
-    }, lowerInterval);
-
-    return () => {
-      clearInterval(upperSetInterval);
-      clearInterval(lowerSetInterval);
-    };
-  }, [carouselLength, upperInterval, lowerInterval]);
-
   return (
     <S.Container>
       <S.Contents>
@@ -38,6 +19,7 @@ export default function Project({ project }: any) {
         <ImageSection project={project} isItUpper={true} />
         <InfoSection project={project} />
         <ImageSection project={project} isItUpper={false} />
+        <Recommendation project={project} />
       </S.Contents>
     </S.Container>
   );
