@@ -22,7 +22,6 @@ function TitleContainer({ project }: any) {
 }
 
 function RatingContainer({ project }: any) {
-  console.log(project.quoteDescription);
   return (
     <S.RatingContainer>
       <S.QuoteContainer>{project.quoteDescription ? `"${project.quoteDescription}"` : `"Astonishing"`}</S.QuoteContainer>
