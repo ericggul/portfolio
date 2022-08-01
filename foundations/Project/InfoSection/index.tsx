@@ -10,7 +10,8 @@ function TitleContainer({ project }: any) {
       <S.UpperInformation>
         {new Array(6).fill(0).map((_, i) => (
           <span key={i}>
-            {project.date} &#8226; {project.medium} &#8226; {project.land.title} &#8226; {`Produly made by JYC`} &#8226;{" "}
+            {project.date} &#8226; {project.medium} &#8226; {project.land.title} &#8226; {`Produly made by JYC`} &#8226; {project.expectedTime ? `${project.expectedTime} minutes` : "Link Below"}{" "}
+            &#8226;{" "}
           </span>
         ))}
         <span>{project.date}</span>
@@ -21,8 +22,10 @@ function TitleContainer({ project }: any) {
 }
 
 function RatingContainer({ project }: any) {
+  console.log(project.quoteDescription);
   return (
     <S.RatingContainer>
+      <S.QuoteContainer>{project.quoteDescription ? `"${project.quoteDescription}"` : `"Astonishing"`}</S.QuoteContainer>
       <S.StarContainer>
         {new Array(5).fill(0).map((_, i) => (
           <S.Star src={`/assets/images/Booking/star${Math.round(project.rating) >= i + 1 ? "-fill" : ""}.svg`} alt="Star" key={i} />

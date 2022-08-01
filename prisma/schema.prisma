@@ -16,6 +16,7 @@ model Project{
 
   shortDescription String?
   longDescription String?
+  quoteDescription String?
   projectURL String?
 
   imageURLs String[]
@@ -23,6 +24,8 @@ model Project{
   date String
   lat Float? @default(37.54648)
   lng Float? @default(127.00609)
+
+  expectedTime Int?
 
   rating Float @default(4.45)
   ratingCount Int @default(28)

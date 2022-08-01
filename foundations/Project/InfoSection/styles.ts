@@ -22,6 +22,8 @@ export const TitleContainer = styled.div`
     margin-top: 0.9rem;
     margin-bottom: 1.2rem;
   }
+  p {
+  }
 `;
 
 export const UpperInformation = styled.div`
@@ -57,8 +59,12 @@ export const RatingContainer = styled.div`
   }
 `;
 
+export const QuoteContainer = styled.h2`
+  margin: 0.3rem 0;
+`;
+
 export const StarContainer = styled.div`
-  margin: 0.5rem 0;
+  margin: 0.3rem 0;
   ${FlexCenterStyle};
 `;
 
