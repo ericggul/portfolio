@@ -42,6 +42,7 @@ function showButtonSet(idx: number, lv: number) {
   if (lv >= START + 5) {
     return true;
   }
+  return false;
 }
 
 function Intro() {
@@ -112,7 +113,7 @@ function Intro() {
 
   useEffect(() => {
     //on enter button press on keyboard
-    function handleOnKeydown(e) {
+    function handleOnKeydown(e: any) {
       if (e.key === "Enter") {
         setLevel((lv) => lv + 1);
       }

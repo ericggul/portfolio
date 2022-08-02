@@ -21,7 +21,7 @@ export const Container = styled.div.attrs<Shine>((props) => ({
   style: {
     background: props.shine,
   },
-}))`
+}))<Shine>`
   position: absolute;
   top: 0;
   left: 0;

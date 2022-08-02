@@ -1,10 +1,9 @@
 import styled, { css } from "styled-components";
 import { FlexCenterStyle, WholeContainer } from "styles/common";
-import { animated } from "@react-spring/web";
 
 interface Level {
   level: number;
-  fadeOut: boolean;
+  fadeOut?: boolean;
 }
 
 export const Container = styled.div<Level>`
@@ -42,7 +41,7 @@ const Level6 = css`
   transition: all 1s ease-in;
 `;
 
-export const Title = styled(animated.div)<Level>`
+export const Title = styled.div<Level>`
   font-size: 4rem;
   font-weight: bold;
   transition: all 0.4s ease-in;
@@ -131,7 +130,7 @@ export const ButtonContainer = styled.div`
 `;
 
 interface Show {
-  show: boolean;
+  show: any;
 }
 
 export const SingleSet = styled.div<Show>`

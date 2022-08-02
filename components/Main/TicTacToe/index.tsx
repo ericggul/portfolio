@@ -146,10 +146,8 @@ function TicTacToe({ handleShine, shine, handleWin }: any) {
 }
 
 export default function TicTacToePage({ moveToNextComponent, currentComponent }: any) {
-  const [shine, setShine] = useState("#f3f3f3");
+  const [shine, setShine] = useState<any>("#f3f3f3");
   const [colorIdx, setColorIdx] = useState(0);
-
-  console.log(shine);
 
   //shine: visual effect
   let shineTimeoutRef = useRef<any>(null);
