@@ -7,11 +7,11 @@ import TicTacToe from "components/Main/TicTacToe";
 import Booking from "components/Main/Booking";
 
 function Main({ projects }: any) {
-  const [currentComponent, setCurrentComponent] = useState<string>("booking");
+  const [currentComponent, setCurrentComponent] = useState<string>("tictactoe");
 
   return (
     <>
-      <TicTacToe goBackToIntro={() => setCurrentComponent("intro")} moveToNextComponent={() => setCurrentComponent("booking")} currentComponent={currentComponent} />
+      <TicTacToe moveToNextComponent={() => setCurrentComponent("booking")} currentComponent={currentComponent} />
       <Booking currentComponent={currentComponent} projects={projects} />
     </>
   );

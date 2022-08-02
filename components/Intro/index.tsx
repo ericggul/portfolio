@@ -77,7 +77,7 @@ function Intro() {
     } else if (level >= START + 8) {
       toast.success(`Stop playing with it and click on the link`);
     }
-  }, [level]);
+  }, [level, windowWidth, windowHeight]);
 
   const [popOut, setPopOut] = useState(new Array(5).fill(false));
   const [fadeOut, setFadeOut] = useState(false);

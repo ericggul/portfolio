@@ -8,7 +8,7 @@ import useDistance from "utils/hooks/useDistance";
 
 const getRandom = (min: number, max: number) => Math.random() * (max - min) + min;
 
-export default function SingleProject({ project, geolocation, idx }: any) {
+export default function SingleProject({ project, idx }: any) {
   const [visible, setVisible] = useState(false);
   const [move, setMove] = useState(false);
   const domRef = useRef<any>();
@@ -31,8 +31,6 @@ export default function SingleProject({ project, geolocation, idx }: any) {
       return () => clearInterval(intervalFunc);
     }
   }, [visible, interval]);
-
-  const { distance, permittedStatus } = useDistance({ lat: project.lat, lng: project.lng, currPos: geolocation.pos, permittedStatus: geolocation.permittedStatus });
 
   //rating digit
   const [ratingDigit, setRatingDigit] = useState(1);

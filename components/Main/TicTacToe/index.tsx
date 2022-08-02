@@ -1,12 +1,13 @@
 import { useEffect, useState, useCallback, useRef } from "react";
 import * as S from "./styles";
 import { ToastContainer, toast } from "react-toastify";
+import { useRouter } from "next/router";
 
 const TIMEOUT = 500;
 
 const getRandom = (min: number, max: number) => Math.random() * (max - min) + min;
 
-function TicTacToe({ handleShine, shine, goBackToIntro, handleWin }: any) {
+function TicTacToe({ handleShine, shine, handleWin }: any) {
   let TICTACTOE_SIZE = 5;
 
   //state:
@@ -67,6 +68,8 @@ function TicTacToe({ handleShine, shine, goBackToIntro, handleWin }: any) {
     });
   }, [buttonState]);
 
+  const router = useRouter();
+
   function checkGameStatus() {
     if (checkWin()) {
       if (checkWin() === 1) {
@@ -75,7 +78,7 @@ function TicTacToe({ handleShine, shine, goBackToIntro, handleWin }: any) {
         });
         setPlayState(1);
         setTimeout(() => {
-          goBackToIntro();
+          router.back();
         }, 2000);
 
         return "end";
@@ -93,7 +96,7 @@ function TicTacToe({ handleShine, shine, goBackToIntro, handleWin }: any) {
       });
       setPlayState(3);
       setTimeout(() => {
-        goBackToIntro();
+        router.back();
       }, 2000);
       return "end";
     } else {
@@ -142,7 +145,7 @@ function TicTacToe({ handleShine, shine, goBackToIntro, handleWin }: any) {
   );
 }
 
-export default function TicTacToePage({ goBackToIntro, moveToNextComponent, currentComponent }: any) {
+export default function TicTacToePage({ moveToNextComponent, currentComponent }: any) {
   const [shine, setShine] = useState("#f3f3f3");
   const [colorIdx, setColorIdx] = useState(0);
 
@@ -184,8 +187,8 @@ export default function TicTacToePage({ goBackToIntro, moveToNextComponent, curr
   return (
     <S.MovementContainer currentComponent={currentComponent}>
       <S.Container shine={shine}>
-        <S.Text delay={1.5}>If you'd like to view portfolio</S.Text>
-        <TicTacToe handleShine={(color: any) => setShine(color)} shine={shine} goBackToIntro={goBackToIntro} handleWin={handleWin} />
+        <S.Text delay={1.5}>{`If you'd like to view portfolio`}</S.Text>
+        <TicTacToe handleShine={(color: any) => setShine(color)} shine={shine} handleWin={handleWin} />
         <S.Text delay={2}>Win Tic Tac Toe against modern intelligence</S.Text>
         <ToastContainer />
       </S.Container>
