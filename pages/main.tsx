@@ -6,8 +6,9 @@ import { useState } from "react";
 import TicTacToe from "components/Main/TicTacToe";
 import Booking from "components/Main/Booking";
 
-function Main({ projects }: any) {
-  const [currentComponent, setCurrentComponent] = useState<string>("tictactoe");
+function Main({ projects, givenComponent }: any) {
+  console.log(givenComponent);
+  const [currentComponent, setCurrentComponent] = useState<string>(givenComponent);
 
   return (
     <>
@@ -17,7 +18,8 @@ function Main({ projects }: any) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async () => {
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  console.log(context);
   const projects = await prisma.project.findMany({
     include: {
       land: {
@@ -34,6 +36,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return {
     props: {
       projects,
+      givenComponent: context.query.givenComponent || "booking",
     },
   };
 };

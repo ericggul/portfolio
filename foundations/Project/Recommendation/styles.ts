@@ -13,7 +13,7 @@ export const Header = styled.h3``;
 export const Contents = styled.div`
   ${FlexCenterStyle};
   width: 100%;
-  margin: 1rem 0;
+  margin: 1.5rem 0;
 `;
 
 export const Content = styled.div`

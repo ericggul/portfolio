@@ -105,7 +105,10 @@ function Intro() {
     }, 1500);
 
     setTimeout(() => {
-      router.push("/main");
+      router.push({
+        pathname: "/main",
+        query: { givenComponent: "tictactoe" },
+      });
     }, 3300);
   }
 

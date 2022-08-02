@@ -21,7 +21,7 @@ function TitleContainer({ project }: any) {
   );
 }
 
-function RatingContainer({ project }: any) {
+function RatingContainer({ project, handleModalOpen }: any) {
   return (
     <S.RatingContainer>
       <S.QuoteContainer>{project.quoteDescription ? `"${project.quoteDescription}"` : `"Astonishing"`}</S.QuoteContainer>
@@ -34,7 +34,7 @@ function RatingContainer({ project }: any) {
       <p>
         {project.rating} <span>({project.ratingCount} Ratings)</span>
       </p>
-      <S.AddRating> + Add Your Rating</S.AddRating>
+      <S.AddRating onClick={handleModalOpen}> + Add Your Rating</S.AddRating>
     </S.RatingContainer>
   );
 }
@@ -61,11 +61,11 @@ function LinkContainer({ project }: any) {
   );
 }
 
-export default function InfoSection({ project }: any) {
+export default function InfoSection({ project, handleModalOpen }: any) {
   return (
     <S.InfoSection>
       <TitleContainer project={project} />
-      <RatingContainer project={project} />
+      <RatingContainer project={project} handleModalOpen={handleModalOpen} />
       <DescriptionContainer project={project} />
       {project.projectURL && <LinkContainer project={project} />}
     </S.InfoSection>
