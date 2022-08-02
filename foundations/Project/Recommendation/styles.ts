@@ -27,6 +27,8 @@ export const Content = styled.div`
 export const ImgContainer = styled.div`
   width: 100%;
   position: relative;
+  border-radius: 0.3rem;
+  overflow: hidden;
   height: ${({ theme }) => (theme.windowWidth < 768 ? theme.windowWidth * 0.21 : Math.min(theme.windowWidth / 2, 500) * 0.21)}px;
 `;
 
@@ -35,6 +37,7 @@ export const Title = styled.div`
   height: 2rem;
   margin-top: 0.5rem;
 
+  color: #333;
   max-width: 80%;
   text-align: center;
 `;

@@ -110,6 +110,17 @@ function Intro() {
 
   const yesTextPos = useMemo(() => new Array(50).fill(0).map((_) => ({ top: getRandom(0, windowHeight), left: getRandom(0, windowWidth), size: getRandom(3, 7) })), [windowWidth, windowHeight]);
 
+  useEffect(() => {
+    //on enter button press on keyboard
+    function handleOnKeydown(e) {
+      if (e.key === "Enter") {
+        setLevel((lv) => lv + 1);
+      }
+    }
+    const event = document.addEventListener("keydown", handleOnKeydown);
+    return () => document.removeEventListener("keydown", handleOnKeydown);
+  }, []);
+
   return (
     <S.Container level={level} onClick={() => setLevel((l) => l + 1)} fadeOut={fadeOut}>
       <S.Title level={level}>
