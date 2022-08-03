@@ -15,6 +15,12 @@ import RatingModal from "foundations/Project/RatingModal";
 
 export default function Project({ project, recommendedProjects }: any) {
   const { modalOpen, handleModalOpen, handleModalClose } = useModal();
+  const [modalHadOpened, setModalHadOpened] = useState(false);
+  useEffect(() => {
+    if (modalOpen) {
+      setModalHadOpened(true);
+    }
+  }, [modalOpen]);
 
   return (
     <S.Container>
@@ -23,10 +29,10 @@ export default function Project({ project, recommendedProjects }: any) {
           <S.BackNavigator>Back to List</S.BackNavigator>
         </Link>
         <ImageSection project={project} isItUpper={true} />
-        <InfoSection project={project} handleModalOpen={handleModalOpen} />
+        <InfoSection project={project} handleModalOpen={handleModalOpen} modalHadOpened={modalHadOpened} />
         <ImageSection project={project} isItUpper={false} />
         <Recommendation recommendedProjects={recommendedProjects} />
-        <RatingModal modalOpen={modalOpen} handleModalClose={handleModalClose} />
+        <RatingModal project={project} modalOpen={modalOpen} handleModalClose={handleModalClose} />
       </S.Contents>
     </S.Container>
   );

@@ -25,26 +25,34 @@ export const Background = styled.div`
   backdrop-filter: blur(0.4rem);
 `;
 
-export const ModalBox = styled.div`
+export const ModalBox = styled.div<ModalOpen>`
   z-index: 6;
-  width: ${({ theme }) => (theme.windowWidth > 768 ? theme.windowWidth * 0.5 : 768 * 0.5)}px;
-  height: ${({ theme }) => (theme.windowWidth > 768 ? theme.windowWidth * 0.25 : 768 * 0.25)}px;
-  background: rgba(0, 0, 0, 0.9);
+  width: ${({ theme, modalOpen }) => (modalOpen ? (theme.windowWidth > 768 ? theme.windowWidth * 0.5 : 768 * 0.5) : 100)}px;
+  height: ${({ theme, modalOpen }) => (modalOpen ? (theme.windowWidth > 768 ? theme.windowWidth * 0.25 : 768 * 0.25) : theme.windowHeight)}px;
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(100, 100, 100, 0.9));
   color: white;
   ${FlexCenterStyle};
   flex-direction: column;
   position: relative;
+  border-radius: 0.5rem;
 
   h2 {
     text-align: center;
     width: 90%;
+    margin: 1rem 0;
   }
+
+  transition: all 0.5s ease-in-out;
 `;
 
 export const Cancel = styled.div`
   position: absolute;
-  top: 0;
-  right: 0;
+  cursor: pointer;
+  background: rgba(255, 100, 100, 1);
+  width: 1.5rem;
+  height: 1.5rem;
+  ${FlexCenterStyle};
+  border-radius: 50%;
 `;
 
 export const Stars = styled.div`
@@ -58,6 +66,7 @@ export const Star = styled.div`
   width: 2rem;
   height: 2rem;
   margin: 0.2rem;
+  cursor: pointer;
 `;
 
 interface Show {
@@ -66,12 +75,14 @@ interface Show {
 
 export const Confirm = styled.div<Show>`
   ${({ show }) => (show ? `opacity: 1` : `opacity: 0`)};
-  transition: opacity 0.4s;
+  transition: opacity 0.5s;
   font-size: 1.4rem;
+  margin: 1rem 0;
   padding: 0.3rem 1rem;
   border-radius: 0.5rem;
   background: white;
   color: black;
   border: 1px solid white;
   ${FlexCenterStyle};
+  cursor: pointer;
 `;

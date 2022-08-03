@@ -8,7 +8,7 @@ function TitleContainer({ project }: any) {
   return (
     <S.TitleContainer>
       <S.UpperInformation>
-        {new Array(6).fill(0).map((_, i) => (
+        {new Array(7).fill(0).map((_, i) => (
           <span key={i}>
             {project.date} &#8226; {project.medium} &#8226; {project.land.title} &#8226; {`Produly made by JYC`} &#8226; {project.expectedTime ? `${project.expectedTime} minutes` : "Link Below"}{" "}
             &#8226;{" "}
@@ -21,20 +21,20 @@ function TitleContainer({ project }: any) {
   );
 }
 
-function RatingContainer({ project, handleModalOpen }: any) {
+function RatingContainer({ project, handleModalOpen, modalHadOpened }: any) {
   return (
     <S.RatingContainer>
       <S.QuoteContainer>{project.quoteDescription ? `"${project.quoteDescription}"` : `"Astonishing"`}</S.QuoteContainer>
       <S.StarContainer>
-        {new Array(7).fill(0).map((_, i) => (
+        {new Array(5).fill(0).map((_, i) => (
           <S.Star src={`/assets/images/Booking/star${Math.round(project.rating) >= i + 1 ? "-fill" : ""}.svg`} alt="Star" key={i} />
         ))}
       </S.StarContainer>
 
       <p>
-        {project.rating} <span>({project.ratingCount} Ratings)</span>
+        {project.rating.toFixed(3)} <span>({project.ratingCount} Ratings)</span>
       </p>
-      <S.AddRating onClick={handleModalOpen}> + Add Your Rating</S.AddRating>
+      <S.AddRating onClick={handleModalOpen}>{modalHadOpened ? "Modify my Rating" : "+ Add Your Rating"} </S.AddRating>
     </S.RatingContainer>
   );
 }
@@ -61,11 +61,11 @@ function LinkContainer({ project }: any) {
   );
 }
 
-export default function InfoSection({ project, handleModalOpen }: any) {
+export default function InfoSection({ project, handleModalOpen, modalHadOpened }: any) {
   return (
     <S.InfoSection>
       <TitleContainer project={project} />
-      <RatingContainer project={project} handleModalOpen={handleModalOpen} />
+      <RatingContainer project={project} handleModalOpen={handleModalOpen} modalHadOpened={modalHadOpened} />
       <DescriptionContainer project={project} />
       {project.projectURL && <LinkContainer project={project} />}
     </S.InfoSection>
