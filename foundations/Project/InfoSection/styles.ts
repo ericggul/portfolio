@@ -85,13 +85,13 @@ export const AddRating = styled.div`
 
 export const DescriptionContainer = styled.div`
   margin: 1.2rem 0;
-  width: 80%;
+  width: 90%;
   text-align: left;
 `;
 
 export const LinkContainer = styled.div`
   margin: 0.8rem 0;
-  width: 82%;
+  width: 92%;
   word-break: keep-all;
   cursor: pointer;
   font-size: 0.5rem;

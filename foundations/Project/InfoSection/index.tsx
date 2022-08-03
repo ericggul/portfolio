@@ -26,7 +26,7 @@ function RatingContainer({ project, handleModalOpen }: any) {
     <S.RatingContainer>
       <S.QuoteContainer>{project.quoteDescription ? `"${project.quoteDescription}"` : `"Astonishing"`}</S.QuoteContainer>
       <S.StarContainer>
-        {new Array(5).fill(0).map((_, i) => (
+        {new Array(7).fill(0).map((_, i) => (
           <S.Star src={`/assets/images/Booking/star${Math.round(project.rating) >= i + 1 ? "-fill" : ""}.svg`} alt="Star" key={i} />
         ))}
       </S.StarContainer>
@@ -50,7 +50,7 @@ function DescriptionContainer({ project }: any) {
 function LinkContainer({ project }: any) {
   return (
     <S.LinkContainer>
-      {new Array(30).fill(0).map((_, i) => (
+      {new Array(50).fill(0).map((_, i) => (
         <span key={i}>
           <a href={project.land.baseLandURL ? project.land.baseLandURL + project.projectURL : project.projectURL} target="_blank" rel="noreferrer">
             Visit Link

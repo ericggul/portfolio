@@ -23,6 +23,21 @@ export default function ImageSection({ project, isItUpper }: any) {
     };
   }, [carouselLength, currentCarousel, isItUpper]);
 
+  //touch & swipe
+  const [prevTouchPosX, setPrevTocuhPosX] = useState(0);
+  function handleTouchStart(ev: any) {
+    setPrevTocuhPosX(ev.changedTouches[0].clientX);
+  }
+
+  function handleTouchEnd(ev: any) {
+    const touchPosX = ev.changedTouches[0].clientX;
+    if (prevTouchPosX > touchPosX) {
+      setCurrentCarousel((idx) => (idx === 0 ? carouselLength - 1 : (idx - 1) % carouselLength));
+    } else {
+      setCurrentCarousel((idx) => (idx + 1) % carouselLength);
+    }
+  }
+
   return (
     <S.ImgSection>
       {!isItUpper && (
@@ -34,7 +49,7 @@ export default function ImageSection({ project, isItUpper }: any) {
             ))}
         </S.Dots>
       )}
-      <S.ImgContainer>
+      <S.ImgContainer onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
         <Image src={project.land.baseImageURL ? project.land.baseImageURL + project.imageURLs[currentCarousel] : project.imageURLs[0]} alt="Portfolio Image" layout="fill" priority objectFit="cover" />
       </S.ImgContainer>
       {isItUpper && (
