@@ -4,7 +4,7 @@ import { FlexCenterStyle, WholeContainer } from "styles/common";
 export const InfoSection = styled.div`
   ${FlexCenterStyle};
 
-  margin: 1.3rem 0;
+  margin: 3rem 0;
 
   flex-direction: column;
   text-align: center;
@@ -19,8 +19,8 @@ export const TitleContainer = styled.div`
   flex-direction: column;
 
   h1 {
-    margin-top: 0.9rem;
-    margin-bottom: 1.2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.8rem;
   }
   p {
   }
@@ -42,7 +42,7 @@ export const RatingContainer = styled.div`
 
   ${FlexCenterStyle};
   flex-direction: column;
-  margin: 0.6rem 0;
+  margin: 0.7rem 0;
   padding: 0.2rem 0;
   background: black;
   color: #f5f5f3;
@@ -84,13 +84,14 @@ export const AddRating = styled.div`
 `;
 
 export const DescriptionContainer = styled.div`
-  margin: 1.2rem 0;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   width: 90%;
   text-align: left;
 `;
 
 export const LinkContainer = styled.div`
-  margin: 0.8rem 0;
+  margin-bottom: 2rem;
   width: 92%;
   word-break: keep-all;
   cursor: pointer;

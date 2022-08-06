@@ -5,7 +5,16 @@ interface CurrentComponent {
   currentComponent: String;
 }
 
-export const Container = styled.div<CurrentComponent>`
+export const Whole = styled.div`
+  ${FlexCenterStyle};
+  background: hsl(0, 0%, 95%);
+`;
+
+export const Inner = styled.div`
+  width: ${({ theme }) => (theme.windowWidth < 768 ? theme.windowWidth : `${Math.min(theme.windowWidth, 1000)}`)}px;
+`;
+
+export const ProjectsContainer = styled.div<CurrentComponent>`
   ${({ theme }) =>
     theme.windowWidth < 768
       ? `
@@ -25,5 +34,4 @@ export const Container = styled.div<CurrentComponent>`
   z-index: 2;
   transition: all 1s ease-in-out;
   overflow-y: scroll;
-  background: hsl(0, 0%, 95%);
 `;

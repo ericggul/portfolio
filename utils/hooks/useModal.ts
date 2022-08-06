@@ -9,3 +9,13 @@ export default function useModal() {
     handleModalClose: () => setModalOpen(false),
   };
 }
+
+export function useModalWithType() {
+  const [modalType, setModalType] = useState<any>(null);
+
+  return {
+    modalType,
+    handleModalOpen: (type: any) => setModalType(type),
+    handleModalClose: () => setModalType(null),
+  };
+}

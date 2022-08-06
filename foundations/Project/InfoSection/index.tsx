@@ -8,7 +8,7 @@ function TitleContainer({ project }: any) {
   return (
     <S.TitleContainer>
       <S.UpperInformation>
-        {new Array(7).fill(0).map((_, i) => (
+        {new Array(10).fill(0).map((_, i) => (
           <span key={i}>
             {project.date} &#8226; {project.medium} &#8226; {project.land.title} &#8226; {`Produly made by JYC`} &#8226; {project.expectedTime ? `${project.expectedTime} minutes` : "Link Below"}{" "}
             &#8226;{" "}

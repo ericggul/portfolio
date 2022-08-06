@@ -2,6 +2,8 @@ import { useState } from "react";
 import * as S from "./styles";
 import Image from "next/image";
 
+import { useRouter } from "next/router";
+
 export default function RatingModal({ project, modalOpen, handleModalClose }: any) {
   function handleBackgroundClick(e: any) {
     e.preventDefault();
@@ -10,6 +12,7 @@ export default function RatingModal({ project, modalOpen, handleModalClose }: an
 
   const [star, setStar] = useState(-1);
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   async function handleClick() {
     if (star < 0) {
@@ -35,6 +38,7 @@ export default function RatingModal({ project, modalOpen, handleModalClose }: an
     }
 
     //action: upload data
+    router.replace(router.asPath);
     handleModalClose();
   }
 

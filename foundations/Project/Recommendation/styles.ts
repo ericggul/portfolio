@@ -8,7 +8,38 @@ export const Container = styled.div`
   width: ${({ theme }) => (theme.windowWidth < 768 ? theme.windowWidth : Math.min(theme.windowWidth / 2, 500))}px;
 `;
 
-export const Header = styled.h3``;
+export const HeaderContainer = styled.div`
+  position: relative;
+  width: 14rem;
+  height: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  ${FlexCenterStyle};
+`;
+interface HeaderProps {
+  delta: number;
+}
+function adjustDeltaExtreme(val: number) {
+  if (val === 3) {
+    return -1;
+  } else if (val === -3) {
+    return 1;
+  }
+  return val;
+}
+
+export const Header = styled.div.attrs<HeaderProps>((props) => ({
+  style: {
+    transform: `translateX(${adjustDeltaExtreme(props.delta) * 100}%) rotateY(${adjustDeltaExtreme(props.delta) * 90}deg)`,
+    opacity: props.delta === 0 ? 1 : 0,
+  },
+}))<HeaderProps>`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+`;
 
 export const Contents = styled.div`
   ${FlexCenterStyle};
