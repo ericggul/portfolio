@@ -50,10 +50,10 @@ export default function Booking({ currentComponent, projects }: any) {
   }
 
   return (
-    <S.Whole>
+    <S.Whole currentComponent={currentComponent}>
       <S.Inner>
         <SortAndFilter filteredProjects={filteredProjects} handleSortChange={handleSortChange} />
-        <S.ProjectsContainer currentComponent={currentComponent}>
+        <S.ProjectsContainer>
           {filteredProjects.map((project: any, i: number) => (
             <SingleProject project={project} idx={i} key={i} />
           ))}

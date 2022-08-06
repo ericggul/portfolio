@@ -5,16 +5,22 @@ interface CurrentComponent {
   currentComponent: String;
 }
 
-export const Whole = styled.div`
+export const Whole = styled.div<CurrentComponent>`
   ${FlexCenterStyle};
   background: hsl(0, 0%, 95%);
+
+  opacity: 0;
+  z-index: 2;
+  transform: translateY(${({ theme }) => theme.windowHeight}px);
+  ${({ currentComponent }) => currentComponent === "booking" && `transform: translateY(0px); opacity: 1;`}
+  transition: all 1s ease-in-out;
 `;
 
 export const Inner = styled.div`
   width: ${({ theme }) => (theme.windowWidth < 768 ? theme.windowWidth : `${Math.min(theme.windowWidth, 1000)}`)}px;
 `;
 
-export const ProjectsContainer = styled.div<CurrentComponent>`
+export const ProjectsContainer = styled.div`
   ${({ theme }) =>
     theme.windowWidth < 768
       ? `
@@ -28,10 +34,5 @@ export const ProjectsContainer = styled.div<CurrentComponent>`
           justify-content: center;
   `}
 
-  opacity: 0;
-  transform: translateY(${({ theme }) => theme.windowHeight}px);
-  ${({ currentComponent }) => currentComponent === "booking" && `transform: translateY(0px); opacity: 1;`}
-  z-index: 2;
-  transition: all 1s ease-in-out;
   overflow-y: scroll;
 `;
