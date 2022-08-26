@@ -3,6 +3,7 @@ import { useMemo } from "react";
 
 import { createGlobalStyle, ThemeProvider } from "styled-components";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 
 //pre-import css
 import "react-toastify/dist/ReactToastify.min.css";
@@ -47,6 +48,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+       <Head>
+        <title>Jeanyoon Choi Portfolio</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <GlobalStyle />
       <ThemeProvider theme={{ windowWidth, windowHeight }}>
         <Component {...pageProps} />

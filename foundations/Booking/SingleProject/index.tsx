@@ -5,8 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import useDistance from "utils/hooks/useDistance";
-
-const getRandom = (min: number, max: number) => Math.random() * (max - min) + min;
+import { getRandom } from "utils/functions/getRandom";
 
 export default function SingleProject({ project, idx }: any) {
   const [visible, setVisible] = useState(false);

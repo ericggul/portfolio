@@ -10,7 +10,7 @@ import * as S from "./styles";
 
 import { toast, Toast } from "loplat-ui";
 
-const getRandom = (a: number, b: number) => Math.random() * (b - a) + a;
+import { getRandom } from "utils/functions/getRandom";
 
 const START = 8;
 

@@ -1,8 +1,6 @@
 import { useRef, useEffect, useCallback } from "react";
 
-const getRandom = (min: number, max: number) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-};
+import { getRandom } from "utils/functions/getRandom";
 
 export default function useRandomInterval(callback: any, minDelay: number, maxDelay: number) {
   const timeoutRef = useRef<any>(null);

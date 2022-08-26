@@ -1,8 +1,6 @@
 import styled, { css } from "styled-components";
 import { FlexCenterStyle, WholeContainer } from "styles/common";
 
-const getRandom = (min: number, max: number) => Math.random() * (max - min) + min;
-
 interface CurrentComponent {
   currentComponent: String;
 }

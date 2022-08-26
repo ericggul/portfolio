@@ -2,10 +2,9 @@ import { useEffect, useState, useCallback, useRef } from "react";
 import * as S from "./styles";
 import { ToastContainer, toast } from "react-toastify";
 import { useRouter } from "next/router";
+import { getRandom } from "utils/functions/getRandom";
 
 const TIMEOUT = 500;
-
-const getRandom = (min: number, max: number) => Math.random() * (max - min) + min;
 
 function TicTacToe({ handleShine, shine, handleWin }: any) {
   let TICTACTOE_SIZE = 5;
