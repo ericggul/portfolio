@@ -11,7 +11,7 @@ export const Container = styled.div<Visible>`
   margin: 0.9rem 0;
   display: flex;
   flex-direction: column;
-  width: ${({ theme, idx }) => (theme.windowWidth < 768 ? theme.windowWidth - idx * 5 : Math.min(theme.windowWidth / 2, 500) - Math.floor(idx / 2) * 5)}px;
+  width: ${({ theme }) => (theme.windowWidth < 768 ? theme.windowWidth : Math.min(theme.windowWidth / 2, 500))}px;
   cursor: pointer;
 
   ${({ visible, move, idx }) =>
