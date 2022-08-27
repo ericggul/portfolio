@@ -6,7 +6,7 @@ import SortAndFilter from "foundations/Booking/SortAndFilter";
 import SingleProject from "foundations/Booking/SingleProject";
 
 export default function Booking({ currentComponent, projects }: any) {
-  const [filteredProjects, setFilteredProjects] = useState<any>(projects);
+  const [filteredProjects, setFilteredProjects] = useState<any>(projects.sort((a: any, b: any) => b.rating - a.rating));
 
   function handleSortChange(type: any, dir: any) {
     let copiedProjects = [...projects];
