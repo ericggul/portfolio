@@ -27,6 +27,29 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     },
   });
 
+  const primaryRelated =
+    project &&
+    project.relatedProjects &&
+    project.relatedProjects.map(
+      async (prj, i) =>
+        await prisma.project.findUnique({
+          where: {
+            id: prj,
+          },
+          include: {
+            land: {
+              select: {
+                id: true,
+                title: true,
+                medium: true,
+                baseLandURL: true,
+                baseImageURL: true,
+              },
+            },
+          },
+        })
+    );
+
   const sameLandProjects = await prisma.project.findMany({
     where: {
       AND: [
@@ -42,7 +65,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         },
       ],
     },
-    take: 2,
+    take: 5,
     orderBy: {
       ratingCount: "desc",
     },
@@ -64,7 +87,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
         title: project?.title,
       },
     },
-    take: 5,
+    take: 10,
     orderBy: {
       ratingCount: "desc",
     },
@@ -81,8 +104,14 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   });
 
   const getArrayRandom = (array: any) => array[Math.floor(Math.random() * array.length)];
+  const getArrayTwoRandoms = (array: any) => array.sort(() => Math.random() < 0.5).slice(0, 2);
 
-  const recommendedProjects = [...sameLandProjects, getArrayRandom(popularProjects)].sort(() => Math.random() - 0.5);
+  let recommendedProjects = [];
+  if (primaryRelated) {
+    recommendedProjects = [...primaryRelated, getArrayTwoRandoms(popularProjects)];
+  } else {
+    recommendedProjects = [...getArrayTwoRandoms(sameLandProjects), getArrayRandom(popularProjects)];
+  }
 
   return {
     props: { project, recommendedProjects },

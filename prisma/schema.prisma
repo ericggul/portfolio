@@ -22,8 +22,8 @@ model Project{
   imageURLs String[]
   medium String @default("HTML")
   date String
-  lat Float? @default(37.54648)
-  lng Float? @default(127.00609)
+  lat Float? @default(51.4899)
+  lng Float? @default(-0.2070)
 
   expectedTime Int?
 
@@ -35,7 +35,11 @@ model Project{
 
   price Price[]
 
+  relatedProjects String[]
+
 }
+
+
 
 // model ProjectImage{
 //   id String @default(cuid()) @id

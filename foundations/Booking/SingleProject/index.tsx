@@ -22,14 +22,14 @@ export default function SingleProject({ project, idx }: any) {
   }, []);
 
   //when visible, activate animation
-  useEffect(() => {
-    if (visible) {
-      const intervalFunc = setInterval(() => {
-        setMove((move) => !move);
-      }, interval * 1000);
-      return () => clearInterval(intervalFunc);
-    }
-  }, [visible, interval]);
+  // useEffect(() => {
+  //   if (visible) {
+  //     const intervalFunc = setInterval(() => {
+  //       setMove((move) => !move);
+  //     }, interval * 1000);
+  //     return () => clearInterval(intervalFunc);
+  //   }
+  // }, [visible, interval]);
 
   //rating digit
   const [ratingDigit, setRatingDigit] = useState(1);
