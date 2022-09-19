@@ -7,7 +7,15 @@ import TicTacToe from "components/Main/TicTacToe";
 import Booking from "components/Main/Booking";
 
 function Main({ projects, givenComponent }: any) {
-  const [currentComponent, setCurrentComponent] = useState<string>(sessionStorage.getItem("tictactoePlayed") === "played" ? "booking" : givenComponent);
+  const [currentComponent, setCurrentComponent] = useState<string>(typeof window !== "undefined" && sessionStorage.getItem("tictactoePlayed") === "played" ? "booking" : givenComponent);
+
+  useEffect(() => {
+    if (currentComponent === "tictactoe") {
+      if (typeof window !== "undefined" && sessionStorage.getItem("tictactoePlayed") === "played") {
+        setCurrentComponent("booking");
+      }
+    }
+  }, [currentComponent]);
 
   return (
     <>
