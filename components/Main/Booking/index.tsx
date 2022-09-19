@@ -23,8 +23,9 @@ export default function Booking({ currentComponent, projects }: any) {
           const bMonth = MONTH_ARRAY.indexOf(bDate[0]);
           const aYear = parseInt(aDate[1]);
           const bYear = parseInt(bDate[1]);
+          console.log(aYear, bYear, aMonth, bMonth);
           if (aYear === bYear) {
-            return aMonth - bMonth;
+            return bMonth - aMonth;
           } else {
             return aYear - bYear;
           }

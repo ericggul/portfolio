@@ -14,6 +14,7 @@ function Sorter({ handleSortChange }: any) {
 
   const handleClick = (type: any) => {
     console.log("click!");
+    console.log(type);
     if (type === sortingMethod) {
       setSortingDir(sortingDir === "asc" ? "desc" : "asc");
       handleSortChange(type, sortingDir === "asc" ? "desc" : "asc");
