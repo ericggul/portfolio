@@ -2,13 +2,12 @@
 import { GetServerSideProps } from "next";
 import prisma from "lib/prisma";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TicTacToe from "components/Main/TicTacToe";
 import Booking from "components/Main/Booking";
 
 function Main({ projects, givenComponent }: any) {
-  console.log(givenComponent);
-  const [currentComponent, setCurrentComponent] = useState<string>(givenComponent);
+  const [currentComponent, setCurrentComponent] = useState<string>(sessionStorage.getItem("tictactoePlayed") === "played" ? "booking" : givenComponent);
 
   return (
     <>

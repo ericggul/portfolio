@@ -73,7 +73,7 @@ function TicTacToe({ handleShine, shine, handleWin }: any) {
     if (checkWin()) {
       if (checkWin() === 1) {
         toast("You lose! Your specie's intelligence is weaker than Computer haha!!", {
-          autoClose: 2000,
+          autoClose: 1500,
         });
         setPlayState(1);
         setTimeout(() => {
@@ -82,8 +82,9 @@ function TicTacToe({ handleShine, shine, handleWin }: any) {
 
         return "end";
       } else {
+        sessionStorage.setItem("tictactoePlayed", "played");
         toast("You won! What a great intelligence..", {
-          autoClose: 2000,
+          autoClose: 1500,
         });
         handleWin();
         setPlayState(2);
@@ -91,7 +92,7 @@ function TicTacToe({ handleShine, shine, handleWin }: any) {
       }
     } else if (checkDraw()) {
       toast("Draw! How shame is that for human species.", {
-        autoClose: 2000,
+        autoClose: 1500,
       });
       setPlayState(3);
       setTimeout(() => {

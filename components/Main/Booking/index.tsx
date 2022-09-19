@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import * as S from "./styles";
 
-//container
+//foundations
 import SortAndFilter from "foundations/Booking/SortAndFilter";
 import SingleProject from "foundations/Booking/SingleProject";
+import BackToTop from "foundations/Booking/BackToTop";
 
 export default function Booking({ currentComponent, projects }: any) {
   const [filteredProjects, setFilteredProjects] = useState<any>(projects.sort((a: any, b: any) => b.rating - a.rating));
@@ -59,6 +60,7 @@ export default function Booking({ currentComponent, projects }: any) {
           ))}
         </S.ProjectsContainer>
       </S.Inner>
+      <BackToTop />
     </S.Whole>
   );
 }
