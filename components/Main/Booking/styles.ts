@@ -32,6 +32,8 @@ export const Inner = styled.div`
 `;
 
 export const ProjectsContainer = styled.div`
+  max-width: 100%;
+  overflow-x: hidden;
   ${({ theme }) =>
     theme.windowWidth < 768
       ? `

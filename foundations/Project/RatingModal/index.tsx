@@ -62,9 +62,9 @@ export default function RatingModal({ project, modalOpen, handleModalClose }: an
         <h2>{loading ? "Loading" : "Your Rating"}</h2>
 
         <S.Stars>
-          {[...Array(4)].map((_, i) => (
+          {[...Array(5)].map((_, i) => (
             <S.Star key={i} onClick={() => setStar(i + 1)}>
-              <Image src={`/assets/images/Booking/star${star >= i + 1 ? "-fill" : ""}.svg`} alt="Star" layout="fill" objectFit="cover" />
+              <Image src={star >= i + 1 ? `/assets/images/Booking/star-fill.svg` : "/assets/images/Booking/star.svg"} alt="Star" layout="fill" objectFit="cover" />
             </S.Star>
           ))}
         </S.Stars>

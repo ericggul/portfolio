@@ -27,7 +27,7 @@ function RatingContainer({ project, handleModalOpen, modalHadOpened }: any) {
       <S.QuoteContainer>{project.quoteDescription ? `"${project.quoteDescription}"` : `"Astonishing"`}</S.QuoteContainer>
       <S.StarContainer>
         {[...Array(5)].map((_, i) => (
-          <S.Star src={`/assets/images/Booking/star${Math.round(project.rating) >= i + 1 ? "-fill" : ""}.svg`} alt="Star" key={i} />
+          <S.Star src={Math.round(project.rating) >= i + 1 ? `/assets/images/Booking/star-fill.svg` : `/assets/images/Booking/star.svg`} alt="Star" key={i} />
         ))}
       </S.StarContainer>
 
