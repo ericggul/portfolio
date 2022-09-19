@@ -13,13 +13,12 @@ function Main({ projects, givenComponent }: any) {
   return (
     <>
       <TicTacToe moveToNextComponent={() => setCurrentComponent("booking")} currentComponent={currentComponent} />
-      <Booking currentComponent={currentComponent} projects={projects} />
+      {currentComponent === "booking" && <Booking currentComponent={currentComponent} projects={projects} />}
     </>
   );
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  console.log(context);
   const projects = await prisma.project.findMany({
     include: {
       land: {

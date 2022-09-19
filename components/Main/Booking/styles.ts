@@ -9,11 +9,19 @@ export const Whole = styled.div<CurrentComponent>`
   ${FlexCenterStyle};
   background: hsl(0, 0%, 95%);
 
-  opacity: 0;
   z-index: 2;
-  transform: translateY(${({ theme }) => theme.windowHeight}px);
-  ${({ currentComponent }) => currentComponent === "booking" && `transform: translateY(0px); opacity: 1;`}
-  transition: all 1s ease-in-out;
+  animation: appear-and-transform 1s ease-in-out;
+
+  @keyframes appear-and-transform {
+    from {
+      transform: translateY(${({ theme }) => theme.windowHeight}px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
 `;
 
 export const Inner = styled.div`

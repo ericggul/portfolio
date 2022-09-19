@@ -9,6 +9,7 @@ export const MovementContainer = styled.div<CurrentComponent>`
   ${WholeContainer};
   ${({ currentComponent, theme }) => currentComponent === "booking" && `transform: translateY(-${theme.windowHeight}px);`}
   transition: transform 1s ease-in-out;
+  overflow: hidden;
 `;
 
 interface Shine {

@@ -166,13 +166,11 @@ export default function TicTacToePage({ moveToNextComponent, currentComponent }:
 
     setTimeout(() => {
       moveToNextComponent();
+      console.log("move");
     }, 1500);
     setTimeout(() => {
       clearInterval(interval);
     }, 2500);
-    setTimeout(() => {
-      moveToNextComponent();
-    }, 2550);
   }
 
   const COLOR_ARRAY = ["#f3f3f3", "black"];
