@@ -62,11 +62,21 @@ export default function RatingModal({ project, modalOpen, handleModalClose }: an
         <h2>{loading ? "Loading" : "Your Rating"}</h2>
 
         <S.Stars>
-          {[...Array(5)].map((_, i) => (
-            <S.Star key={i} onClick={() => setStar(i + 1)}>
-              <Image src={star >= i + 1 ? `/assets/images/Booking/star-fill.svg` : "/assets/images/Booking/star.svg"} alt="Star" layout="fill" objectFit="cover" />
-            </S.Star>
-          ))}
+          <S.Star onClick={() => setStar(1)}>
+            <Image src={star >= 1 ? `/assets/images/Booking/star-fill.svg` : "/assets/images/Booking/star.svg"} alt="Star" layout="fill" objectFit="cover" />
+          </S.Star>
+          <S.Star onClick={() => setStar(2)}>
+            <Image src={star >= 2 ? `/assets/images/Booking/star-fill.svg` : "/assets/images/Booking/star.svg"} alt="Star" layout="fill" objectFit="cover" />
+          </S.Star>
+          <S.Star onClick={() => setStar(3)}>
+            <Image src={star >= 3 ? `/assets/images/Booking/star-fill.svg` : "/assets/images/Booking/star.svg"} alt="Star" layout="fill" objectFit="cover" />
+          </S.Star>
+          <S.Star onClick={() => setStar(4)}>
+            <Image src={star >= 4 ? `/assets/images/Booking/star-fill.svg` : "/assets/images/Booking/star.svg"} alt="Star" layout="fill" objectFit="cover" />
+          </S.Star>
+          <S.Star onClick={() => setStar(5)}>
+            <Image src={star >= 5 ? `/assets/images/Booking/star-fill.svg` : "/assets/images/Booking/star.svg"} alt="Star" layout="fill" objectFit="cover" />
+          </S.Star>
         </S.Stars>
 
         <S.Confirm show={star > 0} onClick={handleClick}>

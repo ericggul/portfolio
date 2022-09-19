@@ -31,9 +31,6 @@ function RatingContainer({ project, handleModalOpen, modalHadOpened }: any) {
         <S.Star src={Math.round(project.rating) >= 3 ? `/assets/images/Booking/star-fill.svg` : `/assets/images/Booking/star.svg`} alt="Star" />
         <S.Star src={Math.round(project.rating) >= 4 ? `/assets/images/Booking/star-fill.svg` : `/assets/images/Booking/star.svg`} alt="Star" />
         <S.Star src={Math.round(project.rating) >= 5 ? `/assets/images/Booking/star-fill.svg` : `/assets/images/Booking/star.svg`} alt="Star" />
-        {/* {[...Array(5)].map((_, i) => (
-          <S.Star src={Math.round(project.rating) >= i + 1 ? `/assets/images/Booking/star-fill.svg` : `/assets/images/Booking/star.svg`} alt="Star" key={i} />
-        ))} */}
       </S.StarContainer>
 
       <p>
