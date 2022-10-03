@@ -156,6 +156,10 @@ function Intro() {
         </S.YesContainer>
       ))}
       <S.CoverageContainer fadeOut={fadeOut} />
+      <S.InvisibleText>
+        <h1>Jeanyoon Choi Portfolio.</h1>
+        <p>Web-based new media artist Jeanyoon Choi Portfolio.</p>
+      </S.InvisibleText>
     </S.Container>
   );
 }

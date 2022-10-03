@@ -212,3 +212,11 @@ export const CoverageContainer = styled.div<FadeOut>`
   `}
   transition: all 2.5s;
 `;
+
+export const InvisibleText = styled.div`
+  ${FlexCenterStyle};
+  ${WholeContainer};
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+`;
