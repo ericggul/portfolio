@@ -27,28 +27,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     },
   });
 
-  const primaryRelated =
-    project &&
-    project.relatedProjects &&
-    project.relatedProjects.map(
-      async (prj, i) =>
-        await prisma.project.findUnique({
-          where: {
-            id: prj,
-          },
-          include: {
-            land: {
-              select: {
-                id: true,
-                title: true,
-                medium: true,
-                baseLandURL: true,
-                baseImageURL: true,
-              },
-            },
-          },
-        })
-    );
+  const primaryRelated = null;
 
   const sameLandProjects = await prisma.project.findMany({
     where: {
@@ -112,6 +91,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   } else {
     recommendedProjects = [...getArrayTwoRandoms(sameLandProjects), getArrayRandom(popularProjects)];
   }
+  console.log(recommendedProjects);
 
   return {
     props: { project, recommendedProjects },
