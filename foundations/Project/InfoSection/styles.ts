@@ -75,9 +75,9 @@ export const Star = styled.img`
 
 export const AddRating = styled.div`
   ${FlexCenterStyle};
-  margin: 0.4rem 0;
-  font-size: 0.6rem;
-  margin-bottom: 0.6rem;
+  margin-top: 0.7rem;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
   border-bottom: 1px solid #ddd;
   color: #ddd;
   cursor: pointer;
@@ -92,8 +92,9 @@ export const DescriptionContainer = styled.div`
 
 export const LinkContainer = styled.div`
   margin-bottom: 2rem;
-  width: 92%;
+  margin-top: 0.5rem;
+  width: 90%;
   word-break: keep-all;
   cursor: pointer;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
 `;

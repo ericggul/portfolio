@@ -19,13 +19,14 @@ export const Contents = styled.div`
 `;
 
 export const BackNavigator = styled.div`
-  position: absolute;
-  top: 0.5rem;
-  left: 0.7rem;
+  position: fixed;
+  top: 0.6rem;
+  left: 0.8rem;
   padding: 0.2rem 0.6rem;
-  background: hsl(0, 0%, 95%);
-  font-size: 0.8rem;
+  background: white;
+  font-size: 1rem;
   z-index: 2;
+  border: 1px solid black;
 
   cursor: pointer;
   animation: vibrate 3s linear infinite;

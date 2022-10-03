@@ -2,75 +2,17 @@ import styled, { css } from "styled-components";
 
 import { FlexCenterStyle, WholeContainer } from "styles/common";
 
-export const Container = styled.div`
-  ${FlexCenterStyle};
-
-  ${WholeContainer};
-  overflow: scroll;
-  background: hsl(0, 0%, 95%);
-`;
-
-export const Contents = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column;
-  width: ${({ theme }) => (theme.windowWidth < 768 ? theme.windowWidth : Math.min(theme.windowWidth / 2, 500))}px;
-  height: 100%;
-`;
-
-export const BackNavigator = styled.div`
-  position: absolute;
-  top: 0.5rem;
-  left: 0.7rem;
-  padding: 0.2rem 0.6rem;
-  background: hsl(0, 0%, 95%);
-  font-size: 0.8rem;
-  z-index: 2;
-
-  animation: vibrate 3s linear infinite;
-
-  @keyframes vibrate {
-    0% {
-      transform: rotate(0deg);
-    }
-    30% {
-      transform: rotate(15deg);
-    }
-    35% {
-      transform: rotate(-10deg);
-    }
-    40% {
-      transform: rotate(7deg);
-    }
-    43% {
-      transform: rotate(-5deg);
-    }
-    46% {
-      transform: rotate(3deg);
-    }
-    48% {
-      transofmr: rotate(-2deg);
-    }
-    49% {
-      transform: rotate(1deg);
-    }
-    50% {
-      transform: rotate(0);
-    }
-  }
-`;
-
 export const ImgSection = styled.div`
   ${FlexCenterStyle};
   flex-direction: column;
   width: 100%;
+  overflow: hidden;
 `;
 
 export const ImgContainer = styled.div`
   position: relative;
   width: 100%;
+  overflow: hidden;
   height: ${({ theme }) => (theme.windowWidth < 768 ? theme.windowWidth * 0.7 : 0.7 * Math.min(theme.windowWidth / 2, 500))}px;
 `;
 
