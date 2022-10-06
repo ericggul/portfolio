@@ -158,7 +158,11 @@ function Intro() {
       <S.CoverageContainer fadeOut={fadeOut} />
       <S.InvisibleText>
         <h1>Jeanyoon Choi Portfolio.</h1>
-        <p>Web-based new media artist Jeanyoon Choi Portfolio.</p>
+        <h2>Web-based new media artist Jeanyoon Choi Portfolio.</h2>
+        <h3>Featuring 200+ latest work by Jeanyoon Choi.</h3>
+        <h4>Jeanyoon Choi is a student of Royal College of Art Information Experience Design program</h4>
+        <p>Royal College of Art Information Experience Design Portfolio Jeanyoon Choi</p>
+        <p>Copyright &#169; 2022 Jeanyoon Choi</p>
       </S.InvisibleText>
     </S.Container>
   );
