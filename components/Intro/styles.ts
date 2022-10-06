@@ -219,4 +219,6 @@ export const InvisibleText = styled.div`
   z-index: -1;
   pointer-events: none;
   opacity: 0;
+  overflow: hidden;
+  flex-direction: column;
 `;
