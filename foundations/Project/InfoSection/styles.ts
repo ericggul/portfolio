@@ -76,7 +76,7 @@ export const Star = styled.img`
 export const AddRating = styled.div`
   ${FlexCenterStyle};
   margin-top: 0.7rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
   font-size: 0.8rem;
   border-bottom: 1px solid #ddd;
   color: #ddd;
