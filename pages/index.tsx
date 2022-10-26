@@ -1,6 +1,9 @@
 //data retrive
-import Intro from "components/Intro";
+import dynamic from "next/dynamic";
+
 import { NextSeo } from "next-seo";
+
+const Intro = dynamic(() => import("components/Intro"), { ssr: false });
 
 function Home() {
   return (

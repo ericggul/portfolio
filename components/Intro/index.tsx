@@ -2,6 +2,8 @@
 import { useState, useMemo, useEffect } from "react";
 import useResize from "utils/hooks/useResize";
 
+import Link from "next/link";
+
 //router
 import { useRouter } from "next/router";
 
@@ -74,7 +76,7 @@ function Intro() {
     } else if (level === START + 2 || level === START + 3 || level === START + 4) {
       toast.danger("Do You?");
     } else if (level === START + 6) {
-      toast.info(`Then click on the button s'il vous plait`);
+      toast.info(`Then click on the button please`);
     } else if (level >= START + 8) {
       toast.success(`Stop playing with it and click on the link`);
     }
@@ -163,6 +165,13 @@ function Intro() {
         <h4>Jeanyoon Choi is a student of Royal College of Art Information Experience Design program</h4>
         <p>Royal College of Art Information Experience Design Portfolio Jeanyoon Choi</p>
         <p>Copyright &#169; 2022 Jeanyoon Choi</p>
+        <Link href="/main">
+          <button>Go to Main Portfolio</button>
+        </Link>
+
+        <Link href="/main">
+          <button>View Other Artworks</button>
+        </Link>
       </S.InvisibleText>
     </S.Container>
   );

@@ -3,8 +3,11 @@ import { GetServerSideProps } from "next";
 import prisma from "lib/prisma";
 
 import { useEffect, useState } from "react";
-import TicTacToe from "components/Main/TicTacToe";
-import Booking from "components/Main/Booking";
+
+import dynamic from "next/dynamic";
+
+const TicTacToe = dynamic(() => import("components/Main/TicTacToe"), { ssr: false });
+const Booking = dynamic(() => import("components/Main/Booking"), { ssr: false });
 
 function Main({ projects, givenComponent }: any) {
   const [currentComponent, setCurrentComponent] = useState<string>(typeof window !== "undefined" && sessionStorage.getItem("tictactoePlayed") === "played" ? "booking" : givenComponent);
