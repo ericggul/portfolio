@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import * as S from "./styles";
 
 import Link from "next/link";
@@ -44,7 +44,12 @@ function RatingContainer({ project, handleModalOpen, modalHadOpened }: any) {
 function DescriptionContainer({ project }: any) {
   return (
     <S.DescriptionContainer>
-      <p>{project.longDescription}</p>
+      {project.longDescription.split("-n-").map((paragraph: any, i: number) => (
+        <React.Fragment key={i}>
+          <p>{paragraph}</p>
+          {project.longDescription.split("-n-").length > i + 1 && <hr />}
+        </React.Fragment>
+      ))}
     </S.DescriptionContainer>
   );
 }

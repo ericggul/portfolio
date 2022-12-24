@@ -1,5 +1,6 @@
 //data retrive
 import { GetServerSideProps } from "next";
+import { useRouter } from "next/router";
 import prisma from "lib/prisma";
 
 import { useEffect, useState } from "react";
@@ -20,10 +21,12 @@ function Main({ projects, givenComponent }: any) {
     }
   }, [currentComponent]);
 
+  const router = useRouter();
+
   return (
     <>
       <TicTacToe moveToNextComponent={() => setCurrentComponent("booking")} currentComponent={currentComponent} />
-      {currentComponent === "booking" && <Booking currentComponent={currentComponent} projects={projects} />}
+      {currentComponent === "booking" && <Booking currentComponent={currentComponent} projects={projects} scrollTo={router.query.scrollTo || null} />}
     </>
   );
 }

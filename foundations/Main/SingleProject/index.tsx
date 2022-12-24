@@ -21,21 +21,11 @@ export default function SingleProject({ project, idx }: any) {
     observer.observe(domRef.current);
   }, []);
 
-  //when visible, activate animation
-  // useEffect(() => {
-  //   if (visible) {
-  //     const intervalFunc = setInterval(() => {
-  //       setMove((move) => !move);
-  //     }, interval * 1000);
-  //     return () => clearInterval(intervalFunc);
-  //   }
-  // }, [visible, interval]);
-
   //rating digit
   const [ratingDigit, setRatingDigit] = useState(1);
   useEffect(() => {
     const ratingDigitInterval = setInterval(() => {
-      setRatingDigit((ratingDigit) => (ratingDigit + 1) % 4);
+      setRatingDigit((ratingDigit) => (ratingDigit + 1) % 3);
     }, 3000);
     return () => clearInterval(ratingDigitInterval);
   }, []);
@@ -56,12 +46,11 @@ export default function SingleProject({ project, idx }: any) {
               {project.rating.toFixed(ratingDigit)}
               <span>
                 ({project.ratingCount}
-                {"0".repeat(Math.max(ratingDigit - 1, 0))} Rating{"s".repeat(Math.ceil(ratingDigit / 2))})
+                {"0".repeat(Math.max(ratingDigit - 1, 0))} Ratings)
               </span>
             </S.RatingText>
           </S.Rating>
           <S.ContentsLeft>
-            {/* {permittedStatus && <S.Distance>{Math.round(distance / 1000)}km</S.Distance>} */}
             <S.Medium>
               {project.medium} &#x2022; {project.date}
             </S.Medium>

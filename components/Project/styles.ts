@@ -5,7 +5,8 @@ export const Container = styled.div`
   display: flex;
   ${FlexCenterStyle};
   width: ${({ theme }) => theme.windowWidth}px;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
   background: hsl(0, 0%, 95%);
 `;
 
@@ -15,6 +16,7 @@ export const Contents = styled.div`
   align-items: center;
   justify-content: space-between;
   flex-direction: column;
+  overflow-x: hidden;
   width: ${({ theme }) => (theme.windowWidth < 768 ? theme.windowWidth : Math.min(theme.windowWidth / 2, 500))}px;
 `;
 

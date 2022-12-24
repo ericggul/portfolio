@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import * as S from "./styles";
 
 //foundations
-import SortAndFilter from "foundations/Booking/SortAndFilter";
-import SingleProject from "foundations/Booking/SingleProject";
-import BackToTop from "foundations/Booking/BackToTop";
+import SortAndFilter from "foundations/Main/SortAndFilter";
+import SingleProject from "foundations/Main/SingleProject";
+import BackToTop from "foundations/Main/BackToTop";
 
-export default function Booking({ currentComponent, projects }: any) {
+export default function Booking({ currentComponent, projects, scrollTo }: any) {
   const [filteredProjects, setFilteredProjects] = useState<any>(projects.sort((a: any, b: any) => b.rating - a.rating));
 
   function handleSortChange(type: any, dir: any) {
@@ -47,13 +47,25 @@ export default function Booking({ currentComponent, projects }: any) {
     setFilteredProjects(tempProjects);
   }
 
+  //scrollTo
+  useEffect(() => {
+    if (scrollTo) {
+      const target: any = document.querySelector(`.project-${scrollTo}`);
+      if (target) {
+        window.scrollTo({ top: target.offsetTop, behavior: "smooth" });
+      }
+    }
+  }, [scrollTo]);
+
   return (
     <S.Whole currentComponent={currentComponent}>
       <S.Inner>
         <SortAndFilter filteredProjects={filteredProjects} handleSortChange={handleSortChange} />
         <S.ProjectsContainer>
           {filteredProjects.map((project: any, i: number) => (
-            <SingleProject project={project} idx={i} key={i} />
+            <div key={i} className={`project-${project.id}`}>
+              <SingleProject project={project} idx={i} />
+            </div>
           ))}
         </S.ProjectsContainer>
       </S.Inner>

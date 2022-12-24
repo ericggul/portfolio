@@ -88,6 +88,14 @@ export const DescriptionContainer = styled.div`
   margin-bottom: 1rem;
   width: 90%;
   text-align: left;
+
+  p {
+    margin-bottom: 1rem;
+  }
+
+  hr {
+    margin-bottom: 1rem;
+  }
 `;
 
 export const LinkContainer = styled.div`

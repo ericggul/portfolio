@@ -22,10 +22,16 @@ export default function Project({ project, recommendedProjects }: any) {
     }
   }, [modalOpen]);
 
+  console.log(project);
   return (
     <S.Container>
       <S.Contents>
-        <Link href="/main">
+        <Link
+          href={{
+            pathname: "/main",
+            query: { scrollTo: project.id },
+          }}
+        >
           <S.BackNavigator>Back to List</S.BackNavigator>
         </Link>
         <ImageSection project={project} isItUpper={true} />

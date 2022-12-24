@@ -51,7 +51,7 @@ export const Title = styled.h2``;
 
 export const ShortDescription = styled.p``;
 export const Medium = styled.p`
-  max-width: 60%;
+  max-width: 55%;
   font-weight: 300;
   font-size: 0.95rem;
   color: #777;
@@ -66,7 +66,6 @@ export const Distance = styled.p`
 
 export const Rating = styled.div`
   display: flex;
-
   position: absolute;
   right: 0;
   top: 0;
