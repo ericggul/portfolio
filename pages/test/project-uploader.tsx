@@ -86,7 +86,6 @@ export default function ProjectUpload() {
       },
       body: JSON.stringify(body),
     });
-    console.log(res);
   }
 
   return <div></div>;

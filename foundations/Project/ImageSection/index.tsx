@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import * as S from "./styles";
 
 import Image from "next/image";
@@ -12,9 +12,9 @@ export default function ImageSection({ project, isItUpper }: any) {
   useEffect(() => {
     const settingInterval = setInterval(() => {
       if (isItUpper) {
-        setCurrentCarousel((idx) => (idx + 1) % carouselLength);
+        carouselNextItem();
       } else {
-        setCurrentCarousel((idx) => (idx === 0 ? carouselLength - 1 : (idx - 1) % carouselLength));
+        carouselPrevItem();
       }
     }, interval);
 
@@ -23,20 +23,47 @@ export default function ImageSection({ project, isItUpper }: any) {
     };
   }, [carouselLength, currentCarousel, isItUpper]);
 
+  function carouselNextItem() {
+    setCurrentCarousel((idx) => (idx + 1) % carouselLength);
+  }
+
+  function carouselPrevItem() {
+    setCurrentCarousel((idx) => (idx === 0 ? carouselLength - 1 : (idx - 1) % carouselLength));
+  }
+
   //touch & swipe
-  const [prevTouchPosX, setPrevTocuhPosX] = useState(0);
+  const touchPosRef = useRef(0);
+  const mousePosRef = useRef(0);
   function handleTouchStart(ev: any) {
-    setPrevTocuhPosX(ev.changedTouches[0].clientX);
+    touchPosRef.current = ev.changedTouches[0].clientX;
   }
 
   function handleTouchEnd(ev: any) {
     const touchPosX = ev.changedTouches[0].clientX;
-    if (prevTouchPosX > touchPosX) {
-      setCurrentCarousel((idx) => (idx === 0 ? carouselLength - 1 : (idx - 1) % carouselLength));
+    if (touchPosRef.current > touchPosX) {
+      carouselNextItem();
     } else {
-      setCurrentCarousel((idx) => (idx + 1) % carouselLength);
+      carouselPrevItem();
     }
   }
+
+  function handleMouseOver(ev: any) {
+    console.log(ev.clientX);
+    mousePosRef.current = ev.clientX;
+  }
+
+  function handleMouseLeave(ev: any) {
+    console.log(ev.clientX);
+    const mousePosX = ev.clientX;
+    if (mousePosRef.current > mousePosX) {
+      console.log(mousePosRef.current, mousePosX);
+      carouselNextItem();
+    } else {
+      carouselPrevItem();
+    }
+  }
+
+  function handleClick(ev: any) {}
 
   return (
     <S.ImgSection>
@@ -49,8 +76,15 @@ export default function ImageSection({ project, isItUpper }: any) {
             ))}
         </S.Dots>
       )}
-      <S.ImgContainer onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
-        <Image src={project.land.baseImageURL ? project.land.baseImageURL + project.imageURLs[currentCarousel] : project.imageURLs[0]} alt="Portfolio Image" layout="fill" priority objectFit="cover" />
+      <S.ImgContainer onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} onClick={handleClick}>
+        <Image
+          draggable={false}
+          src={project.land.baseImageURL ? project.land.baseImageURL + project.imageURLs[currentCarousel] : project.imageURLs[0]}
+          alt="Portfolio Image"
+          layout="fill"
+          priority
+          objectFit="cover"
+        />
       </S.ImgContainer>
       {isItUpper && (
         <S.Dots>

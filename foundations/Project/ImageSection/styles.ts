@@ -13,6 +13,7 @@ export const ImgContainer = styled.div`
   position: relative;
   width: 100%;
   overflow: hidden;
+
   height: ${({ theme }) => (theme.windowWidth < 768 ? theme.windowWidth * 0.7 : 0.7 * Math.min(theme.windowWidth / 2, 500))}px;
 `;
 

@@ -33,9 +33,7 @@ export default function RatingModal({ project, modalOpen, handleModalClose }: an
       const data = await res.json();
 
       setLoading(false);
-    } catch (e) {
-      console.log(e);
-    }
+    } catch (e) {}
 
     //action: upload data
     router.replace(router.asPath);

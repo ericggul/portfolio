@@ -167,7 +167,6 @@ export default function TicTacToePage({ moveToNextComponent, currentComponent }:
 
     setTimeout(() => {
       moveToNextComponent();
-      console.log("move");
     }, 1500);
     setTimeout(() => {
       clearInterval(interval);

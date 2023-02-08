@@ -22,7 +22,6 @@ export default function Project({ project, recommendedProjects }: any) {
     }
   }, [modalOpen]);
 
-  console.log(project);
   return (
     <S.Container>
       <S.Contents>

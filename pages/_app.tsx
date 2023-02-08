@@ -50,7 +50,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>Jeanyoon Choi Portfolio</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={{ windowWidth, windowHeight }}>
