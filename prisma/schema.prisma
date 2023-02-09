@@ -32,7 +32,13 @@ model Project{
 
   relatedProjects String[]
 
+
+  lat Float? @default(51.4899)
+  lng Float? @default(-0.2070)
+
 }
+
+
 
 
 
