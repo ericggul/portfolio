@@ -33,9 +33,9 @@ model Project{
   relatedProjects String[]
 
 
-  lat Float? @default(51.4899) 
-  lng Float? @default(-0.2070) 
-  expectedTime Int?
+  lat Float? @default(51.4899) @ignore
+  lng Float? @default(-0.2070) @ignore
+  expectedTime Int? @ignore
 
 }
 
