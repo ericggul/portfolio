@@ -22,10 +22,6 @@ model Project{
   imageURLs String[]
   medium String @default("HTML")
   date String
-  lat Float? @default(51.4899)
-  lng Float? @default(-0.2070)
-
-  expectedTime Int?
 
   rating Float @default(4.45)
   ratingCount Int @default(28)
@@ -33,28 +29,11 @@ model Project{
   land Land? @relation(fields: [landId], references: [id])
   landId String? 
 
-  price Price[]
-
   relatedProjects String[]
 
 }
 
 
-
-// model ProjectImage{
-//   id String @default(cuid()) @id
-//   imageURL String
-//   project Project @relation(fields: [projectId], references: [id])
-//   projectId String
-// }
-
-model Price{
-  id String @default(cuid()) @id
-  priceType String
-  price Float
-  project Project? @relation(fields: [projectId], references: [id])
-  projectId String?
-}
 
 
 model Land{
