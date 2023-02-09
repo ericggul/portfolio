@@ -31,12 +31,6 @@ model Project{
   landId String? 
 
   relatedProjects String[]
-
-
-  // lat Float? @default(51.4899) @ignore
-  // lng Float? @default(-0.2070) @ignore
-  // expectedTime Int? @ignore
-
 }
 
 
