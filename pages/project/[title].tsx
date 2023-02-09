@@ -91,7 +91,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   } else {
     recommendedProjects = [...getArrayTwoRandoms(sameLandProjects), getArrayRandom(popularProjects)];
   }
-  console.log(recommendedProjects);
 
   return {
     props: { project, recommendedProjects },

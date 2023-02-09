@@ -4,7 +4,6 @@ import * as S from "./styles";
 import Image from "next/image";
 import Link from "next/link";
 
-import useDistance from "utils/hooks/useDistance";
 import { getRandom } from "utils/functions/getRandom";
 
 export default function SingleProject({ project, idx }: any) {
