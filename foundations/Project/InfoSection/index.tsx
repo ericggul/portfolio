@@ -20,16 +20,19 @@ function TitleContainer({ project }: any) {
   );
 }
 
+const STAR_SVG = "/assets/images/Booking/star.svg";
+const STAR_FILL_SVG = "/assets/images/Booking/star-fill.svg";
+
 function RatingContainer({ project, handleModalOpen, modalHadOpened }: any) {
   return (
     <S.RatingContainer>
       <S.QuoteContainer>{project.quoteDescription ? `"${project.quoteDescription}"` : `"Astonishing"`}</S.QuoteContainer>
       <S.StarContainer>
-        <S.Star src={Math.round(project.rating) >= 1 ? `/assets/images/Booking/star-fill.svg` : `/assets/images/Booking/star.svg`} alt="Star" />
-        <S.Star src={Math.round(project.rating) >= 2 ? `/assets/images/Booking/star-fill.svg` : `/assets/images/Booking/star.svg`} alt="Star" />
-        <S.Star src={Math.round(project.rating) >= 3 ? `/assets/images/Booking/star-fill.svg` : `/assets/images/Booking/star.svg`} alt="Star" />
-        <S.Star src={Math.round(project.rating) >= 4 ? `/assets/images/Booking/star-fill.svg` : `/assets/images/Booking/star.svg`} alt="Star" />
-        <S.Star src={Math.round(project.rating) >= 5 ? `/assets/images/Booking/star-fill.svg` : `/assets/images/Booking/star.svg`} alt="Star" />
+        <S.Star src={Math.round(project.rating) >= 1 ? STAR_FILL_SVG : STAR_SVG} alt="Star" />
+        <S.Star src={Math.round(project.rating) >= 2 ? STAR_FILL_SVG : STAR_SVG} alt="Star" />
+        <S.Star src={Math.round(project.rating) >= 3 ? STAR_FILL_SVG : STAR_SVG} alt="Star" />
+        <S.Star src={Math.round(project.rating) >= 4 ? STAR_FILL_SVG : STAR_SVG} alt="Star" />
+        <S.Star src={Math.round(project.rating) >= 5 ? STAR_FILL_SVG : STAR_SVG} alt="Star" />
       </S.StarContainer>
 
       <p>
