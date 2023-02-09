@@ -1,5 +1,5 @@
 //data retrive
-import { GetServerSideProps } from "next";
+import { GetServerSideProps, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import prisma from "lib/prisma";
 
@@ -31,7 +31,7 @@ function Main({ projects, givenComponent }: any) {
   );
 }
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
   const projects = await prisma.project.findMany({
     include: {
       land: {
@@ -48,9 +48,31 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   return {
     props: {
       projects,
-      givenComponent: context.query.givenComponent || "booking",
+      givenComponent: context.params?.givenComponent || "booking",
     },
   };
 };
+
+// export const getServerSideProps: GetServerSideProps = async (context) => {
+//   const projects = await prisma.project.findMany({
+//     include: {
+//       land: {
+//         select: {
+//           title: true,
+//           medium: true,
+//           baseLandURL: true,
+//           baseImageURL: true,
+//         },
+//       },
+//     },
+//   });
+
+//   return {
+//     props: {
+//       projects,
+//       givenComponent: context.query.givenComponent || "booking",
+//     },
+//   };
+// };
 
 export default Main;
