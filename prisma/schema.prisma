@@ -14,6 +14,9 @@ model Project{
   id String @default(cuid()) @id
   title String @unique
 
+  rating Float @default(4.45)
+  ratingCount Int @default(28)
+
   shortDescription String?
   longDescription String?
   quoteDescription String?
@@ -23,8 +26,6 @@ model Project{
   medium String @default("HTML")
   date String
 
-  rating Float @default(4.45)
-  ratingCount Int @default(28)
 
   land Land? @relation(fields: [landId], references: [id])
   landId String? 
