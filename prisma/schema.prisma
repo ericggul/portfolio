@@ -35,7 +35,6 @@ model Project{
 
   lat Float? @default(51.4899) 
   lng Float? @default(-0.2070) 
-
   expectedTime Int?
 
 }
