@@ -1,9 +1,13 @@
 import { useState, useEffect, useMemo, useRef } from "react";
 import * as S from "./styles";
 
+import useResize from "utils/hooks/useResize";
+
 import Image from "next/image";
 
 export default function ImageSection({ project, isItUpper }: any) {
+  const [windowWidth, windowHeight] = useResize();
+
   const carouselLength = useMemo(() => project.imageURLs.length, [project.imageURLs]);
   const interval = useMemo(() => ((new Date().getMinutes() % 6) + 6) * (isItUpper ? 500 : 250), []);
 
@@ -77,6 +81,15 @@ export default function ImageSection({ project, isItUpper }: any) {
         </S.Dots>
       )}
       <S.ImgContainer onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave} onClick={handleClick}>
+        {windowWidth > 600 && (
+          <S.Arrow
+            style={{
+              left: "-4rem",
+            }}
+          >
+            {"<"}
+          </S.Arrow>
+        )}
         <Image
           draggable={false}
           src={project.land.baseImageURL ? project.land.baseImageURL + project.imageURLs[currentCarousel] : project.imageURLs[0]}

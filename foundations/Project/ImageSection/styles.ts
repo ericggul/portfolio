@@ -12,9 +12,18 @@ export const ImgSection = styled.div`
 export const ImgContainer = styled.div`
   position: relative;
   width: 100%;
-  overflow: hidden;
+  // overflow-y: hidden;
 
   height: ${({ theme }) => (theme.windowWidth < 768 ? theme.windowWidth * 0.7 : 0.7 * Math.min(theme.windowWidth / 2, 500))}px;
+`;
+
+export const Arrow = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  font-size: 3rem;
+  color: black;
 `;
 
 export const Dots = styled.div`
