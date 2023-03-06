@@ -14,7 +14,8 @@ function Main({ projects }: any) {
   const router = useRouter();
   const { givenComponent } = router.query;
 
-  const [currentComponent, setCurrentComponent] = useState<any>(typeof window !== "undefined" && sessionStorage.getItem("tictactoePlayed") === "played" ? "booking" : givenComponent);
+  // const [currentComponent, setCurrentComponent] = useState<any>(typeof window !== "undefined" && sessionStorage.getItem("tictactoePlayed") === "played" ? "booking" : givenComponent);
+  const [currentComponent, setCurrentComponent] = useState<any>("booking");
 
   useEffect(() => {
     if (currentComponent === "tictactoe") {
