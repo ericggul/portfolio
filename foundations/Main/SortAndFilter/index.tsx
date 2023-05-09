@@ -35,10 +35,14 @@ function Sorter({ handleSortChange }: any) {
           Date
           {sortingMethod === "date" && <span>{sortingDir === "asc" ? "↑" : "↓"}</span>}
         </S.Button>
-        <S.Button onClick={() => handleClick("land")} current={sortingMethod === "land"}>
+        <S.Button onClick={() => handleClick("alphabet")} current={sortingMethod === "alphabet"}>
+          Alphabet
+          {sortingMethod === "alphabet" && <span>{sortingDir === "asc" ? "↑" : "↓"}</span>}
+        </S.Button>
+        {/* <S.Button onClick={() => handleClick("land")} current={sortingMethod === "land"}>
           Land
           {sortingMethod === "land" && <span>{sortingDir === "asc" ? "↑" : "↓"}</span>}
-        </S.Button>
+        </S.Button> */}
       </S.SecondRow>
     </S.SortOrFiltContainer>
   );

@@ -8,9 +8,9 @@ function TitleContainer({ project }: any) {
   return (
     <S.TitleContainer>
       <S.UpperInformation>
-        {new Array(10).fill(0).map((_, i) => (
+        {new Array(8).fill(0).map((_, i) => (
           <span key={i}>
-            {project.date} &#8226; {project.medium} &#8226; {project.land.title} &#8226; {`Produly made by JYC`} &#8226; {"Link Below"} &#8226;{" "}
+            {project.date} &#8226; {project.medium} &#8226; {project.land.title} &#8226;{" "}
           </span>
         ))}
         <span>{project.date}</span>
@@ -20,8 +20,8 @@ function TitleContainer({ project }: any) {
   );
 }
 
-const STAR_SVG = "/assets/images/Booking/star.svg";
-const STAR_FILL_SVG = "/assets/images/Booking/star-fill.svg";
+const STAR_SVG = "/assets/images/ProjectList/star.svg";
+const STAR_FILL_SVG = "/assets/images/ProjectList/star-fill.svg";
 
 function RatingContainer({ project, handleModalOpen, modalHadOpened }: any) {
   return (

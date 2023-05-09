@@ -8,27 +8,27 @@ import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
 const TicTacToe = dynamic(() => import("components/Main/TicTacToe"), { ssr: false });
-const Booking = dynamic(() => import("components/Main/Booking"), { ssr: false });
+const ProjectList = dynamic(() => import("components/Main/ProjectList"), { ssr: false });
 
 function Main({ projects }: any) {
   const router = useRouter();
   const { givenComponent } = router.query;
 
-  // const [currentComponent, setCurrentComponent] = useState<any>(typeof window !== "undefined" && sessionStorage.getItem("tictactoePlayed") === "played" ? "booking" : givenComponent);
-  const [currentComponent, setCurrentComponent] = useState<any>("booking");
+  // const [currentComponent, setCurrentComponent] = useState<any>(typeof window !== "undefined" && sessionStorage.getItem("tictactoePlayed") === "played" ? "ProjectList" : givenComponent);
+  const [currentComponent, setCurrentComponent] = useState<any>("projectList");
 
   useEffect(() => {
     if (currentComponent === "tictactoe") {
       if (typeof window !== "undefined" && sessionStorage.getItem("tictactoePlayed") === "played") {
-        setCurrentComponent("booking");
+        setCurrentComponent("projectList");
       }
     }
   }, [currentComponent]);
 
   return (
     <>
-      <TicTacToe moveToNextComponent={() => setCurrentComponent("booking")} currentComponent={currentComponent} />
-      {currentComponent === "booking" && <Booking currentComponent={currentComponent} projects={projects} scrollTo={router.query.scrollTo || null} />}
+      <TicTacToe moveToNextComponent={() => setCurrentComponent("projectList")} currentComponent={currentComponent} />
+      {currentComponent === "projectList" && <ProjectList currentComponent={currentComponent} projects={projects} scrollTo={router.query.scrollTo || null} />}
     </>
   );
 }

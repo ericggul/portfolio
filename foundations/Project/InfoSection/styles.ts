@@ -19,15 +19,15 @@ export const TitleContainer = styled.div`
   flex-direction: column;
 
   h1 {
-    margin-top: 3rem;
-    margin-bottom: 1.8rem;
+    margin-top: 2rem;
+    margin-bottom: 1.5rem;
   }
   p {
   }
 `;
 
 export const UpperInformation = styled.div`
-  font-size: 0.5rem;
+  font-size: 0.8rem;
   width: 80%;
 
   word-break: break-all;

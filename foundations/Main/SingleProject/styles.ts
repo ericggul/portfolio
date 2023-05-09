@@ -45,24 +45,9 @@ export const ContentsContainer = styled.div`
   position: relative;
 `;
 
-export const ContentsLeft = styled.div``;
+export const ContentsBottom = styled.div``;
 
-export const Title = styled.h2``;
-
-export const ShortDescription = styled.p``;
-export const Medium = styled.p`
-  max-width: 55%;
-  font-weight: 300;
-  font-size: 0.95rem;
-  color: #777;
-`;
-
-export const Distance = styled.p`
-  max-width: 60%;
-  font-weight: 300;
-  font-size: 0.95rem;
-  color: #777;
-`;
+export const ContentsTop = styled.div``;
 
 export const Rating = styled.div`
   display: flex;
@@ -81,8 +66,33 @@ export const RatingStar = styled.div`
 export const RatingText = styled.div`
   ${FlexCenterStyle};
   span {
-    margin-left: 0.3rem;
-    font-size: 0.85rem;
+    margin-left: 0.2rem;
+    font-size: 0.9rem;
     color: #777;
   }
+`;
+
+export const ContentsLeft = styled.div`
+  position: relative;
+  hr {
+    position: absolute;
+    // left: 0;
+    width: 30%;
+  }
+`;
+
+export const Medium = styled.p`
+  max-width: 60%;
+  font-weight: 300;
+  font-size: 0.9rem;
+  color: #777;
+`;
+export const ShortDescription = styled.p`
+  font-size: 1rem;
+  margin-top: 0rem;
+`;
+
+export const Title = styled.h2`
+  font-size: 1.7rem;
+  margin-top: 0rem;
 `;

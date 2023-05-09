@@ -61,19 +61,19 @@ export default function RatingModal({ project, modalOpen, handleModalClose }: an
 
         <S.Stars>
           <S.Star onClick={() => setStar(1)}>
-            <Image src={star >= 1 ? `/assets/images/Booking/star-fill.svg` : "/assets/images/Booking/star.svg"} alt="Star" layout="fill" objectFit="cover" />
+            <Image src={star >= 1 ? `/assets/images/ProjectList/star-fill.svg` : "/assets/images/ProjectList/star.svg"} alt="Star" layout="fill" objectFit="cover" />
           </S.Star>
           <S.Star onClick={() => setStar(2)}>
-            <Image src={star >= 2 ? `/assets/images/Booking/star-fill.svg` : "/assets/images/Booking/star.svg"} alt="Star" layout="fill" objectFit="cover" />
+            <Image src={star >= 2 ? `/assets/images/ProjectList/star-fill.svg` : "/assets/images/ProjectList/star.svg"} alt="Star" layout="fill" objectFit="cover" />
           </S.Star>
           <S.Star onClick={() => setStar(3)}>
-            <Image src={star >= 3 ? `/assets/images/Booking/star-fill.svg` : "/assets/images/Booking/star.svg"} alt="Star" layout="fill" objectFit="cover" />
+            <Image src={star >= 3 ? `/assets/images/ProjectList/star-fill.svg` : "/assets/images/ProjectList/star.svg"} alt="Star" layout="fill" objectFit="cover" />
           </S.Star>
           <S.Star onClick={() => setStar(4)}>
-            <Image src={star >= 4 ? `/assets/images/Booking/star-fill.svg` : "/assets/images/Booking/star.svg"} alt="Star" layout="fill" objectFit="cover" />
+            <Image src={star >= 4 ? `/assets/images/ProjectList/star-fill.svg` : "/assets/images/ProjectList/star.svg"} alt="Star" layout="fill" objectFit="cover" />
           </S.Star>
           <S.Star onClick={() => setStar(5)}>
-            <Image src={star >= 5 ? `/assets/images/Booking/star-fill.svg` : "/assets/images/Booking/star.svg"} alt="Star" layout="fill" objectFit="cover" />
+            <Image src={star >= 5 ? `/assets/images/ProjectList/star-fill.svg` : "/assets/images/ProjectList/star.svg"} alt="Star" layout="fill" objectFit="cover" />
           </S.Star>
         </S.Stars>
 
