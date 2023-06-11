@@ -15,7 +15,7 @@ export default function Title({ project, recommendedProjects }: any) {
   return (
     <>
       <Head>
-        <title>Jeanyoon Choi Portfolio</title>
+        <title>{project.title} | Jeanyoon Choi Portfolio</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
 
         <meta charSet="utf-8" />
