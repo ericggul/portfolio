@@ -46,11 +46,31 @@ const GlobalStyle = createGlobalStyle`
 function MyApp({ Component, pageProps }: AppProps) {
   const [windowWidth, windowHeight] = useResize();
 
+  const description = "Jeanyoon Choi is a Web-Based New Media Artist focusing on Multi-Device Web Artwork practice.";
+
   return (
     <>
       <Head>
         <title>Jeanyoon Choi Portfolio</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width, user-scalable=no" />
+
+        <meta charSet="utf-8" />
+        <html lang="en" />
+        <meta property="og:type" content="website" />
+        <meta property="twitter:card" content="summary_large_image" />
+
+        <title>{"Jeanyoon Choi Portfolio"}</title>
+        <meta name="title" content={"Jeanyoon Choi Portfolio"} />
+        <meta property="og:title" content={"Jeanyoon Choi Portfolio"} />
+        <meta property="twitter:title" content={"Jeanyoon Choi Portfolio"} />
+
+        <meta name="description" content={description} />
+        <meta property="og:description" content={description} />
+        <meta property="twitter:description" content={description} />
+
+        <link rel="canonical" href={"https://www.portfolio-jyc.org"} />
+        <meta property="twitter:url" content={"https://www.portfolio-jyc.org"} />
+        <meta property="og:url" content={"https://www.portfolio-jyc.org"} />
       </Head>
       <GlobalStyle />
       <ThemeProvider theme={{ windowWidth, windowHeight }}>

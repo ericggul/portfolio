@@ -23,13 +23,6 @@ export default function Project({ project, recommendedProjects }: any) {
     // handleDelete();
   }, [modalOpen]);
 
-  // async function handleDelete() {
-  //   const dbs = await window.indexedDB.databases();
-  //   dbs.forEach((db: any) => {
-  //     window.indexedDB.deleteDatabase(db.name);
-  //   });
-  // }
-
   return (
     <S.Container>
       <S.Contents>
