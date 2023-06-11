@@ -34,10 +34,6 @@ model Project{
 }
 
 
-
-
-
-
 model Land{
   id String @default(cuid()) @id
   title String
