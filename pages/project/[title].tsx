@@ -9,8 +9,8 @@ import { useMemo } from "react";
 import Project from "components/Project";
 
 export default function Title({ project, recommendedProjects }: any) {
-  const projectURL = useMemo(() => `https://www.portfolio-jyc.org/project/${project.title}`, [project]);
-  const seoTitle = useMemo(() => `${project.title} | Jeanyoon Choi Portfolio`, [project]);
+  const projectURL = useMemo(() => (project ? `https://www.portfolio-jyc.org/project/${project.title}` : ""), [project]);
+  const seoTitle = useMemo(() => (project ? `${project.title} | Jeanyoon Choi Portfolio` : ""), [project]);
 
   return (
     <>
@@ -28,9 +28,9 @@ export default function Title({ project, recommendedProjects }: any) {
         <meta property="og:title" content={seoTitle} />
         <meta property="twitter:title" content={seoTitle} />
 
-        <meta name="description" content={project.longDescription} />
-        <meta property="og:description" content={project.longDescription} />
-        <meta property="twitter:description" content={project.longDescription} />
+        <meta name="description" content={project ? project.longDescription : ""} />
+        <meta property="og:description" content={project ? project.longDescription : ""} />
+        <meta property="twitter:description" content={project ? project.longDescription : ""} />
 
         <link rel="canonical" href={projectURL} />
         <meta property="twitter:url" content={projectURL} />
