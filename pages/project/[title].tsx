@@ -9,8 +9,8 @@ import { useMemo } from "react";
 import Project from "components/Project";
 
 export default function Title({ project, recommendedProjects }: any) {
-  const projectURL = useMemo(() => (project ? `https://www.portfolio-jyc.org/project/${project.title}` : ""), [project]);
-  const seoTitle = useMemo(() => (project ? `${project.title} | Jeanyoon Choi Portfolio` : ""), [project]);
+  const projectURL = useMemo(() => (project && project.title ? `https://www.portfolio-jyc.org/project/${project.title}` : ""), [project]);
+  const seoTitle = useMemo(() => (project && project.title ? `${project.title} | Jeanyoon Choi Portfolio` : "Jeanyoon Choi Portfolio"), [project]);
 
   return (
     <>
