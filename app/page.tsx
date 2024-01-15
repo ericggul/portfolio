@@ -1,5 +1,9 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
-  return <main>Lorem Ipsum</main>;
+import { useState, useEffect } from "react";
+
+import IntroComp from "@/components/Intro";
+
+export default function Intro() {
+  return <IntroComp />;
 }
