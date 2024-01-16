@@ -11,6 +11,7 @@ import * as S from "./styles";
 import { toast, Toast } from "loplat-ui";
 import { getRandom } from "@/utils/functions/getRandom";
 
-export default function Project() {
-  return <S.Container></S.Container>;
+export default function Project({ mappedImages }: any) {
+  console.log(mappedImages);
+  return <S.Container>Lorem Ipsum</S.Container>;
 }
