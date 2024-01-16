@@ -2,8 +2,8 @@ import styled, { css } from "styled-components";
 import { FlexCenterStyle, WholeContainer } from "@/styles/common";
 
 interface Level {
-  level: number;
-  fadeOut?: boolean;
+  $level: number;
+  $fadeOut?: boolean;
 }
 
 export const Container = styled.div<Level>`
@@ -11,7 +11,7 @@ export const Container = styled.div<Level>`
   ${FlexCenterStyle}
   cursor: pointer;
 
-  ${({ level }) => level >= 5 && "background: hsl(0, 0%, 5%)"};
+  ${({ $level }) => $level >= 5 && "background: hsl(0, 0%, 5%)"};
   opacity: 1;
 `;
 
@@ -51,10 +51,10 @@ export const Title = styled.div<Level>`
   ${FlexCenterStyle};
   cursor: pointer;
 
-  ${({ level }) => level === 1 && Level1};
-  ${({ level }) => level === 3 && Level3};
-  ${({ level }) => level === 5 && Level5};
-  ${({ level }) => level >= 6 && Level6};
+  ${({ $level }) => $level === 1 && Level1};
+  ${({ $level }) => $level === 3 && Level3};
+  ${({ $level }) => $level === 5 && Level5};
+  ${({ $level }) => $level >= 6 && Level6};
 `;
 
 export const Overline = styled.div<Level>`
@@ -67,8 +67,8 @@ export const Overline = styled.div<Level>`
   background: hsl(0, 100%, 40%);
   position: absolute;
 
-  ${({ level }) =>
-    level === 3 &&
+  ${({ $level }) =>
+    $level === 3 &&
     `width: 10rem;
   `}
 
@@ -76,27 +76,27 @@ export const Overline = styled.div<Level>`
 `;
 
 interface SmallEl {
-  pos: any;
-  rotation: number;
-  level: number;
-  colorHue: any;
-  delay: number;
-  popOut: boolean;
+  $pos: any;
+  $rotation: number;
+  $level: number;
+  $colorHue: any;
+  $delay: number;
+  $popOut: boolean;
 }
 
 export const SmallEl = styled.div.attrs<SmallEl>((props) => ({
   style: {
-    top: `${props.pos.y}px`,
-    left: `${props.pos.x}px`,
-    transform: props.popOut ? undefined : `rotate(${props.rotation}turn)`,
-    background: `hsl(${props.colorHue}, 100%, 50%)`,
-    boxShadow: `0 0 .3rem white, 0 0 .5rem hsl(${(180 + props.colorHue) % 360}, 100%, 50%), 0 0 1rem hsl(${(180 + props.colorHue) % 360}, 100%, 50%), 0 0 2rem hsl(${
-      (180 + props.colorHue) % 360
+    top: `${props.$pos.y}px`,
+    left: `${props.$pos.x}px`,
+    transform: props.$popOut ? undefined : `rotate(${props.$rotation}turn)`,
+    background: `hsl(${props.$colorHue}, 100%, 50%)`,
+    boxShadow: `0 0 .3rem white, 0 0 .5rem hsl(${(180 + props.$colorHue) % 360}, 100%, 50%), 0 0 1rem hsl(${(180 + props.$colorHue) % 360}, 100%, 50%), 0 0 2rem hsl(${
+      (180 + props.$colorHue) % 360
     }, 100%, 50%)`,
   },
 }))<SmallEl>`
   opacity: 0;
-  ${({ level }) => level >= 6 && "opacity: 1"};
+  ${({ $level }) => $level >= 6 && "opacity: 1"};
 
   font-family: Anton;
 
@@ -117,7 +117,7 @@ export const SmallEl = styled.div.attrs<SmallEl>((props) => ({
   }
 
   animation: appear 1s both;
-  animation-delay: ${({ delay }) => delay}s;
+  animation-delay: ${({ $delay }) => $delay}s;
 `;
 
 export const ButtonContainer = styled.div`
@@ -130,12 +130,12 @@ export const ButtonContainer = styled.div`
 `;
 
 interface Show {
-  show: any;
+  $show: any;
 }
 
 export const SingleSet = styled.div<Show>`
   ${FlexCenterStyle};
-  ${({ show }) => (show ? "display: flex" : "display: none")};
+  ${({ $show }) => ($show ? "display: flex" : "display: none")};
   transition: all 1s;
 `;
 
@@ -165,26 +165,26 @@ export const NoButton = styled.div`
 `;
 
 interface PopOut {
-  popOut: boolean;
+  $popOut: boolean;
 }
 
 export const YesContainer = styled.div<PopOut>`
   position: absolute;
   ${WholeContainer};
   z-index: 2;
-  ${({ popOut }) => (!popOut ? "transform: translateY(-100%)" : "transform: translateY(0)")};
+  ${({ $popOut }) => (!$popOut ? "transform: translateY(-100%)" : "transform: translateY(0)")};
   transition: all 0.4s;
 `;
 
 interface Pos {
-  pos: any;
+  $pos: any;
 }
 
 export const YesText = styled.div.attrs<Pos>((props) => ({
   style: {
-    top: `${props.pos.top}px`,
-    left: `${props.pos.left}px`,
-    fontSize: `${props.pos.size}rem`,
+    top: `${props.$pos.top}px`,
+    left: `${props.$pos.left}px`,
+    fontSize: `${props.$pos.size}rem`,
     transform: `translate(-50%, -50%)`,
   },
 }))<Pos>`
@@ -194,7 +194,7 @@ export const YesText = styled.div.attrs<Pos>((props) => ({
 `;
 
 interface FadeOut {
-  fadeOut: boolean;
+  $fadeOut: boolean;
 }
 
 export const CoverageContainer = styled.div<FadeOut>`
@@ -203,8 +203,8 @@ export const CoverageContainer = styled.div<FadeOut>`
   ${WholeContainer};
   opacity: 0;
   z-index: 5;
-  ${({ fadeOut }) =>
-    fadeOut &&
+  ${({ $fadeOut }) =>
+    $fadeOut &&
     `
       backdrop-filter: blur(1rem);
       background: #f3f3f3;

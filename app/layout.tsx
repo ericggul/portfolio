@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import StyledComponentsRegistry from "./lib/registry";
+import StyledComponentsRegistry from "@/lib/registry";
 
 export const metadata: Metadata = {
   title: "Jeanyoon Choi Portfolio",

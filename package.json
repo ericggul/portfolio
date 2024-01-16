@@ -9,8 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@prisma/client": "^5.8.1",
     "loplat-ui": "^1.11.1-rc",
     "next": "14.0.4",
+    "prisma": "^5.8.1",
     "react": "^18",
     "react-dom": "^18",
     "styled-components": "^6.1.8"

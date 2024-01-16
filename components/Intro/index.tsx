@@ -127,20 +127,20 @@ function Intro() {
   }, []);
 
   return (
-    <S.Container level={level} onClick={() => setLevel((l) => l + 1)} fadeOut={fadeOut}>
-      <S.Title level={level}>
+    <S.Container $level={level} onClick={() => setLevel((l) => l + 1)} $fadeOut={fadeOut}>
+      <S.Title $level={level}>
         Enter
-        <S.Overline level={level} />
+        <S.Overline $level={level} />
       </S.Title>
       {smallEl.map((el: any, i: number) => (
-        <S.SmallEl key={el.key} pos={el.pos} rotation={getRandom(-1, 1)} level={level} colorHue={el.colorHue} delay={el.delay} popOut={popOut[0]}>
+        <S.SmallEl key={el.key} $pos={el.pos} $rotation={getRandom(-1, 1)} $level={level} $colorHue={el.colorHue} $delay={el.delay} $popOut={popOut[0]}>
           Enter
         </S.SmallEl>
       ))}
       <Toast duration={2000} />
       <S.ButtonContainer>
         {new Array(10).fill(0).map((_, i) => (
-          <S.SingleSet key={i} show={showButtonSet(i, level)}>
+          <S.SingleSet key={i} $show={showButtonSet(i, level)}>
             <S.YesButton onClick={yesButtonClick}>Yes I Do!</S.YesButton>
             <S.NoButton>No I Do!</S.NoButton>
           </S.SingleSet>
@@ -148,15 +148,15 @@ function Intro() {
       </S.ButtonContainer>
 
       {popOut.map((bool, j) => (
-        <S.YesContainer popOut={bool} key={j}>
+        <S.YesContainer $popOut={bool} key={j}>
           {new Array(10).fill(0).map((_, i) => (
-            <S.YesText pos={yesTextPos[10 * j + i]} key={i}>
+            <S.YesText $pos={yesTextPos[10 * j + i]} key={i}>
               Yes I Do
             </S.YesText>
           ))}
         </S.YesContainer>
       ))}
-      <S.CoverageContainer fadeOut={fadeOut} />
+      <S.CoverageContainer $fadeOut={fadeOut} />
       <S.InvisibleText>
         <h1>Jeanyoon Choi Portfolio.</h1>
         <h2>Web-based new media artist Jeanyoon Choi Portfolio.</h2>
