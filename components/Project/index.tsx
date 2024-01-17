@@ -58,6 +58,8 @@ export default function Project({ allImages }: any) {
     2000
   );
 
+  console.log(shuffledImagesArray, shuffledImagesArray.length);
+
   // Use useMemo to memoize the shuffledImagesArray
   const memorisedImages = useMemo(() => shuffledImagesArray.map((el: any, i: number) => <SingleEl el={el} key={i} />), [shuffledImagesArray, newImages]);
 
