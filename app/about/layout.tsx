@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 
-import StyledComponentsRegistry from "@/lib/registry";
+import Navigation from "@/components/Navigation";
 
 export const metadata: Metadata = {
-  title: "Jeanyoon Choi Portfolio | Works",
-  description:
-    "Web-based new media artist Jeanyoon Choi. Featuring latest works by Jeanyoon Choi, a Computational Artist, Creative Developer, and Interaction Designer. Visit to look at Jeanyoon's work",
+  title: "Jeanyoon Choi | About",
+  description: "Bio of Jeanyoon Choi. Jeanyoon Choi Artistic Bio and CV.",
   openGraph: {
     type: "website",
     locale: "en_UK",
-    url: "portfolio-jyc.org/main",
+    url: "portfolio-jyc.org/about",
     siteName: "Jeanyoon Choi Portfolio",
     // images: [
     //   {
@@ -31,5 +30,10 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  return (
+    <>
+      <Navigation currTab="about" />
+      {children}
+    </>
+  );
 }

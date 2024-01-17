@@ -1,6 +1,4 @@
 import prisma from "@/lib/prisma";
-
-import Navigation from "@/components/Navigation";
 import Project from "@/components/Project";
 
 export default async function ProjectsPage() {
@@ -20,7 +18,6 @@ export default async function ProjectsPage() {
 
   return (
     <>
-      <Navigation />
       <Project allImages={allImages} />
     </>
   );

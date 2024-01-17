@@ -4,11 +4,8 @@ import { FlexCenterStyle, WholeContainer } from "@/styles/common";
 export const Container = styled.div`
   ${FlexCenterStyle}
   width: 100%;
-  min-height: 100vh;
   position: relative;
-
   background: black;
-  overflow-y: scroll;
   font-family: "Times New Roman", Times, serif;
   transition: all 0.3s ease-in-out;
 `;

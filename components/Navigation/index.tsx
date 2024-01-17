@@ -1,7 +1,5 @@
 "use client";
-import React, { useState, useMemo, useEffect, use } from "react";
-import useResize from "@/utils/hooks/useResize";
-import useRandomInterval from "@/utils/hooks/useRandomInterval";
+import Link from "next/link";
 
 //styles
 import * as S from "./styles";
@@ -9,11 +7,19 @@ import * as S from "./styles";
 export default function Navigation({ currTab }: any) {
   return (
     <S.NavContainer>
-      <S.Left>Jeanyoon Choi</S.Left>
+      <S.Left>
+        <h1>Jeanyoon Choi</h1>
+      </S.Left>
       <S.Right>
-        <S.Tab currTab={currTab === "projects"}>Projects</S.Tab>
-        <S.Tab currTab={currTab === "about"}>About</S.Tab>
-        <S.Tab currTab={currTab === "texts"}>Contact</S.Tab>
+        <S.Tab currTab={currTab === "works"}>
+          <Link href="/works">Works</Link>
+        </S.Tab>
+        <S.Tab currTab={currTab === "about"}>
+          <Link href="/about">About</Link>
+        </S.Tab>
+        <S.Tab currTab={currTab === "texts"}>
+          <Link href="/texts">Texts</Link>
+        </S.Tab>
       </S.Right>
     </S.NavContainer>
   );
