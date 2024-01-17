@@ -9,37 +9,22 @@ import * as S from "./styles";
 const getRandomFromArr = (arr: any) => arr[Math.floor(Math.random() * arr.length)];
 
 export default function Project({ allImages }: any) {
-  const [loadedImagesArray, setLoadedImagesArray] = useState<any>([]);
   const [newImages, setNewImages] = useState<any>([]);
-  const [shuffledImagesArray, setShuffledImagesArray] = useState<any>(new Array(40).fill(null));
-
-  useEffect(() => {
-    allImages.map((el: any) => {
-      if (loadedImagesArray.find((ele: any) => ele.url === el.url)) return;
-      const img = new Image();
-      img.src = el.url;
-      img.onload = () => {
-        setLoadedImagesArray((prev: any) =>
-          //check if image is already included in prev, if not, add new image
-          prev.find((ele: any) => ele.url === el.url) ? prev : [...prev, el]
-        );
-      };
-    });
-  }, [allImages]);
+  const [shuffledImagesArray, setShuffledImagesArray] = useState<any>([]);
 
   useEffect(() => {
     setShuffledImagesArray((prev: any) => {
       const newImages = [];
       const images = [...prev];
       for (let i = 0; i < 80; i++) {
-        const newImage = getRandomFromArr(loadedImagesArray);
+        const newImage = getRandomFromArr(allImages);
         images[i] = newImage;
         newImages.push(i);
       }
       setNewImages(newImages);
       return images;
     });
-  }, [loadedImagesArray]);
+  }, [allImages]);
 
   useRandomInterval(
     //add new images
@@ -47,7 +32,7 @@ export default function Project({ allImages }: any) {
       setShuffledImagesArray((prev: any) => {
         const newImages = [...prev];
         //add one new image in random location
-        const newImage = getRandomFromArr(loadedImagesArray);
+        const newImage = getRandomFromArr(allImages);
         const randomIndex = Math.floor(Math.random() * newImages.length);
         newImages[randomIndex] = newImage;
         newImages.push(randomIndex);
