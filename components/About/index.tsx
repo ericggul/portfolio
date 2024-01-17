@@ -1,10 +1,9 @@
 "use client";
-import Link from "next/link";
 
 //styles
 import * as S from "./styles";
 
-export default function About({ currTab }: any) {
+export default function About() {
   return (
     <S.Container>
       <S.Contents>
