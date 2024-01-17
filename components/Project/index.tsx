@@ -1,7 +1,5 @@
 "use client";
 import React, { useState, useMemo, useEffect, use } from "react";
-import useResize from "@/utils/hooks/useResize";
-import useRandomInterval from "@/utils/hooks/useRandomInterval";
 
 //styles
 import * as S from "./styles";

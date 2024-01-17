@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 
 import Navigation from "@/components/Navigation";
 
-import StyledComponentsRegistry from "@/lib/registry";
-
 export const metadata: Metadata = {
   title: "Jeanyoon Choi | Works",
   description:
