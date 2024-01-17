@@ -3,12 +3,12 @@ import Project from "@/components/Project";
 
 export default async function ProjectsPage() {
   const res = await prisma.project.findMany();
-  const mappedImages = res
+  const allImages = res
     .reduce((acc: any, curr: any) => {
       acc = [
         ...acc,
         ...curr.imageURLs.map((el: string) => ({
-          url: curr.imageURLBase + el,
+          url: "/assets" + curr.imageURLBase + "/" + el,
           ...curr,
         })),
       ];
@@ -18,7 +18,7 @@ export default async function ProjectsPage() {
 
   return (
     <>
-      <Project mappedImages={mappedImages} />
+      <Project allImages={allImages} />
     </>
   );
 }

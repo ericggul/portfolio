@@ -11,7 +11,17 @@ import * as S from "./styles";
 import { toast, Toast } from "loplat-ui";
 import { getRandom } from "@/utils/functions/getRandom";
 
-export default function Project({ mappedImages }: any) {
-  console.log(mappedImages);
-  return <S.Container>Lorem Ipsum</S.Container>;
+export default function Project({ allImages }: any) {
+  console.log(allImages);
+  return (
+    <S.Container>
+      <S.Wrapper>
+        {allImages.map((el: any, i: number) => (
+          <S.SingleEl key={i}>
+            <img src={el.url} alt={el.title} />
+          </S.SingleEl>
+        ))}
+      </S.Wrapper>
+    </S.Container>
+  );
 }
