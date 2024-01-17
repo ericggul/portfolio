@@ -5,6 +5,8 @@ export const Container = styled.div`
   ${FlexCenterStyle}
   justify-content: space-between;
   overflow-y: scroll;
+  background: black;
+  min-height: calc(${({ theme }) => theme.windowHeight}px - 4.5rem);
 `;
 
 export const Contents = styled.div`

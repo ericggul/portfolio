@@ -5,12 +5,17 @@ export const Container = styled.div`
   ${FlexCenterStyle}
   justify-content: space-between;
   overflow-y: scroll;
+
+  background: black;
+  color: #ddd;
 `;
 
 export const Contents = styled.div`
   width: calc(100vw - 3rem);
+  min-height: calc(${({ theme }) => theme.windowHeight}px - 4.5rem);
   margin-left: 1.5rem;
   overflow-y: scroll;
+  background: black;
 
   color: #ddd;
   p {

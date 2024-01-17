@@ -26,25 +26,6 @@ export default function Project({ allImages }: any) {
     });
   }, [allImages]);
 
-  useRandomInterval(
-    //add new images
-    () => {
-      setShuffledImagesArray((prev: any) => {
-        const newImages = [...prev];
-        //add one new image in random location
-        const newImage = getRandomFromArr(allImages);
-        const randomIndex = Math.floor(Math.random() * newImages.length);
-        newImages[randomIndex] = newImage;
-        newImages.push(randomIndex);
-        return newImages;
-      });
-    },
-    500,
-    2000
-  );
-
-  console.log(shuffledImagesArray, shuffledImagesArray.length);
-
   // Use useMemo to memoize the shuffledImagesArray
   const memorisedImages = useMemo(() => shuffledImagesArray.map((el: any, i: number) => <SingleEl el={el} key={i} />), [shuffledImagesArray, newImages]);
 

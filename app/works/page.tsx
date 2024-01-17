@@ -7,8 +7,8 @@ export default async function ProjectsPage() {
     .reduce((acc: any, curr: any) => {
       acc = [
         ...acc,
-        ...curr.imageURLs.map((el: string) => ({
-          url: "/assets" + curr.imageURLBase + "/" + el,
+        ...new Array(parseInt(curr.imageNumber)).fill(0).map((_, i: number) => ({
+          url: "/assets" + curr.imageURLBase + "/" + (i + 1).toString() + ".webp",
           ...curr,
         })),
       ];

@@ -11,13 +11,13 @@ export default function Navigation({ currTab }: any) {
         <h1>Jeanyoon Choi</h1>
       </S.Left>
       <S.Right>
-        <S.Tab currTab={currTab === "works"}>
+        <S.Tab $currTab={currTab === "works"}>
           <Link href="/works">Works</Link>
         </S.Tab>
-        <S.Tab currTab={currTab === "about"}>
+        <S.Tab $currTab={currTab === "about"}>
           <Link href="/about">About</Link>
         </S.Tab>
-        <S.Tab currTab={currTab === "texts"}>
+        <S.Tab $currTab={currTab === "texts"}>
           <Link href="/texts">Texts</Link>
         </S.Tab>
       </S.Right>

@@ -6,13 +6,15 @@ export const NavContainer = styled.div`
   justify-content: space-between;
   width: 100vw;
   height: 4.5rem;
-  h1 {
-    font-size: 1.4rem;
-  }
 
   top: 0;
   background: black;
   color: #ddd;
+
+  h1 {
+    font-weight: 200;
+    font-size: 1.4rem;
+  }
 `;
 
 export const Left = styled.div`
@@ -25,7 +27,7 @@ export const Right = styled.div`
 `;
 
 interface TabProps {
-  currTab: boolean;
+  $currTab: boolean;
 }
 
 export const Tab = styled.div<TabProps>`
@@ -36,7 +38,7 @@ export const Tab = styled.div<TabProps>`
   color: #aaa;
 
   ${(props) =>
-    props.currTab &&
+    props.$currTab &&
     css`
       color: #fff;
       text-shadow: 0 0 0.5rem #fff;

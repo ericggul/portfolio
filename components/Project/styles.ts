@@ -20,8 +20,8 @@ export const Wrapper = styled.div`
 `;
 
 export const SingleEl = styled.div`
-  width: 20vw;
-  height: 11.25vw;
+  width: ${({ theme }) => (theme.windowWidth > 768 ? "20vw" : "33.333vw")};
+  height: ${({ theme }) => (theme.windowWidth > 768 ? "11.25vw" : "18.75vw")};
   position: relative;
   background: black;
   transition: transform 0.3s ease-in-out;
@@ -66,19 +66,19 @@ export const Info = styled.div`
 
 export const Title = styled.div`
   position: absolute;
-  font-size: 1.5vw;
-  left: 1vw;
-  top: 0.5vw;
-  width: 18vw;
+  font-size: ${({ theme }) => (theme.windowWidth > 768 ? "1.5vw" : "3.5vw")};
+  left: ${({ theme }) => (theme.windowWidth > 768 ? "1vw" : "1.5vw")};
+  top: ${({ theme }) => (theme.windowWidth > 768 ? "0.5vw" : "1vw")};
+  width: ${({ theme }) => (theme.windowWidth > 768 ? "18vw" : "30vw")};
   text-align: left;
 `;
 
 export const Year = styled.div`
   position: absolute;
-  font-size: 1vw;
-  left: 1vw;
-  bottom: 0.5vw;
-  width: 18vw;
+  font-size: ${({ theme }) => (theme.windowWidth > 768 ? "1vw" : "2vw")};
+  left: ${({ theme }) => (theme.windowWidth > 768 ? "1vw" : "1.5vw")};
+  bottom: ${({ theme }) => (theme.windowWidth > 768 ? "0.5vw" : "1vw")};
+  width: ${({ theme }) => (theme.windowWidth > 768 ? "18vw" : "30vw")};
 
   display: flex;
   flex-direction: row;

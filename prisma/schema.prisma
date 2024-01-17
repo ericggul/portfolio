@@ -19,7 +19,7 @@ model Project{
   projectURL String?
 
   imageURLBase String?
-  imageURLs String[]
+  imageNumber Int @default(0)
   medium String @default("HTML")
   year String @default("2024")
 
