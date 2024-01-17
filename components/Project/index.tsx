@@ -17,12 +17,35 @@ export default function Project({ allImages }: any) {
     <S.Container>
       <S.Wrapper>
         {allImages.map((el: any, i: number) => (
-          <S.SingleEl key={i}>
-            <img src={el.url} alt={el.title} />
-            <S.OverlayShadow />
-          </S.SingleEl>
+          <SingleEl el={el} key={i} />
         ))}
       </S.Wrapper>
     </S.Container>
+  );
+}
+
+function SingleEl({ el }: any) {
+  const [hovered, setHovered] = useState(false);
+
+  return (
+    <S.SingleEl onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+      <img src={el.url} alt={el.title} />
+
+      <S.Info
+        style={{
+          opacity: hovered ? 1 : 0,
+        }}
+      >
+        <S.Title>{el.title}</S.Title>
+
+        <S.Year>
+          <p>{el.type}</p>
+
+          <p>{el.year}</p>
+        </S.Year>
+      </S.Info>
+
+      <S.OverlayShadow />
+    </S.SingleEl>
   );
 }
