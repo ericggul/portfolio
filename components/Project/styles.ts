@@ -7,7 +7,7 @@ export const Container = styled.div`
 
   background: black;
   overflow-y: scroll;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Times New Roman", Times, serif;
   transition: all 0.3s ease-in-out;
 `;
 
@@ -24,6 +24,18 @@ export const SingleEl = styled.div`
   height: 11.25vw;
   position: relative;
   background: black;
+  transition: transform 0.3s ease-in-out;
+
+  @keyframes init-appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  animation: init-appear 0.3s ease-in-out both;
 
   img {
     position: absolute;

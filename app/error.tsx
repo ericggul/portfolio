@@ -1,6 +1,7 @@
 "use client"; // Error components must be Client Components
 
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import useRandomInterval from "@/utils/hooks/useRandomInterval";
 
 export default function Error({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
   useEffect(() => {
@@ -8,8 +9,26 @@ export default function Error({ error, reset }: { error: Error & { digest?: stri
     console.error(error);
   }, [error]);
 
+  const [oCount, setOCount] = useState(2);
+  //ocount increase randomly
+  useRandomInterval(
+    () => {
+      setOCount((count) => count + Math.ceil(Math.random() * (Math.min(count * 2, 1000) + 10)));
+    },
+    1,
+    1000
+  );
+
   return (
     <div>
+      <p
+        style={{
+          maxWidth: "100vw",
+          wordBreak: "break-all",
+        }}
+      >
+        O{"o".repeat(oCount)}ps
+      </p>
       <h2>Something went wrong!</h2>
       <button
         onClick={

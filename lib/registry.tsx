@@ -40,6 +40,8 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: "Times New Roman";
+    background: black;
+    color: white;
   }
 
   // a {
