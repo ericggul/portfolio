@@ -20,6 +20,11 @@ export default function Navigation({ currTab }: any) {
         <S.Tab $currTab={currTab === "texts"}>
           <Link href="/texts">Texts</Link>
         </S.Tab>
+        <S.Tab $currTab={currTab === "fund"}>
+          <Link href="https://iba.art/products/%CF%89-resistance" target="_blank">
+            Fund
+          </Link>
+        </S.Tab>
       </S.Right>
     </S.NavContainer>
   );

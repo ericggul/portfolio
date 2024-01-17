@@ -12,8 +12,9 @@ export const NavContainer = styled.div`
   color: #ddd;
 
   h1 {
-    font-weight: 200;
-    font-size: 1.4rem;
+    font-weight: normal;
+    font-size: 1.3rem;
+    color: #aaa;
   }
 `;
 
