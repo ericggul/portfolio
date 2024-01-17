@@ -19,6 +19,7 @@ export default function Project({ allImages }: any) {
         {allImages.map((el: any, i: number) => (
           <S.SingleEl key={i}>
             <img src={el.url} alt={el.title} />
+            <S.OverlayShadow />
           </S.SingleEl>
         ))}
       </S.Wrapper>
