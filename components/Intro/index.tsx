@@ -104,8 +104,8 @@ function Intro() {
     }, 1500);
 
     setTimeout(() => {
-      window.alert("Site under construction! Please visit IG @schumpeterstrasse for more works");
-      router.push("https://2023.rca.ac.uk/students/jeanyoon-choi");
+      window.alert("Site under construction! Some of the functionalities may not work properly.");
+      router.push("/works");
       // router.push({
       //   pathname: "/main",
       //   query: { givenComponent: "tictactoe" },

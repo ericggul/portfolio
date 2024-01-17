@@ -40,9 +40,50 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: "Times New Roman";
-    background: black;
-    color: white;
     overflow: hidden;
+
+
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Old versions of Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+  
+    -webkit-animation-delay: 0.1s;
+    -webkit-animation-name: fontfix;
+    -webkit-animation-duration: 0.1s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: linear;
+  
+    @-webkit-keyframes fontfix {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  
+    &::-webkit-scrollbar {
+      display: none;
+      -webkit-appearance: none;
+      width: 0;
+      height: 0;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: transparent;
+      background-color: transparent;
+      outline: none;
+    }
+  
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   a {
@@ -70,4 +111,7 @@ const GlobalStyle = createGlobalStyle`
     src: url('/assets/fonts/ComingSoon-Regular.ttf');
   }
   
+
+
+ 
 `;

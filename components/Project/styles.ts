@@ -14,6 +14,7 @@ export const Wrapper = styled.div`
   ${WholeContainer}
   overflow-y: scroll;
   min-height: ${({ theme }) => theme.windowHeight}px;
+  background: black;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
 `;
@@ -24,6 +25,7 @@ export const SingleEl = styled.div`
   position: relative;
   background: black;
   transition: transform 0.3s ease-in-out;
+  cursor: pointer;
 
   @keyframes init-appear {
     from {
