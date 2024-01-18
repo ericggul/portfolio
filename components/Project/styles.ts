@@ -16,12 +16,12 @@ export const Wrapper = styled.div`
   min-height: ${({ theme }) => theme.windowHeight}px;
   background: black;
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: ${({ theme }) => (theme.windowWidth > 768 ? "repeat(5, 1fr)" : "repeat(2, 1fr)")};
 `;
 
 export const SingleEl = styled.div`
-  width: ${({ theme }) => (theme.windowWidth > 768 ? "20vw" : "33.333vw")};
-  height: ${({ theme }) => (theme.windowWidth > 768 ? "11.25vw" : "18.75vw")};
+  width: ${({ theme }) => (theme.windowWidth > 768 ? "20vw" : "50vw")};
+  height: ${({ theme }) => (theme.windowWidth > 768 ? "11.25vw" : "28.125vw")};
   position: relative;
   background: black;
   transition: transform 0.3s ease-in-out;

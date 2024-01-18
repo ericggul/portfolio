@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import { GoogleAnalytics } from "@/next/third-parties/google";
 import StyledComponentsRegistry from "@/lib/registry";
 
 export const metadata: Metadata = {
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body>
+        <GoogleAnalytics gaId="G-EQ8SQ1G84X" />
         <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>

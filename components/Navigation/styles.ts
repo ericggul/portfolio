@@ -13,17 +13,17 @@ export const NavContainer = styled.div`
 
   h1 {
     font-weight: normal;
-    font-size: 1.3rem;
+    font-size: ${({ theme }) => (theme.windowWidth > 768 ? "1.4rem" : "1rem")};
     color: #aaa;
   }
 `;
 
 export const Left = styled.div`
-  margin-left: 1.5rem;
+  margin-left: 1.2rem;
 `;
 
 export const Right = styled.div`
-  margin-right: 1.5rem;
+  margin-right: 1.2rem;
   ${FlexCenterStyle}
 `;
 
@@ -32,8 +32,8 @@ interface TabProps {
 }
 
 export const Tab = styled.div<TabProps>`
-  font-size: 1.1rem;
-  margin-left: 1.1rem;
+  font-size: ${({ theme }) => (theme.windowWidth > 768 ? "1.1rem" : "1rem")};
+  margin-left: ${({ theme }) => (theme.windowWidth > 768 ? "1.1rem" : ".7rem")};
   cursor: pointer;
   transition: all 0.3s ease-in-out;
   color: #aaa;

@@ -11,21 +11,22 @@ export default function Project({ allImages }: any) {
   const [shuffledImagesArray, setShuffledImagesArray] = useState<any>([]);
 
   useEffect(() => {
-    setShuffledImagesArray((prev: any) => {
-      const newImages = [];
-      const images = [...prev];
-      for (let i = 0; i < 80; i++) {
-        const newImage = getRandomFromArr(allImages);
-        images[i] = newImage;
-        newImages.push(i);
-      }
-      setNewImages(newImages);
-      return images;
+    console.log(allImages);
+    allImages.map((el: any) => {
+      const img = new Image();
+      img.src = el.url;
+      img.onload = () => {
+        setShuffledImagesArray(
+          (
+            prev: any //upload except for redundant images
+          ) => (prev.find((ele: any) => ele.url === el.url) ? prev : [...prev, el])
+        );
+      };
     });
   }, [allImages]);
 
   // Use useMemo to memoize the shuffledImagesArray
-  const memorisedImages = useMemo(() => shuffledImagesArray.map((el: any, i: number) => <SingleEl el={el} key={i} />), [shuffledImagesArray, newImages]);
+  const memorisedImages = useMemo(() => shuffledImagesArray.map((el: any, i: number) => <SingleEl el={el} key={i} />), [shuffledImagesArray]);
 
   return (
     <S.Container>

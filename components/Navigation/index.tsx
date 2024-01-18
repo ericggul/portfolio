@@ -1,10 +1,12 @@
 "use client";
 import Link from "next/link";
+import useResize from "@/utils/hooks/useResize";
 
 //styles
 import * as S from "./styles";
 
 export default function Navigation({ currTab }: any) {
+  const [windowWidth, _] = useResize();
   return (
     <S.NavContainer>
       <S.Left>
