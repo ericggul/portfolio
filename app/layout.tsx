@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-import { GoogleAnalytics } from "@/next/third-parties/google";
+import Script from "next/script";
 import StyledComponentsRegistry from "@/lib/registry";
 
 export const metadata: Metadata = {
@@ -33,11 +33,20 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body>
-        <GoogleAnalytics gaId="G-EQ8SQ1G84X" />
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-      </body>
-    </html>
+    <>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-EQ8SQ1G84X" strategy="afterInteractive" />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-EQ8SQ1G84X');`}
+      </Script>
+      <html lang="en">
+        <body>
+          <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        </body>
+      </html>
+    </>
   );
 }
