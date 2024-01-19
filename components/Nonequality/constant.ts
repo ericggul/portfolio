@@ -1,3 +1,6 @@
+export const YOUTUBE_IDS = ["LwWcRS1FhNc", "459r4Z0juNI", "hWPgJ0hkQlQ", "xTHepagctI8"];
+export const VIMEO = "https://vimeo.com/904510875?share=copy";
+
 export const SUMMARY = [
   `≠ (Nonequality) denotes anything else other than = (Equality). = implies a singular answer, while ≠ encompasses limitless possibilities. However, we often prefer = over ≠, attempting false datificiation (Intangible_Ambiguity=Numerical_Value), or uncritical acceptance of algorithmic outcomes (Generative_AI=Truth). Like the overreliance on Recommendation Systems, some accept LLM-generated texts to be assuredly true.`,
   `≠ (Nonequality) is an interactive Multi-Device Web Art Installation integrating ChatGPT, Stable Diffusion, TTS, and WebSocket, presenting aggregated chaos - Where individual sections adhere to logic and algorithms, yet the overall experience emerges as illogical, deconstructed, and decentralised. It exposes the illogicality (≠) within seemingly logical systems (=).`,

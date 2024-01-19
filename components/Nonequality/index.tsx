@@ -5,13 +5,25 @@ import { useState, useEffect, useMemo } from "react";
 import { useRouter } from "next/navigation";
 
 import * as S from "./styles";
-import { SUMMARY, DESCRIPTION, CONCEPT, MEDIA } from "./constant";
+import { SUMMARY, DESCRIPTION, CONCEPT, MEDIA, YOUTUBE_IDS } from "./constant";
 
 const IMG_BASE_URL = "/assets/personal/2023/nonequality/";
 export default function About() {
   const [highlightedWord, setHighlightedWord] = useState("");
 
   const router = useRouter();
+  const [introStage, setIntroStage] = useState(0);
+
+  useEffect(() => {
+    if (introStage === 1) {
+      // new audio
+      const audio = new Audio("/assets/sound/neins/0.wav");
+      audio.play();
+      setTimeout(() => {
+        setIntroStage(2);
+      }, 1000);
+    }
+  }, [introStage]);
 
   return (
     <S.Container>
@@ -26,6 +38,8 @@ export default function About() {
         {SUMMARY.map((s, i) => (
           <Paragraph key={i} text={s} highlightedWord={highlightedWord} setHighlightedWord={setHighlightedWord} />
         ))}
+
+        <VidSection introStage={introStage} />
         <div
           style={{
             display: "flex",
@@ -80,6 +94,17 @@ export default function About() {
           <Paragraph key={i} text={s} highlightedWord={highlightedWord} setHighlightedWord={setHighlightedWord} />
         ))}
       </S.Contents>
+
+      <S.Overlay
+        style={{
+          background: introStage === 0 ? "white" : "radial-gradient(hsla(0, 100%, 50%, 0.5), hsla(0, 100%, 50%, 1))",
+          opacity: introStage <= 1 ? 1 : 0,
+          pointerEvents: introStage <= 1 ? "all" : "none",
+        }}
+        onClick={() => setIntroStage((i) => i + 1)}
+      >
+        <h3>≠</h3>
+      </S.Overlay>
     </S.Container>
   );
 }
@@ -137,10 +162,14 @@ function ImgSection({ imgIndexes }: any) {
   );
 }
 
-function VidSection() {
+function VidSection({ introStage }: any) {
+  return <S.VidSection>{introStage >= 1 && YOUTUBE_IDS.map((id: string, i: number) => <SingleVideo key={i} id={id} />)}</S.VidSection>;
+}
+
+function SingleVideo({ id }: any) {
   return (
-    <S.VidSection>
-      <iframe src="https://www.youtube.com/embed/xTHepagctI8?si=3Mr_4rDCc24UNQcX" allow="autoplay" title="Youtube" frameBorder="0" border="0" cellSpacing="0"></iframe>
-    </S.VidSection>
+    <S.SingleVideo>
+      <iframe src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1`} allow="autoplay" title="Youtube" frameBorder="0" border="0" cellSpacing="0" />
+    </S.SingleVideo>
   );
 }
