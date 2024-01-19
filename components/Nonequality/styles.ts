@@ -28,7 +28,6 @@ export const Contents = styled.div`
     font-weight: normal;
     text-shadow: 0 0 1px #fff;
     margin: 1.5rem 0;
-    text-decoration: line-through;
   }
 
   h2 {
@@ -63,12 +62,34 @@ export const Contents = styled.div`
   scrollbar-width: none !important;
 `;
 
-export const ImgSection = styled.div``;
+export const ImgSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 1.5rem 0;
+
+  img {
+    width: calc((100vw - 3rem) / 5);
+    height: calc(((100vw - 3rem) / 5) * 0.5625);
+    object-fit: cover;
+  }
+`;
 
 export const CV = styled.div`
   cursor: pointer;
 
   a {
     text-decoration: underline;
+  }
+`;
+
+export const VidSection = styled.div`
+  width: 100%;
+
+  iframe {
+    border: none;
+
+    width: calc((100vw - 3rem));
+    height: calc(((100vw - 3rem)) * 0.5625);
   }
 `;
