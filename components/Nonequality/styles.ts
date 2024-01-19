@@ -128,7 +128,7 @@ export const VidSection = styled.div`
 `;
 
 export const RhizomeSection = styled.div`
-  ${FlexCenterStyle}
+  display: flex;
   flex-direction: column;
   width: 100%;
   margin: 1.5rem 0;
