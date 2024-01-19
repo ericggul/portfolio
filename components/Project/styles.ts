@@ -13,9 +13,10 @@ export const Container = styled.div`
 export const Wrapper = styled.div`
   ${WholeContainer}
   overflow-y: scroll;
-  min-height: ${({ theme }) => theme.windowHeight}px;
+  // min-height: ${({ theme }) => theme.windowHeight}px;
   background: black;
   display: grid;
+  grid-row-gap: 0 !important;
   grid-template-columns: ${({ theme }) => (theme.windowWidth > 768 ? "repeat(5, 1fr)" : "repeat(2, 1fr)")};
 `;
 
@@ -66,19 +67,19 @@ export const Info = styled.div`
 
 export const Title = styled.div`
   position: absolute;
-  font-size: ${({ theme }) => (theme.windowWidth > 768 ? "1.5vw" : "3.5vw")};
-  left: ${({ theme }) => (theme.windowWidth > 768 ? "1vw" : "1.5vw")};
-  top: ${({ theme }) => (theme.windowWidth > 768 ? "0.5vw" : "1vw")};
-  width: ${({ theme }) => (theme.windowWidth > 768 ? "18vw" : "30vw")};
+  font-size: ${({ theme }) => (theme.windowWidth > 768 ? "1.5vw" : "4vw")};
+  left: ${({ theme }) => (theme.windowWidth > 768 ? "1vw" : "2.5vw")};
+  top: ${({ theme }) => (theme.windowWidth > 768 ? "0.5vw" : "1.5vw")};
+  width: ${({ theme }) => (theme.windowWidth > 768 ? "18vw" : "45vw")};
   text-align: left;
 `;
 
 export const Year = styled.div`
   position: absolute;
-  font-size: ${({ theme }) => (theme.windowWidth > 768 ? "1vw" : "2vw")};
-  left: ${({ theme }) => (theme.windowWidth > 768 ? "1vw" : "1.5vw")};
-  bottom: ${({ theme }) => (theme.windowWidth > 768 ? "0.5vw" : "1vw")};
-  width: ${({ theme }) => (theme.windowWidth > 768 ? "18vw" : "30vw")};
+  font-size: ${({ theme }) => (theme.windowWidth > 768 ? "1vw" : "3vw")};
+  left: ${({ theme }) => (theme.windowWidth > 768 ? "1vw" : "2.5vw")};
+  bottom: ${({ theme }) => (theme.windowWidth > 768 ? "0.5vw" : "1.5vw")};
+  width: ${({ theme }) => (theme.windowWidth > 768 ? "18vw" : "45vw")};
 
   display: flex;
   flex-direction: row;

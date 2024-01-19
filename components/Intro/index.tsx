@@ -104,12 +104,7 @@ function Intro() {
     }, 1500);
 
     setTimeout(() => {
-      window.alert("Site under construction! Some of the functionalities may not work properly.");
       router.push("/works");
-      // router.push({
-      //   pathname: "/main",
-      //   query: { givenComponent: "tictactoe" },
-      // });
     }, 3300);
   }
 
@@ -158,8 +153,20 @@ function Intro() {
       ))}
       <S.CoverageContainer $fadeOut={fadeOut} />
       <S.InvisibleText>
-        <h1>Jeanyoon Choi Portfolio.</h1>
-        <h2>Web-based new media artist Jeanyoon Choi Portfolio.</h2>
+        <h1
+          style={{
+            fontFamily: "coming-soon",
+          }}
+        >
+          Jeanyoon Choi Portfolio.
+        </h1>
+        <h2
+          style={{
+            fontFamily: "Anton",
+          }}
+        >
+          Web-based new media artist Jeanyoon Choi Portfolio.
+        </h2>
         <h3>Featuring 200+ latest work by Jeanyoon Choi.</h3>
         <h4>Jeanyoon Choi is a student of Royal College of Art Information Experience Design program</h4>
         <p>Royal College of Art Information Experience Design Portfolio Jeanyoon Choi</p>

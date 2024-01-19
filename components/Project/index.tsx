@@ -7,30 +7,46 @@ import * as S from "./styles";
 const getRandomFromArr = (arr: any) => arr[Math.floor(Math.random() * arr.length)];
 
 export default function Project({ allImages }: any) {
-  const [newImages, setNewImages] = useState<any>([]);
   const [shuffledImagesArray, setShuffledImagesArray] = useState<any>([]);
 
   useEffect(() => {
-    console.log(allImages);
-    allImages.map((el: any) => {
-      const img = new Image();
-      img.src = el.url;
-      img.onload = () => {
-        setShuffledImagesArray(
-          (
-            prev: any //upload except for redundant images
-          ) => (prev.find((ele: any) => ele.url === el.url) ? prev : [...prev, el])
-        );
-      };
-    });
+    loadAllImages();
   }, [allImages]);
+
+  async function loadAllImages() {
+    for (const element of allImages) {
+      await loadImage(element);
+    }
+  }
+
+  const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+
+  async function loadImage(el: any) {
+    const img = new Image();
+    img.src = el.url;
+    img.onload = () => {
+      setShuffledImagesArray(
+        (
+          prev: any //upload except for redundant images
+        ) => (prev.find((ele: any) => ele && ele.url === el.url) ? prev : [...prev, el])
+      );
+    };
+
+    await delay(300);
+  }
 
   // Use useMemo to memoize the shuffledImagesArray
   const memorisedImages = useMemo(() => shuffledImagesArray.map((el: any, i: number) => <SingleEl el={el} key={i} />), [shuffledImagesArray]);
 
   return (
     <S.Container>
-      <S.Wrapper>{memorisedImages}</S.Wrapper>
+      <S.Wrapper>
+        {memorisedImages}
+
+        {new Array(20).fill(null).map((_, i) => (
+          <SingleEl key={i} />
+        ))}
+      </S.Wrapper>
     </S.Container>
   );
 }
@@ -38,10 +54,11 @@ export default function Project({ allImages }: any) {
 const SingleEl = React.memo(({ el }: any) => {
   const [hovered, setHovered] = useState(false);
   const [showedEl, setShowedEl] = useState<any>(null);
-  const [change, setChange] = useState(true);
+  const [change, setChange] = useState(false);
   const [appear, setAppear] = useState(false);
 
   useEffect(() => {
+    if (!el) return;
     setChange(true);
     setAppear(false);
     //after 1s, set change to false
@@ -55,30 +72,32 @@ const SingleEl = React.memo(({ el }: any) => {
 
   return (
     <>
-      {showedEl && (
-        <S.SingleEl
-          onMouseEnter={() => setHovered(true)}
-          onMouseLeave={() => setHovered(false)}
-          style={{
-            transform: change || !appear ? "scale(0)" : "scale(1)",
-          }}
-        >
-          {showedEl.url && <img onLoad={() => setAppear(true)} loading="lazy" src={showedEl.url} alt={showedEl.title} />}
-          <S.Info
-            style={{
-              opacity: hovered ? 1 : 0,
-            }}
-          >
-            <S.Title>{showedEl.title}</S.Title>
-            <S.Year>
-              <p>{showedEl.type}</p>
-              <p>{showedEl.year}</p>
-            </S.Year>
-          </S.Info>
+      <S.SingleEl
+        onMouseEnter={() => setHovered(true)}
+        onMouseLeave={() => setHovered(false)}
+        style={{
+          transform: change || !appear ? "scale(0)" : "scale(1)",
+        }}
+      >
+        {showedEl && (
+          <>
+            {showedEl.url && <img onLoad={() => setAppear(true)} loading="lazy" src={showedEl.url} alt={showedEl.title} />}
+            <S.Info
+              style={{
+                opacity: hovered ? 1 : 0,
+              }}
+            >
+              <S.Title>{showedEl.title}</S.Title>
+              <S.Year>
+                <p>{showedEl.type}</p>
+                <p>{showedEl.year}</p>
+              </S.Year>
+            </S.Info>
 
-          <S.OverlayShadow />
-        </S.SingleEl>
-      )}
+            <S.OverlayShadow />
+          </>
+        )}
+      </S.SingleEl>
     </>
   );
 });
