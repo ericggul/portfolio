@@ -38,10 +38,10 @@ export const Contents = styled.div`
 
   iframe {
     border: none;
-    margin: 1.5rem 0;
   }
 
   p {
+    font-size: 1rem;
     margin: 0.5rem 0;
   }
 
@@ -55,6 +55,7 @@ export const Contents = styled.div`
     text-shadow: 0 0 1px #fff;
     margin: 1.5rem 0;
     color: #fff;
+    margin-top: 2.5rem;
   }
 
   h2 {
@@ -63,8 +64,10 @@ export const Contents = styled.div`
   }
 
   h5 {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 1rem 0;
+    margin-bottom: 1.5rem;
+    font-style: italic;
   }
 
   img {
@@ -96,7 +99,7 @@ export const Contents = styled.div`
 `;
 
 export const ImgSection = styled.div`
-  display: flex;
+  ${FlexCenterStyle}
   flex-direction: ${({ theme }) => (theme.windowWidth > 768 ? "row" : "column")};
   width: 100%;
   margin: 1.5rem 0;
@@ -120,15 +123,27 @@ export const CV = styled.div`
 export const VidSection = styled.div`
   ${FlexCenterStyle}
   width: 100%;
+  margin: 1.5rem 0;
+  flex-direction: ${({ theme }) => (theme.windowWidth > 768 ? "row" : "column")};
+`;
+
+export const RhizomeSection = styled.div`
+  ${FlexCenterStyle}
+  flex-direction: column;
+  width: 100%;
+  margin: 1.5rem 0;
+
+  iframe {
+    margin: 0.5rem 0;
+  }
 `;
 
 export const SingleVideo = styled.div`
-  width: calc((100vw - 3rem) / 4);
-
   iframe {
     border: none;
 
-    width: calc((100vw - 3rem) / 4);
-    height: calc(((100vw - 3rem) / 4) * 0.5625);
+    margin: 0;
+    width: ${({ theme }) => (theme.windowWidth > 768 ? "calc((100vw - 3rem) / 4)" : "calc(100vw - 3rem)")};
+    height: ${({ theme }) => (theme.windowWidth > 768 ? "calc(((100vw - 3rem) / 4) * 0.5625)" : "calc((100vw - 3rem) * 0.5625)")};
   }
 `;

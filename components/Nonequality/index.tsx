@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo } from "react";
-
+import useResize from "@/utils/hooks/useResize";
 import { useRouter } from "next/navigation";
 
 import * as S from "./styles";
@@ -25,6 +25,8 @@ export default function About() {
     }
   }, [introStage]);
 
+  const [windowWidth, windowHeight] = useResize();
+
   return (
     <S.Container>
       <S.Contents
@@ -38,27 +40,32 @@ export default function About() {
         <h2>Software: HTML, Next.js, WebSocket, Stable Diffusion, ChatGPT, Youtube API, D3.js, Tone.js</h2>
         <h2>Installation: 4-Channel Screens and Audience's Mobile Interaction</h2>
         <ImgSection imgIndexes={[1, 2, 3]} />
+        <h5>Snapshots of ≠</h5>
 
         {SUMMARY.map((s, i) => (
           <Paragraph key={i} text={s} highlightedWord={highlightedWord} setHighlightedWord={setHighlightedWord} />
         ))}
 
         <VidSection introStage={introStage} />
-        <h5>Lorem Ipsum</h5>
+        <h5>Videos showing Iterations of ≠ over time, specifically focusing on the ChatGPT-based conversation channels</h5>
 
         <h1>Artwork in a Glance</h1>
         {DESCRIPTION.slice(0, 2).map((s, i) => (
           <Paragraph key={i} text={s} highlightedWord={highlightedWord} setHighlightedWord={setHighlightedWord} />
         ))}
 
-        <iframe
-          src="https://internetinental.herokuapp.com/nonequality/data-uploader"
-          style={{
-            margin: "0 auto",
-            width: "80vw",
-            height: "70vh",
-          }}
-        />
+        <S.RhizomeSection>
+          <iframe
+            src={`https://internetinental.herokuapp.com/nonequality/data-uploader${windowWidth < 768 ? "?showAddKeywordButton=false" : ""}`}
+            style={{
+              margin: "0 auto",
+              width: "100%",
+              height: "65vh",
+            }}
+          />
+
+          <h5>Rhizomatic Database displaying the hypertext relationship between keywords. Developed using D3.js</h5>
+        </S.RhizomeSection>
 
         {DESCRIPTION.slice(2).map((s, i) => (
           <Paragraph key={i} text={s} highlightedWord={highlightedWord} setHighlightedWord={setHighlightedWord} />
@@ -153,7 +160,7 @@ function VidSection({ introStage }: any) {
 function SingleVideo({ id }: any) {
   return (
     <S.SingleVideo>
-      <iframe src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1`} allow="autoplay" title="Youtube" frameBorder="0" />
+      <iframe src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=0&loop=1`} allow="autoplay" title="Youtube" frameBorder="0" />
     </S.SingleVideo>
   );
 }
