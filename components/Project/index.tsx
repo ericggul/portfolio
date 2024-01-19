@@ -25,6 +25,7 @@ export default function Project({ allImages }: any) {
     const img = new Image();
     img.src = el.url;
     img.onload = () => {
+      console.log("28");
       setShuffledImagesArray(
         (
           prev: any //upload except for redundant images
@@ -32,7 +33,7 @@ export default function Project({ allImages }: any) {
       );
     };
 
-    await delay(300);
+    await delay(250);
   }
 
   // Use useMemo to memoize the shuffledImagesArray
@@ -81,7 +82,15 @@ const SingleEl = React.memo(({ el }: any) => {
       >
         {showedEl && (
           <>
-            {showedEl.url && <img onLoad={() => setAppear(true)} loading="lazy" src={showedEl.url} alt={showedEl.title} />}
+            {showedEl.url && (
+              <img
+                onLoad={() => setAppear(true)}
+                // loading="lazy"
+
+                src={showedEl.url}
+                alt={showedEl.title}
+              />
+            )}
             <S.Info
               style={{
                 opacity: hovered ? 1 : 0,

@@ -26,6 +26,11 @@ export default function About() {
           collaboration projects with Google Arts & Culture, NASA JPL, UN COP28, and the Victoria & Albert Museum. He studied BSc Industrial Engineering at Seoul National University (KR), pursued an
           MA in Information Experience Design at the Royal College of Art (UK), and is currently a PhD Candidate at KAIST (Korean Advanced Institute of Science and Technology, KR).
         </p>
+
+        <S.CV>
+          <a href="/cv/JeanyoonChoi_CV.pdf" download="newfilename" />
+          Download CV
+        </S.CV>
       </S.Contents>
     </S.Container>
   );
