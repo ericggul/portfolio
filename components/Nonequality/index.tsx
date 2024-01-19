@@ -40,6 +40,7 @@ export default function About() {
         ))}
 
         <VidSection introStage={introStage} />
+        <h5>Lorem Ipsum</h5>
         <div
           style={{
             display: "flex",
@@ -143,8 +144,8 @@ function SingleSpan({ word, highlightedWord, handleWordHovered, handleWordHovere
       }}
       style={{
         textDecoration: highlight ? "line-through" : "none",
-        color: highlight ? "#fff" : "#bbb",
-        textShadow: highlight ? "0 0 5px #fff" : "none",
+        color: highlight ? "hsl(0, 100%, 65%)" : "#bbb",
+        textShadow: highlight ? "0 0 5px hsl(0, 100, 85%)" : "none",
       }}
     >
       {word}{" "}
@@ -169,7 +170,7 @@ function VidSection({ introStage }: any) {
 function SingleVideo({ id }: any) {
   return (
     <S.SingleVideo>
-      <iframe src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1`} allow="autoplay" title="Youtube" frameBorder="0" border="0" cellSpacing="0" />
+      <iframe src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1`} allow="autoplay" title="Youtube" frameBorder="0" cellSpacing="0" />
     </S.SingleVideo>
   );
 }
