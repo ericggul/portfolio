@@ -32,16 +32,21 @@ export const Contents = styled.div`
   overflow-y: scroll !important;
   font-size: ${({ theme }) => (theme.windowWidth > 768 ? "1rem" : ".8rem")};
   font-weight: 300;
+  transition: opacity 0.3s ease-in-out;
 
   color: #bbb;
 
   iframe {
     border: none;
-    margin: 2.5rem 0;
+    margin: 1.5rem 0;
   }
 
   p {
     margin: 0.5rem 0;
+  }
+
+  span {
+    transition: all 0.2s ease-in-out;
   }
 
   h1 {
@@ -56,6 +61,12 @@ export const Contents = styled.div`
     font-size: 1rem;
     font-weight: normal;
   }
+
+  h5 {
+    font-size: 0.8rem;
+    margin: 1rem 0;
+  }
+
   img {
     width: 100%;
     margin: 1.5rem 0;
@@ -86,14 +97,15 @@ export const Contents = styled.div`
 
 export const ImgSection = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: ${({ theme }) => (theme.windowWidth > 768 ? "row" : "column")};
   width: 100%;
   margin: 1.5rem 0;
 
   img {
-    width: calc((100vw - 3rem) / 3);
-    height: calc(((100vw - 3rem) / 3) * 0.5625);
+    width: ${({ theme }) => (theme.windowWidth > 768 ? "calc((100vw - 3rem) / 3)" : "calc(100vw - 3rem)")};
+    height: ${({ theme }) => (theme.windowWidth > 768 ? "calc(((100vw - 3rem) / 3) * 0.5625)" : "calc((100vw - 3rem) * 0.5625)")};
     object-fit: cover;
+    margin: 0.2rem 0;
   }
 `;
 

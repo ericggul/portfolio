@@ -27,7 +27,11 @@ export default function About() {
 
   return (
     <S.Container>
-      <S.Contents>
+      <S.Contents
+        style={{
+          opacity: introStage >= 1 ? 1 : 0,
+        }}
+      >
         <h1>≠ (Nonequality)</h1>
         <h2>2023, Jeanyoon Choi</h2>
         <h2>A Multi-Device Web Artwork</h2>
@@ -41,43 +45,22 @@ export default function About() {
 
         <VidSection introStage={introStage} />
         <h5>Lorem Ipsum</h5>
-        <div
+
+        <h1>Artwork in a Glance</h1>
+        {DESCRIPTION.slice(0, 2).map((s, i) => (
+          <Paragraph key={i} text={s} highlightedWord={highlightedWord} setHighlightedWord={setHighlightedWord} />
+        ))}
+
+        <iframe
+          src="https://internetinental.herokuapp.com/nonequality/data-uploader"
           style={{
-            display: "flex",
+            margin: "0 auto",
+            width: "80vw",
+            height: "70vh",
           }}
-        >
-          <video
-            src="/assets/nonequality/channel2.mp4"
-            style={{
-              width: "45vw",
-              height: "45vh",
-            }}
-            autoPlay
-            controls
-          />
+        />
 
-          <a
-            onClick={() => {
-              window.open("https://internetinental.herokuapp.com/nonequality/data-uploader", "_blank");
-            }}
-            style={{
-              width: "45vw",
-              height: "45vh",
-              cursor: "pointer",
-            }}
-          >
-            <iframe
-              src="https://internetinental.herokuapp.com/nonequality/data-uploader?showAddKeywordButton=false"
-              style={{
-                width: "45vw",
-                height: "45vh",
-              }}
-            />
-          </a>
-        </div>
-
-        <h1>Artwork in Glance</h1>
-        {DESCRIPTION.map((s, i) => (
+        {DESCRIPTION.slice(2).map((s, i) => (
           <Paragraph key={i} text={s} highlightedWord={highlightedWord} setHighlightedWord={setHighlightedWord} />
         ))}
 
@@ -144,8 +127,8 @@ function SingleSpan({ word, highlightedWord, handleWordHovered, handleWordHovere
       }}
       style={{
         textDecoration: highlight ? "line-through" : "none",
-        color: highlight ? "hsl(0, 100%, 65%)" : "#bbb",
-        textShadow: highlight ? "0 0 5px hsl(0, 100, 85%)" : "none",
+        color: highlight ? "white" : "#bbb",
+        textShadow: highlight ? "0 0 5px white" : "none",
       }}
     >
       {word}{" "}
@@ -170,7 +153,7 @@ function VidSection({ introStage }: any) {
 function SingleVideo({ id }: any) {
   return (
     <S.SingleVideo>
-      <iframe src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1`} allow="autoplay" title="Youtube" frameBorder="0" cellSpacing="0" />
+      <iframe src={`https://www.youtube.com/embed/${id}?autoplay=1&mute=1&loop=1`} allow="autoplay" title="Youtube" frameBorder="0" />
     </S.SingleVideo>
   );
 }
