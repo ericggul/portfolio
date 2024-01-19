@@ -18,7 +18,7 @@ export const Contents = styled.div`
   font-size: ${({ theme }) => (theme.windowWidth > 768 ? "1rem" : ".8rem")};
   font-weight: 300;
 
-  color: #bbb;
+  color: #ddd;
   p {
     margin: 0.5rem 0;
   }
@@ -28,7 +28,16 @@ export const Contents = styled.div`
     font-weight: normal;
     text-shadow: 0 0 1px #fff;
     margin: 1.5rem 0;
-    transform: scaleY(-1);
+    text-decoration: line-through;
+  }
+
+  h2 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  img {
+    width: 100%;
+    margin: 1rem 0;
   }
 
   &::-webkit-scrollbar {
@@ -53,6 +62,8 @@ export const Contents = styled.div`
   -ms-overflow-style: none;
   scrollbar-width: none !important;
 `;
+
+export const ImgSection = styled.div``;
 
 export const CV = styled.div`
   cursor: pointer;
