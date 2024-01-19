@@ -66,9 +66,9 @@ const GlobalStyle = createGlobalStyle`
     }
   
     &::-webkit-scrollbar {
-      display: none;
+      display: none !important;
       -webkit-appearance: none;
-      width: 0;
+      width: 0 !important;
       height: 0;
     }
   
@@ -82,8 +82,11 @@ const GlobalStyle = createGlobalStyle`
       outline: none;
     }
   
+
+    /* width */
+  
     -ms-overflow-style: none;
-    scrollbar-width: none;
+    scrollbar-width: none !important;
   }
 
   a {

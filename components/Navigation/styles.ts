@@ -8,7 +8,7 @@ export const NavContainer = styled.div`
   height: 4.5rem;
 
   top: 0;
-  background: black;
+  background: #111;
   color: #ddd;
 
   h1 {
@@ -19,11 +19,11 @@ export const NavContainer = styled.div`
 `;
 
 export const Left = styled.div`
-  margin-left: 1.2rem;
+  margin-left: ${({ theme }) => (theme.windowWidth > 768 ? "1.5rem" : "1.1rem")};
 `;
 
 export const Right = styled.div`
-  margin-right: 1.2rem;
+  margin-right: ${({ theme }) => (theme.windowWidth > 768 ? "1.5rem" : "1.1rem")};
   ${FlexCenterStyle}
 `;
 

@@ -6,7 +6,7 @@ export const Container = styled.div`
   justify-content: space-between;
   overflow-y: scroll;
 
-  background: black;
+  background: #111;
   color: #ddd;
 `;
 
@@ -15,7 +15,7 @@ export const Contents = styled.div`
   min-height: calc(${({ theme }) => theme.windowHeight}px - 4.5rem);
   margin-left: 1.5rem;
   overflow-y: scroll;
-  background: black;
+  background: #111;
 
   color: #ddd;
   p {

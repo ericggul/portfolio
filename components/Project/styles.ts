@@ -5,7 +5,7 @@ export const Container = styled.div`
   ${FlexCenterStyle}
   width: 100%;
   position: relative;
-  background: black;
+  background: #111;
   font-family: "Times New Roman", Times, serif;
   transition: all 0.3s ease-in-out;
 `;
@@ -14,30 +14,41 @@ export const Wrapper = styled.div`
   ${WholeContainer}
   overflow-y: scroll;
   // min-height: ${({ theme }) => theme.windowHeight}px;
-  background: black;
+  background: #111;
   display: grid;
   grid-row-gap: 0 !important;
   grid-template-columns: ${({ theme }) => (theme.windowWidth > 768 ? "repeat(5, 1fr)" : "repeat(2, 1fr)")};
+
+  &::-webkit-scrollbar {
+    display: none !important;
+    -webkit-appearance: none;
+    width: 0 !important;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    background-color: transparent;
+    outline: none;
+  }
+
+  /* width */
+
+  -ms-overflow-style: none;
+  scrollbar-width: none !important;
 `;
 
 export const SingleEl = styled.div`
   width: ${({ theme }) => (theme.windowWidth > 768 ? "20vw" : "50vw")};
   height: ${({ theme }) => (theme.windowWidth > 768 ? "11.25vw" : "28.125vw")};
   position: relative;
-  background: black;
-  transition: transform 0.3s ease-in-out;
+  background: #111;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
-
-  @keyframes init-appear {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  animation: init-appear 0.3s ease-in-out both;
 
   img {
     position: absolute;

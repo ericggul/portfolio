@@ -77,7 +77,8 @@ const SingleEl = React.memo(({ el }: any) => {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{
-          transform: change || !appear ? "scale(0)" : "scale(1)",
+          // transform: change || !appear ? "scale(0)" : "scale(1)",
+          opacity: change || !appear ? 0 : 1,
         }}
       >
         {showedEl && (

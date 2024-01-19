@@ -6,7 +6,7 @@ import StyledComponentsRegistry from "@/lib/registry";
 export const metadata: Metadata = {
   title: "Jeanyoon Choi Portfolio",
   description:
-    "Web-based new media artist Jeanyoon Choi. Featuring latest works by Jeanyoon Choi, a Computational Artist, Creative Developer, and Interaction Designer. Jeanyoon Choi is currently a PhD Candidate at KAIST.",
+    "Web-based new media artist Jean yoon Choi. Featuring latest works by Jean-Yoon Choi, a Computational Artist, Creative Developer, and Interaction Designer. Jeanyoon Choi is currently a PhD Candidate at KAIST.",
   openGraph: {
     type: "website",
     locale: "en_UK",
