@@ -152,7 +152,7 @@ function OtherProjectsSection({ similarProjects, type }: any) {
 
   return (
     <>
-      <h2>View Other {type}s</h2>
+      <h2>View Other Projects</h2>
       <S.OtherProjectsSection>
         {similarProjects.slice(0, windowWidth > 768 ? 5 : 2).map((el: any, i: number) => (
           <SingleEl el={el} key={i} />

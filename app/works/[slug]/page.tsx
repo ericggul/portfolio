@@ -14,9 +14,9 @@ export default async function Page({ params }: { params: { slug: string } }) {
 
   const allProjects = await prisma.project.findMany();
   const similarProjects = allProjects
-    .filter((el: any) => el.type === projectData.type && el.id !== projectData.id)
+    .filter((el: any) => el.id !== projectData.id)
     .sort((a: any, b: any) => -a.rating + b.rating)
-    .slice(0, 8)
+    .slice(0, 10)
     .sort(() => Math.random() - 0.5)
     .slice(0, 5);
 

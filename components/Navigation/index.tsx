@@ -10,7 +10,9 @@ export default function Navigation({ currTab }: any) {
   return (
     <S.NavContainer>
       <S.Left>
-        <h1>Jeanyoon Choi</h1>
+        <Link href="/works">
+          <h1>Jeanyoon Choi</h1>
+        </Link>
       </S.Left>
       <S.Right>
         <S.Tab $currTab={currTab === "works"}>

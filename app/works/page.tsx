@@ -2,7 +2,18 @@ import prisma from "@/lib/prisma";
 import Works from "@/components/Works";
 
 export default async function WorksPage() {
-  const res = await prisma.project.findMany();
+  const res = await prisma.project.findMany({
+    select: {
+      imageNumber: true,
+      imageURLBase: true,
+      rating: true,
+      title: true,
+      year: true,
+      type: true,
+      mdxOrSeperateLink: true,
+      id: true,
+    },
+  });
   const allImages = res
     .sort((a: any, b: any) => -a.rating + b.rating)
     .reduce((acc: any, curr: any) => {

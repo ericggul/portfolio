@@ -3,7 +3,14 @@ import prisma from "@/lib/prisma";
 import IntroComp from "@/components/Intro";
 
 export default async function Intro() {
-  const res = await prisma.project.findMany();
+  const res: any[] = await prisma.project.findMany({
+    select: {
+      imageNumber: true,
+      imageURLBase: true,
+      rating: true,
+    },
+  });
+
   const allImages = res
     .sort((a: any, b: any) => -a.rating + b.rating)
     .reduce((acc: any, curr: any) => {
