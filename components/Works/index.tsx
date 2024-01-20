@@ -24,7 +24,6 @@ export default function Project({ allImages }: any) {
     const img = new Image();
     img.src = el.url;
     img.onload = () => {
-      console.log("28");
       setShuffledImagesArray(
         (
           prev: any //upload except for redundant images

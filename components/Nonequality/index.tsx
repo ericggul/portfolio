@@ -207,16 +207,16 @@ function SingleSpan({ word, highlightedWord, handleWordHovered, handleWordHovere
 
   return (
     <span
-      onMouseOver={() => {
-        setHovered(true);
-        handleWordHovered(word);
-      }}
-      onMouseOut={() => {
-        setTimeout(() => {
-          setHovered(false);
-          handleWordHoveredCancelled(word);
-        }, 3000);
-      }}
+      // onMouseOver={() => {
+      //   setHovered(true);
+      //   handleWordHovered(word);
+      // }}
+      // onMouseOut={() => {
+      //   setTimeout(() => {
+      //     setHovered(false);
+      //     handleWordHoveredCancelled(word);
+      //   }, 3000);
+      // }}
       style={{
         textDecoration: highlight ? "line-through" : "none",
         color: highlight ? "white" : "#bbb",

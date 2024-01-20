@@ -128,7 +128,7 @@ export const VideoSection = styled.div`
 
 export const OtherProjectsSection = styled.div`
   width: 100%;
-  ${FlexCenterStyle}
+  display: flex;
 `;
 
 export const SingleEl = styled.div`

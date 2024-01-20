@@ -34,7 +34,10 @@ export default function Work({ projectData, similarProjects }: any) {
 
           <h5>{projectData.shortDescription}</h5>
           <ImgSection imageURLBase={projectData.imageURLBase} imageNumber={projectData.imageNumber} />
-          {projectData.longDescription && projectData.longDescription.split("  ").map((el: any, i: number) => <p key={i}>{el}</p>)}
+          {projectData.longDescription && projectData.longDescription.split("  ").map((firstEl: any, i: number) => firstEl.split("-n-").map((el: any, i: number) => <p key={i}>{el}</p>))}
+
+          {projectData.imageNumber >= 4 && <ImgSection imageURLBase={projectData.imageURLBase} imageNumber={projectData.imageNumber} startFrom={4} />}
+
           {projectData.projectURL && windowWidth > 768 && (
             <>
               <h2>{"Live Project"}</h2>
@@ -61,6 +64,7 @@ export default function Work({ projectData, similarProjects }: any) {
               </h5>
             </>
           )}
+
           {projectData.projectURL && windowWidth <= 768 && (
             <>
               <h5>
@@ -79,6 +83,33 @@ export default function Work({ projectData, similarProjects }: any) {
             </>
           )}
 
+          {projectData.type === "Personal" && (
+            <>
+              <h2>Credits</h2>
+              <h5
+                style={{
+                  margin: "0",
+                }}
+              >
+                Artist: Jeanyoon Choi
+              </h5>
+              <h5
+                style={{
+                  margin: "0",
+                }}
+              >
+                Software Engineer: Jeanyoon Choi
+              </h5>
+              <h5
+                style={{
+                  margin: "0",
+                }}
+              >
+                Interaction Designer: Jeanyoon Choi
+              </h5>
+            </>
+          )}
+
           <OtherProjectsSection similarProjects={similarProjects} type={TYPE_CONVERSION[projectData.type] || "Artwork"} />
           <br />
           <br />
@@ -91,22 +122,26 @@ export default function Work({ projectData, similarProjects }: any) {
   );
 }
 
-function ImgSection({ imageURLBase, imageNumber }: any) {
+function ImgSection({ imageURLBase, imageNumber, startFrom = 1 }: any) {
   const [windowWidth, windowHeight] = useResize();
   const imagesCount = useMemo(() => Math.min(3, imageNumber), [imageNumber]);
 
   return (
     <S.ImgSection>
       {new Array(imagesCount).fill(0).map((_, i) => (
-        <img
-          src={`/assets${imageURLBase}/${i + 1}.webp`}
-          alt="nonequality"
-          key={i}
-          style={{
-            width: `${windowWidth > 768 ? `calc((100vw - 3rem) / ${imagesCount})` : "calc(100vw - 3rem)"}`,
-            height: `${windowWidth > 768 ? `calc(((100vw - 3rem) / ${imagesCount}) * 0.5625)` : "calc((100vw - 3rem) * 0.5625)"}`,
-          }}
-        />
+        <>
+          {i + startFrom <= imageNumber && (
+            <img
+              src={`/assets${imageURLBase}/${i + startFrom}.webp`}
+              alt="nonequality"
+              key={i}
+              style={{
+                width: `${windowWidth > 768 ? `calc((100vw - 3rem) / ${imagesCount})` : "calc(100vw - 3rem)"}`,
+                height: `${windowWidth > 768 ? `calc(((100vw - 3rem) / ${imagesCount}) * 0.5625)` : "calc((100vw - 3rem) * 0.5625)"}`,
+              }}
+            />
+          )}
+        </>
       ))}
     </S.ImgSection>
   );
