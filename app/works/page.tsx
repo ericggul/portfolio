@@ -1,7 +1,7 @@
 import prisma from "@/lib/prisma";
-import Project from "@/components/Project";
+import Works from "@/components/Works";
 
-export default async function ProjectsPage() {
+export default async function WorksPage() {
   const res = await prisma.project.findMany();
   const allImages = res
     .sort((a: any, b: any) => -a.rating + b.rating)
@@ -20,7 +20,7 @@ export default async function ProjectsPage() {
 
   return (
     <>
-      <Project allImages={allImages} />
+      <Works allImages={allImages} />
     </>
   );
 }

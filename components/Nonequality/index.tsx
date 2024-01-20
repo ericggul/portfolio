@@ -12,7 +12,7 @@ export default function About() {
   const [highlightedWord, setHighlightedWord] = useState("");
 
   const router = useRouter();
-  const [introStage, setIntroStage] = useState(0);
+  const [introStage, setIntroStage] = useState(2);
 
   useEffect(() => {
     if (introStage === 1) {
@@ -83,7 +83,7 @@ export default function About() {
 
         <S.RhizomeSection>
           <iframe
-            src={`https://internetinental.herokuapp.com/nonequality/data-uploader`}
+            src={`https://internetinental.herokuapp.com/nonequality/data-uploader?showAddKeywordButton=false`}
             style={{
               margin: "0 auto",
               width: "100%",
@@ -118,6 +118,11 @@ export default function About() {
         {MEDIA.map((s, i) => (
           <Paragraph key={i} text={s} highlightedWord={highlightedWord} setHighlightedWord={setHighlightedWord} />
         ))}
+
+        <h1>Credits</h1>
+        <p>Artist | Jeanyoon Choi</p>
+        <p>Software Developer | Jeanyoon Choi</p>
+        <p>Interaction Designer | Jeanyoon Choi</p>
 
         <h1>Past Exhibitions</h1>
         <p>Sep 2023 | Ars Electronica 2023, "Who Owns the Truth?", Linz, Austria</p>
