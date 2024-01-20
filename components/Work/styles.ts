@@ -119,8 +119,8 @@ export const VideoSection = styled.div`
   iframe {
     border: none;
 
-    width: calc((100vw - 3rem) * ${({ theme }) => (theme.windowWidth > 768 ? 0.85 : 1)});
-    height: calc(((100vw - 3rem) * 0.5625) * ${({ theme }) => (theme.windowWidth > 768 ? 0.85 : 1)});
+    width: calc((100vw - 3rem) * ${({ theme }) => (theme.windowWidth > 768 ? 0.3333 : 1)});
+    height: calc(((100vw - 3rem) * 0.5625) * ${({ theme }) => (theme.windowWidth > 768 ? 0.3333 : 1)});
 
     margin: 1.5rem 0;
   }

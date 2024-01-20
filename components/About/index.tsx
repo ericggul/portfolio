@@ -9,10 +9,10 @@ export default function About() {
       <S.Contents>
         <h1>Jeanyoon Choi</h1>
         <p>
-          Jeanyoon Choi (b.1999) is a Korean web artist and creative developer focusing on Multi-Device Web Artworks (MDWA). Putting the interconnection between mobile and screen devices in the core,
-          he researches the possibility of reality and physicality induced from a purely digital domain, enabling an immersive dimension which is embedded within the real (Embedded Reality), rather
-          than being segmented from the real (Virtual Reality). Thus he focuses on creating a communal experience of physicality which goes beyond the commercialised landscape of current digital
-          technologies, triggering a Dionysian experience in Nietzschestic terminology.
+          Jeanyoon Choi (b.1999) is a Korean Computational Artist, Interaction Designer, and Creative Developer focusing on Multi-Device Web Artworks (MDWA). Putting the interconnection between mobile
+          and screen devices in the core, he researches the possibility of reality and physicality induced from a purely digital domain, enabling an immersive dimension which is embedded within the
+          real (Embedded Reality), rather than being segmented from the real (Virtual Reality). Thus he focuses on creating a communal experience of physicality which goes beyond the commercialised
+          landscape of current digital technologies, triggering a Dionysian experience in Nietzschestic terminology.
         </p>
 
         <p>

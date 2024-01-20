@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: { slug: string } }) {
   const similarProjects = allProjects
     .filter((el: any) => el.type === projectData.type && el.id !== projectData.id)
     .sort((a: any, b: any) => -a.rating + b.rating)
-    .slice(0, 10)
+    .slice(0, 8)
     .sort(() => Math.random() - 0.5)
     .slice(0, 5);
 

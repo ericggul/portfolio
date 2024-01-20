@@ -1,3 +1,4 @@
+"use client";
 //hooks
 import { useState, useMemo, useEffect } from "react";
 import useResize from "@/utils/hooks/useResize";
@@ -44,7 +45,28 @@ function showButtonSet(idx: number, lv: number) {
   return false;
 }
 
-function Intro() {
+function Intro({ allImages }: any) {
+  //load allimages
+
+  useEffect(() => {
+    loadAllImages();
+  }, [allImages]);
+
+  async function loadAllImages() {
+    for (const element of allImages) {
+      await loadImage(element);
+    }
+  }
+
+  const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+
+  async function loadImage(el: any) {
+    const img = new Image();
+    img.src = el.url;
+    img.onload = () => {};
+    await delay(330);
+  }
+
   const [level, setLevel] = useState(0);
   const [smallEl, setSmallEl] = useState<any>([]);
 
