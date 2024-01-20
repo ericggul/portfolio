@@ -8,7 +8,7 @@ export const NavContainer = styled.div`
   height: 4.5rem;
 
   top: 0;
-  background: #111;
+  background: linear-gradient(#111, #222);
   color: #ddd;
 
   h1 {

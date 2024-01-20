@@ -8,7 +8,7 @@ function parseSlug(slug: string) {
 export default async function Page({ params }: { params: { slug: string } }) {
   const res = await prisma.project.findUnique({
     where: {
-      title: params.slug,
+      id: params.slug,
     },
   });
 

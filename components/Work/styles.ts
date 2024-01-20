@@ -90,7 +90,7 @@ export const Contents = styled.div`
 `;
 
 export const ImgSection = styled.div`
-  ${FlexCenterStyle}
+  display: flex;
   flex-direction: ${({ theme }) => (theme.windowWidth > 768 ? "row" : "column")};
   width: 100%;
   margin: 1.5rem 0;
