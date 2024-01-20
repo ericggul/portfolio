@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 import { useState, useEffect, useMemo } from "react";
 import useResize from "@/utils/hooks/useResize";
 import { useRouter } from "next/navigation";
@@ -34,7 +36,17 @@ export default function About() {
           opacity: introStage >= 1 ? 1 : 0,
         }}
       >
-        <h1>≠ (Nonequality)</h1>
+        <Link href="/works">
+          <h6>&#x2190; Back to Main</h6>
+        </Link>
+
+        <h1
+          style={{
+            fontSize: "1.8rem",
+          }}
+        >
+          ≠ (Nonequality)
+        </h1>
         <h2>2023, Jeanyoon Choi</h2>
         <h2>A Multi-Device Web Artwork</h2>
         <h2>Software: HTML, Next.js, WebSocket, Stable Diffusion, ChatGPT, Youtube API, D3.js, Tone.js</h2>

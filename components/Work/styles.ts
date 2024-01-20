@@ -23,7 +23,7 @@ export const Contents = styled.div`
 
   a {
     cursor: pointer;
-    text-decoration: underline;
+    // text-decoration: underline;
     color: #fff;
   }
 
@@ -41,7 +41,7 @@ export const Contents = styled.div`
   }
 
   h1 {
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     font-weight: normal;
     text-shadow: 0 0 1px #fff;
     margin: 1.5rem 0;
@@ -50,8 +50,12 @@ export const Contents = styled.div`
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: 1.4rem;
     font-weight: normal;
+    text-shadow: 0 0 1px #fff;
+    margin: 1.5rem 0;
+    color: #fff;
+    margin-top: 2.5rem;
   }
 
   h5 {
@@ -59,6 +63,14 @@ export const Contents = styled.div`
     margin: 1rem 0;
     margin-bottom: 1.5rem;
     font-style: italic;
+  }
+
+  h6 {
+    font-size: 1rem;
+    margin: 1rem 0;
+    margin-bottom: -1rem;
+    font-style: italic;
+    cursor: pointer;
   }
 
   img {
@@ -93,12 +105,47 @@ export const ImgSection = styled.div`
   display: flex;
   flex-direction: ${({ theme }) => (theme.windowWidth > 768 ? "row" : "column")};
   width: 100%;
-  margin: 1.5rem 0;
+  margin: 2.5rem 0;
 
   img {
     width: ${({ theme }) => (theme.windowWidth > 768 ? "calc((100vw - 3rem) / 3)" : "calc(100vw - 3rem)")};
     height: ${({ theme }) => (theme.windowWidth > 768 ? "calc(((100vw - 3rem) / 3) * 0.5625)" : "calc((100vw - 3rem) * 0.5625)")};
     object-fit: cover;
     margin: 0.2rem 0;
+  }
+`;
+
+export const VideoSection = styled.div`
+  iframe {
+    border: none;
+
+    width: calc(100vw - 3rem);
+    height: calc((100vw - 3rem) * 0.5625);
+
+    margin: 1.5rem 0;
+  }
+`;
+
+export const OtherProjectsSection = styled.div`
+  width: 100%;
+  ${FlexCenterStyle}
+`;
+
+export const SingleEl = styled.div`
+  width: ${({ theme }) => (theme.windowWidth > 768 ? "calc((100vw - 3rem) / 5)" : "calc((100vw - 3rem) / 2)")};
+
+  img {
+    width: 100%;
+    height: ${({ theme }) => (theme.windowWidth > 768 ? "calc(((100vw - 3rem) / 5) * 0.5625)" : "calc(((100vw - 3rem)/2) * 0.5625)")};
+    object-fit: cover;
+    margin: 0.5rem 0;
+  }
+
+  h4 {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    color: #bbb;
+    text-decoration: none !important;
   }
 `;

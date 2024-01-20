@@ -1,10 +1,9 @@
 "use client";
 import React, { useState, useMemo, useEffect, use } from "react";
+import Link from "next/link";
 
 //styles
 import * as S from "./styles";
-
-const getRandomFromArr = (arr: any) => arr[Math.floor(Math.random() * arr.length)];
 
 export default function Project({ allImages }: any) {
   const [shuffledImagesArray, setShuffledImagesArray] = useState<any>([]);
@@ -71,8 +70,10 @@ const SingleEl = React.memo(({ el }: any) => {
     return () => clearTimeout(timeout);
   }, [el]);
 
+  const linkTo = useMemo(() => (showedEl ? showedEl.mdxOrSeperateLink || `/works/${showedEl.id}` : "/works"), [showedEl]);
+
   return (
-    <>
+    <Link href={linkTo} target={linkTo.includes("http") || linkTo.includes("https") ? "_blank" : undefined}>
       <S.SingleEl
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
@@ -108,6 +109,6 @@ const SingleEl = React.memo(({ el }: any) => {
           </>
         )}
       </S.SingleEl>
-    </>
+    </Link>
   );
 });

@@ -1,5 +1,5 @@
 export const TYPE_CONVERSION: any = {
   Personal: "Individual Artwork",
-  Project: "Collective Project",
+  Projects: "Collective Project",
   Performance: "Performance",
 };

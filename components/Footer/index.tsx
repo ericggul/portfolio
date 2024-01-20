@@ -1,6 +1,4 @@
 "use client";
-import Link from "next/link";
-
 //styles
 import * as S from "./styles";
 

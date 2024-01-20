@@ -17,6 +17,8 @@ model Project{
   shortDescription String?
   longDescription String?
   projectURL String?
+  videoURL String?
+  mdxOrSeperateLink String?
 
   imageURLBase String?
   imageNumber Int @default(0)

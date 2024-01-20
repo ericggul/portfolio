@@ -70,6 +70,14 @@ export const Contents = styled.div`
     font-style: italic;
   }
 
+  h6 {
+    font-size: 1rem;
+    margin: 1rem 0;
+    margin-bottom: -1rem;
+    font-style: italic;
+    cursor: pointer;
+  }
+
   img {
     width: 100%;
     margin: 1.5rem 0;
