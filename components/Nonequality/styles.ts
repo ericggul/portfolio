@@ -155,3 +155,13 @@ export const SingleVideo = styled.div`
     height: ${({ theme }) => (theme.windowWidth > 768 ? "calc(((100vw - 3rem) / 4) * 0.5625)" : "calc((100vw - 3rem) * 0.5625)")};
   }
 `;
+
+export const LargeVideo = styled.div`
+  margin: 2rem 0;
+  iframe {
+    border: none;
+
+    width: ${({ theme }) => (theme.windowWidth > 768 ? "calc((100vw - 3rem)/2)" : "calc(100vw - 3rem)")};
+    height: ${({ theme }) => (theme.windowWidth > 768 ? "calc(((100vw - 3rem)/2) * 0.5625)" : "calc((100vw - 3rem) * 0.5625)")};
+  }
+`;

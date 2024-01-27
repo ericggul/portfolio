@@ -71,6 +71,12 @@ export default function About() {
         <ImgSection imgIndexes={[1, 2, 3]} />
         <h5>Snapshots of ≠</h5>
 
+        <S.LargeVideo>
+          <iframe src={`https://www.youtube.com/embed/edzzv3ZAhKM?autoplay=1&mute=0&loop=1`} allow="autoplay" title="Youtube" frameBorder="0" />
+
+          <h5>Video of Whole Interaction</h5>
+        </S.LargeVideo>
+
         {SUMMARY.map((s, i) => (
           <Paragraph key={i} text={s} highlightedWord={highlightedWord} setHighlightedWord={setHighlightedWord} />
         ))}
