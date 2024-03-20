@@ -1,9 +1,9 @@
-import Texts from "@/components/Texts";
+import Text from "@/components/Text";
 
 export default async function TextPage() {
   return (
     <>
-      <Texts />
+      <Text />
     </>
   );
 }

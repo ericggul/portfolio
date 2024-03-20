@@ -12,8 +12,10 @@
   "dependencies": {
     "@next/third-parties": "^14.0.4",
     "@prisma/client": "^5.8.1",
+    "axios": "^1.6.8",
     "loplat-ui": "^1.11.1-rc",
     "next": "14.0.4",
+    "openai": "^4.29.2",
     "prisma": "^5.8.1",
     "react": "^18",
     "react-dom": "^18",

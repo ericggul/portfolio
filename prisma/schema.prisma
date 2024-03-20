@@ -31,3 +31,13 @@ model Project{
   tags String[]
 }
 
+
+model Text{
+  id String @default(cuid()) @id
+  title String @unique
+  content String
+  imgURL String?
+  tags String[]
+
+  createdAt DateTime @default(now())
+}
