@@ -2,7 +2,6 @@ import axios from "axios";
 
 export default async function getChatGPT(texts: any) {
   try {
-    console.log(texts);
     const completion = await axios.post(
       "https://api.openai.com/v1/chat/completions",
       {

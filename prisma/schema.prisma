@@ -35,7 +35,11 @@ model Project{
 model Text{
   id String @default(cuid()) @id
   title String @unique
-  content String
+
+  originalText String
+  englishText String?
+  koreanText String?
+  
   imgURL String?
   tags String[]
 
