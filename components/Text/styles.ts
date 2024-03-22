@@ -80,7 +80,7 @@ export const Contents = styled.div`
   }
 
   img {
-    width: 100%;
+    width: calc(min(100%, 700px));
     margin: 1.5rem 0;
   }
 
