@@ -23,7 +23,7 @@ export default function Text({ textData }: any) {
           {textData.imgURL && <img src={textData.imgURL} alt={textData.title} />}
 
           <h5>
-            Original Text <i>(Pre-LLM)</i>
+            Original Notes <i>(Pre-LLM)</i>
           </h5>
           {textData.originalText.split("\n").map((el: any, i: number) => (
             <p key={i}>{el}</p>

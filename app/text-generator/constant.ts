@@ -1,50 +1,30 @@
 export const TEXT_TO_UPLOAD = {
-  title: "Conducting Screens: A possible approach to Multi-Device Web Artwork",
-  text: `Think of the case: One Mobile, Multiple Screens. The audience controls the mobile device to alternate the contents spread across the screens.
+  title: "Creating Monochrome out of ChatGPT",
+  text: `An idea of making an interactive Monochrome → Generated on top of bunch of texts, bunch of ChatGPT/LLM-generated texts
 
-  Lots of options in the contemporary use of mobile devices… Scroll, Touch, Pinch, lots of finger-based gestures using the touch interface, but what is lacking?
-  More phenomenological approach?
-  As many mobile devices nowadays have accelerometers and motion sensors, why not use this feature?
+  Monochrome (단색화) Korean Most popular painting approach, a sense of materiality, diving deeper into it, the ultimate position of the abstraction, compared to the descriptiveness..
   
-  This is like an act of conducting… Conducting, with the mobile phone. It perfectly resonates with the act. 
-  Beyond using just ‘fingers’, as was the case for our daily mobile interaction… Now it’s time to expand to the whole ‘hand’. A beautiful, poetic, phenomenological transition from the finger to the hand.
+  On the other hand, there is descriptiveness: Language. Language is there to describe and is rarely used for abstraction. Of course, there is an abstractive layer - poems for example, but it’s far from the daily usage. especially the language represented by the ChatGPT nowadays - Most people might agree that ChatGPT is capable of writing descriptive/repetitive texts which already exists, but rarely can create a new poem or new layer of abstraction, other than mimicking the pre-existing styles of poems.
   
-  And what more? Then just the act of using hand and mobile sensor from the mobile input end? → We have the multi-devices output on the screens side (screens can be laptop/projector, but the key factor is that it’s in multi-device format)
+  My key theme: What happens if the data/AI-generated output/any descriptive/metaphysical output is converted if aggregated massively and repeated massively? I believe that ΣPart ≠ Whole. Part’s characteristic is transformed into a different dimension when aggregated as a whole. Its characteristics are converted, 일종의 왜곡을 겪는다… 성질적 변환이 이 속에서 일어난다. 
   
-  Just like an experience of orchestration, the conducting → Condutor never conducts a single instrument, they manage the whole rhythm made from number of instruments that are placed spanning across the space..
+  This is the theme explored in my latest artwork ≠ → Where the sum of algorithm-generated results creates an abstractive layer, a layer of chaos. The part is interpretable and logical, ‘=’. The part is non-interpretable, illogical, chaotic, ‘ ≠’. It presents the aggregated chaos: Capturing the illogicality that is always presented with the seemingly logical systems, highlighting the limitation of the logic.
   
-  Similarly, once we ‘conduct’ on the mobile, the output devices (now I’m thinking this can be also mobile devices, don’t have to limit the scope to just computer, but also think the price per device) now react correspondingly, creating harmonic audio-visual, which are placed around the space… The input conduction - output device audio visual harmonically resonates.
+  The same might be possible within this monochrome approach? Maybe aesthetically referencing the old Laboratory Occupied project…. Aggregated Text might present a monochrome! Text is descriptive, meaningful… But the aggregated text is not meaningful at all, it’s diminished… Containing no meaning… It’s just a materiality, text is just consumed as material, ChatGPT is consumed as material, its meaning is diminished and disappeared… 
   
-  Now the real problem: What kind of contents are altered within the act of conduction? We have a sort of an overall form: User conducting via mobile, Screens reacting correspondingly. Now the problem is, What will be the context? What will be the specific use cases? What will be the potential narrative / storytelling / experience-telling?
+  Monochrome… Monochrome…. The infinite layers of meaning? No meaning? Meaning aggregated → No meaning?
   
-  What will be the trackable input?
-  Javascript device motion/device acceleration
+  Now how to implement: Multi-Channel, single interactive input via keyboard. Upon keyword on six channels output chatgpt real-time generates some texts (should be generated accordingly to some meaning, idk what meaning/context will this be)... These texts, increasingly accelerates its accumulation speed as the interaction gets deeper… Now the screen is fulfilled with text (see the project untitled for example) and the layer of text…. Text is no longer visible
   
-  What can this induce?
+  References: Glenn Ligon, Jenny Holzer (yet not necessarily blurring the meaning)
   
-  A. 3D Scene, scene transforming/rotating correspondingly to the motion?
-  Scene view itself might rotate
-  Or the object might be morphed accordingly
-  Or it can be both
+  Meaning→ Audience will first focus on meaning, 처음에는 의미에 집착한다, … 그러다가 나중에는 의미로부터 해방될 수 있지 않을까? 의미 그 자체보다는, 기의보다는 기표 (문자 그대로, 텍스트 그대로, 잉크 그대로러써의 기표) 를 긍정하고 그것으로부터 생성되는 하나의 거대한 체계에 Immerse 되는 형식으로
   
-  B. Spatial Audio: Audio somehow increases / decreases correspondingly to the acceleration?
-  C. More primitively: Screen turning on/off, white ←> black based on the acceleration?
-  Kind of speculating the primitive approach
-  Can there be potential intersections with the projection mapping?
-  D. How about morphing the 2D graphics? Speculating Fluid Interfaces?
-  E. How about morphing screens full of texts/numbers? How about morphing maps? 
-  F. How to harmonically combine the motion and the acceleration data and resonate with the both?
-  G. Maybe it can be very poetic… Narrative-based, storytelling-based, very subtle, the texts wandering around… As the user conducts, some kind of melody (audio-visual melody) continously generates → Kind of story emerges from these multiple screens. More referencing to the primitive orchestra form of the orchestration conducting.
+  Yes this might be my interpretation of immersiveness… Text-driven immersiveness, and interactivity (of starting from blank page → To accelerating to the whole monochrome) is quite important to me. This interactiivity, guiding audience from the meaning to the meaningless, from the language to the colour, from the descriptiveness to the abstraction… Is the key to the experience…
   
-  
-  Also, can there be a derivate form?
-  A. Why just only mobiles? What about mouse? Doing the same thing with the mouse might be also poetic, and a bit retro (might be more artistic references there). A couple of interesting web art might have tried this, but their output was not really multi-device (It is usually limited to single screen/tab output). How can this be expanded towards multi-device?
-  B. What about having two or more audiences? Interfering with each other? Two or more mobile phones? Can use the difference and the resonance, and the tension generated from them? Remember to use the sine/cosine-shaped wave functions when tracking these systems. What about when the number of audiences are way much higher? Like 100 or so?
-  
-  
-  
+  Ultimately, therefore interaction → creates abstractive output, which constantly changes, yet not clear where it is ‘changed’.
   
   
 `,
-  tags: ["Conducting", "Conducting Mobiles", "Accelerometer", "MDWA", "Interactive Art", "Idea"],
+  tags: ["MDWA", "Interactive Art", "Monochroome", "Abstraction", "Descriptivness", "ChatGPT", "LLM", "Meaning", "Meaningless", "Ideation"],
 };

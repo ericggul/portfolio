@@ -4,7 +4,7 @@ import Navigation from "@/components/Navigation";
 
 export const metadata: Metadata = {
   title: "Jeanyoon Choi | Texts",
-  description: "Texts of Jeanyoon Choi. Jeanyoon Choi Artistic Texts and Research.",
+  description: "Texts of Jeanyoon Choi. Jeanyoon Choi Artistic Texts and Research Blogging.",
   openGraph: {
     type: "website",
     locale: "en_UK",
