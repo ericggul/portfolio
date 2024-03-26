@@ -13,7 +13,6 @@ export const Container = styled.div`
 export const Contents = styled.div`
   width: 100vw;
   min-height: calc(${({ theme }) => theme.windowHeight}px - 4.5rem);
-  overflow-y: scroll;
   background: #111;
 
   color: #ddd;

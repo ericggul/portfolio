@@ -13,38 +13,33 @@ const IMAGE_INSTRUCTION_TEXT = `Create a beautiful, eye-catching, artistic and p
 const NEGATIVE_PROMPT = `Animation, Blurry, Low quality, Cropped, Text, Out of Frame, Poor, Dehydrated, Watermark, Not Attractive`;
 
 export default async function TextPage() {
-  const englishText = await getChatGPT({
-    system: SYSTEM_TEXT,
-    user: TEXT_TO_UPLOAD.text,
-  });
-
-  const koreanText = await getChatGPT({
-    system: SYSTEM_TEXT_KO,
-    user: TEXT_TO_UPLOAD.text,
-  });
-
-  // const koreanText = await getChatGPT({
-  //   system: TRANSLATION_TEXT,
-  //   user: englishText,
+  // const englishText = await getChatGPT({
+  //   system: SYSTEM_TEXT,
+  //   user: TEXT_TO_UPLOAD.text,
   // });
 
-  ///TO BE RESOLVED: GET IMAGE from STABLE DIFFUSION
+  // const koreanText = await getChatGPT({
+  //   system: SYSTEM_TEXT_KO,
+  //   user: TEXT_TO_UPLOAD.text,
+  // });
 
-  const img = await getImage({
-    prompt: IMAGE_INSTRUCTION_TEXT + "Title: " + TEXT_TO_UPLOAD.title + "\n" + englishText,
-    negativePrompt: NEGATIVE_PROMPT,
-  });
-  // console.log(img);
+  // ///TO BE RESOLVED: GET IMAGE from STABLE DIFFUSION
 
-  const data = {
-    title: TEXT_TO_UPLOAD.title,
-    originalText: TEXT_TO_UPLOAD.text,
-    tags: TEXT_TO_UPLOAD.tags,
-    englishText: englishText,
-    koreanText: koreanText,
-  };
+  // const img = await getImage({
+  //   prompt: IMAGE_INSTRUCTION_TEXT + "Title: " + TEXT_TO_UPLOAD.title + "\n" + englishText,
+  //   negativePrompt: NEGATIVE_PROMPT,
+  // });
+  // // console.log(img);
 
-  await upload({ data });
+  // const data = {
+  //   title: TEXT_TO_UPLOAD.title,
+  //   originalText: TEXT_TO_UPLOAD.text,
+  //   tags: TEXT_TO_UPLOAD.tags,
+  //   englishText: englishText,
+  //   koreanText: koreanText,
+  // };
+
+  // await upload({ data });
 
   return <></>;
 }
