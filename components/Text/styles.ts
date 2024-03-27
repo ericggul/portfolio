@@ -4,7 +4,6 @@ import { FlexCenterStyle, WholeContainer } from "@/styles/common";
 export const Container = styled.div`
   ${FlexCenterStyle}
   justify-content: space-between;
-  overflow-y: scroll !important;
   background: #111;
   min-height: calc(${({ theme }) => theme.windowHeight}px - 4.5rem);
 `;

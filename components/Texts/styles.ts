@@ -9,6 +9,28 @@ export const Container = styled.div`
 
   background: #111;
   color: #ddd;
+
+  &::-webkit-scrollbar {
+    display: none !important;
+    -webkit-appearance: none;
+    width: 0 !important;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: transparent;
+    background-color: transparent;
+    outline: none;
+  }
+
+  /* width */
+
+  -ms-overflow-style: none;
+  scrollbar-width: none !important;
 `;
 
 export const Contents = styled.div`
@@ -47,7 +69,6 @@ export const Items = styled.div`
 
   ${FlexCenterStyle}
   flex-direction: column;
-  overflow-y: scroll;
 
   display: grid;
   grid-row-gap: 0 !important;
