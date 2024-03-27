@@ -2,7 +2,8 @@ import styled, { css } from "styled-components";
 import { FlexCenterStyle, WholeContainer } from "@/styles/common";
 
 export const Container = styled.div`
-  ${FlexCenterStyle}
+  display: flex;
+  height: calc(${({ theme }) => theme.windowHeight}px - 4.5rem);
   justify-content: space-between;
   overflow-y: scroll;
 
@@ -46,6 +47,7 @@ export const Items = styled.div`
 
   ${FlexCenterStyle}
   flex-direction: column;
+  overflow-y: scroll;
 
   display: grid;
   grid-row-gap: 0 !important;

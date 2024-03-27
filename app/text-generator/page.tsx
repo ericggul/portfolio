@@ -23,14 +23,6 @@ export default async function TextPage() {
   //   user: TEXT_TO_UPLOAD.text,
   // });
 
-  // ///TO BE RESOLVED: GET IMAGE from STABLE DIFFUSION
-
-  // const img = await getImage({
-  //   prompt: IMAGE_INSTRUCTION_TEXT + "Title: " + TEXT_TO_UPLOAD.title + "\n" + englishText,
-  //   negativePrompt: NEGATIVE_PROMPT,
-  // });
-  // // console.log(img);
-
   // const data = {
   //   title: TEXT_TO_UPLOAD.title,
   //   originalText: TEXT_TO_UPLOAD.text,

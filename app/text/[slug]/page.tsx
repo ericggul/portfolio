@@ -10,22 +10,27 @@ type Props = {
 
 export async function generateMetadata({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   // read route params
-  const id = params.slug;
 
-  // fetch data
-  const textData: any = await prisma.text.findUnique({
-    where: {
-      id: params.slug,
-    },
-  });
+  try {
+    const id = params.slug;
 
-  return {
-    title: textData.title + " | Jeanyoon Choi",
-    description: textData.originalText,
-    openGraph: {
-      images: [textData.imgURL || undefined],
-    },
-  };
+    // fetch data
+    const textData: any = await prisma.text.findUnique({
+      where: {
+        id: params.slug,
+      },
+    });
+
+    return {
+      title: textData.title + " | Jeanyoon Choi",
+      description: textData.originalText,
+      openGraph: {
+        images: [textData.imgURL || undefined],
+      },
+    };
+  } catch (e) {
+    console.log(e);
+  }
 }
 
 export default async function TextPage({ params, searchParams }: Props) {

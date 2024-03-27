@@ -1,30 +1,31 @@
 export const TEXT_TO_UPLOAD = {
-  title: "Creating Monochrome out of ChatGPT",
-  text: `An idea of making an interactive Monochrome → Generated on top of bunch of texts, bunch of ChatGPT/LLM-generated texts
+  title: "How everyone is obsessed with Base Interest Rates and how I am obsessed with making an experience out of such an obsession",
+  text: `How everyone is obsessed with Base Interest Rates and how I am obsessed with making an experience out of such an obsession.
 
-  Monochrome (단색화) Korean Most popular painting approach, a sense of materiality, diving deeper into it, the ultimate position of the abstraction, compared to the descriptiveness..
+  Base Interest Rate from Federal Bank → During Covid it went down crazily low, for two years 2020 - 2022, and the world’s capitalistic structure rapidly reacted to this → Bitcoin Boom! Real Estate Boom! Every asset Boom! 
   
-  On the other hand, there is descriptiveness: Language. Language is there to describe and is rarely used for abstraction. Of course, there is an abstractive layer - poems for example, but it’s far from the daily usage. especially the language represented by the ChatGPT nowadays - Most people might agree that ChatGPT is capable of writing descriptive/repetitive texts which already exists, but rarely can create a new poem or new layer of abstraction, other than mimicking the pre-existing styles of poems.
+  Now the interest rate went up again after covid… Another series of Booms! Startup going down… Real estate smth… Isn’t it crazy that a single number 5.5% is changing the world’s dynamics?
   
-  My key theme: What happens if the data/AI-generated output/any descriptive/metaphysical output is converted if aggregated massively and repeated massively? I believe that ΣPart ≠ Whole. Part’s characteristic is transformed into a different dimension when aggregated as a whole. Its characteristics are converted, 일종의 왜곡을 겪는다… 성질적 변환이 이 속에서 일어난다. 
+  Ofc there a complicated dynamics related to this single number… It’s not just a number. Ofc I get it. BUT isn’t it still very silly, how the whole world is obsessed with this one-digit number percentage? Isn’t it silly how the whole world’s ecosystem is dependent on this number? Isn’t it silly how this number can control millions of people where they live - Many people who used to live in Seoul pre-covid, for example, were forced to move outside of the city as the rent price and real estate price went up crazily, a chain reaction of change due to the interest rate… Is this phenomenon logical? It is logical – Too logical to be true. Too much logic, to create illogic…
   
-  This is the theme explored in my latest artwork ≠ → Where the sum of algorithm-generated results creates an abstractive layer, a layer of chaos. The part is interpretable and logical, ‘=’. The part is non-interpretable, illogical, chaotic, ‘ ≠’. It presents the aggregated chaos: Capturing the illogicality that is always presented with the seemingly logical systems, highlighting the limitation of the logic.
+  Everyone is obsessed with Base Interest Rates.
+  Everyone is obsessed with one person’s mouth.
+  Everyone is dependent on this simple single number. 
   
-  The same might be possible within this monochrome approach? Maybe aesthetically referencing the old Laboratory Occupied project…. Aggregated Text might present a monochrome! Text is descriptive, meaningful… But the aggregated text is not meaningful at all, it’s diminished… Containing no meaning… It’s just a materiality, text is just consumed as material, ChatGPT is consumed as material, its meaning is diminished and disappeared… 
+  Or maybe… Everyone/Every system is too myopic to be dependent on this number which will eventually change after a period. The current system is fragile to a single number. And we’re so obsessed with it… Why are we so dependent on a single number? Isn’t this something we should tackle??
   
-  Monochrome… Monochrome…. The infinite layers of meaning? No meaning? Meaning aggregated → No meaning?
+  A Multi-Device Web Artwork Installation Idea: One Input → Might be traditional GUI, might be hand-made tool, but has 3.XX % one digit + two decimal digits where people can adjust/customise, a symbol of interest rate (yet not explicitly told that it’s an interest rate). Audience can adjust this number → Increase or decrease.
   
-  Now how to implement: Multi-Channel, single interactive input via keyboard. Upon keyword on six channels output chatgpt real-time generates some texts (should be generated accordingly to some meaning, idk what meaning/context will this be)... These texts, increasingly accelerates its accumulation speed as the interaction gets deeper… Now the screen is fulfilled with text (see the project untitled for example) and the layer of text…. Text is no longer visible
+  Surrounding screens: 10 + laptops or so, forming an ecosystem. Images might be abstract. Still need to ideate on what those images will be & what context they will be in, but it is a (not-to-direct) metaphor of the current economic society, economic environment (which is fragile/highly dependent to the input node - the interest rate)
   
-  References: Glenn Ligon, Jenny Holzer (yet not necessarily blurring the meaning)
+  Normally these surrounding screens are relatively stable & calm. But once the number goes up & down dramatically, THE SURROUNDING SCREENS REACT VERY DRAMATICALLY & SENSITIVLY. Still need to ideate on what exact reactions this will be, might prefer a more dada-istic & humoristic approach, kind of explicit (too much explicit), but some cries & some laughs based on this unprecedented change in interest rate - symbolically presenting that the traditional capitalistic structure is no longer valid in a neo-liberal world, where individual’s idea and ability is too small on top of the simple change in the symbolic number…. But soon after 30 seconds or so after the change in interest rate, surrounding screens get calm again… Forming the new equilibrium state. Yes, this is the dystopia we’re living in, which is getting worse over time, but is justified as being ‘equilibrium’ in a long term.
   
-  Meaning→ Audience will first focus on meaning, 처음에는 의미에 집착한다, … 그러다가 나중에는 의미로부터 해방될 수 있지 않을까? 의미 그 자체보다는, 기의보다는 기표 (문자 그대로, 텍스트 그대로, 잉크 그대로러써의 기표) 를 긍정하고 그것으로부터 생성되는 하나의 거대한 체계에 Immerse 되는 형식으로
-  
-  Yes this might be my interpretation of immersiveness… Text-driven immersiveness, and interactivity (of starting from blank page → To accelerating to the whole monochrome) is quite important to me. This interactiivity, guiding audience from the meaning to the meaningless, from the language to the colour, from the descriptiveness to the abstraction… Is the key to the experience…
-  
-  Ultimately, therefore interaction → creates abstractive output, which constantly changes, yet not clear where it is ‘changed’.
+  References:
+  https://www.hani.co.kr/arti/economy/finance/1127169.html
+  https://www.chosun.com/economy/int_economy/2024/02/01/MUQHIJRYZVEB7PN2KB67SOZMR4/
+  https://www.lgbr.co.kr/report/view.do?idx=3724 
   
   
 `,
-  tags: ["MDWA", "Interactive Art", "Monochroome", "Abstraction", "Descriptivness", "ChatGPT", "LLM", "Meaning", "Meaningless", "Ideation"],
+  tags: ["MDWA", "Interactive Art", "Ideation", "Ecosystem", "Base Interest Rate", "Dependency", "Fragile", "Anti-Fragile", "Economy", "Neo-liberalism", "Dystopia", "Screen Ecoystem"],
 };
