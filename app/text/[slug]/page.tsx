@@ -30,6 +30,10 @@ export async function generateMetadata({ params, searchParams }: Props, parent: 
     };
   } catch (e) {
     console.log(e);
+    return {
+      title: "Jeanyoon Choi Texts",
+      description: "Texts by Jeanyoon Choi",
+    };
   }
 }
 
