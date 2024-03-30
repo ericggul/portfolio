@@ -193,12 +193,16 @@ function Intro({ allImages }: any) {
         <h4>Jeanyoon Choi is a student of Royal College of Art Information Experience Design program</h4>
         <p>Royal College of Art Information Experience Design Portfolio Jeanyoon Choi</p>
         <p>Copyright &#169; 2022 Jeanyoon Choi</p>
-        <Link href="/main">
+        <Link href="/works">
           <button>Go to Main Portfolio</button>
         </Link>
 
-        <Link href="/main">
+        <Link href="/works">
           <button>View Other Artworks</button>
+        </Link>
+
+        <Link href="/texts">
+          <button>View Philosophical Texts written by Jeanyoon Choi</button>
         </Link>
       </S.InvisibleText>
     </S.Container>

@@ -11,14 +11,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: "https://portfolio-jyc.org/about",
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "yearly",
       priority: 0.8,
     },
     {
       url: "https://portfolio-jyc.org/works",
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
       priority: 0.9,
+    },
+    {
+      url: "https://portfolio-jyc.org/texts",
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 1,
     },
     {
       url: "https://portfolio-jyc.org/nonequality",
