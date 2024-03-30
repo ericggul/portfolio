@@ -18,7 +18,7 @@ export const Contents = styled.div`
   font-weight: 300;
   transition: opacity 0.3s ease-in-out;
 
-  color: #bbb;
+  color: #b8b8b8;
 
   user-select: text;
 
@@ -34,6 +34,7 @@ export const Contents = styled.div`
 
   p {
     font-size: 1rem;
+    line-height: 1.5;
     margin: 0.5rem 0;
   }
 
