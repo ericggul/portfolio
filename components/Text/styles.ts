@@ -4,7 +4,8 @@ import { FlexCenterStyle, WholeContainer } from "@/styles/common";
 export const Container = styled.div`
   ${FlexCenterStyle}
   justify-content: space-between;
-  background: #111;
+  background: #eee;
+  color: #111;
   min-height: calc(${({ theme }) => theme.windowHeight}px - 4.5rem);
 `;
 
@@ -18,14 +19,12 @@ export const Contents = styled.div`
   font-weight: 300;
   transition: opacity 0.3s ease-in-out;
 
-  color: #b8b8b8;
-
   user-select: text;
 
   a {
     cursor: pointer;
     // text-decoration: underline;
-    color: #fff;
+    color: #111;
   }
 
   iframe {
@@ -45,9 +44,9 @@ export const Contents = styled.div`
   h1 {
     font-size: 1.8rem;
     font-weight: normal;
-    text-shadow: 0 0 1px #fff;
+    text-shadow: 0 0 1px #111;
     margin: 1.5rem 0;
-    color: #fff;
+    color: #000;
     margin-top: 2.5rem;
   }
 
@@ -55,7 +54,7 @@ export const Contents = styled.div`
     font-size: 1.2rem;
     margin: 1rem 0;
     margin-top: 3rem;
-    color: #fff;
+    color: #000;
     font-style: italic;
 
     i {
