@@ -1,21 +1,16 @@
 export const TEXT_TO_UPLOAD = {
-  title: "Against Rounded Personality - The Lonely Crowd by David Riesman",
-  text: `David Riesman’s The Lonely Crowd 한국어판 p.148-p.157 제 3장 “동료에 의한 심판" 중 “선호의 사회화"에서 발췌
+  title: "A Psychology behind sneak-peeking other's AVOD in airplanes",
+  text: `Famous meme → It’s funnier to sneak-peek other’s AVOD (movies, sports, etc.) rather than looking at my own. Even if the movie that other person is watching looks funny, if I look at it with my screen, not funny. The same kind of applies in undergrounds → For me it is funnier to sneak peek other’s smartphones than to look at mine. … Why?
 
-  “때로는 상품의 소비뿐 아니라 정서생활에 관한 취향까지도 철저히 사회화된다. 그 결과 아이들은 남과 의미 없는 잡담하는 법을 배우게 된다.” 
-  “... 자신이 동료들과 동떨어진 유별난 존재가 돼버릴지 모륻나는 그들의 공포심은 참으로 엄청났다…”
-  “... 나는 우리 아이가 모든 면에서 평범한 아이가 되기를 바랍니다.”
-  “좋은 집이나 멋진 말, 아름다운 여자, 또는 값진 예술품에 대한 욕망이란 소비자 기호에 따른 가치의 상실이나 변화가 생기는 순수 소비라기보다는 일종의 투자와 다름없기 때문이다.”
-  “아이들의 만화와 장난감을 소비하는 데 반해 어른들은 신문 사설이나 자동차를 소비한다. 그러나 그 둘은 갈수록 비슷한 방식으로 소비생활을 즐기게 된다.”
+  PHYSICALITY, a sense of spatial connection with the stranger. Obv the content on my screen is just about the content itself. Other’s contents in other’s screens → More spatial obstacles, more screens and AVODs, looking at movies which goes beyond my normal preference/choices, blended with a kind of tension that I might get caught sneak peeking, all happening with the physical space - Beyond just the digital audio-visual contents. All within the area of ‘uncertainty’ and ‘randomness’ that happens naturally within the domain of the physical world, not in an algorithmic pre-defined digital world. Ironically, the true value of digital content is realised within the physical world.
   
-  Rounded Personality → Appears in a Job description, recruitment, student admission process (입학사정관제).... The value considered when recruiting a new person - or, a new slave. A new person can be substituted from person A to person B. Person A and Person B → Identitial if they are ‘rounded’. Average, just normal. Normal person, normal people…
+  What I’m trying to do with Multi-Device Web Artwork is bring this sense of physicality on top of the existing combination of digital content. To help people connect to the real world whilst leveraging the benefits of digital content. To prevent us from losing connection to the real world whilst being immersed so much in algorithm-generated trash, and help us to find again the very human, natural nature and desire to interact with the real physical world- Just as how we like to sneak peek other’s contents in planes.  
   
-  We are trained to be ‘rounded’, to be socialised → i.e., within David Riesman’s perspective, to share the contemporary trend with peers and adjust ourselves to cultural preferences within it. Thus, we consume the same, we listen to the same, we think the same… And that’s how you become a ‘rounded’ person. The same kind of manufactured person, with slightly different expertise, but that’s all - The rest of the preferences are identitcal from one to another. 
+  An idea → How about a distributed audio-visual symphony made out of a plane’s 180 AVODs, changing & synchronising in real-time? Maybe DJ might be playing the music, and 180 AVODs alter their contents/visual accordingly. Maybe 180 people are playing one big simple game where they can all unite, or they can fight together in two big groups. Maybe more subtle poetic audio-visual → Very subtle enough to help people sleep during the plane. So many possibilities, both within interactive/non-interactive domains. So many new experience, a new experience that will unite passengers on board, yet to come. This will truly create unforgettable experiences…
   
-  Nietzschestic vision of ubermensch is dead within this perspective… Ubermensch is not a rounded person, it might lack in some aspects, but very strong in other aspects…. Ubermensch is never rounded, innovation does not come from a rounded personality (It is only the branded innovation that a rounded personality can make). Definitely, the strong and resilient humanity’s future will be based on how we get out of this treadmill of consumerism-Regresstion_to_the_mean (in terms of personality, education, preferences, etc.) Destroy the landscape of existing preference towards rounded personality, destroy the existing frameworks, if we don’t want the history of humanity to terminate by the rise of machines.
-  
+  Same might be true for undergrounds, trains, buses, or any sort of public space where anonymity is currently ruling, but yet where people are open to communicate & connect with each other (who’s in the physical space) rather than just looking at phones, killing time. This will potentially bring us back the communal feeling, a sense of humaneness, and overall, our natural self-desire of connecting the domain of the real, rather than the fake. 
   
   
 `,
-  tags: ["Conceptual", "Personality", "Rounded Personality", "David Riesman", "The Lonely Crowd", "Society", "Consumerism", "Consumer Society"],
+  tags: ["AVOD", "Sneak-peeking", "Physicality", "Multi-Device Web Artwork", "Human Connection", "Real World", "MDWA", "Airplanes", "Public Space", "Anonymity", "Humaneness", "Real vs Fake", "Idea"],
 };

@@ -14,6 +14,7 @@ export default async function WorksPage() {
       id: true,
     },
   });
+
   const allImages = res
     .sort((a: any, b: any) => -a.rating + b.rating)
     .reduce((acc: any, curr: any) => {
