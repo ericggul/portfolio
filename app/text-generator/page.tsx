@@ -13,25 +13,25 @@ const IMAGE_INSTRUCTION_TEXT = `Create a beautiful, eye-catching, artistic and p
 const NEGATIVE_PROMPT = `Animation, Blurry, Low quality, Cropped, Text, Out of Frame, Poor, Dehydrated, Watermark, Not Attractive`;
 
 export default async function TextPage() {
-  // const englishText = await getChatGPT({
-  //   system: SYSTEM_TEXT,
-  //   user: TEXT_TO_UPLOAD.text,
-  // });
+  const englishText = await getChatGPT({
+    system: SYSTEM_TEXT,
+    user: TEXT_TO_UPLOAD.text,
+  });
 
-  // const koreanText = await getChatGPT({
-  //   system: SYSTEM_TEXT_KO,
-  //   user: TEXT_TO_UPLOAD.text,
-  // });
+  const koreanText = await getChatGPT({
+    system: SYSTEM_TEXT_KO,
+    user: TEXT_TO_UPLOAD.text,
+  });
 
-  // const data = {
-  //   title: TEXT_TO_UPLOAD.title,
-  //   originalText: TEXT_TO_UPLOAD.text,
-  //   tags: TEXT_TO_UPLOAD.tags,
-  //   englishText: englishText,
-  //   koreanText: koreanText,
-  // };
+  const data = {
+    title: TEXT_TO_UPLOAD.title,
+    originalText: TEXT_TO_UPLOAD.text,
+    tags: TEXT_TO_UPLOAD.tags,
+    englishText: englishText,
+    koreanText: koreanText,
+  };
 
-  // await upload({ data });
+  await upload({ data });
 
   return <></>;
 }
