@@ -1,44 +1,25 @@
 export const TEXT_TO_UPLOAD = {
-  title: "More Primitive than a Game",
-  text: `Ian Cheng - White Stone Exhibition in Seoul… Bad… Very Bad quality, it tries to convey storytelling and let people enter a ‘World-Watching Mode’, but because the world itself is so amateur-fully constructed, nobody can really resonate with the story itself. Audiences can interact with the world by 1) Touching, 2) Tapping, 3) Pinching on the world → This Touch accordingly selects an object from the world, Pinch Rotates on top of the object, and generates a simple sound effect accordingly… What interested me was not the story itself, it was more of an interaction → Not the interaction for the sake of getting information, but interaction to enjoy the chaotically real-time changing audio-visuals. For instance, if I click once, then that’s bullshit information displayed… So boring… But If I tap and pinch continuously, the new sound layer is generated and a chaotic transition of visual layers is triggered…. And if I repeat, it gets more playful! Suddenly and finally it becomes playful! Also the same for the moving image going back/forth option, If I keep on clicking the move towards 10s/backward 10s button, the chaotic audio-visual transformation is triggered in a very joyful, dada-istic way!
+  title: "Real-Time Archiving Art",
+  text: `Sum and Part: How sum of part can be archived and displayed differently, presented audio-visually in an aggregated manner, and how this can influence viewers/participants of the act of part
 
-
-  Here is the formula: There is an existing (Logical System), and an existing (Logical way of interacting with the system). But if I interact it very often/play with it/just dadaistically click on it, just as if I’m playing the game, then the joyful dimension happens, then the illogical dimension arises! Hack the system!
+  Precise examples: 
   
-  (Logical Interaction) X (100 Taps/second) = (Illogical Interaction)
+  Starbucks Siren Order, So many siren orders happening all around the globe 24/7, what if there’s one real-time visualisation (on the map or can be more abstractive) which displays the real-time siren order status and pop-ups data accordingly
+  Same for Delivery services… A real-time audio-visualisation map showing real-time delivery service status
   
-  Same for my portfolio Entrance… Clicking on ‘Enter’ was a logical interaction, but once you need to do it 20 times then it’s an illogical, joyful interaction
-  Same for Ω… Doing ‘MBTI Test’ was a logical interaction, but once you scroll through the whole page to get the option you want, it’s an illogical, joyful interaction
-  Same for Das Gerede Part II…. The ongoing conversation between ChatGPTs might be logical, but once you use your facial expression to distort it, it starts to become illogical/distorts
-  Same for the Quantum Dream… The original video was quite logical/predictable, but the endless repetition/distortion/quantisation of its temporal dimension is illogical
+  These are the reflection of the society we’re living in, representing the so-called ‘convenience’ triggered by technologies & platform economies, also showing our daily consuming pattern, which might occur only once or twice from the individual’s perspective, but when viewed from collective, comes quite massive, even chaotic.. Creating a sort of ‘불멍' for the contemporary technology-driven consumeristic society. Almost reminiscent of Andreas Gursky’s Frankfurt Photographs – The amplified version of the part.
   
-  Yes, you might have predicted → The structure is quite similar to the accelerationism at the same time.
+  The interesting part: Part is delivered by the individual’s optimal solution/choice of doing an action (i.e., I would like to deliver because of ____ ____), but the chaotic aggregation of a whole, gives you a pretty much different feeling… The feeling of how society is working… Almost same to watching endless cars crossing Hannam Bridge
   
-  Thus it’s more than a game. It’s going through the primitive reason why we’re playing the game. It’s our primitive nature to hack the system, to play with the system… Remember that stupid person in Venice Archi Biennale who prevented from interacting playfully? I bet that audiences might have enjoyed a lot more if the system was designed to interact so → playfully tapping a lot in a short time, than the way it was → Stupid content displayed in a stupidly slowing speed.
+  Or other examples, related to previous Scream Propagation/Stress Propagation ideation
   
-  Thus, going more primitive than a game → Dadaistically Tap, Scroll, Pinch, Play, and Repeat!
-
-  HACKING SYSTEM --> HACKING ESTABLISHED INTERACTIVE SYSTEM --> HACKING ESTABLISHED INTERACTIVE SYSTEM WITH A PLAYFUL WAY --> HACKING ESTABLISHED INTERACTIVE SYSTEM WITH A PLAYFUL WAY IN A DADAISTIC WAY
+  Scream Propagation: Act of sharing the stress with a global audience in the world. A person can scream on the mobile app, and that information is propagated to another user, most notably the screen which archives & displays the real-time screaming status → Kind of abstractive audio-visual triggered whenever somebody screams. The act of (anonymously) ‘shared screams’ 
+  Stress Propagation: Similar, but this time targeting on stress: Large keyboard button-shaped sculpture/sponge, people can hit it whenever they are stressed out → Embedded Arduino sensor triggers websocket signal, and same here → Maybe the screen placed at the lobby, or installation at the museum, is triggered whenever somebody hits the stress button, and displays according audio-visual. 
   
-  PS. Smart Sound Design is necessary to make this interactive hacking playful
+  These two acts - Scream/Stress Propagation, aim to make our society more collective. Screaming Alone, expressing stress alone -  due to a highly individualistic society, it is now no longer considered ‘normal’ to express everyday stress/scream… Therefore we’re psychologically more separated than ever → Why is Korea ranking No.1 in suicide rate? 
+  
+  Maybe we wouldn’t want to share these screams/stress to our close surroundings, but maybe would want to express our situation somehow… anonymously… (Reasons why communities like Blind/Everytime is flourishing). What if we share this in the form of Multi-Device Web Artwork → We don’t know who is sharing our scream/stress, but we do know that it’s going to be shared to the public – To the public randomly walking through the building lobby, to the random audiences placed across the globe viewing exhibition? This is an act of how web & web technology can be used somehow poetically…. Lots of potential in it. Archiving Art, Real-Time Archiving Art
   
 `,
-  tags: [
-    "Ian Cheng",
-    "White Stone Exhibition",
-    "Seoul",
-    "World-Watching Mode",
-    "Touching",
-    "Tapping",
-    "Pinching",
-    "Chaotically Real-time Changing Audio-visuals",
-    "Dadaism",
-    "Accelerationism",
-    "Hacking System",
-    "Hacking Interactive System",
-    "Smart Sound Design",
-    "Idea",
-    "Ideation",
-    "Interactive Art",
-  ],
+  tags: ["Scream Propagation", "Stress Propagation", "Sum and Part", "Ideation", "Starbucks", "Delivery Application", "Real-Time", "Audio-Visual Mapping", "Andreas Gursky"],
 };
