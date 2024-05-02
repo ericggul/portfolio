@@ -144,6 +144,7 @@ export default function About() {
 
         <h1>Past Exhibitions</h1>
         <p>Sep 2023 | Ars Electronica 2023, "Who Owns the Truth?", Linz, Austria</p>
+        <p>May 2024 | Istanbul Digital Art Festival (IDAF) 2024, "Search Reality", Istanbul, Turkey</p>
         <p>Nov 2023 | Some Facts at Midnight, Studio Motif, Seoul, South Korea</p>
         <p>Nov 2023 | Beyond Binary: Exploring life beyond data, Monash University (Virtual), Australia</p>
         <p>Oct 2023 | Coding Creativity, Hera Gallery, Rhode Island, United States</p>
