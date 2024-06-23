@@ -1,55 +1,18 @@
 export const TEXT_TO_UPLOAD = {
-  title: "Simple Interaction-based Immersiveness",
-  text: `When talking about immersiveness. Usually within AR/VR context… Usually talks about very precisely constructed beautiful 3D scenes, as well as very high-fidelity interactions… Usually focuses on mimicking the real, making simulacres. 
-
-  Yet, what I propose: Immersiveness is not merely about reconstructing the real, being immersed in the hyper-real, it is more of embodies and interconnectedness (to the dimension of reality), which might trigger from well-reconstructed scene, but also inducable from very simple interaction and the cognitive connection towards it - What I actually see from numerous VR games and artworks is when very complicated interaction paradoxically make users detached to the scene, and thus disentangling from immersiveness. What I propose is the opposite → Really starting from a simple interaction, very simple and somehow dadaistic (via repetition) that anybody can easily understand, and emphasising it, throughout targeted multi-channels, to create single interaction-based immersiveness. 
+  title: "Research for Omega - The Hallucination of Vectorisation",
+  text: `Reflecting after reading wiki article on the pseudoscientific-ness of MBTI Tests
+  MBTI test based on Barnum effect and confirmation bias
+  I generally interpret this as individual’s fake desire to percept themselves as a special characteristic when that exact part is generalised → So people are actually flattened to one of the vectors while they are not aware of the fact
   
-  Example: Mouse movement. Mouse movement is already used as a way of rotating the scene’s angle within Web Games/Wb 3D. What if… The mouse cursor itself is emphasised across the space? So single mouse movement from a single channel is propagated to multiple channels simultaneously, somehow exaggerated, somehow repeated, so people feel somehow will-to-power to their mouse movements, as well as dadaistic enjoyment → Their simple mouse movement has created a significant audio-visual change across 20 different channels! Wouldn’t that be amazing? Wouldn’t that be truely immersive?
+  So currently: MBTI Test → Classifying people within 16 types → People happy about it because of the Barnum Effect and Confirmation Bias and further define their personality/characteristic accordingly → They are actually being massively identical to each other 
   
-  Example 2: Three.js OrbitControls → Rotation, Panning… How can this apply within multi channels?
+  False-Classification and False-Individualism → Collective-Individualism, something that I defined earlier: People are externally more individualistic to each other, but actually characteristic-wise, essential-wise, they are becoming more identical to each other. Best example showing this: Test (수능), 의대진학, 반포자이즘, People compete each other to rank higher within a mono-defined dimension, but actually, due to this competition, they are increasingly becoming homogenous (Least marginal difference). Same for the personality test and MBTI types…. A collective suicidal attempt of uniqueness/unique humaneness
+  
+  What will happen in the age of Personally-Customised AI? (Like the movie ‘Her’...)
+  
+  Speculatively: Hyper-Customaised Conversation AI/Algorithm-generated customisation → Classifying people with existing vectorial classification (THE VECTORISATION OF HUMAN/HUMANENESS) → People happy about it, people thin k it’s hyper customsied, people think it’s real confronting own personality (Same because Barnum Effect and Confirmation Bias) → People become increasingly homogenous, people substituted/substitutable to exist as vectors, and thus, humaneness is now extinct → Human does not occupy any existential superiority against AI.
+  
   
 `,
-  tags: [
-    "immersiveness",
-    "interaction",
-    "Ideation",
-    "simple",
-    "dadaistic",
-    "repetition",
-    "multi-channels",
-    "simple interaction",
-    "immersive",
-    "immersive experience",
-    "simple interaction-based immersiveness",
-    "simple interaction-based immersive experience",
-    "simple interaction-based immersive",
-    "simple interaction-based",
-    "simple interaction-based immersive experience",
-    "simple interaction-based immersive",
-    "simple interaction-based",
-    "simple interaction-based immersive experience",
-    "simple interaction-based immersive",
-    "simple interaction-based",
-    "simple interaction-based immersive experience",
-    "simple interaction-based immersive",
-    "simple interaction-based",
-    "simple interaction-based immersive experience",
-    "simple interaction-based immersive",
-    "simple interaction-based",
-    "simple interaction-based immersive experience",
-    "simple interaction-based immersive",
-    "simple interaction-based",
-    "simple interaction-based immersive experience",
-    "simple interaction-based immersive",
-    "simple interaction-based",
-    "simple interaction-based immersive experience",
-    "simple interaction-based immersive",
-    "simple interaction-based",
-    "simple interaction-based immersive experience",
-    "simple interaction-based immersive",
-    "simple interaction-based",
-    "simple interaction-based immersive experience",
-    "simple interaction-based immersive",
-    "simple interaction-based",
-  ],
+  tags: ["MBTI", "Barnum Effect", "Confirmation Bias", "Vectorisation of Human", "Collective-Individualism", "Personally-Customised AI", "Hyper-Customaised Conversation AI", "Omega", "Resistance"],
 };

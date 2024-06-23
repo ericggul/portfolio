@@ -6,11 +6,11 @@ import upload from "./upload";
 
 const SYSTEM_TEXT = `An art and technology artist's avant-garde writing, rewrite in the form of paragraphs`;
 const SYSTEM_TEXT_KO = `이 아방가르드한 스타일의 글을 한국어 글로 다시 작성하여라`;
-const TRANSLATION_TEXT = `Translate this text into the korean.`;
+// const TRANSLATION_TEXT = `Translate this text into the korean.`;
 
-const IMAGE_INSTRUCTION_TEXT = `Create a beautiful, eye-catching, artistic and poetic header image for the blog post with the following contents: \n`;
+// const IMAGE_INSTRUCTION_TEXT = `Create a beautiful, eye-catching, artistic and poetic header image for the blog post with the following contents: \n`;
 
-const NEGATIVE_PROMPT = `Animation, Blurry, Low quality, Cropped, Text, Out of Frame, Poor, Dehydrated, Watermark, Not Attractive`;
+// const NEGATIVE_PROMPT = `Animation, Blurry, Low quality, Cropped, Text, Out of Frame, Poor, Dehydrated, Watermark, Not Attractive`;
 
 export default async function TextPage() {
   const englishText = await getChatGPT({
