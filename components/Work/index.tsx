@@ -6,6 +6,7 @@ import useResize from "@/utils/hooks/useResize";
 import { TYPE_CONVERSION } from "@/public/static";
 import { useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Work({ projectData, similarProjects }: any) {
   const [windowWidth, windowHeight] = useResize();
@@ -33,10 +34,10 @@ export default function Work({ projectData, similarProjects }: any) {
           )}
 
           <h5>{projectData.shortDescription}</h5>
-          <ImgSection imageURLBase={projectData.imageURLBase} imageNumber={projectData.imageNumber} />
+          <ImgSection windowWidth={windowWidth} imageURLBase={projectData.imageURLBase} imageNumber={projectData.imageNumber} />
           {projectData.longDescription && projectData.longDescription.split("  ").map((firstEl: any, i: number) => firstEl.split("-n-").map((el: any, i: number) => <p key={i}>{el}</p>))}
 
-          {projectData.imageNumber >= 4 && <ImgSection imageURLBase={projectData.imageURLBase} imageNumber={projectData.imageNumber} startFrom={4} />}
+          {projectData.imageNumber >= 4 && <ImgSection windowWidth={windowWidth} imageURLBase={projectData.imageURLBase} imageNumber={projectData.imageNumber} startFrom={4} />}
 
           {projectData.projectURL && windowWidth > 768 && (
             <>
@@ -122,26 +123,19 @@ export default function Work({ projectData, similarProjects }: any) {
   );
 }
 
-function ImgSection({ imageURLBase, imageNumber, startFrom = 1 }: any) {
-  const [windowWidth, windowHeight] = useResize();
+function ImgSection({ windowWidth, imageURLBase, imageNumber, startFrom = 1 }: any) {
   const imagesCount = useMemo(() => Math.min(3, imageNumber), [imageNumber]);
+
+  const imgSize = useMemo(() => {
+    const width = windowWidth > 768 ? (windowWidth - 48) / imagesCount : windowWidth - 36;
+    const height = windowWidth > 768 ? ((windowWidth - 48) / imagesCount) * 0.5625 : (windowWidth - 36) * 0.5625;
+    return { width, height };
+  }, [windowWidth]);
 
   return (
     <S.ImgSection>
       {new Array(imagesCount).fill(0).map((_, i) => (
-        <>
-          {i + startFrom <= imageNumber && (
-            <img
-              src={`/assets${imageURLBase}/${i + startFrom}.webp`}
-              alt="nonequality"
-              key={i}
-              style={{
-                width: `${windowWidth > 768 ? `calc((100vw - 3rem) / ${imagesCount})` : "calc(100vw - 3rem)"}`,
-                height: `${windowWidth > 768 ? `calc(((100vw - 3rem) / ${imagesCount}) * 0.5625)` : "calc((100vw - 3rem) * 0.5625)"}`,
-              }}
-            />
-          )}
-        </>
+        <>{i + startFrom <= imageNumber && <Image src={`/assets${imageURLBase}/${i + startFrom}.webp`} alt="nonequality" key={i} width={imgSize.width} height={imgSize.height} />}</>
       ))}
     </S.ImgSection>
   );

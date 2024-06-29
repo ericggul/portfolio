@@ -1,6 +1,8 @@
 "use client";
 import React, { useState, useMemo, useEffect, use } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import useResize from "@/utils/hooks/useResize";
 
 //styles
 import * as S from "./styles";
@@ -21,21 +23,36 @@ export default function Project({ allImages }: any) {
   const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
 
   async function loadImage(el: any) {
-    const img = new Image();
-    img.src = el.url;
-    img.onload = () => {
-      setShuffledImagesArray(
-        (
-          prev: any //upload except for redundant images
-        ) => (prev.find((ele: any) => ele && ele.url === el.url) ? prev : [...prev, el])
-      );
-    };
+    // const img = new Image();
+    // img.src = el.url;
+    // img.onload = () => {
+    //   setShuffledImagesArray(
+    //     (
+    //       prev: any //upload except for redundant images
+    //     ) => (prev.find((ele: any) => ele && ele.url === el.url) ? prev : [...prev, el])
+    //   );
+    // };
 
-    await delay(250);
+    setShuffledImagesArray(
+      (
+        prev: any //upload except for redundant images
+      ) => (prev.find((ele: any) => ele && ele.url === el.url) ? prev : [...prev, el])
+    );
+
+    await delay(100);
   }
 
+  /////sizing
+  const [windowWidth, windowHeight] = useResize();
+
+  const imgSize = useMemo(() => {
+    const width = windowWidth > 768 ? windowWidth * 0.2 : windowWidth * 0.5;
+    const height = windowWidth > 768 ? windowWidth * 0.1125 : windowWidth * 0.28125;
+    return { width, height };
+  }, [windowWidth]);
+
   // Use useMemo to memoize the shuffledImagesArray
-  const memorisedImages = useMemo(() => shuffledImagesArray.map((el: any, i: number) => <SingleEl el={el} key={i} />), [shuffledImagesArray]);
+  const memorisedImages = useMemo(() => shuffledImagesArray.map((el: any, i: number) => <SingleEl el={el} key={i} imgSize={imgSize} />), [shuffledImagesArray]);
 
   return (
     <S.Container>
@@ -43,14 +60,14 @@ export default function Project({ allImages }: any) {
         {memorisedImages}
 
         {new Array(20).fill(null).map((_, i) => (
-          <SingleEl key={i} />
+          <SingleEl key={i} imgSize={imgSize} />
         ))}
       </S.Wrapper>
     </S.Container>
   );
 }
 
-const SingleEl = React.memo(({ el }: any) => {
+const SingleEl = React.memo(({ el, imgSize }: any) => {
   const [hovered, setHovered] = useState(false);
   const [showedEl, setShowedEl] = useState<any>(null);
   const [change, setChange] = useState(false);
@@ -77,21 +94,13 @@ const SingleEl = React.memo(({ el }: any) => {
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{
-          // transform: change || !appear ? "scale(0)" : "scale(1)",
           opacity: change || !appear ? 0 : 1,
         }}
       >
         {showedEl && (
           <>
-            {showedEl.url && (
-              <img
-                onLoad={() => setAppear(true)}
-                // loading="lazy"
-
-                src={showedEl.url}
-                alt={showedEl.title}
-              />
-            )}
+            {/* {showedEl.url && <img onLoad={() => setAppear(true)} src={showedEl.url} alt={showedEl.title} />} */}
+            {showedEl.url && <Image onLoad={() => setAppear(true)} src={showedEl.url} alt={showedEl.title} width={imgSize.width} height={imgSize.height} />}
             <S.Info
               style={{
                 opacity: hovered ? 1 : 0,
