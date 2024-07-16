@@ -4,7 +4,7 @@ const nextConfig = {
     styledComponents: true,
   },
   images: {
-    domains: ["replicate.delivery"],
+    domains: ["replicate.delivery", "pds.joongang.co.kr"],
   },
 };
 

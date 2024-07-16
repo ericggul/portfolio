@@ -112,20 +112,6 @@ export const UpperInfo = styled.div`
   justify-content: space-between;
 `;
 
-export const ImgSection = styled.div`
-  display: flex;
-  flex-direction: ${({ theme }) => (theme.windowWidth > 768 ? "row" : "column")};
-  width: 100%;
-  margin: 2.5rem 0;
-
-  img {
-    width: ${({ theme }) => (theme.windowWidth > 768 ? "calc((100vw - 3rem) / 3)" : "calc(100vw - 3rem)")};
-    height: ${({ theme }) => (theme.windowWidth > 768 ? "calc(((100vw - 3rem) / 3) * 0.5625)" : "calc((100vw - 3rem) * 0.5625)")};
-    object-fit: cover;
-    margin: 0.2rem 0;
-  }
-`;
-
 export const Tags = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -149,8 +135,11 @@ export const OtherProjectsSection = styled.div`
   display: flex;
 `;
 
-export const SingleEl = styled.div`
-  width: ${({ theme }) => (theme.windowWidth > 768 ? "calc((100vw - 3rem) / 5)" : "calc((100vw - 3rem) / 2)")};
+export const ImgWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  height: ${({ theme }) => (theme.windowWidth > 768 ? "calc(((100vw - 3rem) / 5) * 0.5625)" : "calc(((100vw - 3rem)/2) * 0.5625)")};
+  margin: 0.5rem 0;
 
   img {
     width: 100%;
@@ -158,6 +147,10 @@ export const SingleEl = styled.div`
     object-fit: cover;
     margin: 0.5rem 0;
   }
+`;
+
+export const SingleEl = styled.div`
+  width: ${({ theme }) => (theme.windowWidth > 768 ? "calc((100vw - 3rem) / 5)" : "calc((100vw - 3rem) / 2)")};
 
   h4 {
     font-size: 1rem;
