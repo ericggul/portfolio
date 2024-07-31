@@ -1,37 +1,36 @@
 export const TEXT_TO_UPLOAD = {
-  title: "Puppet Show and Will-to-Power",
+  title: "Human-as-Interface: Human Sliders, Human Mouse",
   text: `
-James Turrell Room of Chinchu Art Museum, Naoshima → Projector
-프로젝터 맺힌 상으로 관람객들 자연스럽게 Puppet Show
-This puppet show symbolises a representatitve example of will-to-power
-Small movement → Hand movement → Becomes amplified (As a shadow)
-And thus audience enjoys the puppet show doing by themselves → They want their interaction to be amplified, and thus the amplified interaction to span the whole space, thus highlighting and enhancing their ability to control the space and influence the space (will-to-power)
+Humans moving in space → and unprecedently, something happens on the surrounding screens/projections??
 
-Multi-Device Web Artwork, when symbolised conceptually, is a conversation between the actor/audience/subject and the space. Audience (Audience body’s expansion → Digital Devices) controls the surrounding space (Augmented Space/Augmented Architecture/Digitally Augmented Space). 
+What if all the UIs/simple interactions we use in our daily web interfaces - are re-presented and re-interpreted within the space, with us human body used as the interactive pointer/mouse/finger → Finger within the smartphones, Body within the Installation (Bodily Experience)
 
-Thus comes the important of phenomenology → How to realise/meditate this conceptual connection of audience controlling the space with nowadays technologies and engineering/physical constraints? Traditional interactions like clicking might be not sufficient, maybe we need a somehow stronger interaction.
+Toggler: Boolean Interaction
+Slider: 1-Dimensional Interaction
+Pad/2D Mouse Move/Touch Move: 2-Dimensional Interaction
 
-Also always important factor to consider: WILL-To-POWER. And thus how interaction is amplified, highlighted, and echoed throughout the space.
+Toggler → Body being on the left of the space ←> Right of the space
+Slider → Body moving across the single corridor/passage → And something occurring reactively on the screen
+Pad Movement → Body moving within the 2D floor → And something occurring reactively on the screen
+
+Thus, the human-as-interface tracks the body/human to create a bodily movement that influences the surroundings → And humans act as a big finger. A language that will expand the boundary of bodily interaction → Not through the wall projection, but through the floor-based bodily movement tracking.
+
+Multi-Device Web Artwork: Inducing Physicality from Virtuality, is at the End - the communication between the subject and the space. The conversation between the subject and the space.
 
 `,
   tags: [
-    "Puppet Show",
-    "Will-to-Power",
-    "James Turrell",
-    "Chinchu Art Museum",
-    "Naoshima",
-    "Projector",
-    "Multi-Device Web Artwork",
-    "Augmented Space",
-    "Augmented Architecture",
-    "Digitally Augmented Space",
-    "Phenomenology",
-    "Interaction",
-    "Engineering",
-    "Physical Constraints",
-    "Traditional Interactions",
-    "Stronger Interaction",
-    "WILL-To-POWER",
-    "Echoed Interaction",
+    "human-as-interface",
+    "human sliders",
+    "human mouse",
+    "bodily experience",
+    "multi-device web artwork",
+    "physicality",
+    "virtuality",
+    "interaction design",
+    "web interface",
+    "UI",
+    "UX",
+    "body movement tracking",
+    "bodily interaction",
   ],
 };
