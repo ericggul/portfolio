@@ -1,10 +1,6 @@
 import prisma from "@/lib/prisma";
 import Work from "@/components/Work";
 
-function parseSlug(slug: string) {
-  return slug.replace(/-/g, " ");
-}
-
 export default async function Page({ params }: { params: { slug: string } }) {
   const projectData: any = await prisma.project.findUnique({
     where: {

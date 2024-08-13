@@ -1,30 +1,66 @@
 export const TEXT_TO_UPLOAD = {
-  title: "Behavioural Interface",
+  title: "Audio-Visual Disentanglement",
   text: `
-Behavioural Interface: Rather than explicitly displaying icons/buttons to express the present of a certain function, those functions are implicitly hidden - and presented upon the user’s unconscious/unintended behaviour - creating a special context within the interaction design. (Especially important within the mobile interaction design)
+설계된 경험: 유사-디오니소스/키치: 마블, 디즈니, 천만영화, 알고리즘, 디오니소스적 욕구의 알고리즘적/단차원적 해소: 마치 맥도날드의 햄버거와 같은 불량식품들
 
-So the key is in minimising and hiding functionality → and when the audience unintentionally/accidentally triggers such (normally phenomenological) interaction, then the hidden interface/functionality is presented.
+불편한 경험: Uncanny, 분명히 하하 호호 웃고 있는데, 뭔가 어디가 상당히 이상한듯한?
+설계된 경험은 옛 Masterpiece/디오니소스를 모방하여 대량생산하였다.
+불편한 경험의 공모 또한 설계된 경험을 모방하는데서 시작됨: 역전의 역전, 모방의 모방
 
-For instance, Omega: People just do a normal Personality Test (Choosing from one of the options), but once they start to unintentionally shake/move the mobile device, the accelerometer triggers the ‘Omega’ signal - which triggers the destruction of the vectorised space within the artwork, which act as a symbolic act of phenomenological resistance within this artwork.
+겉으로는 굉장히 시뮬라시옹 적인 기획, 그러나 이 시뮬라시옹의 허점이 대번에 들어나는데에서 uncanny함… 가장 대표적인 Example: Audio-Visual Disentanglement
 
-Another example: KAIST Museum AI artwork → Current plan, people first land on accelerometer-triggered interaction, where their phone shaking interaction rotates the surrounding accordingly at the start – Then once they accidentally speak out any word, the TTS + LLM combination is suddenly triggered, showing the Prop & Back-Prop interactions within multi-screens settings, and then displays the result accordingly (Symbolically showing how AI is embedded within our daily lives(?) + Wow-Effect: Verfremdungseffekt)
+분명히 하하 호호 웃고 있는데, 소리는 그렇지 않은 비명소리? (잘 디자인된)
+비주얼은 밝지만, 오디오는 어두운 케이스.
 
-Thus Behaviour Interface is not designed for everyone to interact with - rather, it is target for relatively smaller group which will accidentally trigger such hidden interactions - but once they do trigger those, they will have an unforgettable/unique interactive experience where such uniqueness is triggered from the unexpectedness (Verfremdungseffekt) - as well as serving the literal ‘Distancing Effect’ of objectifying the situation/re-think about the interaction itself (Just like within the artwork Omega)
+굉장히 목소리는 (TTS) 상냥하고 친절한데, 비주얼은 그렇지 않은 딱딱한 숫자의 향연들? 
+오디오는 밝지만, 비주얼은 어두운 케이스
+
+그리고 카이스트 개관전 같은 경우: 제너레이트된 텍스트 자체의 표면적 의미나 제너레이트된 보이스 (TTS)는 친절하고 상냥한데, 비주얼은 매트릭스적인 휘몰아치는 숫자의 향연들. 인공지능이 본질적으로 시뮬라시옹/숫자 기반임을 말해주는데 유리한 기획?
+
+이러한 Audio-Visual Disentanglement는 잘 디자인되어야함… 잘 디자인 되지 않을 경우 기획한 효과 못이룰수도 있음. 그러나 잘 디자인 하면 굉장한 Uncanny 유추할 수 있고, 많은 영화에서 실제로 차용하는 기법. Interactive Art는 여기서 한걸음 더 나아가 Audio-Visual 이 완전히 Entangle 되어있는 상태에서 시작해서… 점차 Uncanny함을 유도하기 위해 Audio-Visual 이 Disentangle 되기 시작했다가, 결국에 완전히 해체되고 분해되는
+
+이러한 Disentangle 에 소프트웨어 아트적으로 또 활용할만한 기법: 플랫폼 (알고리즘적 관계) 를 만들어놓고, 여기에 이상한 변수를 넣어서 해체하기.
+
+오메가의 케이스: 처음에는 회전하는 동영상들이 일렬로 나열되어서 잘 회전하다가… 점차 구조가 분해되자 그 회전의 속도들이 더욱 전체 structure을 어지럽게 만들어버리는 그러한 케이스
+
+어떠한 상관관계/알고리즘적 연결관계가 99% 의 경우 들어맞지만… 1% 의 예외적 블랙스완이나 해체적인 기획 앞에서는… 그 알고리즘적 연결관계로 말미암아 해체와 붕괴, 파괴가 더욱 빨리 진행되는 그런 사례들
+
+이런 알고리즘적 상관관계/연결관계를 디자인 하는 일이 나의 작품에서는 핵심적이다..
+
+Reference: https://www.linkedin.com/pulse/%25EC%259C%25A0%25EC%2582%25AC-%25EB%2594%2594%25EC%2598%25A4%25EB%258B%2588%25EC%2586%258C%25EC%258A%25A4-jeanyoon-choi/?trackingId=BmRg6slEREum40UdnLJa2g%3D%3D 
 
 `,
   tags: [
-    "Behavioural Interface",
-    "Interaction Design",
-    "Mobile Interaction Design",
-    "Phenomenological Interaction",
-    "Accelerometer",
-    "Omega",
-    "KAIST Museum AI Artwork",
-    "TTS",
-    "LLM",
-    "Prop & Back-Prop",
-    "AI",
-    "Verfremdungseffekt",
-    "Distancing Effect",
+    "Audio-Visual Disentanglement",
+    "Uncanny",
+    "디오니소스",
+    "키치",
+    "마블",
+    "디즈니",
+    "천만영화",
+    "알고리즘",
+    "디오니소스적 욕구",
+    "알고리즘적/단차원적 해소",
+
+    "맥도날드의 햄버거",
+    "불량식품",
+    "설계된 경험",
+    "Masterpiece",
+    "대량생산",
+    "불편한 경험",
+    "공모",
+    "모방",
+    "역전",
+    "시뮬라시옹",
+    "허점",
+    "대번",
+    "uncanny",
+    "예외적",
+    "블랙스완",
+    "해체",
+    "분해",
+    "파괴",
+    "알고리즘적 연결관계",
+    "디자인",
   ],
 };
