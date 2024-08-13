@@ -1,36 +1,82 @@
 import { MetadataRoute } from "next";
+import prisma from "@/lib/prisma";
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  return [
+export default async function sitemap(): Promise<any> {
+  const URL = "https://portfolio-jyc.org";
+
+  const staticURLs = [
     {
-      url: "https://portfolio-jyc.org",
+      url: `${URL}/`,
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: "monthly",
       priority: 1,
     },
     {
-      url: "https://portfolio-jyc.org/about",
+      url: `${URL}/about`,
       lastModified: new Date(),
-      changeFrequency: "yearly",
+      changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://portfolio-jyc.org/works",
+      url: `${URL}/works`,
       lastModified: new Date(),
-      changeFrequency: "monthly",
+      changeFrequency: "daily",
       priority: 0.9,
     },
     {
-      url: "https://portfolio-jyc.org/texts",
+      url: `${URL}/texts`,
       lastModified: new Date(),
-      changeFrequency: "weekly",
+      changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: "https://portfolio-jyc.org/nonequality",
+      url: `${URL}/nonequality`,
       lastModified: new Date(),
       changeFrequency: "monthly",
-      priority: 0.7,
+      priority: 1.0,
     },
   ];
+
+  const texts = await prisma.text.findMany({
+    select: {
+      id: true,
+      title: true,
+      tags: true,
+      imgURL: true,
+      createdAt: true,
+    },
+  });
+
+  const textsURLs = texts.map((el) => ({
+    url: `${URL}/text/${el.id}`,
+    lastModified: new Date(),
+    changeFrequency: "daily",
+    priority: 0.9,
+  }));
+
+  const works = await prisma.project.findMany({
+    select: {
+      imageNumber: true,
+      imageURLBase: true,
+      rating: true,
+      title: true,
+      year: true,
+      type: true,
+      mdxOrSeperateLink: true,
+      id: true,
+    },
+  });
+
+  const worksURLs = works
+    .filter((el) => !el.mdxOrSeperateLink)
+    .map((el) => ({
+      url: `${URL}/works/${el.id}`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.8,
+    }));
+
+  const dynamicURLs = [...textsURLs, ...worksURLs];
+
+  return [...staticURLs, ...dynamicURLs];
 }

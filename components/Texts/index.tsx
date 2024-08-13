@@ -26,15 +26,9 @@ export default function Texts({ texts }: any) {
   );
 }
 
-// img {
-//   width: ${({ theme }) => (theme.windowWidth > 768 ? "16.66666666667vw" : "50vw")};
-//   height: ${({ theme }) => (theme.windowWidth > 768 ? "16.66666666667vw" : "50vw")};
-//   object-fit: cover;
-// }
-
 function SingleItem({ el, isEvenRow, imgWidth }: any) {
   const [imgLoaded, setImgLoaded] = useState(false);
-  console.log(imgWidth);
+
   return (
     <Link href={`/text/${el.id}`}>
       <S.SingleItem>

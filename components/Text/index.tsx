@@ -62,6 +62,7 @@ export default function Text({ textData }: any) {
           {/* <OtherProjectsSection similarProjects={similarProjects} type={TYPE_CONVERSION[projectData.type] || "Artwork"} /> */}
           <br />
           <br />
+          <p>Text written by Jeanyoon Choi</p>
           <p>Ⓒ Jeanyoon Choi, 2024</p>
           <br />
           <br />
