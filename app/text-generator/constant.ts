@@ -1,66 +1,71 @@
 export const TEXT_TO_UPLOAD = {
-  title: "Audio-Visual Disentanglement",
+  title: "Integration of real-world api/real-world data & Collaged Collective World",
   text: `
-설계된 경험: 유사-디오니소스/키치: 마블, 디즈니, 천만영화, 알고리즘, 디오니소스적 욕구의 알고리즘적/단차원적 해소: 마치 맥도날드의 햄버거와 같은 불량식품들
+Case of Nam June Paik’s early show in Wuppertal - He just opened the show from 7:30 pm - 9:30 pm bc that was the only time slot when the television show was live back then in Germany. However retrieving the real-time television show contents and post-processing it was an important conceptual dimension of his practice, thus he made this kind of decision. 
 
-불편한 경험: Uncanny, 분명히 하하 호호 웃고 있는데, 뭔가 어디가 상당히 이상한듯한?
-설계된 경험은 옛 Masterpiece/디오니소스를 모방하여 대량생산하였다.
-불편한 경험의 공모 또한 설계된 경험을 모방하는데서 시작됨: 역전의 역전, 모방의 모방
+Same for the case of cildo meireles’ Babel in Tate Modern → How amazing is it to get the real-time audio and multiply it to reflect the radio/audio/pop culture we’re living in?
 
-겉으로는 굉장히 시뮬라시옹 적인 기획, 그러나 이 시뮬라시옹의 허점이 대번에 들어나는데에서 uncanny함… 가장 대표적인 Example: Audio-Visual Disentanglement
+The web is the space where you can easily integrate any sort of real-time external sources → Why not try? Something that I hadn’t rapidly tried so far… Different from the integration of ChatGPT, in a way that ChatGPT just generates the text from the stored data (not real-time although API itself is real-time and structure allows real-time interaction), but something like retrieving real-time audio television data/integrating youtube/transportation data is a sort of different story. Something more integrable within the/with the real-world? What will be the possible categories?
 
-분명히 하하 호호 웃고 있는데, 소리는 그렇지 않은 비명소리? (잘 디자인된)
-비주얼은 밝지만, 오디오는 어두운 케이스.
+Attempts tried within Civilisation Movement 3 → Good, but getting just fake API. Need to be more than that. But good speculative/graphic design-oriented reflection on contemporary society. But something more than that? What kind of aesthetic/approach can Multi-Device Web Artwork only/represenatively serve? (Repetition/Randomness/Cyclicality)
 
-굉장히 목소리는 (TTS) 상냥하고 친절한데, 비주얼은 그렇지 않은 딱딱한 숫자의 향연들? 
-오디오는 밝지만, 비주얼은 어두운 케이스
+Remember the idea of making a collective sort of painting approach visually inspired from Jean-Michel Basquiat/Cy Twombly? A possible integration on this? Jean-Michel Basquiat: Collage-like representation of the contemporary world, collaged contemporary, each part is acting independently reflecting different parts of the contemporary world…. The-world-we’re-living-in?? An ecosystem, independently functioning and spanning all across, but also resonates & exists within a single canvas. Different parts in 2D digital canvas represent different parts of the modern world - retrieved & visualised & symbolised via extensive use of APIs.
 
-그리고 카이스트 개관전 같은 경우: 제너레이트된 텍스트 자체의 표면적 의미나 제너레이트된 보이스 (TTS)는 친절하고 상냥한데, 비주얼은 매트릭스적인 휘몰아치는 숫자의 향연들. 인공지능이 본질적으로 시뮬라시옹/숫자 기반임을 말해주는데 유리한 기획?
+GPT just generated a bunch of ideas for me:
 
-이러한 Audio-Visual Disentanglement는 잘 디자인되어야함… 잘 디자인 되지 않을 경우 기획한 효과 못이룰수도 있음. 그러나 잘 디자인 하면 굉장한 Uncanny 유추할 수 있고, 많은 영화에서 실제로 차용하는 기법. Interactive Art는 여기서 한걸음 더 나아가 Audio-Visual 이 완전히 Entangle 되어있는 상태에서 시작해서… 점차 Uncanny함을 유도하기 위해 Audio-Visual 이 Disentangle 되기 시작했다가, 결국에 완전히 해체되고 분해되는
+1. Live Broadcast and Streaming Media
+Television & Radio Feeds: Incorporate real-time television or radio broadcasts into installations or performances. For example, an installation could use live news feeds from multiple countries, juxtaposed to explore global perspectives.
+Social Media Feeds: Real-time integration of social media content like Twitter or Instagram, reflecting the pulse of current events or public sentiment in an immediate and unfiltered way.
+Streaming Services: Utilize live data from streaming platforms (e.g., Twitch, YouTube) to reflect current trends in gaming, entertainment, or live events. This could include interactive elements where the audience’s input directly influences the content being streamed.
+2. Environmental and Sensor Data
+Weather Data: Real-time integration of global weather data to create art that responds to or reflects the current atmospheric conditions across various locations. For instance, a visual display that changes color or intensity based on temperature, wind speed, or precipitation.
+Air Quality & Pollution Levels: Data on air quality or pollution can be used to drive changes in an installation, making the invisible visible and raising awareness of environmental issues.
+Seismic Activity: Real-time earthquake or seismic data could be used in sound installations or kinetic sculptures that react to tremors happening around the world.
+3. Transportation and Movement
+Traffic & Public Transit Data: Visualize or sonify real-time traffic patterns or public transportation activity in a city. This could create a dynamic representation of urban life and movement.
+Flight and Maritime Data: Track real-time flight paths or ship movements, possibly visualizing the global flow of goods and people, or highlighting the impact of human activity on the environment.
+4. Communication & Human Interaction
+Live Chat/Conversations: Integration of real-time chat from platforms like Discord, WhatsApp, or Slack into installations, exploring the nature of communication in the digital age.
+Live Translations: Real-time translation services could be used to create multi-lingual art pieces, highlighting the diversity of languages and cultures in real-time conversations.
+5. Financial and Economic Data
+Stock Market Feeds: Visual or auditory representations of real-time stock market data, reflecting the volatility and pace of global economics.
+Cryptocurrency Transactions: Tracking and visualizing real-time blockchain transactions, reflecting the emerging world of digital finance and its implications for privacy, security, and value exchange.
+6. Health and Biological Data
+Real-Time Health Monitoring: Integration of biometric data (e.g., heart rate, brain waves) into an art piece that responds to the physical state of the participants or audience.
+Global Health Data: Using live data from health organizations (e.g., real-time tracking of disease outbreaks) to create visualizations or installations that respond to the current global health situation.
+7. Geospatial and Location-Based Data
+Real-Time Mapping: Interactive installations using live GPS data, where participants’ locations influence the artwork. This could include global maps that highlight areas of high activity or current events.
+Geofencing & Augmented Reality: Use geofencing to trigger real-time AR experiences based on the location of participants, blending the digital and physical worlds in a highly interactive manner.
+Conceptual Dimensions and Potential Projects:
+Dynamic Narrative Installations: Create installations where real-time data drives a continuously evolving narrative. For example, a story that changes based on live weather patterns, financial data, or social media trends.
+Responsive Architecture: Design buildings or spaces that change in response to real-time environmental data, such as shifting lighting based on the time of day, weather, or air quality.
+Real-Time Music and Sound Art: Generate soundscapes that are influenced by live inputs such as seismic activity, traffic data, or social media sentiment. These could be used in concert settings, installations, or even as generative music albums that never sound the same twice.
+Interactive Public Art: Develop public art installations that change based on real-time data, such as digital murals that shift with the weather or light displays that respond to traffic flows.
 
-이러한 Disentangle 에 소프트웨어 아트적으로 또 활용할만한 기법: 플랫폼 (알고리즘적 관계) 를 만들어놓고, 여기에 이상한 변수를 넣어서 해체하기.
+But I need smth more than this… This is too typical, Rafael Lozano already did stuff like this.
+Or maybe a mixture? Is this meaningful? Partly global health data, partly augmented reality, partly Stock Market, partly live conversation… Collage? In a single canvas/single screen? Each part has a different QR and the audience interacts with a different mobile landing sites, and this will influence that exact part. I.e. if a user lands on the stock market app and does some trading that will interactively change the screen - but not rapidly since it’s a symbolised act? What is the meaning behind here? Too much production cost maybe compared to the conceptual value?
 
-오메가의 케이스: 처음에는 회전하는 동영상들이 일렬로 나열되어서 잘 회전하다가… 점차 구조가 분해되자 그 회전의 속도들이 더욱 전체 structure을 어지럽게 만들어버리는 그러한 케이스
+What should be collaged? What is the justification for this collage? What is the political message behind this? What is the value more than just merely displaying the collage - A narrative - Sum is bigger than the sum of parts? That’s the world we’re living in? An attempt to create a chaotic/uncomprehendible Times Square? In a single canvas? Broadway Boogie-Woogie? Related to the concept of naked interface/creating an interface which is not for the users but which 여과없이 세상의 원리를 들어내는…. 가감없이…
 
-어떠한 상관관계/알고리즘적 연결관계가 99% 의 경우 들어맞지만… 1% 의 예외적 블랙스완이나 해체적인 기획 앞에서는… 그 알고리즘적 연결관계로 말미암아 해체와 붕괴, 파괴가 더욱 빨리 진행되는 그런 사례들
-
-이런 알고리즘적 상관관계/연결관계를 디자인 하는 일이 나의 작품에서는 핵심적이다..
-
-Reference: https://www.linkedin.com/pulse/%25EC%259C%25A0%25EC%2582%25AC-%25EB%2594%2594%25EC%2598%25A4%25EB%258B%2588%25EC%2586%258C%25EC%258A%25A4-jeanyoon-choi/?trackingId=BmRg6slEREum40UdnLJa2g%3D%3D 
 
 `,
   tags: [
-    "Audio-Visual Disentanglement",
-    "Uncanny",
-    "디오니소스",
-    "키치",
-    "마블",
-    "디즈니",
-    "천만영화",
-    "알고리즘",
-    "디오니소스적 욕구",
-    "알고리즘적/단차원적 해소",
-
-    "맥도날드의 햄버거",
-    "불량식품",
-    "설계된 경험",
-    "Masterpiece",
-    "대량생산",
-    "불편한 경험",
-    "공모",
-    "모방",
-    "역전",
-    "시뮬라시옹",
-    "허점",
-    "대번",
-    "uncanny",
-    "예외적",
-    "블랙스완",
-    "해체",
-    "분해",
-    "파괴",
-    "알고리즘적 연결관계",
-    "디자인",
+    "Collage",
+    "Real-time",
+    "API",
+    "Nam June Paik",
+    "Cildo Meireles",
+    "Jean-Michel Basquiat",
+    "Cy Twombly",
+    "Real-world data",
+    "Global health data",
+    "Augmented reality",
+    "Stock Market",
+    "Live conversation",
+    "Narrative",
+    "Responsive architecture",
+    "Dynamic narrative installations",
+    "Interactive public art",
+    "MDWA",
   ],
 };
