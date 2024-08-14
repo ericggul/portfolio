@@ -11,14 +11,6 @@ export const metadata: Metadata = {
     locale: "en_UK",
     url: "portfolio-jyc.org/works",
     siteName: "Jeanyoon Choi Portfolio",
-    // images: [
-    //   {
-    //     url: "https://jeanyoonchoi.com/images/og-image.png",
-    //     width: 1200,
-    //     height: 630,
-    //     alt: "Jeanyoon Choi Portfolio",
-    //   },
-    // ],
   },
   viewport: {
     width: "device-width",
