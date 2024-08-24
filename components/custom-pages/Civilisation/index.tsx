@@ -57,11 +57,11 @@ export default function About() {
           <Paragraph key={i} text={s} highlightedWord={highlightedWord} setHighlightedWord={setHighlightedWord} />
         ))}
 
-        <S.LargeVideo>
+        {/* <S.LargeVideo>
           <iframe src={`https://www.youtube.com/embed/6cfdTbTwlUM?autoplay=1&mute=0&loop=1`} allow="autoplay" title="Youtube" frameBorder="0" />
 
           <h5>Video of Whole Interaction</h5>
-        </S.LargeVideo>
+        </S.LargeVideo> */}
 
         <h1>Artwork in a Glance</h1>
         {DESCRIPTION.map((s, i) => (
