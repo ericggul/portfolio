@@ -1,33 +1,26 @@
 export const TEXT_TO_UPLOAD = {
-  title: "Platform Art",
+  title: "Data Emotionalisation",
   text: `
-Miyajima Tatsuo Naoshima House Project → Tatsuo’s trademark aesthetic, numbers from 1-9 and void moving all at different speeds with the same rule applied, positioned spanning across the water outlet. This creates a unique poetic aesthetic that is distinguishable from a single number device. Single number device vs. Multiple devices synchronised vs. Multiple devices desynchronised → The platform art is about the very third category.
+Data: 사회의 부산물, 하이퍼오브젝트의 부산물, 우리가 살고 있는 곳의 Complexitiy를 대변해서 이 Complexitiy와 복합적 역학 상관관계를 쥐어짜서 나온 결과물이 데이터. 이 데이터는 어느 정도 자연적이고, 어느 정도 인공적이다. 때때로는 리니어하게 증가하지만, 블랙스완에 의해예상치 못하게 가변된다. 어느 정도는 정돈되고, 어느 정도는 무작위적이다.
 
-The Primitive of Platform Art: Identical Rule/Algorithm-based Unit, repeated and aggregated independently to create a chaotic/wholistic aesthetic. 
+그렇기에 데이터야 말로 가장 컨템포러리한 대상이고, 모더니티의 복잡하고 다층적인 측면을 보여주는, 현대 사회의 산 증인이다. 
 
-Identical Rule/Algorithm-based Unit: A module. Single Module. Represented as M(t)
-Where t is a variable. This module is an algorithm-based unit, sort of functional, dependent on the parameter t (which usually represents speed – time).
+그동안의 Data Visualisation: 대체로 Explicitly 이러한 데이터를 오디오-비주얼화 하고 있다고 대놓고 쓰고 있었지만, 이는 청중에게 Information을 전달 할 수는 있지만 Emotion을 전달하거나 이 데이터가 만들어놓은 결과물에 순전하게 집중하는데ㅇ는 방해를 할 수 있따… 사람들이 Semantics과 마주하면 그것을 있는 그 자체로 관조/즐기기 보다는 해석하려 들려는 경향성…
 
-Module combined and multiplied: All combined in a different/distinguishable state. What is interesting is that the whole operating principle/basic aesthetic is the same algorithmically/modularly (The capital letter M), but a Least-Marginal-Difference (Baudrillard) - the alternation in the given parametric input - and variation of these inputs across different modules, induce a unique aesthetic difference → Sort of acting like a natural ecosystem of aggregated modules (World-displaying)
+나의 목표: 사람들이 이 데이터의 다층적인 구조를 시청각적으로/직관적으로 감각할 수 있도록. 이해보다 감각이 선행하도록…. Climate Data for example —> Accelerated Tension, Accelerated Rhyhtm을 통해 뭔가 심상치 않은 멜로디가 전개되고 있음을 직관적으로 알 수 있다. 어떠한 사전 컨텍스트 없이…. 예술을 즐기고 난 이후 그 컨텍스트를 알 수 있도록. 이것이 동시대를 감각하는 가장 예술적인 방식 아니겠는가?
 
-Referencing the aesthetic of Small Multiples on Data visualisation – But small multiples are usually static, but Platform Art shows the dynamics. Small multiples have limitations in showing only the cross-section of the world/information we’re living in, but platform art has an ability to communicate the wholistic dynamics which surround/are embedded in the world/information we’re living in.
+Implicit Data Visualisation → Data-Emotionalisation. Experiencing Through Data, Communicating with the Audio-Visual Result of the Data, not the Context of the Data itself.
 
-Source of inspiration: Literally train platform, London Victoria Station, Train Departure Board → What creates a livingly feeling and atmosphere here is the tension between similarity - and dynamic difference across channels. Different information, same layout, presented distinguishably. 
+Data Emotionalisation!
 
-Another source of inspiration: OPIC Test center - Ava. Look at 30 computers placed in a grid, all displaying the same avatar, ‘Ava’ speaking the test problem, but within a slightly different speed/context/text. How cringy is this? How distancing is this? How utopian/dystopian/efficient/inefficient is this?
+Data Visualisation 뿐만 아니라 Data Temporalisation/Data Rhythimification 또한 필요한 이유…
 
-Representative example: Miyajima Tatsuo – The modular system is singular: A system of moving the number from 1 to 9 and void, and back again. But the speed an the starting point are all different, and this serves as the key to the unique aesthetic in contaminates.
+Application 1: Rise & Fall. Rise & Fall Interactive Video-based artwork, people scan the QR and Video WebRTC real-time propagated to TouchDesigner, The face’s position & area span & emotion changes accordingly to the data → If the face becomes economically wealthier it attains more space → Showing the Rise & Fall of one’s life. This graph of rise & fall can use real-company’s stock price data & revenue data… 
 
-Similar but contrary example: Rafael Lozano-Hemmer
-In the case of Rafael, he uses multiple output channels which are based in same algorithmic foundation, and thus can be considered as modules, but in his case these output channels are somehow synchronised/dependent on a single grand rule - For instance, user’s breathing will control the light intensity over different channels continuously and thoroughly, rather than each channel reacting dependently. This is beautiful, but just a multi-channel interaction. In order to be considered as platform art, each module needs to have some degree of autonomy and thus react asynchronously, although its foundation algorithm/layout should be identical to each other.
-
-My artworks: Noneqaulity, Das Gerede, (Sort of Factory 4.0)
-
-Das Gerede → Literal representation of the inspiration I got from London Victoria Station, re-constructed with ChatGPT-based conversations criticising the ‘das gerede’ within our daily meaningless conversations
 
 
 
 
 `,
-  tags: ["Platform Art", "Miyajima Tatsuo", "Rafael Lozano-Hemmer", "Data Visualisation", "Small Multiples", "Das Gerede", "Factory 4.0"],
+  tags: ["Data", "Data Visualisation", "Data Emotionalisation", "Data Temporalisation", "Data Rhythimification", "Audio-Visual", "Interactive", "TouchDesigner", "WebRTC", "Rise & Fall"],
 };
