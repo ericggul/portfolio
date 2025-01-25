@@ -5,7 +5,7 @@ export default async function getChatGPT(texts: any) {
     const completion = await axios.post(
       "https://api.openai.com/v1/chat/completions",
       {
-        model: "gpt-4",
+        model: "gpt-4o",
         messages: [
           { role: "system", content: texts.system },
           { role: "user", content: texts.user },
