@@ -1,98 +1,122 @@
 export const TEXT_TO_UPLOAD = {
-  title: "Resting is part of the Data - Resting is part of the Art",
-  text: `Hyper-Personalisation: 궁극적으로 개인의 벡터화 (AI Agents, 알고리즘 등으로 인식될때)
-개인을 Vector space 상 한개의 점으로 대응시킴 (유사 MBTI, 유사 의사 병명 분류, 유사 변호사 사건 분류)
+  title: "Two-Rooms Problem: Creating inter-spatial Multi-Device Web Artwork ",
+  text: `DIRECTION 1: Two Rooms Problem 
 
-이것은 수많은 Data Aggregation 으로 인해 가능하게함 (의사의 경우 수많은 환자)
-이러한 Data Aggregation was possible after internet → 사람들이 Internet에 More deeply embedded 되면서 가능하게됨
+두개의 분리된 방, Multi-Device Interconnectivity 이용해 색다른 Experience (방 두개 간 연결된 Experience) 만들 수 있지 않을까?
 
-더 많은 데이터가 필요함! (We are running out of training data - GPT)
-IoT, 메타의 Thread 출시 등 개인의 일상속에 침투하여 더 많은 데이터 수급을 가능하게 하는것이 빅테크의 전략
+Further Research Expandability:
+Expandable for N-Rooms Problem later on within my research
+More than a single-room experience, more than an exhibition setting
 
-IoT → Sleeping, Sleep Tech, Rest Tech
+한 방/공간 속에만 있는 잘 짜여진/디자인된 인터랙션이 아닌, Space-independent/exhibiton-independent한, 하나의 거대 Incomprehendible System
+Two Rooms Problem은 가장 기본적인 Incomprehendible System
 
-Sleep은 가장 Private, Resting 또한 가장 Private (Take a break! Off the grid!)
-그러나 현재의 트렌드: 
-여가/휴식 또한 경제의 일부, 자본 순환 과정의 일부
-여가/휴식 또한 데이터의 일부
-여가/휴식 중에도 멈추지 마라! 
-(혹은 변형으로 휴식 공간 또한/휴식 자체 또한 예술의 일부로 편입 - 캔버스를 넘어 점차 모든곳으로 침범해오는 현대 예술 - 이 작품 또한 마찬가지)
+DIRECTION 2: Direct Manipulation vs. In-direct Manipulation  
+
+지금까지의 Interaction Design/UX Design은 User의 Overload를 줄이는 방향으로 이루어짐.
+특히 인터랙션상 Direct Manipulation (Input in, Immediate Corresponding Output out) 은 직관적인 인터랙션을 통해 유저의 Overload 줄임
+그러나 이는 인터랙티브 대상에 대한 유저의 비판적 거리유지를 불가하게 함
+
+의도적인 Indirect Manipulation/Non-Intuitive Interaction Design 이 깔끔하게 디자인 되면 유저와 인터랙션 사이의 비판적 거리유지가 가능해지지 않을까? (Distancing Effect)
+그러나 잘못/Low-Level에서 디자인하면 거리두기는 커녕 User Disinterest/Misunderstanding 만들 수도…
+
+DIRECTION 3: Semantical vs. Non-Semantical
+
+의미의 과다 사회
+수많은 의미들이 난무함
+그러나 이러한 의미 작용 파악/의미 작용 생산은 (Semantical) 이제 AI가 훨씬 보다 잘함
+인간의 길은 의미의/의미작용의 족쇄에서 벗어나 Non-Semantical한 시스템적 사고를 향해야 
+
+눈 앞에 보이는 의미 저편에, 특정 시스템 속 Embedded된/Unknown-Unknown Parameters가 사실 우리에게 더 큰 영향을 주지 않는가?
+Semantic을 넘어 Non-Semantics, 더 나아가 Semantic과 Non-Semantic 사이의 끊임없는 순환구조를 통한 둘 사이의 Boundary 붕괴
+예컨대 Semantic이 Non-Semantic해지고, Non-Semantic이 지극히도 Semantical해진다…
+지금까지 우리가 Semantic 하게 여겨져왔던 Boundary의 붕괴
+
+Semantic Intuitive Interaction의 예시: 내가 사과라는 키워드를 치면 사과 비디오가 나온다.
+Non-Semantic적 Involvement의 예시: 사과라는 비디오 그 자체가 (비디오의 맥락, 개별 비디오의 Semantic)이 중요한 것이 아닌 중첩된 비디오의 레이아웃, 그 사과 비디오를 둘러싸고 있는 배치, 사과 비디오와 주변 사이의 관계 (Non-Semantical/Systemetic Parameters)가 더 중요한 영향을 준다.
+
+이러한 Non-Semantic한 사고 구조/눈 앞에 보이는 Semantic을 넘어 서는 것이 인공지능의 Capability (Semantic 의미작용의 Experts)를 넘어서 인간이 Connecting the Dots 할 수 있는 방향성…
+
+부분이 아닌 전체를, 객체가 아닌 시스템을
+
+Note: Semantical vs. Non-semantical 구분은 엄밀하지 않은 구분
 
 
-REST 휴식은 더 이상 온전한 순수한 휴식이 아니라,
-데이터의 재료이자, AI Agent가 서비스 해야하는 분야 (Sleep Tech/Alexa Speakers/영화 Her)
-현대인은 Sleep/Rest/여가 또한 어떤 것이 '최적'인지, 어떻게 쉬는게 '최적'인지 알고 싶어한다
-혹은 알고 싶어하게끔 넛지된다 (알고싶어하는 기업의 Needs를 억지로 발굴해낸다)
-이 부분에서도 Hyper-Customisation/Hyper-Personalisation)과 일맥상통…
+
+ELEMENTS
+
+2 Rooms, 2 Types of Screens, 2 Types of Mobiles
+
+Semantical Screen: Generated된 Videos Overlay 
+Non-Semantical Screen: Videos 자리 - Graphs가 대신, Real-Time Parameter Change (Nothing Semantical, Fully Abstract & Graph/Number-Driven)
+Two Screens are Synced in real-time
+
+Semantical Mobile: 비디오 컨텐츠/맥락 Generation (Either Text Typing or VUI - Voice User Interface)
+Non-Semantical Mobile: 수많은 Abstract Sliders/Togglers/Checkbox UI 비치, 각 UI의 조절은 전체 System의 Parameter을 조절
 
 
-INDIVIDUAL SECTION – RESTING SECTION
-
-빈백 + 모니터 + 카메라 + PC + 스피커 조합
-사람들 걍 처음 쉬러옴, 모니터 스피커 등은 가려져 있음 (최대한)
-Exhibition Setting → Get exhausted Fast, people need rest (break from an art) → We make this an integral part of art
-
-Still Voice Interaction → But make it as natural /not disturbing as possible
-
-User 빈백 앉기 전에는 어떠한 Digital Elements 도 없다 (IDLE BLACK NO NOISE)
+Two cases based on screens/mobiles composition per room
 
 
-User 빈백 앉고 한 3-4초 있다가 (Camera Dtection Triggered)
+Case 1. 
+
+Room 1: Non-Semantical Screen + Non-Semantical Mobile
+Room 2: Semantical Screen + Semantical Mobile
+
+Pros: More Comprehensive 
+Room 2 같은 경우, Mobile 상 Context Input 할때마다 Screen상 Video 바로 생기면 By Nature more comprehensive
+Cons: Less Conceptual 
+말하고자 하는 Incomprehendible System과는 거리가 있는, Comprehendible Structure
 
 
-	Initial Welcome Message Trigger
+Case 2. (Möbius Structure)
 
-User → Confused, Murmur, Not actively speaking, 쭈뼛
+Room 1: Non-Semantical Screen + Semantical Mobile
+Room 2: Semantical Screen + Non-Semantical Mobile
 
-	SYSTEM TAKES CONTROL 상관 없이 서비스를 Lead 해감
-	Different from conventional conversation LLM
-Traditional: User가 명확한 Objective/Topic 없으면 'What can I help you?' 'I'm here to help you'
-Our Version: More Active AI Agent, Almost like 답정너
-쭈뼛 하더라도 다음 대화 전개해나감
-명확한 Conversational Context
 
-User Here two types
-Engaged Users
-Disengaged Users
+Pros: More Conceptual
+Möbius Structure: 
+Semantical Mobile (Room 1) → Semantical Screen (Room 2) → Non-Semantical Mobile (Room 2) → Non-Semantical Screen (Room 1) → Semantical Mobile (Room 1)
+Semantical Mobile (Room 1) → Semantical Screen (Room 2):
+모바일상 맥락이 스크린상 동영상 제너레이트
+Semantical Screen (Room 2) → Non-Semantical Mobile (Room 2)
+스크린상 시스템 파라미터 아웃풋이 사용자 모바일 인터랙션에 영향을 줌
+Non-Semantical Mobile (Room 2) → Non-Semantical Screen (Room 1)
+모바일상 파라미터 조절이 스크린상 시스템 파라미터 조절
+Non-Semantical Screen (Room 1) → Semantical Mobile (Room 1)
+스크린상 시스템 파라미터 아웃풋이 사용자 모바일 인터랙션에 영향을 줌
 
-Type 1. Engaged Users
-	
-	Contextual Interaction → Data sent to the Controller
+Cons: Less Comprehensive
+일반 대중 Audience가 아예 이해를 못할수도..
+그러나 이거는 세부적인 Design Decision/Contents Creation으로 이겨낼 수 있지 않을까?
 
-Type 2. Disengaged Users
 
-	그럼 그냥 ok 하고 Sleeping/Resting 영상 틀어줌 (이것 또한 Data gen의 일부)
-	한 2-3분 있다가 괜히 잘 쉬고 있는지 물어봐줌
-		Is Everything Alright? (Reminiscent to Services in Anglo-American 식당)
-	이 와중에도 Rest Users Video Recording (Andy Warhol - Sleep)
-	여러 Params (Eyes, Mouth, Emotion) 등 Analyse
-	쉬는것 또한 시스템/Data Aggregation의 일부! 
-	Disengaged/쭈뼛 또한 시스템의 일부!
 
 
 `,
 
   tags: [
-    "AI-Art",
-    "Surveillance Art",
-    "Data Collection",
-    "Privacy Art",
-    "Rest Technology",
-    "Sleep Art",
-    "Interactive Installation",
-    "Digital Experience",
-    "Hyper-Personalization",
-    "Human-AI Interaction",
-    "Voice Interface",
-    "Behavioral Art",
-    "Surveillance Capitalism",
-    "Contemporary Art",
-    "Digital Installation",
-    "Performance Art",
-    "Biometric Art",
-    "Leisure Studies",
-    "Critical Design",
-    "Algorithmic Society",
     "Multi-Device Web Artwork",
+    "Multi-Device Art",
+    "Spatial Installation",
+    "Interactive Art",
+    "Two-Room Experience",
+    "Web-Based Art",
+    "Networked Art",
+    "Interconnected Spaces",
+    "Digital Installation",
+    "Semantic Art",
+    "System Art",
+    "Non-Semantic Interaction",
+    "Experimental UI",
+    "Critical Design",
+    "Contemporary Art",
+    "Möbius Structure",
+    "Real-time Interaction",
+    "Parametric Art",
+    "Abstract Visualization",
+    "Video Art",
+    "Distributed Experience",
   ],
 };
