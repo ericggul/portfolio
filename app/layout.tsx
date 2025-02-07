@@ -6,7 +6,7 @@ import StyledComponentsRegistry from "@/lib/registry";
 export const metadata: Metadata = {
   title: "Jeanyoon Choi Portfolio",
   description:
-    "Web-based new media artist Jean yoon Choi. Featuring latest works by Jean-Yoon Choi, a Computational Artist, Creative Developer, and Interaction Designer. Jeanyoon Choi is currently a PhD Candidate at KAIST.",
+    "Web-based new media artist Jeanyoon Choi. Featuring latest works by Jean-Yoon Choi, a Computational Artist, Creative Developer, and Interaction Designer. Jeanyoon Choi is currently a PhD Candidate at KAIST.",
   openGraph: {
     type: "website",
     locale: "en_UK",
@@ -42,6 +42,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   
     gtag('config', 'G-EQ8SQ1G84X');`}
       </Script>
+      <head>
+        <meta name="naver-site-verification" content="0cc6a64e8cffc3303071773ec9aa5fb26dd09ba8" />
+      </head>
       <html lang="en">
         <body>
           <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
