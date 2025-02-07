@@ -1,146 +1,460 @@
 export const TEXT_TO_UPLOAD = {
-  title: "JUNK SITE: The Digital Echo Chamber of AI-Generated Web Spaces",
+  title: "Dadaism for the Algorithm Age",
   text: `
-NTERACTION & DESIGN
-
-MDWA (Multi-Device Web Artwork) 형태
-OUTPUT: Multi-Channels
-각 채널 하나의 생성된 웹사이트 (Junk Site)
-Feature 1. Site Generation: Mobile Input 속 VUI Context 바뀔때마 새 사이트 생성
-Feature 2. Site Update: Mobile에서 사용자 Blink 할때매다 사이트 디자인 업데이트
-Feature 3. Site Navigation: 주기적으로 (1초) 사이트 상 내비게이션
-
-INPUT: Mobile 
-Feature 1. VUI (Voice User Interface): OpenAI Real-Time Agents LINK
-Feature 2. Eye Blink Interaction: Navigation/업데이트를 상징적으로 보여주는 인터랙션
-
-CONCEPT
-
-LLM/Coding Assistant Tool 등장으로 웹사이트 대량생산 가능 (Junk Sites)
-단순한 UI 대량생산이 아닌 사이트로서 기능을 할 수 있는 풀스택 웹사이트/웹 서비스의 대량생산
-Landing Page, Navigation, Nested Pages, SEO (Search Engine Optimisation)
-(유사하게) 수많은 SNS 컨텐츠/블로그 컨텐츠의 대량생산 가능 
-이런 수많은 웹사이트들은 다시 LLM의 훈련 데이터로 사용됨
-LLM의 Massive Dataset은 웹상 수많은 웹사이트의 데이터로 모아짐
-Currently LLM running out of data
-이에 대한 해결책으로 빅테크 데이터 생산 전략 확보중
-Meta가 Thread 출시한 이유 → 자연어 데이터 확보를 위해
-Junk Sites의 생산은 데이터의 양적 측면에서 반가운 일
-그러나 Junk Sites는 LLM 데이터를 바탕으로 생산됨
-결국 LLM → Junk Sites → LLM 사이의 Closed Loop 만들어짐
-정크 사이트는 LLM/Generated AI 시대 인류가 맞이하게될 컨텐츠의 범람, 순환적 범람과정을 상징적으로 보여주는 개념
-Closed Loop 속 인류의 창의성은 어디로 가는가? 그저 무한히 Trash in, Trash Out, 새로운 컨텐츠 없이 순환만을 지속할 것인가?
-정크 사이트의 논의는 정크 텍스트 (블로그 포스트/학술적 논문), 정크 이미지, 정크 비디오의 논의로 확장될 수 있음
-MDWA 형태로 가장 직관적으로 보여줄수 있는 개념이 정크 사이트
-
-렘 콜하스의 '정크 스페이스' 개념에 빗댐
-정크 스페이스:
-상업 기술과 소비주의에 의해 무분별하게 팽창하여 기능과 의미가 상실된, 혼란스럽고 비정형적인 도시 공간의 범람.
-대량생산, 복제되고 전세계적으로 동질화된 도시 공간
-예시: 쇼핑몰, 공항, 상업 가게로 가득찬 도심 거리 등
-기술적 특징: 정크 스페이스는 에어컨, 에스칼레이터 등 Mall 건축을 가능하게 하는 기술의 등장으로 가능
-정크 사이트: 
-LLM의 발전과 소비주의에 의해 무분별하게 팽창하여 기능과 의미가 상실된, 혼란스럽고 자기복제적인 웹 공간의 범람. 
-대량생산, 복제되고 데이터의 순환 구조에 의해 동질화된 웹상 공간
-예시: 수많은 상업적 웹사이트, 랜딩 페이지, 온라인 쇼핑몰, 스타트업 페이지 등
-기술적 특징: 정크 사이트는 대량의 웹사이트를 빠르게 만들어낼 수 있는 LLM의 등장으로 가능
-
-Key References: 
-Rem Koolhaas, Junk Space LINK
-Nassim Nicholas Taleb, LLM & Self-Driven Data Retrieval-Generation Process LINK
-
-(줄글)
-
-정크 사이트는 LLM과 생성형 AI의 발전으로 인해, 사용자의 실시간 모바일 입력과 VUI 인터랙션에 따라 자동으로 대량 복제 및 생성되는 웹 공간을 의미한다. 이러한 정크 사이트는 풀스택 웹사이트로서 랜딩 페이지, 내비게이션, 중첩 페이지, SEO 등의 기능을 갖추며, 끊임없이 변화하는 데이터 순환 구조 속에서 LLM의 훈련 데이터로 재활용되어 결국 'Trash in, Trash out'의 폐쇄 루프를 형성한다. 이와 유사하게, 렘 콜하스가 정의한 정크 스페이스는 상업 기술과 소비주의에 의해 무분별하게 팽창하여 기능과 의미가 상실된, 에어컨과 에스컬레이터 같은 기술 발전에 힘입어 전 세계적으로 동질화되고 복제된 쇼핑몰, 공항, 도심의 상업 공간을 상징한다. 즉, 정크 사이트는 디지털 영역에서 LLM과 소비주의에 의해 대량생산되고 자기복제적인 웹 공간의 범람을, 정크 스페이스는 물리적 도시 공간에서 상업 기술에 의해 형성된 혼란스럽고 비정형적인 공간의 범람을 각각 드러내며, 두 개념은 현대 사회의 기술 발전과 소비 문화가 만들어낸 복제 및 순환 현상을 은유적으로 보여준다.
-
-ESEARCH: 어떻게 연구화, 연구제안서화?
-
-Achievement 1. JUNK SITE
-LLM 기반 Auto-generated Website 자체가 Strong HCI Research Achievement
-Website Structure Auto-generation
-Website Context Auto-Generation
-UI/Style Auto-Generation
-Junk Site라는 말은 Explicitly Use X
-
-인간 Challenge Solving
-LLM → Junk SIte → LLM
-어떻게 구체적으로 어떤 Challenge를 Tackle 할 수 있는지?
-인류에 대한 Challenge 
-For the better of humanity
-학교의 캐치프레이즈/가치와 얼라인되게
-
-Achievement 2. Interaction Design 
-VUI Interaction Design
-VUI속 Context 추출, 이거에 맞춰 Generative Contents 만드는게 Research Achievement
-Blink Interaction Design
-New use of modality in multi-device interaction design
 
 
-Challenge
+  export const TRANSCRIPT = [
+ {
+   idx: 1,
+   title: "먼저 제 소개를 하겠습니다.",
+   ko: "저는 수학 영재로서 이공계 엘리트 코스를 밟았습니다. 중학교에서는 영재교육원을 다녔고, 고등학교에서는 과학영재학교 경기과학고등학교를 졸업했으며, 대학교에서는 서울대학교 산업공학과에 진학하여 대통령과학장학금을 수학 부문에서 받았습니다.",
+   en: "Allow me to introduce myself. As a prodigy in mathematics, I pursued an elite trajectory in the STEM fields. In middle school, I attended a centre for gifted education; in high school, I graduated from Gyeonggi Science High School for the Gifted; and at university, I matriculated into the Department of Industrial Engineering at Seoul National University, where I was awarded the Presidential Science Scholarship in mathematics.",
+ },
+ {
+   idx: 2,
+   title: "그렇다면 어떻게 예술 기술 연구자가 되었을까요?",
+   ko: "이처럼 저는 전형적인 이공계 엘리트였습니다. 그러나 지금은 예술 기술 연구자로 이 자리에 섰습니다. 이는 AI가 주도하는 시대에 공학 분야에서 제가 어떤 독창적인 기여를 할 수 있을지 고민했기 때문입니다.",
+   en: "So, how did I become a researcher in art and technology? Although I was a quintessential STEM elite, I now stand before you as a researcher in art and technology. This transformation arose from my contemplation of what unique contributions I could make in the field of engineering in this AI-dominated era.",
+ },
+ {
+   idx: 3,
+   title: "모든 것이 '알파고화'되고 있습니다.",
+   ko: "올해 노벨 화학상이 AI 연구에 수여되었고, 제가 고등학교 때 어려워했던 기하 문제도 이제 AI가 더 효율적으로 해결합니다. 이렇게 많은 이공계 분야가 '알파고화'되고 있습니다. 이러한 변화 속에서 인간은 무엇을 할 수 있을까요? 모든 분야에서 AI가 인간을 능가할까요?",
+   en: "Everything is becoming 'AlphaGo-ised.' This year's Nobel Prize in Chemistry was awarded for AI research, and even the challenging geometry problems I struggled with in high school are now being solved more efficiently by AI. Many STEM fields are undergoing this 'AlphaGo-isation.' Amidst these transformations, what can humans do? Will AI surpass us in every domain?",
+ },
+ {
+   idx: 4,
+   title: "예술이 답일 수 있습니다.",
+   ko: "그러나 AI가 모든 분야에서 인간을 능가하지는 못할 것입니다. 인간만이 할 수 있는 영역이 있으며, 그 답은 예술에서 찾을 수 있었습니다. 수치화되고 합리적으로 설명 가능한 영역 밖에—바로 예술에—인간의 강점이 있습니다.",
+   en: "However, AI will not eclipse humanity in every field. There exist realms that only humans can navigate, and I discovered that the answer lies in art. Beyond quantifiable and rationally explicable domains—in art—lies the strength of humanity.",
+ },
+ {
+   idx: 5,
+   title: "기계는 합리적입니다. 인간의 비합리성이 강점입니다.",
+   ko: "기계는 합리적이고 계산적이며, AI는 확률적 계산으로 최적의 결과를 냅니다. 반면 인간은 비합리적이고 예측 불가능하며, 감정에 따라 행동합니다. 이러한 인간의 감정은 오랫동안 약점으로 여겨졌습니다.",
+   en: "Machines are rational and calculative; AI produces optimal results through probabilistic computations. In contrast, humans are irrational, unpredictable, and act according to emotions. For a long time, these human emotions have been considered weaknesses.",
+ },
+ {
+   idx: 6,
+   title: "우리는 새로운 가치평가가 필요합니다.",
+   ko: "산업혁명 이후 인간의 비완전성은 단점으로 여겨졌지만, AI 시대에는 오히려 기계와 인간을 구분하는 특징입니다. 이러한 비합리성과 비논리성이 인간 존재의 이유이며, 이를 발전시키는 것이 인류의 미래라고 생각합니다.",
+   en: "We need a new valuation of our attributes. Since the Industrial Revolution, human imperfections have been regarded as shortcomings. Yet, in the AI era, they are precisely the characteristics that distinguish us from machines. I believe that this irrationality and illogicality are the very essence of human existence, and that cultivating them is the future of humanity.",
+ },
+ {
+   idx: 7,
+   title: "따라서 예술이 중요합니다.",
+   ko: "인류의 비합리성, 비논리성, 감각은 이제 단점이 아니라 강점입니다. 이러한 특성을 부각시키는 것이 바로 예술입니다. 인공지능 시대일수록 우리는 더 예술적이고 창의적이며 다양성을 추구해야 합니다.",
+   en: "Therefore, art becomes paramount. Humanity's irrationality, illogicality, and sensibility are no longer weaknesses but strengths. It is precisely art that accentuates these qualities. In the age of artificial intelligence, we must become more artistic, creative, and pursue diversity.",
+ },
+ {
+   idx: 8,
+   title: "특히, 과학 기반 예술이 중요한 의의를 갖습니다.",
+   ko: "합리주의의 산물인 과학, 기술, 컴퓨터공학을 비합리주의의 상징인 예술에 접목시키는 것—즉, 합리성을 수단으로 활용하되 목적은 비합리적이고 창의적으로 지향하는 일은 큰 의미를 갖습니다. 이것이야말로 인간만이 진정 할 수 있는 형태의 융합이자, 연구입니다. 이것이 제가 기술 기반의, 컴퓨터 코딩 기반의 예술을 하는 이유입니다.",
+   en: "In particular, science-based art holds significant meaning. Integrating science, technology, and computer engineering—the products of rationalism—with art, the emblem of irrationalism—utilising rationality as a means but aiming for irrational and creative ends—carries profound significance. This is a form of fusion and inquiry that only humans can truly achieve. This is why I engage in technology-based, computer coding-based art.",
+ },
+ {
+   idx: 9,
+   title: "그리고 다다이즘 또한 중요합니다.",
+   ko: "특히 기존의 합리주의적이고 과학주의적인 사고방식을 벗어나야 한다는 점에서 다다이즘과 기존 논리 구조의 해체는 더욱 중요합니다. 제가 이번 강연을 '알고리즘 시대를 위한 다다이즘'이라 부른 이유도 여기에 있습니다.",
+   en: "Moreover, Dadaism is of significant importance. In particular, the need to depart from traditional rationalistic and scientistic modes of thought makes Dadaism and the deconstruction of existing logical structures even more crucial. This is why I have titled this lecture 'Dadaism for the Algorithm Age.'",
+ },
+ {
+   idx: 10,
+   title: "그러나, 현대 사회 속 인간은 스스로를 기계화하고 있습니다.",
+   ko: "우리는 자신을 수치화하고 표준화하며, 인간이 더 인간적이 되기보다 기계처럼 되고 있습니다. 스스로를 객관화하고 알고리즘화하면서, 기계와 존재론적으로 다를 바 없는 대상으로 전락시키고 있습니다.",
+   en: "However, in contemporary society, humans are mechanising themselves. We quantify and standardise ourselves, becoming more like machines rather than embracing our humanity. By objectifying and algorithmising ourselves, we reduce ourselves to entities ontologically indistinguishable from machines.",
+ },
+ {
+   idx: 11,
+   title: "대표적으로 MBTI 테스트가 있습니다.",
+   ko: "인간의 기계화와 벡터화의 대표적 예가 MBTI 테스트입니다. 복잡한 인간 성격을 16가지 유형으로 단순화하는 MBTI는 인간을 벡터로 치환합니다. 이는 인간을 숫자와 알고리즘으로 치환하는 것이며, 결국 인간성을 희석시킵니다.",
+   en: "A quintessential example is the MBTI test. Simplifying the complex human personality into 16 types, the MBTI reduces humans to vectors. This substitutes humans with numbers and algorithms, ultimately diluting our humanity.",
+ },
+ {
+   idx: 12,
+   title: "그래서 저는 이를 비판하는 작품을 만들었습니다.",
+   ko: '‘Ω’라는 예술 작품을 통해 이러한 인간의 벡터화와 알고리즘화를 비판하고자 했습니다. 이 작품은 인터랙티브 웹 기반이며, 지금 여러분께 보여드리겠습니다.',
+   en: "Therefore, I created an artwork to critique this phenomenon. Through an art piece titled 'Ω,' I sought to criticise this vectorisation and algorithmisation of humans. This interactive web-based piece is what I would like to present to you now.",
+ },
+];
 
-LLM의 등장으로 Auto-generated Website (정크 사이트) 많아질 것임
-이러한 정크 사이트는 다시 LLM의 데이터로 순환적으로 이용
-LLM → Junk Site → LLM 간의 Closed Loop 형성
-이런 담론은 일반적으로 Generative AI → Junk Contents → Generative AI 간의 Closed Loop로 확장 가능
 
-이러한 Closed Loop는 다음과 같은 두가지 측면에서 인류에 대한 Challenge
-LLM/Generative AI의 Dataset에 대한 Challenge
-더이상 새로운 데이터셋이 만들어지지 않고 기존에 있던 데이터를 순환적으로 재가공한 복제적 데이터만이 많아짐, 데이터가 양적으로 성장하나 질적으로 성장히지 않음
-새로운 담론, 새로운 형태의 디자인이 나오기가 불가능
-Human Creativity 대한 Challenge
-인류가 LLM을 비롯한 Generative AI에만 의존하고 
-웹 환경이 Junk Site만으로 가득차게 된다면 더 이상 창의적인 웹/ 무의미한 사이트 만으로 가득 찰것임
-따라서 인류는 인공지능과 공존하는 시대에도 Junk Site를 넘어 계속해서 알고리즘을 넘어서는 창의적인 컨텐츠를 많이 생산해야하고, LLM을 비롯한 Generative AI는 이러한 새로운 컨텐츠를 통해 계속 새로운 진화를 만들어나가야함. Closed Loop가 아닌 Open Loop를 향해, 인류와 AI의 공진화를 향해
-본 사업은 Junk Site Generation의 직접적 구현 및 이를 경험적 형태로 제시함으로써 Junk Site를 비롯한 Junk Contents가 인류의 창의성에 미칠 수 있는 악영향을 미리 경고하고자 함 
+export const SCRIPT = [
+  { idx: 0, paragraph: 0, text: "보셨습니까?", en: "Did you see that?" },
+  {
+    idx: 1,
+    paragraph: 1,
+    text: "하나의 시뮬라시옹의 붕괴를.",
+    en: "The collapse of a simulacrum.",
+  },
+  {
+    idx: 2,
+    paragraph: 1,
+    text: "벡터화된 MBTI 성격유형의 붕괴를.",
+    en: "The collapse of the vectorized MBTI personality types.",
+  },
+  {
+    idx: 3,
+    paragraph: 1,
+    text: "우리는 이 벡터를 가장 현상학적인 방법으로 깨부시는 과정을 목격했습니다.",
+    en: "We have witnessed the process of dismantling this vector in the most phenomenological way.",
+  },
+  {
+    idx: 4,
+    paragraph: 1,
+    text: "그 어떤 알고리즘적인 대상도,",
+    en: "No algorithmic construct,",
+  },
+  {
+    idx: 5,
+    paragraph: 1,
+    text: "살아있는 몸의 체험 앞에서는",
+    en: "In front of the experience of a living body,",
+  },
+  {
+    idx: 6,
+    paragraph: 1,
+    text: "현상학적으로 해체되기 마련입니다.",
+    en: "Must phenomenologically deconstruct.",
+  },
+  {
+    idx: 7,
+    paragraph: 2,
+    text: "그래서 저는 더 이상 정립된 언어로 소통하지 않겠습니다.",
+    en: "Therefore, I will no longer communicate through established language.",
+  },
+  {
+    idx: 8,
+    paragraph: 2,
+    text: "언어라는 것은 일종의 사고의 감옥이기 때문입니다.",
+    en: "Because language is a kind of prison for thought.",
+  },
+  {
+    idx: 9,
+    paragraph: 2,
+    text: "기존의 정립된 언어를 초월한, 더 원초적이고 본능적인 소통,",
+    en: "Communication that transcends established language, more primal and instinctive,",
+  },
+  {
+    idx: 10,
+    paragraph: 2,
+    text: "LLM(대형언어모델)이 해석할 수 없는 방식으로 소통하는것,",
+    en: "Communicating in ways that Large Language Models (LLMs) cannot interpret,",
+  },
+  {
+    idx: 11,
+    paragraph: 2,
+    text: "그것이야말로 진정 인간의 특권이자,",
+    en: "That is truly the privilege of humanity, and",
+  },
+  {
+    idx: 12,
+    paragraph: 2,
+    text: "진정한 다다이즘의 실천 아니겠습니까?",
+    en: "Isn't that the true practice of Dadaism?",
+  },
+  {
+    idx: 13,
+    paragraph: 3,
+    text: "저는 말을 하고 있습니다.",
+    en: "I am speaking.",
+  },
+  {
+    idx: 14,
+    paragraph: 3,
+    text: "그리고 그 말에 따라 텍스트가 자동 생성됩니다.",
+    en: "And text is automatically generated according to my speech.",
+  },
+  {
+    idx: 15,
+    paragraph: 3,
+    text: "제 말이 무엇인지는 중요하지 않습니다.",
+    en: "What I'm saying is not important.",
+  },
+  {
+    idx: 16,
+    paragraph: 3,
+    text: "말의 뜻이 중요한 것이 아닙니다.",
+    en: "The meaning of words is not what matters.",
+  },
+  {
+    idx: 17,
+    paragraph: 3,
+    text: "일종의 퍼포먼스 그 자체가 중요합니다.",
+    en: "It's the performance itself that matters.",
+  },
+  {
+    idx: 18,
+    paragraph: 3,
+    text: "이것이 바로 LLM을 넘어서는,",
+    en: "This is precisely what transcends LLMs,",
+  },
+  {
+    idx: 19,
+    paragraph: 3,
+    text: "인간적인, 다다적인 표현 방식이 아니겠습니까?",
+    en: "Isn't this the humane dadaistic way of expression?",
+  },
+  {
+    idx: 20,
+    paragraph: 3,
+    text: "무의미한 무미건조한 다다",
+    en: "Meaningless and dry",
+  },
+  {
+    idx: 21,
+    paragraph: 3,
+    text: "다다적인 다다 다다",
+    en: "Dadaistic dada dada",
+  },
+  {
+    idx: 22,
+    paragraph: 3,
+    text: "다다입니다.",
+    en: "That is Dada.",
+  },
+  {
+    idx: 23,
+    paragraph: 3,
+    text: "다다라는 것은 다다다",
+    en: "Dada is dadada",
+  },
+  {
+    idx: 24,
+    paragraph: 3,
+    text: "다닫 다다다닫 다다다다다다다다다 다다다다다 다다 다다 다다다다다다 다다다다 다",
+    en: "Dadak dadadak dadadadadadadadada dadak adadadadada dadad dadada",
+  },
+  {
+    idx: 25,
+    paragraph: 3,
+    text: "다닫 다다다다 다다다다 다다다다다 다다다다다다다다다다다다 dadadada dadadada 다다다 닫 ㅏㄷ ㅏ다다다다 다다다 다 다다 다다다다다다다다다다다다 dadadada dadadada 다다다 닫 ㅏㄷ ㅏ다다다다 다다다 다 다다 다다다다다다다다다다다다 dadadada dadadada 다다다 닫 ㅏㄷ ㅏ다다다다 다다다 다다 다다다",
+    en: "Dadak dadada dadada dadadada dadadadada 다다다다다다ㅏ 다닫 다다다다다다다  dada adada dadadadada 다다다다다다ㅏ 다닫 다다다다다다다  dada adada dadadadada 다다다다다다ㅏ 다닫 다다다다다다다  dada adada dadadadada 다다다다다다ㅏ 다닫 다다다다다다다  dadadadadada dadadadadada dadadadadada",
+  },
+  {
+    idx: 26,
+    paragraph: 3,
+    text: "다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다",
+    en: "DADADADADADADADADADADADADADADADADADADADA DADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADAD ADADADADADADADADADADADADADADADADADADADADADADADADADAD ADADADADADADADADADADADADADADADADADADADADADADADADADADADADA DADADADADADADADADADADADADADADADA DADADADADADADADADADADADADADADADADADADADADADADADADADADADADADAD ADADADADADADADADADADADADADADADADADADADAD ADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADA",
+  },
+  {
+    idx: 27,
+    paragraph: 4,
+    text: "이제 여러분을 또 다른 다다의 무대로 초대하겠습니다.",
+    en: "Now, I invite you to another stage of Dada.",
+  },
+  {
+    idx: 28,
+    paragraph: 4,
+    text: "핸드폰을 꺼내 주십시오.",
+    en: "Please take out your mobile phones.",
+  },
+  {
+    idx: 29,
+    paragraph: 4,
+    text: "핸드폰을 꺼내 QR을 스캔하십시오.",
+    en: "Please take out your phones and scan the QR code.",
+  },
+  {
+    idx: 30,
+    paragraph: 4,
+    text: "QR코드를 스캔하십시오.",
+    en: "Please scan the QR code.",
+  },
+  {
+    idx: 31,
+    paragraph: 4,
+    text: "그리고 이름을 기입해 주십시오.",
+    en: "And please enter your name.",
+  },
+  {
+    idx: 32,
+    paragraph: 5,
+    text: "자.",
+    en: "Now.",
+  },
+  {
+    idx: 33,
+    paragraph: 5,
+    text: "무엇이 보이십니까?",
+    en: "What do you see?",
+  },
+  {
+    idx: 34,
+    paragraph: 5,
+    text: "여러분이 보고 계신 것은 인공신경망의 구조입니다.",
+    en: "What you're seeing is the structure of an artificial neural network.",
+  },
+  {
+    idx: 35,
+    paragraph: 5,
+    text: "볼츠만 머신,",
+    en: "Boltzmann Machines,",
+  },
+  {
+    idx: 36,
+    paragraph: 5,
+    text: "VAE,",
+    en: "VAE,",
+  },
+  {
+    idx: 37,
+    paragraph: 5,
+    text: "알렉스넷,",
+    en: "AlexNet,",
+  },
+  {
+    idx: 38,
+    paragraph: 5,
+    text: "우리가 매일같이 말하고 있는,",
+    en: "These are the things we talk about daily,",
+  },
+  {
+    idx: 39,
+    paragraph: 5,
+    text: "우리가 두려워하는 인공지능 모델들이 보이십니까?",
+    en: "Do you see the artificial intelligence models we fear?",
+  },
+  {
+    idx: 40,
+    paragraph: 6,
+    text: "이들이 진정 우리 인류보다 똑똑할까요?",
+    en: "Are they truly smarter than us?",
+  },
+  {
+    idx: 41,
+    paragraph: 6,
+    text: "이들이 진정 우리 인류를 대체할까요?",
+    en: "Will they truly replace us?",
+  },
+  {
+    idx: 42,
+    paragraph: 7,
+    text: "아닙니다.",
+    en: "No.",
+  },
+  {
+    idx: 43,
+    paragraph: 7,
+    text: "저는 우리 인류의 인간적 특성, 예술적 특성을 믿습니다.",
+    en: "I believe in the human qualities, our artistic traits.",
+  },
+  {
+    idx: 44,
+    paragraph: 7,
+    text: "우리 인간이 벡터로 치환될 수 없는,",
+    en: "That we humans cannot be reduced to vectors,",
+  },
+  {
+    idx: 45,
+    paragraph: 7,
+    text: "숫자 그 이상의 무언가를 성취할 수 있는 존재라고 생각합니다.",
+    en: "And are beings capable of achieving something beyond numbers.",
+  },
+  {
+    idx: 46,
+    paragraph: 7,
+    text: "다다이즘의 파괴적 힘이 그 비결입니다.",
+    en: "We need the destructive power of Dadaism.",
+  },
+  {
+    idx: 47,
+    paragraph: 8,
+    text: "이 다다의 서곡을 같이 써내려가지 않으시겠습니까?",
+    en: "Shall we compose this prelude of Dada together?",
+  },
+  {
+    idx: 48,
+    paragraph: 8,
+    text: "핸드폰을 높이 들어 주십시오.",
+    en: "Please raise your mobile phones high.",
+  },
+  {
+    idx: 49,
+    paragraph: 8,
+    text: "저를 따라 핸드폰을 높이 들어 주십시오.",
+    en: "Follow me and raise your phones high.",
+  },
+  {
+    idx: 50,
+    paragraph: 8,
+    text: "핸드폰의 볼륨도 키우십시오.",
+    en: "And turn up the volume on your phones.",
+  },
+  {
+    idx: 51,
+    paragraph: 8,
+    text: "핸드폰을 높이 들어 주십시오.",
+    en: "Please raise your mobile phones high.",
+  },
+  {
+    idx: 52,
+    paragraph: 8,
+    text: "다 같이 일어나 보시겠습니까?",
+    en: "Shall we all stand up?",
+  },
+  {
+    idx: 53,
+    paragraph: 9,
+    text: "이제 셋을 세면서 동시에 손을 모두 내리겠습니다.",
+    en: "Now, as I count to three, we'll all lower our hands together.",
+  },
+  {
+    idx: 54,
+    paragraph: 9,
+    text: "셋을 세면 모두 손을 내리는 겁니다.",
+    en: "When I count to three, we all lower our hands.",
+  },
+  {
+    idx: 55,
+    paragraph: 9,
+    text: "자 준비되셨나요?",
+    en: "Are you ready?",
+  },
+  {
+    idx: 56,
+    paragraph: 9,
+    text: "셋.",
+    en: "Three.",
+  },
+  {
+    idx: 57,
+    paragraph: 9,
+    text: "둘.",
+    en: "Two.",
+  },
+  {
+    idx: 58,
+    paragraph: 9,
+    text: "하나.",
+    en: "One.",
+  },
+];
 
-Creative Problem Solving
-
-본 연구 프로젝트는 LLM 기반 Massive Junk Site Generation Framework을 만들고 이를 기반으로 인터랙티브 경험을 디자인하는 데에 초점을 둠
-Junk Site Generation Framework은 단순히 웹사이트 UI 디자인을 자동화 하는 것이 아닌, 웹사이트의 내용/구조/디자인/SEO (Search Engine Optimisation) 등을 자동 생성하는 웹 기반 프레임워크
-이는 우선 학문적으로 HCI분야에서 Contribution, 실용적으로 웹사이트 자동화 툴로 사용될 수 있기에 단기적인 Contribution을 제시함
-그러나 본 프로젝트가 해결하고자 하는 문제는 Junk Site를 통한 위와 같은 실용적 목표 달성보다는, Junk Site를 비롯한 앞으로 사회에 등장하게될 무수한 Junk Contents의 위험성을 보여주고 커뮤니케이트하는데에 목표가 있음
-
-본 연구의 Junk Site Generation은 아래와 같은 목표를 가지고 있음
-Junk Site Generation 툴 제시를 통해 5-10년 후 Junk Site/Contents 가 가져올 미래를 Speculatively 제시
-SEO (Search Engine Optimisation)된 Junk Site의 대량생산을 통한 현재 웹 생태계 교란
-사용자가 인터랙션을 통해 실시간으로 Junk Site 무수히 제작할 수 있는 이머시브 경험을 제작
-
-Methodology
-
-Junk Site Generation Framework은 단순히 웹사이트 UI 디자인을 자동화 하는 것이 아닌, 웹사이트의 내용/구조/디자인/SEO (Search Engine Optimisation) 등을 자동 생성하는 웹 기반 프레임워크
-생성된 웹사이트는 피그마 등 다른 툴을 통한 웹사이트 프로토타입으로 존재하는 것이 아닌, 실제 Web URL이 존재하고 직접 유저가 웹사이트 속에서 인터랙션 할 수 있는 Full-Stack Programmed Website로 존재
-내용 및 구조 자동생성: 주어진 맥락/키워드/웹사이트 분류에 따라 웹사이트의 전반적 내용 및 구조 (내비게이션, 페이지 연결구조, 페이지 내 텍스트, 웹사이트 타이틀 등) 자동생성
-디자인 자동생성: 주어진 맥락/웹사이트 분류에 따라 웹사이트 스타일을 비롯한 UI 전반의 자동생성, 여러가지 디자인 옵션을 한번에 대량생산
-자동 SEO: 주어진 맥락/키워드에 맞는 자동 URL Path 생성 및 키워드별 Search Engine Optimisation 완료, 구글 등 서치 엔진에서 바로 검색이 될 수 있도록 만들어줌
 
 
-
-INITIAL APPROACH: START FROM PROMOTING MULTI-DEVICE WEB ARTWORK
-START FROM CREATING BUNCH OF JUNK SITES ABOUT MULTI-DEVICE WEB ARTWORK WHICH CROSS REFERENCE TO ONE ANOTHER
 `,
 
   tags: [
-    "Junk Site",
-    "Multi-Device Web Artwork",
-    "Generative AI",
-    "Web Development",
-    "Digital Architecture",
-    "LLM",
-    "Content Generation",
-    "Digital Spaces",
-    "Web Design",
-    "AI Ethics",
+    "AI Era",
+    "STEM Education",
+    "Art Technology",
     "Human Creativity",
-    "Digital Transformation",
-    "Urban Theory",
-    "Junk Space",
-    "Data Circulation",
-    "Voice Interfaces",
-    "Interactive Design",
-    "Digital Culture",
-    "Web Automation",
-    "SEO",
-    "Multi-Device",
-    "Future Web",
+    "AlphaGo Effect",
+    "Mathematics",
+    "Dadaism",
+    "Digital Art",
+    "Human Intelligence",
+    "Artificial Intelligence",
+    "Educational Philosophy",
+    "Creative Technology",
+    "Interactive Art",
+    "Tech Philosophy",
+    "Human-AI Relationship",
+    "Digital Humanities",
+    "Technological Evolution",
+    "Art Theory",
+    "Korean Education",
+    "Future of Creativity",
   ],
 };
