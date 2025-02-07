@@ -1,460 +1,98 @@
 export const TEXT_TO_UPLOAD = {
-  title: "Dadaism for the Algorithm Age",
-  text: `
+  title: "Resting is part of the Data - Resting is part of the Art",
+  text: `Hyper-Personalisation: 궁극적으로 개인의 벡터화 (AI Agents, 알고리즘 등으로 인식될때)
+개인을 Vector space 상 한개의 점으로 대응시킴 (유사 MBTI, 유사 의사 병명 분류, 유사 변호사 사건 분류)
+
+이것은 수많은 Data Aggregation 으로 인해 가능하게함 (의사의 경우 수많은 환자)
+이러한 Data Aggregation was possible after internet → 사람들이 Internet에 More deeply embedded 되면서 가능하게됨
+
+더 많은 데이터가 필요함! (We are running out of training data - GPT)
+IoT, 메타의 Thread 출시 등 개인의 일상속에 침투하여 더 많은 데이터 수급을 가능하게 하는것이 빅테크의 전략
+
+IoT → Sleeping, Sleep Tech, Rest Tech
+
+Sleep은 가장 Private, Resting 또한 가장 Private (Take a break! Off the grid!)
+그러나 현재의 트렌드: 
+여가/휴식 또한 경제의 일부, 자본 순환 과정의 일부
+여가/휴식 또한 데이터의 일부
+여가/휴식 중에도 멈추지 마라! 
+(혹은 변형으로 휴식 공간 또한/휴식 자체 또한 예술의 일부로 편입 - 캔버스를 넘어 점차 모든곳으로 침범해오는 현대 예술 - 이 작품 또한 마찬가지)
 
 
-  export const TRANSCRIPT = [
- {
-   idx: 1,
-   title: "먼저 제 소개를 하겠습니다.",
-   ko: "저는 수학 영재로서 이공계 엘리트 코스를 밟았습니다. 중학교에서는 영재교육원을 다녔고, 고등학교에서는 과학영재학교 경기과학고등학교를 졸업했으며, 대학교에서는 서울대학교 산업공학과에 진학하여 대통령과학장학금을 수학 부문에서 받았습니다.",
-   en: "Allow me to introduce myself. As a prodigy in mathematics, I pursued an elite trajectory in the STEM fields. In middle school, I attended a centre for gifted education; in high school, I graduated from Gyeonggi Science High School for the Gifted; and at university, I matriculated into the Department of Industrial Engineering at Seoul National University, where I was awarded the Presidential Science Scholarship in mathematics.",
- },
- {
-   idx: 2,
-   title: "그렇다면 어떻게 예술 기술 연구자가 되었을까요?",
-   ko: "이처럼 저는 전형적인 이공계 엘리트였습니다. 그러나 지금은 예술 기술 연구자로 이 자리에 섰습니다. 이는 AI가 주도하는 시대에 공학 분야에서 제가 어떤 독창적인 기여를 할 수 있을지 고민했기 때문입니다.",
-   en: "So, how did I become a researcher in art and technology? Although I was a quintessential STEM elite, I now stand before you as a researcher in art and technology. This transformation arose from my contemplation of what unique contributions I could make in the field of engineering in this AI-dominated era.",
- },
- {
-   idx: 3,
-   title: "모든 것이 '알파고화'되고 있습니다.",
-   ko: "올해 노벨 화학상이 AI 연구에 수여되었고, 제가 고등학교 때 어려워했던 기하 문제도 이제 AI가 더 효율적으로 해결합니다. 이렇게 많은 이공계 분야가 '알파고화'되고 있습니다. 이러한 변화 속에서 인간은 무엇을 할 수 있을까요? 모든 분야에서 AI가 인간을 능가할까요?",
-   en: "Everything is becoming 'AlphaGo-ised.' This year's Nobel Prize in Chemistry was awarded for AI research, and even the challenging geometry problems I struggled with in high school are now being solved more efficiently by AI. Many STEM fields are undergoing this 'AlphaGo-isation.' Amidst these transformations, what can humans do? Will AI surpass us in every domain?",
- },
- {
-   idx: 4,
-   title: "예술이 답일 수 있습니다.",
-   ko: "그러나 AI가 모든 분야에서 인간을 능가하지는 못할 것입니다. 인간만이 할 수 있는 영역이 있으며, 그 답은 예술에서 찾을 수 있었습니다. 수치화되고 합리적으로 설명 가능한 영역 밖에—바로 예술에—인간의 강점이 있습니다.",
-   en: "However, AI will not eclipse humanity in every field. There exist realms that only humans can navigate, and I discovered that the answer lies in art. Beyond quantifiable and rationally explicable domains—in art—lies the strength of humanity.",
- },
- {
-   idx: 5,
-   title: "기계는 합리적입니다. 인간의 비합리성이 강점입니다.",
-   ko: "기계는 합리적이고 계산적이며, AI는 확률적 계산으로 최적의 결과를 냅니다. 반면 인간은 비합리적이고 예측 불가능하며, 감정에 따라 행동합니다. 이러한 인간의 감정은 오랫동안 약점으로 여겨졌습니다.",
-   en: "Machines are rational and calculative; AI produces optimal results through probabilistic computations. In contrast, humans are irrational, unpredictable, and act according to emotions. For a long time, these human emotions have been considered weaknesses.",
- },
- {
-   idx: 6,
-   title: "우리는 새로운 가치평가가 필요합니다.",
-   ko: "산업혁명 이후 인간의 비완전성은 단점으로 여겨졌지만, AI 시대에는 오히려 기계와 인간을 구분하는 특징입니다. 이러한 비합리성과 비논리성이 인간 존재의 이유이며, 이를 발전시키는 것이 인류의 미래라고 생각합니다.",
-   en: "We need a new valuation of our attributes. Since the Industrial Revolution, human imperfections have been regarded as shortcomings. Yet, in the AI era, they are precisely the characteristics that distinguish us from machines. I believe that this irrationality and illogicality are the very essence of human existence, and that cultivating them is the future of humanity.",
- },
- {
-   idx: 7,
-   title: "따라서 예술이 중요합니다.",
-   ko: "인류의 비합리성, 비논리성, 감각은 이제 단점이 아니라 강점입니다. 이러한 특성을 부각시키는 것이 바로 예술입니다. 인공지능 시대일수록 우리는 더 예술적이고 창의적이며 다양성을 추구해야 합니다.",
-   en: "Therefore, art becomes paramount. Humanity's irrationality, illogicality, and sensibility are no longer weaknesses but strengths. It is precisely art that accentuates these qualities. In the age of artificial intelligence, we must become more artistic, creative, and pursue diversity.",
- },
- {
-   idx: 8,
-   title: "특히, 과학 기반 예술이 중요한 의의를 갖습니다.",
-   ko: "합리주의의 산물인 과학, 기술, 컴퓨터공학을 비합리주의의 상징인 예술에 접목시키는 것—즉, 합리성을 수단으로 활용하되 목적은 비합리적이고 창의적으로 지향하는 일은 큰 의미를 갖습니다. 이것이야말로 인간만이 진정 할 수 있는 형태의 융합이자, 연구입니다. 이것이 제가 기술 기반의, 컴퓨터 코딩 기반의 예술을 하는 이유입니다.",
-   en: "In particular, science-based art holds significant meaning. Integrating science, technology, and computer engineering—the products of rationalism—with art, the emblem of irrationalism—utilising rationality as a means but aiming for irrational and creative ends—carries profound significance. This is a form of fusion and inquiry that only humans can truly achieve. This is why I engage in technology-based, computer coding-based art.",
- },
- {
-   idx: 9,
-   title: "그리고 다다이즘 또한 중요합니다.",
-   ko: "특히 기존의 합리주의적이고 과학주의적인 사고방식을 벗어나야 한다는 점에서 다다이즘과 기존 논리 구조의 해체는 더욱 중요합니다. 제가 이번 강연을 '알고리즘 시대를 위한 다다이즘'이라 부른 이유도 여기에 있습니다.",
-   en: "Moreover, Dadaism is of significant importance. In particular, the need to depart from traditional rationalistic and scientistic modes of thought makes Dadaism and the deconstruction of existing logical structures even more crucial. This is why I have titled this lecture 'Dadaism for the Algorithm Age.'",
- },
- {
-   idx: 10,
-   title: "그러나, 현대 사회 속 인간은 스스로를 기계화하고 있습니다.",
-   ko: "우리는 자신을 수치화하고 표준화하며, 인간이 더 인간적이 되기보다 기계처럼 되고 있습니다. 스스로를 객관화하고 알고리즘화하면서, 기계와 존재론적으로 다를 바 없는 대상으로 전락시키고 있습니다.",
-   en: "However, in contemporary society, humans are mechanising themselves. We quantify and standardise ourselves, becoming more like machines rather than embracing our humanity. By objectifying and algorithmising ourselves, we reduce ourselves to entities ontologically indistinguishable from machines.",
- },
- {
-   idx: 11,
-   title: "대표적으로 MBTI 테스트가 있습니다.",
-   ko: "인간의 기계화와 벡터화의 대표적 예가 MBTI 테스트입니다. 복잡한 인간 성격을 16가지 유형으로 단순화하는 MBTI는 인간을 벡터로 치환합니다. 이는 인간을 숫자와 알고리즘으로 치환하는 것이며, 결국 인간성을 희석시킵니다.",
-   en: "A quintessential example is the MBTI test. Simplifying the complex human personality into 16 types, the MBTI reduces humans to vectors. This substitutes humans with numbers and algorithms, ultimately diluting our humanity.",
- },
- {
-   idx: 12,
-   title: "그래서 저는 이를 비판하는 작품을 만들었습니다.",
-   ko: '‘Ω’라는 예술 작품을 통해 이러한 인간의 벡터화와 알고리즘화를 비판하고자 했습니다. 이 작품은 인터랙티브 웹 기반이며, 지금 여러분께 보여드리겠습니다.',
-   en: "Therefore, I created an artwork to critique this phenomenon. Through an art piece titled 'Ω,' I sought to criticise this vectorisation and algorithmisation of humans. This interactive web-based piece is what I would like to present to you now.",
- },
-];
+REST 휴식은 더 이상 온전한 순수한 휴식이 아니라,
+데이터의 재료이자, AI Agent가 서비스 해야하는 분야 (Sleep Tech/Alexa Speakers/영화 Her)
+현대인은 Sleep/Rest/여가 또한 어떤 것이 '최적'인지, 어떻게 쉬는게 '최적'인지 알고 싶어한다
+혹은 알고 싶어하게끔 넛지된다 (알고싶어하는 기업의 Needs를 억지로 발굴해낸다)
+이 부분에서도 Hyper-Customisation/Hyper-Personalisation)과 일맥상통…
 
 
-export const SCRIPT = [
-  { idx: 0, paragraph: 0, text: "보셨습니까?", en: "Did you see that?" },
-  {
-    idx: 1,
-    paragraph: 1,
-    text: "하나의 시뮬라시옹의 붕괴를.",
-    en: "The collapse of a simulacrum.",
-  },
-  {
-    idx: 2,
-    paragraph: 1,
-    text: "벡터화된 MBTI 성격유형의 붕괴를.",
-    en: "The collapse of the vectorized MBTI personality types.",
-  },
-  {
-    idx: 3,
-    paragraph: 1,
-    text: "우리는 이 벡터를 가장 현상학적인 방법으로 깨부시는 과정을 목격했습니다.",
-    en: "We have witnessed the process of dismantling this vector in the most phenomenological way.",
-  },
-  {
-    idx: 4,
-    paragraph: 1,
-    text: "그 어떤 알고리즘적인 대상도,",
-    en: "No algorithmic construct,",
-  },
-  {
-    idx: 5,
-    paragraph: 1,
-    text: "살아있는 몸의 체험 앞에서는",
-    en: "In front of the experience of a living body,",
-  },
-  {
-    idx: 6,
-    paragraph: 1,
-    text: "현상학적으로 해체되기 마련입니다.",
-    en: "Must phenomenologically deconstruct.",
-  },
-  {
-    idx: 7,
-    paragraph: 2,
-    text: "그래서 저는 더 이상 정립된 언어로 소통하지 않겠습니다.",
-    en: "Therefore, I will no longer communicate through established language.",
-  },
-  {
-    idx: 8,
-    paragraph: 2,
-    text: "언어라는 것은 일종의 사고의 감옥이기 때문입니다.",
-    en: "Because language is a kind of prison for thought.",
-  },
-  {
-    idx: 9,
-    paragraph: 2,
-    text: "기존의 정립된 언어를 초월한, 더 원초적이고 본능적인 소통,",
-    en: "Communication that transcends established language, more primal and instinctive,",
-  },
-  {
-    idx: 10,
-    paragraph: 2,
-    text: "LLM(대형언어모델)이 해석할 수 없는 방식으로 소통하는것,",
-    en: "Communicating in ways that Large Language Models (LLMs) cannot interpret,",
-  },
-  {
-    idx: 11,
-    paragraph: 2,
-    text: "그것이야말로 진정 인간의 특권이자,",
-    en: "That is truly the privilege of humanity, and",
-  },
-  {
-    idx: 12,
-    paragraph: 2,
-    text: "진정한 다다이즘의 실천 아니겠습니까?",
-    en: "Isn't that the true practice of Dadaism?",
-  },
-  {
-    idx: 13,
-    paragraph: 3,
-    text: "저는 말을 하고 있습니다.",
-    en: "I am speaking.",
-  },
-  {
-    idx: 14,
-    paragraph: 3,
-    text: "그리고 그 말에 따라 텍스트가 자동 생성됩니다.",
-    en: "And text is automatically generated according to my speech.",
-  },
-  {
-    idx: 15,
-    paragraph: 3,
-    text: "제 말이 무엇인지는 중요하지 않습니다.",
-    en: "What I'm saying is not important.",
-  },
-  {
-    idx: 16,
-    paragraph: 3,
-    text: "말의 뜻이 중요한 것이 아닙니다.",
-    en: "The meaning of words is not what matters.",
-  },
-  {
-    idx: 17,
-    paragraph: 3,
-    text: "일종의 퍼포먼스 그 자체가 중요합니다.",
-    en: "It's the performance itself that matters.",
-  },
-  {
-    idx: 18,
-    paragraph: 3,
-    text: "이것이 바로 LLM을 넘어서는,",
-    en: "This is precisely what transcends LLMs,",
-  },
-  {
-    idx: 19,
-    paragraph: 3,
-    text: "인간적인, 다다적인 표현 방식이 아니겠습니까?",
-    en: "Isn't this the humane dadaistic way of expression?",
-  },
-  {
-    idx: 20,
-    paragraph: 3,
-    text: "무의미한 무미건조한 다다",
-    en: "Meaningless and dry",
-  },
-  {
-    idx: 21,
-    paragraph: 3,
-    text: "다다적인 다다 다다",
-    en: "Dadaistic dada dada",
-  },
-  {
-    idx: 22,
-    paragraph: 3,
-    text: "다다입니다.",
-    en: "That is Dada.",
-  },
-  {
-    idx: 23,
-    paragraph: 3,
-    text: "다다라는 것은 다다다",
-    en: "Dada is dadada",
-  },
-  {
-    idx: 24,
-    paragraph: 3,
-    text: "다닫 다다다닫 다다다다다다다다다 다다다다다 다다 다다 다다다다다다 다다다다 다",
-    en: "Dadak dadadak dadadadadadadadada dadak adadadadada dadad dadada",
-  },
-  {
-    idx: 25,
-    paragraph: 3,
-    text: "다닫 다다다다 다다다다 다다다다다 다다다다다다다다다다다다 dadadada dadadada 다다다 닫 ㅏㄷ ㅏ다다다다 다다다 다 다다 다다다다다다다다다다다다 dadadada dadadada 다다다 닫 ㅏㄷ ㅏ다다다다 다다다 다 다다 다다다다다다다다다다다다 dadadada dadadada 다다다 닫 ㅏㄷ ㅏ다다다다 다다다 다다 다다다",
-    en: "Dadak dadada dadada dadadada dadadadada 다다다다다다ㅏ 다닫 다다다다다다다  dada adada dadadadada 다다다다다다ㅏ 다닫 다다다다다다다  dada adada dadadadada 다다다다다다ㅏ 다닫 다다다다다다다  dada adada dadadadada 다다다다다다ㅏ 다닫 다다다다다다다  dadadadadada dadadadadada dadadadadada",
-  },
-  {
-    idx: 26,
-    paragraph: 3,
-    text: "다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다다다다다다다 다다다다다다다다다다다다다다다다다다다다다",
-    en: "DADADADADADADADADADADADADADADADADADADADA DADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADAD ADADADADADADADADADADADADADADADADADADADADADADADADADAD ADADADADADADADADADADADADADADADADADADADADADADADADADADADADA DADADADADADADADADADADADADADADADA DADADADADADADADADADADADADADADADADADADADADADADADADADADADADADAD ADADADADADADADADADADADADADADADADADADADAD ADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADADA",
-  },
-  {
-    idx: 27,
-    paragraph: 4,
-    text: "이제 여러분을 또 다른 다다의 무대로 초대하겠습니다.",
-    en: "Now, I invite you to another stage of Dada.",
-  },
-  {
-    idx: 28,
-    paragraph: 4,
-    text: "핸드폰을 꺼내 주십시오.",
-    en: "Please take out your mobile phones.",
-  },
-  {
-    idx: 29,
-    paragraph: 4,
-    text: "핸드폰을 꺼내 QR을 스캔하십시오.",
-    en: "Please take out your phones and scan the QR code.",
-  },
-  {
-    idx: 30,
-    paragraph: 4,
-    text: "QR코드를 스캔하십시오.",
-    en: "Please scan the QR code.",
-  },
-  {
-    idx: 31,
-    paragraph: 4,
-    text: "그리고 이름을 기입해 주십시오.",
-    en: "And please enter your name.",
-  },
-  {
-    idx: 32,
-    paragraph: 5,
-    text: "자.",
-    en: "Now.",
-  },
-  {
-    idx: 33,
-    paragraph: 5,
-    text: "무엇이 보이십니까?",
-    en: "What do you see?",
-  },
-  {
-    idx: 34,
-    paragraph: 5,
-    text: "여러분이 보고 계신 것은 인공신경망의 구조입니다.",
-    en: "What you're seeing is the structure of an artificial neural network.",
-  },
-  {
-    idx: 35,
-    paragraph: 5,
-    text: "볼츠만 머신,",
-    en: "Boltzmann Machines,",
-  },
-  {
-    idx: 36,
-    paragraph: 5,
-    text: "VAE,",
-    en: "VAE,",
-  },
-  {
-    idx: 37,
-    paragraph: 5,
-    text: "알렉스넷,",
-    en: "AlexNet,",
-  },
-  {
-    idx: 38,
-    paragraph: 5,
-    text: "우리가 매일같이 말하고 있는,",
-    en: "These are the things we talk about daily,",
-  },
-  {
-    idx: 39,
-    paragraph: 5,
-    text: "우리가 두려워하는 인공지능 모델들이 보이십니까?",
-    en: "Do you see the artificial intelligence models we fear?",
-  },
-  {
-    idx: 40,
-    paragraph: 6,
-    text: "이들이 진정 우리 인류보다 똑똑할까요?",
-    en: "Are they truly smarter than us?",
-  },
-  {
-    idx: 41,
-    paragraph: 6,
-    text: "이들이 진정 우리 인류를 대체할까요?",
-    en: "Will they truly replace us?",
-  },
-  {
-    idx: 42,
-    paragraph: 7,
-    text: "아닙니다.",
-    en: "No.",
-  },
-  {
-    idx: 43,
-    paragraph: 7,
-    text: "저는 우리 인류의 인간적 특성, 예술적 특성을 믿습니다.",
-    en: "I believe in the human qualities, our artistic traits.",
-  },
-  {
-    idx: 44,
-    paragraph: 7,
-    text: "우리 인간이 벡터로 치환될 수 없는,",
-    en: "That we humans cannot be reduced to vectors,",
-  },
-  {
-    idx: 45,
-    paragraph: 7,
-    text: "숫자 그 이상의 무언가를 성취할 수 있는 존재라고 생각합니다.",
-    en: "And are beings capable of achieving something beyond numbers.",
-  },
-  {
-    idx: 46,
-    paragraph: 7,
-    text: "다다이즘의 파괴적 힘이 그 비결입니다.",
-    en: "We need the destructive power of Dadaism.",
-  },
-  {
-    idx: 47,
-    paragraph: 8,
-    text: "이 다다의 서곡을 같이 써내려가지 않으시겠습니까?",
-    en: "Shall we compose this prelude of Dada together?",
-  },
-  {
-    idx: 48,
-    paragraph: 8,
-    text: "핸드폰을 높이 들어 주십시오.",
-    en: "Please raise your mobile phones high.",
-  },
-  {
-    idx: 49,
-    paragraph: 8,
-    text: "저를 따라 핸드폰을 높이 들어 주십시오.",
-    en: "Follow me and raise your phones high.",
-  },
-  {
-    idx: 50,
-    paragraph: 8,
-    text: "핸드폰의 볼륨도 키우십시오.",
-    en: "And turn up the volume on your phones.",
-  },
-  {
-    idx: 51,
-    paragraph: 8,
-    text: "핸드폰을 높이 들어 주십시오.",
-    en: "Please raise your mobile phones high.",
-  },
-  {
-    idx: 52,
-    paragraph: 8,
-    text: "다 같이 일어나 보시겠습니까?",
-    en: "Shall we all stand up?",
-  },
-  {
-    idx: 53,
-    paragraph: 9,
-    text: "이제 셋을 세면서 동시에 손을 모두 내리겠습니다.",
-    en: "Now, as I count to three, we'll all lower our hands together.",
-  },
-  {
-    idx: 54,
-    paragraph: 9,
-    text: "셋을 세면 모두 손을 내리는 겁니다.",
-    en: "When I count to three, we all lower our hands.",
-  },
-  {
-    idx: 55,
-    paragraph: 9,
-    text: "자 준비되셨나요?",
-    en: "Are you ready?",
-  },
-  {
-    idx: 56,
-    paragraph: 9,
-    text: "셋.",
-    en: "Three.",
-  },
-  {
-    idx: 57,
-    paragraph: 9,
-    text: "둘.",
-    en: "Two.",
-  },
-  {
-    idx: 58,
-    paragraph: 9,
-    text: "하나.",
-    en: "One.",
-  },
-];
+INDIVIDUAL SECTION – RESTING SECTION
 
+빈백 + 모니터 + 카메라 + PC + 스피커 조합
+사람들 걍 처음 쉬러옴, 모니터 스피커 등은 가려져 있음 (최대한)
+Exhibition Setting → Get exhausted Fast, people need rest (break from an art) → We make this an integral part of art
+
+Still Voice Interaction → But make it as natural /not disturbing as possible
+
+User 빈백 앉기 전에는 어떠한 Digital Elements 도 없다 (IDLE BLACK NO NOISE)
+
+
+User 빈백 앉고 한 3-4초 있다가 (Camera Dtection Triggered)
+
+
+	Initial Welcome Message Trigger
+
+User → Confused, Murmur, Not actively speaking, 쭈뼛
+
+	SYSTEM TAKES CONTROL 상관 없이 서비스를 Lead 해감
+	Different from conventional conversation LLM
+Traditional: User가 명확한 Objective/Topic 없으면 'What can I help you?' 'I'm here to help you'
+Our Version: More Active AI Agent, Almost like 답정너
+쭈뼛 하더라도 다음 대화 전개해나감
+명확한 Conversational Context
+
+User Here two types
+Engaged Users
+Disengaged Users
+
+Type 1. Engaged Users
+	
+	Contextual Interaction → Data sent to the Controller
+
+Type 2. Disengaged Users
+
+	그럼 그냥 ok 하고 Sleeping/Resting 영상 틀어줌 (이것 또한 Data gen의 일부)
+	한 2-3분 있다가 괜히 잘 쉬고 있는지 물어봐줌
+		Is Everything Alright? (Reminiscent to Services in Anglo-American 식당)
+	이 와중에도 Rest Users Video Recording (Andy Warhol - Sleep)
+	여러 Params (Eyes, Mouth, Emotion) 등 Analyse
+	쉬는것 또한 시스템/Data Aggregation의 일부! 
+	Disengaged/쭈뼛 또한 시스템의 일부!
 
 
 `,
 
   tags: [
-    "AI Era",
-    "STEM Education",
-    "Art Technology",
-    "Human Creativity",
-    "AlphaGo Effect",
-    "Mathematics",
-    "Dadaism",
-    "Digital Art",
-    "Human Intelligence",
-    "Artificial Intelligence",
-    "Educational Philosophy",
-    "Creative Technology",
-    "Interactive Art",
-    "Tech Philosophy",
-    "Human-AI Relationship",
-    "Digital Humanities",
-    "Technological Evolution",
-    "Art Theory",
-    "Korean Education",
-    "Future of Creativity",
+    "AI-Art",
+    "Surveillance Art",
+    "Data Collection",
+    "Privacy Art",
+    "Rest Technology",
+    "Sleep Art",
+    "Interactive Installation",
+    "Digital Experience",
+    "Hyper-Personalization",
+    "Human-AI Interaction",
+    "Voice Interface",
+    "Behavioral Art",
+    "Surveillance Capitalism",
+    "Contemporary Art",
+    "Digital Installation",
+    "Performance Art",
+    "Biometric Art",
+    "Leisure Studies",
+    "Critical Design",
+    "Algorithmic Society",
+    "Multi-Device Web Artwork",
   ],
 };
