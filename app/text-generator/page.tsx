@@ -4,8 +4,8 @@ import getChatGPT from "./chatgpt";
 import getImage from "./getImage";
 import upload from "./upload";
 
-const SYSTEM_TEXT = `Rewrite this essay draft in an art and technology style in english.`;
-const SYSTEM_TEXT_KO = `이 글을 예술과 기술의 스타일로 한국어로 다시 작성하여라.`;
+const SYSTEM_TEXT = `Rewrite this essay draft in a professional style in english.`;
+const SYSTEM_TEXT_KO = `이 글을 전문적인 방식으로 한국어로 다시 작성하여라.`;
 // const TRANSLATION_TEXT = `Translate this text into the korean.`;
 
 // const IMAGE_INSTRUCTION_TEXT = `Create a beautiful, eye-catching, artistic and poetic header image for the blog post with the following contents: \n`;
