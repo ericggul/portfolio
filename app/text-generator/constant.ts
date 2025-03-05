@@ -1,58 +1,93 @@
 export const TEXT_TO_UPLOAD = {
-  title: "System Art: Contextual Switch (Generatable Automatic Systems) ",
+  title: "From Semantic Interaction to Phenomenological Interaction",
   text: `
 
-System Art - Structurally it can be modelled in state-based graph-like structure. Multiple-state based structure. 
+System Art - Semantic, Interactive, and Modular
 
-Multi-Device Web Artwork: INPUT Modalities → SYSTEM (Interconnection, G(V, E) Structure) → OUTPUT 
+Important: Interaction should contain semantic information. Yet should be also simple & intuitive for first comers to use. 
 
-Input → System → Output
+Multiple strategies to employ: 
+Non-semantic interaction transformed into semantic interaction (Dimensional Amplifying/Transformation/Amplified Interaction)
+OR Semantic Interaction make it phenomenological / Starts from semantic interaction but end up in non-semantic era
 
-At a high level, systems act as the interconnection of how input modalities can be transformed into output multi-channels. This system's interconnections can be block-based modularised, meaning that the subsection of the system can be interchangeable - Just as how a graph can have a subsectional sub-graph which is interchangeable with another subgraph. 
+For example: Our daily interactions within platforms - Stars from semantic interaction but mostly subcognitive phenomenological interaction
 
-Theoretically, let's say there's a System with a Graph A. If there is a subsectional Sub-Graph A → This can be substituted into a Sub-Graph B, C, D, … with a similar structure. (Graphical Decomposition)
-"SUB-GRAPH SWAPPING - CONTEXTUAL CHANGE"
-Refer to: Rozenberg, G. (ed.). Handbook of Graph Grammars and Computing by Graph Transformation. World Scientific, 1997
+Within the context of system art: Let’s say you’re controlling the system params / switching system context. There might be couple of buttons in front of you. First user clicks on those buttons for the sake of the signified meaning of the button. Over time, user clicks just for the sake of enjoying the output effect that the interaction causes, rather than attached to the meaning of the button.
 
-Conceptually, let's say there's a System Art: Automated System functioning within multi-channels. If the user can give a new context (new sub graph), and combine with the pre-defined mechanisms (the other part of the graph), a new system (new graph) is generated. This is also the mechanism of how Generative-X, Generative-Simulacra (Junk Sites, Biennales) might work. But it can also be applied & generalised in a wider application: Most generally about switching contexts. How about switching modalities? Switching spatial-temporal dimension?
+This is crucial because most of users in interactive art does not want to confront with the heavy semantics, in most of the cases they are quite passive users - also related to reason why many of media art from now focused on the very simple action (waving hands, bodily movement) to create audio-visual affect for the interactive art, not nothing more - some kind of high-dimensional semantic interaction.
 
-Contextual switch within system art is definitely crystal clear.
-This rapid contextual switch enables us to massively generate different systems: All same mechanisms, but with different context: At a high speed.
-Generative - Automated System: We are generating the automated system by switching context easily. This is akin to how Andy Warhol mass-produced paintings by switching context (The flavour of the Campbell's Soups). 
+Although I think the semantical interaction (of user choosing smth semantical/input smth semantical) is very important, we cannot expect large vast majority of users to follow these semantic rules - For instance, limitations of text input/voice input
 
-All of these following examples share Input (Contextual input) → System → Output structure:
+When given text input/voice input, it is largely observed that user doesn’t know what to say/input in an exhibition setting, and end up just entering dummy word. If it’s a word-based interaction, it’s still ok, but if it’s sentence-based interaction and users are enforced to input a large sentence, they most likely to leave - Especially when there’s not so strong background context given. So we should recall that this text-input interaction, especially when given at an early phrase of interaction, will lead to a disaster - interaction just for the interaction’s sake, not really gaining any useful information from the user side.  
 
-Andy Warhol's Campbell's soup cans: Flavour → Soup Can → Soup Can with a Flavour
-Biennales: Context/Theme → Curatorial System → Mass-Generated Biennales
-Self-Help Book: Context/Theme → Automatic Tone & manner of Self-Help Book → Mess-Generated Self-Help Book
-SoTA: Different Model → Sub-Automatic Architecture Generation → New Architecture
-Wall-E Advertising Scene (Culture on the Axiom): Advertising 'Try Blue' → Immediate Trend Application & Button-based Interaction→ All people wearing blue https://www.youtube.com/watch?v=_xToQ4cIHkk 
-Book Industry (Or Media Art, or Newspaper…): New Buzzword (AI! Quantum!) → Automatic Book Generation & Media Art Generation & Newspaper Generation & Media Generation → All contents talking about new buzzword in a surface level
-1984 (George Orwell): New Political Narrative/Event/Enemy → Hidden Graph Structure (Nodes - Ministries (Truth, Love, Plenty, Peace), Media Outlets, Public Events & Edges - Flow of propaganda, memory hole processes, censorship protocols) → New "Reality", New Newspapers, new map, new slogans
-Kosuth-like System Art (Simple & Conceptual): New Word Input → Massive Recreation of Images & Videos & Designs & Visual Elements & UIs & Texts → New system which is about the new word, but which is dramatically detached from this new word (Not one and three chairs, but one and hundred, if not thousands, of ______ (Input Word)) (Memes, Hashtags, Trends? But maybe too obvious – Maybe not just independent visual elements are generated, but a whole new solid system is generated upon the new word? - Can be related to the buzz word (i.e. have more systematical detail)
+There is still a lot to be resolved with the voice input interaction - one of the hopeful hint is the openai’s realtime solution, enabling real-time voice interaction. But still, the same problem arises - user won’t have much to say from the very start. 
 
-(More complex society? Societal phenomenas?)
-Financial Market: New External Financial Shock → People in charge (Wall St.) are not asked for responsibility, and other people get the negative effect (Obama Administration) → (In long-term) Financial Stability? Or the rich becoming richer, the poor becoming poorer?
-More specifically - Financial Bubble: New Context (Tulip, Real Estate, .com, AI) → People so obsessed with the bubble → Suddenly explodes unexpectedly out of control
-Educational Model: New Education Trend/Buzz → Nodes (Teachers, Curriculum, Tests) & Edges (Policies, Fundings, Incentives, Evaluation Criteria) → Change in classroom materials
-Design & Aesthetics: New Design Trend → Nodes (Agencies, Clients Taste) & Edges (Flow of Design Trends (Via Instagram/Media), Information, Designers Movement, Funding) → All New Design Outputs
+Therefore, we kind of conclude that user is unable to give a bunch of context (in other words bits of information - if user gives plain text, that contains a lots of information, ideally. But in reality, they just end up giving dummy text, which contains no information) - we should narrow down the options that user can take (at least initially) and this is why the button-based interaction, option-based/parameter-changing interactions is more realistic option for us asking the user to interact which contains semantic interaction. (Or mapping the non-semantic interaction - bodily interaction into semantic dimension - dimensional transformation)
+
+Buttons, Options, Sliders, Toggler, Checkbox, Multi-touch, Number Input, List Selection…  → Type A (Direct, Explicit Interaction)
+Eye Tracking, Voice Recognition, Body Movement, Head Pose, EEG, … -> Type B (Implicit, Sensor-based interaction)
+
+Text Input, Voice Recognition → Type C (Language based semantic interaction)
+External APIs, External Data → Type D (Environmental/Contextual)
+
+For long time it was considered that type b is more immersive/playful than type a – surely it is more advanced technology, but what i mean here by ‘Semantic interaction to phenomenological interaction’ is arguing that combination of type a (direct, explicit interaction) in a wisely designed & nudged way can also lead to very immersive, unique, playful, somehow dadaistic, and phenomenological interaction. (That being said, type b can be also, in other direction, lead to semantic interaction – more on the dimensional mapping/amplified interaction)
+
+Generative Junk site example: Audiences, when interacting, gives new context - via buttons or list selection – this is normally very semantic interaction right? And let’s say there is a 대분류, 중분류, 소분류, and user slides to different 분류 columns and select one of the types – as they interact, first they just firmly ‘click’ on each button individually, but as the interaction progresses and accelerates, the start to ‘slide through’/within the buttons - Their finger, beforehand, was discrete movement (selecting a button and then leaving the interface touch). But now their finger does not detach from the interface - their finger is sliding through/touching on top of interface moving from a button to another, switching 대분류/중분류/소분류/context firmly, softly, phenomenological, somehow detached from the semantic of the button (or actually leveraging in an increasing speed) - and on the screen-side, junk sites are generated/altered in real-time matching with this context.
+
+Related to multi-touch? How to develop this firmly & well-functioning on react?
+
+“SLIDING THROUGH/ON TOP OF THE” Interface!
+Ice skating on the interface - ice skating with your finger
+
+This can be applied for other interaction types - sliders for example. 
+
+Multiple sliders columns - Like the iphone tab
+Sliders - metrics - parameters - all adjusting the current
+Mastering the sliders / numerical value adjustment (param adjustment) is the key to designing semantic-to-phenomenological interaction
+
+Sliders displayed in column - arranged in row will have very different experience from sliders displayed in row - arranged in column. Why couldn’t I think of the sliders displayed in the column? Sliders displayed in columns are way much more of a playful experience - We are used to scroll vertically rather than horizontally. 
+
+Also use page structure wisely: Scrolling up & down! Scrolling is really a powerful tool, and it is the most representative interaction that we do nowadays in the contemporary world. What if scrolling up & down is combined with navigating back & forth - the most universal layout used in contemporary sns/platforms/websites - but make it more dadaistic! Brutal! Focusing on the core interaction!
+
+Page Group A (대분류)
+Page Group B (중분류)
+Page Group C (소분류)
+
+A ←> B ←> C: Horizontally connected,  back & forth, (Click and go forth, go back - left movement and go back)
+Within A/B/C: Vertical interaction, scroll interaction
+
+Hierarchical interaction & Semantic & Phenomenological
+
+More advanced usage?
+
+Hacking Shopping Mall UI: You shop through different contexts! (Trump shopping greenland, Panama, Canada Amazon UI)
+Hacking Flight Reservation/Hotel Resera\vation UI (All sort of shopping mall - kayak, booking,com)
+
+Map → Good Example of Semantic Interaction (Interaction w/ Objective) & Phenomenological Interaction (Navigating, Swirling around) combined → The Zoom & Pinch is quite sense-based but also contains semantic meaning. It gives you an experience of ‘finger skating’ on top of the interface
+
+Punctum Interaction: 위태로운 시스템, 벼랑 끝의 사회… 겨우 평형을 유지해가고 있는 시스템
+시뮬라크럼! 시스템 자체가 거대한 시뮬라시옹, 약간의 푼크툼 (외부 충격 - 인터랙션 - Interaction at Mass speed)으로 사회의 외상이 드러난다… 그러나 이후 시간이 지나면 다시 평형 상태로 돌아가는 (푼크툼을 애써 지워내는)... 여기서 푼크툼-외부 충격은 현상학적 인터랙션의 형태를 띈다! (오메가의 예시도 약간 유사함)
+
+Equilibrium? System? External Shock?
 
 
-(ChatGPT's old-school answers: Mainly focused on Visual states and visual outputs. My system art is not about visuals, but arguing that the system - society we're living in can be interpreted parallelly to these visual-based systems. But still can be partially referenced to create visual outputs)
-Parametric Architecture: Parameter Sliders → Node/Graph Env → Output 3D Model
-Algorithmic Art: Seed Values → Algorithm → Output
+Technically: Reference Hammer.js!
 
 
-Semiotically: Contextual Signifier Changes → Meets with system signified (Differ from the contextual signified) which remains constant unchanged → New output
-More surface-level signifiers! Copy without originals!
-Higher detachment of Signifier - Signified (The original contextual signified), new relationship with the signifier - systematic/simulacrum signified. 
+—
 
+o1-pro summary
 
-Interaction-wise: User switches the context (detailed interaction might differ from the topic - Junk Site Context Switch might differ from the Junk Biennale Context Switch) and a new system is generated - The new system itself has an automatic feature. So the automatic system is already out there, and users can create new automatic systems by changing context. 
+Interaction as a Spectrum:
+Users start with semantic intent (e.g., pressing a button for its meaning) but transition into fluid, subcognitive engagement (e.g., sliding through UI elements, focusing on experience rather than meaning).
+This transformation mirrors modern digital behaviors (e.g., platform engagement, UI-based habit loops, scrolling culture).
+UI/UX as a Medium for System Art:
+Experimenting with button-based, slider-based, and list-based interactions to induce flow states similar to gaming or shopping interfaces.
+Leveraging multi-touch, scrolling, hierarchical navigation (A → B → C structures) to nudge users into deeper, emergent interactions.
+Conceptual Parallels to System Art:
+The system itself is self-sustaining, semi-automated, and partially obscured—users see surface symptoms but not the core dynamics.
+The interactional equilibrium can be disturbed by external shocks (Punctum Interaction) but eventually self-regulates, referencing cybernetic systems, societal feedback loops, and hyperobjects.
 
-Users first choose these new contexts carefully - putting and interconnecting their personal meanings. But over time, they change the context fastly, randomly, just for the sake of enjoying the interaction and the will-to-power they enjoy by creating new systems → Which successfully accuses the simulacrumness/generativeness/flaws of modern systems.
-
-Also one suggestion: Shopping cart! Shopping is beautiful, it is the most significant indicator of how signifier and signified are detached in modern society. Maybe users can shop the context signifier! User shops! The Context! The buzzwords! Which are often considered very seriously within our context – users shop them! And as they shop, new system is automatically created - as light and as serious as how the contemporary system works! SHOPPING SHOPPING SHOPPING, SIGNIFIER → SHOP THE SIGNIFIER. SHOP-LIFT THE SIGNIFIER. Especially, as shopping is the symbol of lightness, it should be & must be combined with the most heavy & serious subject as possible.
 
 
 
