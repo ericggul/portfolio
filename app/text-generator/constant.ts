@@ -1,92 +1,54 @@
 export const TEXT_TO_UPLOAD = {
-  title: "From Semantic Interaction to Phenomenological Interaction",
+  title: "Explicit Commercial Interface & Implicit User Behaviour Tracking ",
   text: `
 
-System Art - Semantic, Interactive, and Modular
+Semantic Interaction ←> Phenomenological Interaction
 
-Important: Interaction should contain semantic information. Yet should be also simple & intuitive for first comers to use. 
+Always important to mix these two trade-off values: Semantic-yet-Phenomenonological or Phenomenological-and-Semantic
 
-Multiple strategies to employ: 
-Non-semantic interaction transformed into semantic interaction (Dimensional Amplifying/Transformation/Amplified Interaction)
-OR Semantic Interaction make it phenomenological / Starts from semantic interaction but end up in non-semantic era
+One different approach: There is an explicit commercial interface (which users are familiar with), and whilst user interacts with this, the behavioural aspect of interaction ((x,y,t) coordinate for instance - (x, y) mobile coordinate, t the time of interaction) is collected and transformed into different layer – acting as parameter for parametric input changing the characteristics of the system. 
 
-For example: Our daily interactions within platforms - Stars from semantic interaction but mostly subcognitive phenomenological interaction
+For instance: let's say there is a shopping e-commerce application mimicked. Very intuitive to use, users had seen a lot of interfaces like this before. They interact. And there is a sort of semantic interaction going on here as multi-device (let's call this interactive layer A). But this is more sort of traditional interaction, could be cheesy, not really break through. BUT at the same time as the user is interacting with the commercial interface, the possible collectable data is not only the semantic button click (i.e. product click, product quantity order, check out, etc.) → There is a behaviour data collected behind-the-scene, following like example:
 
-Within the context of system art: Let’s say you’re controlling the system params / switching system context. There might be couple of buttons in front of you. First user clicks on those buttons for the sake of the signified meaning of the button. Over time, user clicks just for the sake of enjoying the output effect that the interaction causes, rather than attached to the meaning of the button.
+Type 1: Regarding fingers. (x, y, t) coordinate of the finger-based interaction. Most conventional data that can be employed. 
+Type 2: Regarding hands. Device motion & acceleration tracking. Needs user consent in advance (accelerometer)
+Type 3: Regarding face. Facial recognition (another phen. data) Needs user consent in advance (camera)
 
-This is crucial because most of users in interactive art does not want to confront with the heavy semantics, in most of the cases they are quite passive users - also related to reason why many of media art from now focused on the very simple action (waving hands, bodily movement) to create audio-visual affect for the interactive art, not nothing more - some kind of high-dimensional semantic interaction.
+These are all 'phenomenological' data which I named 'Type B' from the following categorisation:
 
-Although I think the semantical interaction (of user choosing smth semantical/input smth semantical) is very important, we cannot expect large vast majority of users to follow these semantic rules - For instance, limitations of text input/voice input
-
-When given text input/voice input, it is largely observed that user doesn’t know what to say/input in an exhibition setting, and end up just entering dummy word. If it’s a word-based interaction, it’s still ok, but if it’s sentence-based interaction and users are enforced to input a large sentence, they most likely to leave - Especially when there’s not so strong background context given. So we should recall that this text-input interaction, especially when given at an early phrase of interaction, will lead to a disaster - interaction just for the interaction’s sake, not really gaining any useful information from the user side.  
-
-There is still a lot to be resolved with the voice input interaction - one of the hopeful hint is the openai’s realtime solution, enabling real-time voice interaction. But still, the same problem arises - user won’t have much to say from the very start. 
-
-Therefore, we kind of conclude that user is unable to give a bunch of context (in other words bits of information - if user gives plain text, that contains a lots of information, ideally. But in reality, they just end up giving dummy text, which contains no information) - we should narrow down the options that user can take (at least initially) and this is why the button-based interaction, option-based/parameter-changing interactions is more realistic option for us asking the user to interact which contains semantic interaction. (Or mapping the non-semantic interaction - bodily interaction into semantic dimension - dimensional transformation)
-
-Buttons, Options, Sliders, Toggler, Checkbox, Multi-touch, Number Input, List Selection…  → Type A (Direct, Explicit Interaction)
-Eye Tracking, Voice Recognition, Body Movement, Head Pose, EEG, … -> Type B (Implicit, Sensor-based interaction)
-
+Buttons, Options, Sliders, Toggler, Checkbox, Multi-touch, Number Input, List Selection… → Type A (Direct, Explicit Interaction) 
+Eye Tracking, Voice Recognition, Body Movement, Head Pose, EEG, … -> Type B (Implicit, Sensor-based interaction) 
 Text Input, Voice Recognition → Type C (Language based semantic interaction)
 External APIs, External Data → Type D (Environmental/Contextual)
 
-For long time it was considered that type b is more immersive/playful than type a – surely it is more advanced technology, but what i mean here by ‘Semantic interaction to phenomenological interaction’ is arguing that combination of type a (direct, explicit interaction) in a wisely designed & nudged way can also lead to very immersive, unique, playful, somehow dadaistic, and phenomenological interaction. (That being said, type b can be also, in other direction, lead to semantic interaction – more on the dimensional mapping/amplified interaction)
+So implicit, sensor-based interaction. These data might not have strong semantic sense (it does have semantic data embedded - but not so much. Especially for fingers and hands), but we do have a strong physical-movement based positional data (x,y, t), (a, b, c, t), (____ (Facial Params), t) → From 3d data to high-dimensional data → which can be used for the 'dimensional transformation', to create some kind of different effects to the system. 
 
-Generative Junk site example: Audiences, when interacting, gives new context - via buttons or list selection – this is normally very semantic interaction right? And let’s say there is a 대분류, 중분류, 소분류, and user slides to different 분류 columns and select one of the types – as they interact, first they just firmly ‘click’ on each button individually, but as the interaction progresses and accelerates, the start to ‘slide through’/within the buttons - Their finger, beforehand, was discrete movement (selecting a button and then leaving the interface touch). But now their finger does not detach from the interface - their finger is sliding through/touching on top of interface moving from a button to another, switching 대분류/중분류/소분류/context firmly, softly, phenomenological, somehow detached from the semantic of the button (or actually leveraging in an increasing speed) - and on the screen-side, junk sites are generated/altered in real-time matching with this context.
+In short, Physical Data → Dimensional Transformation → Adjusted System Params → Affected System Behaviour.
 
-Related to multi-touch? How to develop this firmly & well-functioning on react?
+And although this is an implicit/embedded interaction (Interaction Layer B), my assumption is: Once user had understood the mechanism behind physical data → Affected System Behaviour (and spot cognitive correlation/causality), they will then start to interact with this new layer of physical data (which will be transformed into semantic system params) and have fun playing with it, phenomenologically & intuitively interacting, yet affecting the system semantically (i.e. meaningfully). 
 
-“SLIDING THROUGH/ON TOP OF THE” Interface!
-Ice skating on the interface - ice skating with your finger
+Real-world example (although not 100% satisfied)
 
-This can be applied for other interaction types - sliders for example. 
+- Omega: My artwork. User first goes through MBTI-test like setting. But upon accidental 'shake', the interface starts to distort. Each shake triggers 'omega', a sign of resistance, propagating to all four connected channels. Ever since then, phone shake also transforms the angle of the whole scene. 
+In short, Accelerometer → Procedural Storytelling (Triggering 'Omega' and distorting) , Scene Rotation
 
-Multiple sliders columns - Like the iphone tab
-Sliders - metrics - parameters - all adjusting the current
-Mastering the sliders / numerical value adjustment (param adjustment) is the key to designing semantic-to-phenomenological interaction
+- SoTA: Also artwork that I led. User first encounters with infinite-scrolling interface with 118 different Neural Networks (Also example of semantic → phenomenology, first user clicks on each option independently, then after user just scrolls down for the sake of fun), which is intuitive interaction, but then after user soon realises that as they shake their phone, the whole 3D three.js scene will be also shaked accordingly.
+Here: Accerlometer → Scene Rotation
 
-Sliders displayed in column - arranged in row will have very different experience from sliders displayed in row - arranged in column. Why couldn’t I think of the sliders displayed in the column? Sliders displayed in columns are way much more of a playful experience - We are used to scroll vertically rather than horizontally. 
+But I hadn't used the other two extensively yet (Fingers, Face)
+Nor had I used the data that these information provides (a, b, c, t) extensively
+Nor had I actually 'transformed' this data into different dimension and apply as system params - Other than Omega (Sudden accelerometer spike will trigger 'Omega'), there was no example that phenomenological type b interaction had actually affected the system dynamics from the first place (Accelerometer mainly used to rotate the 3D Scene)
 
-Also use page structure wisely: Scrolling up & down! Scrolling is really a powerful tool, and it is the most representative interaction that we do nowadays in the contemporary world. What if scrolling up & down is combined with navigating back & forth - the most universal layout used in contemporary sns/platforms/websites - but make it more dadaistic! Brutal! Focusing on the core interaction!
+What would be a more speculative example to use this? Maybe start from small examples? (Like blinking? Gazing? But also want to start from the finger-based interaction - hammer.js?) How to design a dimensional transformation btw phenomenological data → semantic data effectively, intuitively, surprisingly, and transformatively? 
 
-Page Group A (대분류)
-Page Group B (중분류)
-Page Group C (소분류)
+This might also additionally serve as a commentary to the homogenous design trend/commercial ui trend → Remember how back old days when the smartphone first came out, we all used to play 'phenomenology' based games – Temple Run, Angry Bird, Rhythm Games? All involving finger interaction only? Finger is the best instrument - we can do/could have done so many things with these.. But now what we only do for whole day is scrolling… Going through Reels, Youtube Shorts, just looking at junk contents, scrolling and swiping from one to another… How pathetic is this?
 
-A ←> B ←> C: Horizontally connected,  back & forth, (Click and go forth, go back - left movement and go back)
-Within A/B/C: Vertical interaction, scroll interaction
+So this is the starting point of interaction - Commercial Interface, so easy to use, so well known, we just scroll, we just use it as how we used to do… But suddenly, the hidden embedded version of interaction arises - phenomenologically - because you reckon that some deep embedded interaction affects the system that you encounter in an unexpected manner, and tada! You grasp this causal connection, and thereafter you interact and adjust your behaviour accordingly. Isn't that wonderful?
 
-Hierarchical interaction & Semantic & Phenomenological
-
-More advanced usage?
-
-Hacking Shopping Mall UI: You shop through different contexts! (Trump shopping greenland, Panama, Canada Amazon UI)
-Hacking Flight Reservation/Hotel Resera\vation UI (All sort of shopping mall - kayak, booking,com)
-
-Map → Good Example of Semantic Interaction (Interaction w/ Objective) & Phenomenological Interaction (Navigating, Swirling around) combined → The Zoom & Pinch is quite sense-based but also contains semantic meaning. It gives you an experience of ‘finger skating’ on top of the interface
-
-Punctum Interaction: 위태로운 시스템, 벼랑 끝의 사회… 겨우 평형을 유지해가고 있는 시스템
-시뮬라크럼! 시스템 자체가 거대한 시뮬라시옹, 약간의 푼크툼 (외부 충격 - 인터랙션 - Interaction at Mass speed)으로 사회의 외상이 드러난다… 그러나 이후 시간이 지나면 다시 평형 상태로 돌아가는 (푼크툼을 애써 지워내는)... 여기서 푼크툼-외부 충격은 현상학적 인터랙션의 형태를 띈다! (오메가의 예시도 약간 유사함)
-
-Equilibrium? System? External Shock?
-
-
-Technically: Reference Hammer.js!
-
-
-—
-
-o1-pro summary
-
-Interaction as a Spectrum:
-Users start with semantic intent (e.g., pressing a button for its meaning) but transition into fluid, subcognitive engagement (e.g., sliding through UI elements, focusing on experience rather than meaning).
-This transformation mirrors modern digital behaviors (e.g., platform engagement, UI-based habit loops, scrolling culture).
-UI/UX as a Medium for System Art:
-Experimenting with button-based, slider-based, and list-based interactions to induce flow states similar to gaming or shopping interfaces.
-Leveraging multi-touch, scrolling, hierarchical navigation (A → B → C structures) to nudge users into deeper, emergent interactions.
-Conceptual Parallels to System Art:
-The system itself is self-sustaining, semi-automated, and partially obscured—users see surface symptoms but not the core dynamics.
-The interactional equilibrium can be disturbed by external shocks (Punctum Interaction) but eventually self-regulates, referencing cybernetic systems, societal feedback loops, and hyperobjects.
+When talking about changing the characteristics of system (through interaction): There are three possible approaches
+Approach 1: Parameteric Adjustment (usually for numerical, continuous values)
+Approach 2: Categorical Adjustment (MBTI Test, or selecting one of the 118 Neural Network Models, for example – quite similar to parametric adjustment, but different that parametric is conti'd, categorical is discrete)
+Approach 3: Contextual Adjustment (Traditionally impossible, now possible through LLMs and AIs - any semantic/language-based contextual information can be adjusted & applied to the system and affect system dynamics, just as how parametric numbers/categorical variables might do)
 
 
 
@@ -95,6 +57,26 @@ The interactional equilibrium can be disturbed by external shocks (Punctum Inter
 `,
 
   tags: [
+    "Semantic Interaction",
+    "Phenomenological Interaction",
+    "User Behavior Tracking",
+    "Commercial Interfaces",
+    "Implicit Interaction",
+    "Spatial Coordinates",
+    "Physical Data",
+    "Parametric Input",
+    "System Transformation",
+    "Touch Interaction",
+    "Accelerometer Data",
+    "Facial Recognition",
+    "Dimensional Transformation",
+    "Interactive Art",
+    "Mobile Interaction",
+    "Device Motion",
+    "Sensor-based Interaction",
+    "Procedural Storytelling",
+    "Interface Design",
+    "Experiential Design",
     "Contextual Switch",
     "System Art",
     "Graph Theory",
@@ -107,7 +89,6 @@ The interactional equilibrium can be disturbed by external shocks (Punctum Inter
     "System Theory",
     "Modular Systems",
     "Sub-Systems",
-    "Interactive Art",
     "State Dynamics",
     "Digital Philosophy",
     "Network Theory",
@@ -126,7 +107,6 @@ The interactional equilibrium can be disturbed by external shocks (Punctum Inter
     "Interactive Design",
     "Theoretical Physics",
     "State-Based Art",
-
     "Multi-Device Web Artwork",
     "Network Theory",
   ],
