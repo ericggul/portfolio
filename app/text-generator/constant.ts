@@ -1,55 +1,52 @@
 export const TEXT_TO_UPLOAD = {
-  title: "Explicit Commercial Interface & Implicit User Behaviour Tracking ",
+  title: "Auto-generating auto-generative systems ",
   text: `
 
-Semantic Interaction ←> Phenomenological Interaction
+The doctrine of auto-generating auto-generative systems.
 
-Always important to mix these two trade-off values: Semantic-yet-Phenomenonological or Phenomenological-and-Semantic
+From the system that generates to the generation of the system(s) that generates.
+From the slave of the system to the owner of the system(s).
+From the labour for the system to creating system(s) that labour.
+From the subsection of the system to creating system(s) as subsections. 
+From being commanded by the system to commanding systems. 
+From the system’s consumer to creating system(s) that consume.
+From the system’s generation to generation of system(s). 
 
-One different approach: There is an explicit commercial interface (which users are familiar with), and whilst user interacts with this, the behavioural aspect of interaction ((x,y,t) coordinate for instance - (x, y) mobile coordinate, t the time of interaction) is collected and transformed into different layer – acting as parameter for parametric input changing the characteristics of the system. 
+From being shackled by Industrial Engineering to being liberated by Industrial Design.
+From the Campbell’s Soup Cans to the generation of XXXX’s YYY ZZZZ.
 
-For instance: let's say there is a shopping e-commerce application mimicked. Very intuitive to use, users had seen a lot of interfaces like this before. They interact. And there is a sort of semantic interaction going on here as multi-device (let's call this interactive layer A). But this is more sort of traditional interaction, could be cheesy, not really break through. BUT at the same time as the user is interacting with the commercial interface, the possible collectable data is not only the semantic button click (i.e. product click, product quantity order, check out, etc.) → There is a behaviour data collected behind-the-scene, following like example:
+The end of Industrial Engineering. RIP Taylorism.
 
-Type 1: Regarding fingers. (x, y, t) coordinate of the finger-based interaction. Most conventional data that can be employed. 
-Type 2: Regarding hands. Device motion & acceleration tracking. Needs user consent in advance (accelerometer)
-Type 3: Regarding face. Facial recognition (another phen. data) Needs user consent in advance (camera)
+If the invention of artificial intelligence can contribute to humankind, it will contribute as it opened a pathway to auto-generate auto-generative systems: contextual change of auto-generative systems, simulation of different auto-generative systems.
 
-These are all 'phenomenological' data which I named 'Type B' from the following categorisation:
+This will liberate the humankind from an industrial-slavery doctrine of the 20th century. We no longer serve the system. Systems serve us. Systems serve us as we massively create those systems. If a system tries to dominate us? Create another counter-system. Back then in the 20th century, we needed a massive scale of the system as that was efficient, and we were forced to volunteer to serve for this system. Now we can create massive systems on our own, from our hands. Thanks to increasingly efficient and customisable generation algorithms, we can generate-generate. Or even we can generate-generate-generate. Oh, I would rather generate-generate-generate-generate-and-generate.
 
-Buttons, Options, Sliders, Toggler, Checkbox, Multi-touch, Number Input, List Selection… → Type A (Direct, Explicit Interaction) 
-Eye Tracking, Voice Recognition, Body Movement, Head Pose, EEG, … -> Type B (Implicit, Sensor-based interaction) 
-Text Input, Voice Recognition → Type C (Language based semantic interaction)
-External APIs, External Data → Type D (Environmental/Contextual)
+20th Century (Represented by Le Corbusier) - Where humans become a part of the factory. 
+21st Century - Humans create factories. We all have factories on our own. In our hand. And we shall not stop creating these factories - we shall create infinite factories, create factory generation algorithms, or even generate the factory generation algorithms, or even generate the generation of the factory generation algorithms. 
 
-So implicit, sensor-based interaction. These data might not have strong semantic sense (it does have semantic data embedded - but not so much. Especially for fingers and hands), but we do have a strong physical-movement based positional data (x,y, t), (a, b, c, t), (____ (Facial Params), t) → From 3d data to high-dimensional data → which can be used for the 'dimensional transformation', to create some kind of different effects to the system. 
+Stop living in flats. Stop living in Courbusier-ian squares. Create infinite amounts of alternative designs, produce them with generative technologies. All modules are uniquely yours. 
 
-In short, Physical Data → Dimensional Transformation → Adjusted System Params → Affected System Behaviour.
+Stop looking at grids. Stop interacting with Norman-ian interfaces. Create infinite amounts of alternative designs, produce them with LLM-based engineering. All interfaces are uniquely yours. (See AI-as-Interface)
 
-And although this is an implicit/embedded interaction (Interaction Layer B), my assumption is: Once user had understood the mechanism behind physical data → Affected System Behaviour (and spot cognitive correlation/causality), they will then start to interact with this new layer of physical data (which will be transformed into semantic system params) and have fun playing with it, phenomenologically & intuitively interacting, yet affecting the system semantically (i.e. meaningfully). 
+Stop having Campbell’s Soups. Stop drinking Warhol-istic cans. Create infinite amounts of alternative flavours - not just this, create infinite cans, labels, drinking scenarios, ingredients, build new product categorisation, new brand and flavour created every day, if not seconds. All drinks are uniquely yours.  
 
-Real-world example (although not 100% satisfied)
+Stop working for big companies. Stop dealing with Taylor-ian ideology. Create infinite amount of your own employees, your own slaves - you might have your own engineering, marketing, sales, HR department. Build your own product line, your business model, and make your companies trade with one another. All companies are uniquely yours.
 
-- Omega: My artwork. User first goes through MBTI-test like setting. But upon accidental 'shake', the interface starts to distort. Each shake triggers 'omega', a sign of resistance, propagating to all four connected channels. Ever since then, phone shake also transforms the angle of the whole scene. 
-In short, Accelerometer → Procedural Storytelling (Triggering 'Omega' and distorting) , Scene Rotation
+“In the past the man has been first; in the future the system must be first” - Taylor
+“In the past the system has been first; In the future the human will become, again, the first, and the system follows the human”
 
-- SoTA: Also artwork that I led. User first encounters with infinite-scrolling interface with 118 different Neural Networks (Also example of semantic → phenomenology, first user clicks on each option independently, then after user just scrolls down for the sake of fun), which is intuitive interaction, but then after user soon realises that as they shake their phone, the whole 3D three.js scene will be also shaked accordingly.
-Here: Accerlometer → Scene Rotation
+The definition of mass-generation will change enormously. Now we need no more mass-generation. We no longer reside within mass-generation. Rather, we generate the mass. 
 
-But I hadn't used the other two extensively yet (Fingers, Face)
-Nor had I used the data that these information provides (a, b, c, t) extensively
-Nor had I actually 'transformed' this data into different dimension and apply as system params - Other than Omega (Sudden accelerometer spike will trigger 'Omega'), there was no example that phenomenological type b interaction had actually affected the system dynamics from the first place (Accelerometer mainly used to rotate the 3D Scene)
+Caveat: Hyper-customisation might be another name for mass-generation – When customising, look carefully if the system is controlling the customisation or if you are customising the system. They might tell you that it is customised for you, but they might customise you to the system. Resist to this. Make you customise them.
 
-What would be a more speculative example to use this? Maybe start from small examples? (Like blinking? Gazing? But also want to start from the finger-based interaction - hammer.js?) How to design a dimensional transformation btw phenomenological data → semantic data effectively, intuitively, surprisingly, and transformatively? 
+Principles - and a system which worships these principles - and a principle-obeying mass-generation. This was the 20th century. 
 
-This might also additionally serve as a commentary to the homogenous design trend/commercial ui trend → Remember how back old days when the smartphone first came out, we all used to play 'phenomenology' based games – Temple Run, Angry Bird, Rhythm Games? All involving finger interaction only? Finger is the best instrument - we can do/could have done so many things with these.. But now what we only do for whole day is scrolling… Going through Reels, Youtube Shorts, just looking at junk contents, scrolling and swiping from one to another… How pathetic is this?
+Mass-generated principles - We are the one now generating mass principles on our own, existentialise a system with those principles, validate if one system will work or not. There is no ultimately right or wrong system, but you can choose the bundle which comforts you. We no longer need a simulation: Systems themselves are simulations. 
 
-So this is the starting point of interaction - Commercial Interface, so easy to use, so well known, we just scroll, we just use it as how we used to do… But suddenly, the hidden embedded version of interaction arises - phenomenologically - because you reckon that some deep embedded interaction affects the system that you encounter in an unexpected manner, and tada! You grasp this causal connection, and thereafter you interact and adjust your behaviour accordingly. Isn't that wonderful?
+https://www.chosun.com/opinion/specialist_column/2025/03/07/FABBSDS32RACXFY3STNEF44V6I/?utm_source=naver&utm_medium=referral&utm_campaign=naver-news 
 
-When talking about changing the characteristics of system (through interaction): There are three possible approaches
-Approach 1: Parameteric Adjustment (usually for numerical, continuous values)
-Approach 2: Categorical Adjustment (MBTI Test, or selecting one of the 118 Neural Network Models, for example – quite similar to parametric adjustment, but different that parametric is conti'd, categorical is discrete)
-Approach 3: Contextual Adjustment (Traditionally impossible, now possible through LLMs and AIs - any semantic/language-based contextual information can be adjusted & applied to the system and affect system dynamics, just as how parametric numbers/categorical variables might do)
 
+Auto-generating auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative auto-generative systems.
 
 
 
@@ -57,57 +54,45 @@ Approach 3: Contextual Adjustment (Traditionally impossible, now possible throug
 `,
 
   tags: [
-    "Semantic Interaction",
-    "Phenomenological Interaction",
-    "User Behavior Tracking",
-    "Commercial Interfaces",
-    "Implicit Interaction",
-    "Spatial Coordinates",
-    "Physical Data",
-    "Parametric Input",
-    "System Transformation",
-    "Touch Interaction",
-    "Accelerometer Data",
-    "Facial Recognition",
-    "Dimensional Transformation",
-    "Interactive Art",
-    "Mobile Interaction",
-    "Device Motion",
-    "Sensor-based Interaction",
-    "Procedural Storytelling",
-    "Interface Design",
-    "Experiential Design",
-    "Contextual Switch",
-    "System Art",
-    "Graph Theory",
-    "Automated Systems",
-    "Generative Art",
-    "System States",
-    "Graph Structure",
-    "Digital Systems",
-    "Input-Output",
-    "System Theory",
-    "Modular Systems",
-    "Sub-Systems",
-    "State Dynamics",
-    "Digital Philosophy",
-    "Network Theory",
-    "Generative Systems",
-    "Context Theory",
-    "System Dynamics",
-    "Contemporary Art",
-    "Generative Simulacra",
-    "AI Generation",
-    "Junk Systems",
-    "Digital Simulation",
-    "Multi-Device Web Artwork",
-    "State Dynamics",
-    "Digital Installation",
-    "Quantum Art",
-    "Interactive Design",
-    "Theoretical Physics",
-    "State-Based Art",
-    "Multi-Device Web Artwork",
-    "Network Theory",
+    "Auto-generative Systems",
+    "Post-industrial Design",
+    "System Generation",
+    "Mass Customization",
+    "Industrial Liberation",
+    "Post-Taylorism",
+    "Human-centered Systems",
+    "System Autonomy",
+    "Generative Algorithms",
+    "Meta-generation",
+    "AI Liberation",
+    "Industrial Transformation",
+    "System Hierarchy",
+    "Generative Design",
+    "Digital Manufacturing",
+    "Personalized Production",
+    "System Ownership",
+    "Self-generating Systems",
+    "Anti-mass Production",
+    "Hyper-customization",
+    "Principle Generation",
+    "System Simulation",
+    "Le Corbusier Criticism",
+    "Warhol Criticism",
+    "Norman Criticism",
+    "Industrial Design Philosophy",
+    "System Decentralization",
+    "Automated Creation",
+    "Factory Generation",
+    "Customization Theory",
+    "Digital Emancipation",
+    "System Replication",
+    "Recursive Generation",
+    "21st Century Design",
+    "Anti-standardization",
+    "Generative Freedom",
+    "System Diversity",
+    "Personal Manufacturing",
+    "Algorithmic Design",
+    "Factory Democratization",
   ],
 };
