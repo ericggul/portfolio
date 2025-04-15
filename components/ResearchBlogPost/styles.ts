@@ -116,6 +116,7 @@ export const Contents = styled.div`
   .prose-content {
     p {
       margin-bottom: 1.2em;
+      white-space: pre-wrap; // Preserve whitespace and line breaks
     }
     // Add other prose styles here if needed (headings, lists, etc.)
     // Example: Improve link styling within content
@@ -125,6 +126,34 @@ export const Contents = styled.div`
       &:hover {
         color: #005bb5;
       }
+    }
+
+    // Style for list-like items (lines starting with *, -, •)
+    .list-item {
+      display: block; // Ensure it takes block layout
+      padding-left: 1.5em; // Indent list items
+      position: relative;
+      margin-bottom: 0.5em; // Space between list items
+
+      &::before {
+        content: "•"; // Add a bullet point
+        position: absolute;
+        left: 0.5em; // Position the bullet
+        top: 0;
+        color: #333; // Bullet color
+      }
+    }
+
+    // Style for pre tags used for paragraphs to preserve whitespace
+    pre {
+      font-size: 1.05rem; // Match paragraph font size
+      line-height: 1.8; // Match paragraph line height
+      margin: 0 0 1.2em 0; // Consistent bottom margin like paragraphs
+      color: #222; // Match paragraph text color
+      font-weight: 400; // Match paragraph font weight
+      font-family: inherit; // Use the font from Contents
+      white-space: pre-wrap; // Ensure wrapping and whitespace preservation
+      overflow-x: auto; // Add horizontal scroll if needed for long non-breaking lines
     }
   }
 `;

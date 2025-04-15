@@ -16,6 +16,8 @@ interface ResearchBlogPostProps {
 }
 
 export default function ResearchBlogPost({ post }: ResearchBlogPostProps) {
+  console.log(post);
+
   if (!post) {
     // Handle case where post data is missing, though the page should handle this
     return (
@@ -55,19 +57,38 @@ export default function ResearchBlogPost({ post }: ResearchBlogPostProps) {
         {/* Use a div with a class for potential prose-like styling if needed, or style p directly */}
         <div className="prose-content">
           {post.content.split(/\r\r|\n\n/).map((paragraph, i) => {
-            const trimmedParagraph = paragraph.trim();
-            if (trimmedParagraph) {
+            // Trim only trailing whitespace, keep leading whitespace for indentation
+            const processedParagraph = paragraph.replace(/\s+$/, "");
+            if (processedParagraph) {
+              // Use <pre> for robust whitespace/newline preservation
+              // Split paragraph into lines to check for bullet points
+              const lines = processedParagraph.split("\n");
               return (
-                <p key={i}>
-                  {trimmedParagraph.split("\n").map((line, j) => (
-                    <span key={j}>
-                      {line.trim() ? line : <>&nbsp;</>}
-                      {/* Render non-breaking space for empty lines */}
-                      {/* Add <br/> only if it's not the last line in the paragraph */}
-                      {j < trimmedParagraph.split("\n").length - 1 && <br />}
-                    </span>
-                  ))}
-                </p>
+                <pre key={i}>
+                  {lines.map((line, j) => {
+                    // Check for common bullet point markers (adjust regex as needed)
+                    const isListItem = /^\s*[-*•]/.test(line);
+                    const trimmedLine = line.replace(/^\s*[-*•]\s*/, ""); // Remove marker and leading space
+                    if (isListItem) {
+                      return (
+                        <span key={j} className="list-item">
+                          {trimmedLine}
+                          {/* Add newline unless it's the very last line of the paragraph */}
+                          {j < lines.length - 1 && "\n"}
+                        </span>
+                      );
+                    } else {
+                      // Render regular lines as text nodes within pre
+                      return (
+                        <span key={j}>
+                          {line}
+                          {/* Add newline unless it's the very last line of the paragraph */}
+                          {j < lines.length - 1 && "\n"}
+                        </span>
+                      );
+                    }
+                  })}
+                </pre>
               );
             }
             return null;

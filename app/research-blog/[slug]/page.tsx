@@ -13,6 +13,7 @@ type Props = {
 export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   try {
     const post = await getBlogPostBySlug(params.slug);
+    console.log(post);
 
     if (!post) {
       return {
