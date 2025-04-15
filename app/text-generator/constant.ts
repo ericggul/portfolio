@@ -1,42 +1,115 @@
 export const TEXT_TO_UPLOAD = {
-  title: "Also Sprach Zarathustra",
+  title: "Dimensional Transformation & System Parameterisation",
   text: `
 
-혼란과 혼돈의 세상 속에 살고 있다는 말은 이제 너무 일상적인 상투어가 되어버렸다. 캘리포니아에서는 혁신이 지속되고 있지만, 이쯤이면 인류를 위한 혁신인지, 아니면 혁신을 위한 혁신인지 가늠이 되지 않을 정도이다. 테크노 트레드밀은 그 속도를 가속하며 멈출줄을 모른다. 트레드밀에서 밀려난 인간들의 비율이 늘어난다는 사실은 별로 중요하지 않다. 이 트레드밀의 수요와 공급은 또 다른 트레드밀의 산물 - 이를테면 자동화된 에이전트들 - 이 충족해주기 때문이다. 이것은 멈출 수 없는, 끊임없이 가속되는 디스토피아다. 그러나 모든 디스토피아에는 유토피아적 색채가 숨겨져 있다.
-산업혁명과 함께 태동한 테일러리즘은 인간을 기계로 만들었다. 고용제라는 20세기를 위한 봉건제도가 고안되었고, 직급으로 대표되는 거대한 계층적 피라미드 속에서 인간은 부품으로 전략했다. 일부 예외를 제외한 전통적인 블루/화이트칼라들은 제한된 지식/스킬을 바탕으로 반복 노동을 하는 기계적인 행위를 수행했다. 예컨대 우리는 시스템의 노예였다. 교육 또한 시스템속 최적화된 인재들을 양산하기 위한 양적인 접근에서 이루어졌으며, 제한된 시간 속 많은 문제를 정확히 푸는 최적화의 이데올로기 속에서 이루어졌다. 의식주, 여가, 유행 모두 테일러적으로 진행되었다 - 우리는 코르뷔지에적인 감옥에 산다는 것, 예컨대 반포자이에 산다는 것을 자랑스럽게 여기지 않는가?
-인공지능이 인류에게 유용할 수 있다면, 그것은 모든 시뮬라크르 제작에 수반되는 노동을 즉각적으로 대체할 수 있다는 데에 있다. 시스템이라는 시뮬라시옹을 구동하는데 수반되는 반복적 노동은 이제 알고리즘이 더 잘한다. 단편적으로 이는 일자리와 현대 경제 구조에는 큰 비극이지만, 장기적으로는 인간의 실존적 가치를 시스템의 부품으로 전략시키는 산업공학적 이데올로기에서 해방시킬 수 있다는 데에 장점으로 작용할 수도 있다. 예컨대 시스템의 노예는 즉자존재의 상태에서 해방(해고)된다. 그리고 이 시점에서 대자존재로서의 개인의 가치가 재평가된다. 현시점과 같이 한 인간의 창의성이 실존적 결과물로 빠르게 이어질수 있는 기술을 보유한 시대이기 때문이다. 
-이제 인간은 시스템의 노예에서 시스템의 창조자로, 즉자존재에서 대자존재로, 부품에서 메카니즘으로, 부분에서 전체로 나아간다. 물리적인 자본의 제약은 재생산되는 의미관계의 무수한 창출로 대체된다. 합리성, 최적화, 정답을 강조하는 모더니즘의 잔재는 비선형성, 엉뚱함, 불확실성의 긍정, 혹은 수정궁 앞에서의 혓바닥을 추구하는 포스트모던으로 진정하게 전환된다. 이제 계산과 반복은 기계한테 위임하자. 한 인간의 일생은 수많은 호기심과 궁금증을 무수히 제기하는것 만으로도 짧다. 그리고 이 무수한 사고실험들은 기계에 의해 실증실험으로 상당히 빠르게 연결되고, 이를 통해 인류는 여러 난제들을 다시 해결해낼지도 모른다. 이것이 다음 특이점을 상당히 뒤로 미루는 가장 유토피아적인 발상이 아닐까?
-니체의 차라투스트라는 낙타, 사자, 아이에 대해 말한다. 낙타는 사막 속에서 수많은 정신적 짐을 짊어진채 인내하는 노예다. 그는 "너는 해야 한다"라는 명령을 받아들여 시스템의 부품이 된다. 반대로 사자는 자유를 쟁취하고 사막의 주인이 되기를 원한다. 그는 시스템에 대항해, '나는 원한다'라고 말하지만 아직 그 원하는 대상을 창조해내지는 못한다. 아이는, 그러나, 창조한다. 아이는 순진무구함이자 망각이고, 무수히 많은 놀이를 찾아내는 동시에 긍정하며, '스스로 도는 수레바퀴'를 만들어낸다. 예컨대 아이는 수레바퀴 속에 위치한다기 보다는, 외부에서 스스로 도는 수레바퀴(시스템)를 놀이하듯 창조한다. 내가 다가오는 시대에 희망을 유지할 수 있다면, 그것은 아이적인 긍정과 웃음소리로 가득찬 위버멘쉬의 도래, 즉 인류의 초월적 진보를 예견하는 차원에서 가능할 것이다. 150년전, 차라투스트라는 그렇게 말했다. 이제는 우리가 응답할 차례이다.
+Traditionally:
+
+1. Input → 2. Output
+or
+1. Input → 2. Minor Edit → 3. Output
+
+(ex. Direct system parameters manipulation (Co2, ppm) → Directly affected as output (Often as data visualisation))
+
+What I propose (Especially for multi-user situations)
+
+1. Input → 2. Input Dimensional Transformation → 3. System → 4. Output Dimensional Transformation → 5. Output
+
+More precisely:
+
+1. Input parameter adjustment interaction Input Modalities → 2. Input Dimensional Transformation (From UI Input parameters → System input parameters) → 3. Systematic Changes (System Input → System Output) → 4. Output Dimensional Transformation (System Output Parameters → User-facing Output parameters) → 5. Different A/V Output
+
+For example:
 
 
-----
+1. Everyday Interface Input Modalities
+1 → 2. Current parameters: Consumption, policy, traffic, real-world metrics
+2. Input Dimensional Transformation (Real-world tangible action/data to system metrics)
+2 → 3. Current parameters: Co2, PPM, (Ecological) System Input parameters 
+3. Systematic Algorithm 
+3 → 4. Current parameters: Temperature, Humidity, System Output parameters 'Conseuqences'
+4. Output Dimensional Transformation (System output to Real-world output/events)
+4 → 5. Current parameters (Information): Wildfire/Natural Disaster, Lack of Water/Food Resources, etc.
+5. Everyday Interface/Simulation/etc. Output 
 
-5년안에 세상을 바꾸는 발명품이 나올 것이라는 저자의 예측은 GPT를 비롯한 LLM의 지속적 등장으로 굉장히 현실화되었다. LLM은 이미 인터넷의 발명에 상응하는 파급력을 가진다. 수많은 디자이너, 개발자들의 업무가 이미 Cursor Agent로 가능하고, MCP는 화이트 칼라 노동자들의 일상적 업무를 대체한다. 바야흐로 새로운 패러다임으로의 전환이 시급할 때이다.
-모든 새로운 시대에는 새로운 접근이 필요했으며, 확률분포 기반 Likelihood 계산으로 대표되는 LLM 시대에는 'Regression to the Mean'에 반하여 'Diverging from the Mean'의 접근이 시급한 이유이다. 모든 논리적 게임 (Constraint 가 정해져 있고, Objective가 명확히 정의 가능한) 속의 최적화 상황에서는 더이상 인간이 기계를 능가하지 못한다. 문제를 빠르고 정확하게 푸는 것이 의미가 없는 이유이다. 반대로 예상치도 못한 부분에서 - 예컨대 대통일 이론과 같은 컨텍스트 - 문제를 제기하고 정의하는 능력이 필요하다. 적어도 지금의 LLM은 GIGO 구조를 가지고 있기 때문이다.
-바야흐로 세상이 본인에 혁신을 강요하기 전에 본인이 스스로를 혁신해야하는 시도이다. 이 무한히 가속되는 하이퍼-시지프스는 인류가 하이퍼오브젝트의 런닝머신에 스스로를 가뒀음을 보여준다. 참으로 디스토피아적인 코미디는 유토피아적인 색채를 분명 진하게 가지고 있다.
+1 → 2 → 3 → 4 → 5
+
+Note: Dimensional Transformation is not 1:1 / 1:N / N:1 Relationship (i.e., not like single consumption/event directly transforming a single/multiple climate metric)
+
+Rather, it's a M:N Relationship → If there exist 7 input stations and 5 main climate metrics, for example, it's a 7:5 relationship. Vice versa for the output dimensional transformation: Depicting a hyperobject can contaminate multiple outputs (코끼리와 장님).
+
+This structure effectively captures the complexity and intertwining/relational structure of complex society/system/ecological system whilst well-managing/defining the algorithmic structure behind the scene.
+
+
+WHY DIMENSIONAL TRANSFORMATION?
+
+Direct configuration/parameterisation of the system, enabling suer to explicitly/directly control the system is not sexy at all --- Direct Manipulation, clear cause & effect가 되면 So What?
+What is the value of interaction? More than just a simple interactive interface? Has clear limitations
+
+Avoid direct manipulation. We need indeed DIMENSIONAL TRANSFORMATION btw interactions
+
+차라리 Piano Interface 처럼 (피아노를 치는데 양쪽 스크린에서 시간이 조절된다?), 아니면 Toggler Interface/Toggler Interface + Voice INterface처럼 Multi-Modality Conducting? 한 Interactive Modality에서 다른 Systematic Parameter로 DIMENSIONAL TRANSFORMATION이 일어날때 진짜 재미가 느껴짐
+ 
+Why Dimensional Transformation? What is the value of it?
+Not obvious: Fun when the mental model is newly established. V-Effekt possible
+Allows space for context to involve within the process of dimensional transformation
+Semantic interaction to involve, when designed very well
+Why not obvious interaction? Why such dimensional transformation? Why involve/engage the specific interactive modality A to induce a systemic change? When reasoned well - why specifically modality A is used, it adds an implicit and strong conceptual layer to the overall interaction
+Good example: Bike - city touring interaction
+Why certain dimensional transformation? Why certain modality?
+Why piano?
+Why toggler?
+Why voice interaction?
+All opportunities to strongly bind interaction to the narrative/context
+이들 사용한 Justification이 누구나 알아들을 수 있고 직관적으로 감각할 수 있는 Level까지 Narrow Down/Define 되어야
+
+
+This 1 -> 2 -> 3 -> 4 -> 5 also resonates with the idea: Interface-as-Instrument
+
+1 -> 2 -> 3 -> 4 -> 5: Similar yet different
+
+1 -> 2 -> 3 -> 4 four structure (System is in btw 2 and 3)
+1: Instrumental input
+1-> 2: Input Dimensional Transformation
+2: System Input
+2 -> 3: Systematic Algorithm
+3: System Output
+3 -> 4: Output Dimensional Transformation
+4: Interface Output
+
+For example: Play Garden Idea
+
+1: Phenomenological Interaction? Interactions that kids can do… Very natural modality, screaming, punching, scrolling, tapping, swiping, etc. (Let's say there are 7 different modalities)
+1 → 2: 7-dimension to 9-dimension mapping (7-to-9)
+2: Maps to the Anthropocene data (Nine planetary boundaries)
+2 → 3: Ecological system
+3: Ecological outputs 
+3 → 4: Visualising Dimensional Transformation
+4: Depicted output, like how garden is changed
+
+What is this? Is this similar to simulation? Maybe, perhaps the structure is similar to simulation – but it's different in a way… 
 
 `,
 
   tags: [
-    "Nietzsche Philosophy",
-    "Also Sprach Zarathustra",
-    "Übermensch Concept",
-    "Three Metamorphoses",
-    "AI and Human Value",
-    "LLM Paradigm Shift",
-    "Technological Acceleration",
-    "Critique of Taylorism",
-    "System Slave vs Creator",
-    "Automation Dystopia/Utopia",
-    "Post-Labor Society",
-    "Creativity vs Optimization",
-    "Diverging from the Mean",
-    "Postmodern Thought",
-    "Existential Shift",
-    "Simulacra and Simulation",
-    "Humanity's Future",
-    "Childlike Creation",
-    "Hyper-Sisyphus",
-    "Techno-Treadmill Critique",
+    "Dimensional Transformation Art",
+    "Input/Output Mapping",
+    "System Parameterization",
+    "Indirect Manipulation Interface",
+    "M:N System Relationships",
+    "Beyond Direct Control",
+    "Non-Obvious Interaction",
+    "Semantic Interaction Design",
+    "Contextual Transformation",
+    "V-Effekt in Interaction",
+    "Justified Modality Choice",
+    "Interface-as-Instrument",
+    "Multi-Modal Interaction Systems",
+    "Five-Step System Structure",
+    "Systemic Input/Output Flow",
+    "Complex System Interaction",
+    "Algorithmic Transformation",
+    "Phenomenological Input",
+    "Conceptual Interaction Layers",
+    "Interactive System Architecture",
   ],
 };
