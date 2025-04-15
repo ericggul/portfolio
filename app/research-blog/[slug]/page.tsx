@@ -6,7 +6,6 @@ import type { Metadata, ResolvingMetadata } from "next";
 
 type Props = {
   params: { slug: string };
-  // Add searchParams if needed
 };
 
 // Generate metadata for individual post pages
