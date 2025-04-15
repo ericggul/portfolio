@@ -3,16 +3,19 @@ import { getBlogPostBySlug, getAllBlogPosts } from "@/lib/blog";
 import Link from "next/link";
 import ResearchBlogPost from "@/components/ResearchBlogPost";
 import type { Metadata, ResolvingMetadata } from "next";
+import type { BlogPost } from "@/lib/blog"; // Import the BlogPost type
 
 type Props = {
   params: { slug: string };
 };
 
-// Generate metadata for individual post pages
+// Generate metadata - updated for direct BlogPost retrieval
 export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
   try {
+    // getBlogPostBySlug now returns BlogPost | null directly
     const post = await getBlogPostBySlug(params.slug);
 
+    console.log(post);
     if (!post) {
       return {
         title: "Post Not Found | Jeanyoon Choi Research Blog",
@@ -20,7 +23,7 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
       };
     }
 
-    // Extract a short description from the content (e.g., first 150 chars)
+    // Extract a short description from the content
     const description =
       post.content
         .replace(/\r|\n/g, " ") // Replace newlines with spaces for description
@@ -30,15 +33,9 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
     return {
       title: `${post.title} | Jeanyoon Choi Research Blog`,
       description: description,
-      // Optionally add openGraph data like images if available in post data
-      // openGraph: {
-      //   title: post.title,
-      //   description: description,
-      //   images: [post.imageUrl || '/default-og-image.png'],
-      // },
     };
   } catch (error) {
-    console.error("Error generating metadata for blog post:", error);
+    console.error(`[generateMetadata] Error generating metadata for ${params.slug}:`, error);
     return {
       title: "Error | Jeanyoon Choi Research Blog",
       description: "An error occurred while loading this blog post.",
@@ -47,14 +44,33 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
 }
 
 export default async function BlogPostPage({ params }: { params: { slug: string } }) {
-  // Fetch the blog post
-  const post = await getBlogPostBySlug(params.slug);
+  try {
+    // getBlogPostBySlug now returns BlogPost | null directly
+    const post = await getBlogPostBySlug(params.slug);
 
-  if (!post) {
+    if (!post) {
+      return (
+        <div style={{ padding: "2rem" }}>
+          <h1>Post Not Found</h1>
+          <p>The blog post you're looking for doesn't exist or couldn't be loaded.</p>
+          <div style={{ marginTop: "1rem" }}>
+            <Link href="/research-blog" style={{ color: "blue", textDecoration: "underline" }}>
+              ← Back to all posts
+            </Link>
+          </div>
+        </div>
+      );
+    }
+
+    // Pass the post data to the component
+    console.log(`[BlogPostPage] Successfully loaded post: ${post.title}`);
+    return <ResearchBlogPost post={post} />;
+  } catch (error) {
+    console.error(`[BlogPostPage] Error loading post for ${params.slug}:`, error);
     return (
       <div style={{ padding: "2rem" }}>
-        <h1>Post Not Found</h1>
-        <p>The blog post you're looking for doesn't exist.</p>
+        <h1>Error Loading Post</h1>
+        <p>An error occurred while trying to load this blog post.</p>
         <div style={{ marginTop: "1rem" }}>
           <Link href="/research-blog" style={{ color: "blue", textDecoration: "underline" }}>
             ← Back to all posts
@@ -63,9 +79,6 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
       </div>
     );
   }
-
-  // Pass the fetched post data to the component
-  return <ResearchBlogPost post={post} />;
 }
 
 export async function generateStaticParams() {
