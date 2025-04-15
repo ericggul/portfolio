@@ -1,10 +1,18 @@
 import { MetadataRoute } from "next";
 import prisma from "@/lib/prisma";
+import { getAllBlogPosts } from "@/lib/blog";
 
-export default async function sitemap(): Promise<any> {
+// Define the expected shape of a blog post for the sitemap
+interface BlogPost {
+  slug: string;
+  updated: string | number | Date;
+  // Add other fields if needed for logic, though slug/updated are primary for sitemap
+}
+
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const URL = "https://portfolio-jyc.org";
 
-  const staticURLs = [
+  const staticURLs: MetadataRoute.Sitemap = [
     {
       url: `${URL}/`,
       lastModified: new Date(),
@@ -50,7 +58,7 @@ export default async function sitemap(): Promise<any> {
   const textsURLs = texts.map((el) => ({
     url: `${URL}/text/${el.id}`,
     lastModified: new Date(),
-    changeFrequency: "daily",
+    changeFrequency: "daily" as const,
     priority: 0.9,
   }));
 
@@ -72,11 +80,20 @@ export default async function sitemap(): Promise<any> {
     .map((el) => ({
       url: `${URL}/works/${el.id}`,
       lastModified: new Date(),
-      changeFrequency: "daily",
-      priority: 0.8,
+      changeFrequency: "daily" as const,
+      priority: 0.7,
     }));
 
-  const dynamicURLs = [...textsURLs, ...worksURLs];
+  // Fetch research blog posts
+  const blogPosts: BlogPost[] = await getAllBlogPosts();
+  const blogPostURLs = blogPosts.map((post) => ({
+    url: `${URL}/research-blog/${post.slug}`,
+    lastModified: new Date(post.updated),
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  const dynamicURLs = [...textsURLs, ...worksURLs, ...blogPostURLs];
 
   return [...staticURLs, ...dynamicURLs];
 }

@@ -1,0 +1,10 @@
+# Allow all user agents to crawl the site
+User-agent: *
+Allow: /
+
+# Disallow specific paths if necessary, e.g.:
+# Disallow: /admin/
+# Disallow: /private/
+
+# Point to the sitemap location
+Sitemap: https://portfolio-jyc.org/sitemap.xml 

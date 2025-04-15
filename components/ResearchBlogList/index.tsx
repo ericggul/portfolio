@@ -18,9 +18,9 @@ interface ResearchBlogListProps {
 export default function ResearchBlogList({ posts }: ResearchBlogListProps) {
   return (
     <S.Container>
-      <S.ContentWrapper>
-        <S.Title>Research Blog</S.Title>
+      <S.Title>Research Blog</S.Title>
 
+      <S.ContentWrapper>
         {posts && posts.length > 0 ? (
           <S.PostList>
             {posts.map((post) => (

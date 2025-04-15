@@ -4,7 +4,7 @@ import { FlexCenterStyle } from "@/styles/common";
 export const Container = styled.div`
   background: #fff; // Match single post background
   color: #111;
-  min-height: calc(${({ theme }) => theme.windowHeight}px - 4.5rem);
+  height: calc(${({ theme }) => theme.windowHeight}px - 4.5rem); // Explicitly set height
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
