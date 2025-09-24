@@ -39,7 +39,8 @@ export default function Project({ projects }: any) {
   const [columns, setColumns] = useState(1);
   const pinchState = useRef<{ distance: number | null; columnsAtStart: number } | null>(null);
 
-  const getDistance = (touch1: Touch, touch2: Touch) => {
+  type MinimalTouch = { clientX: number; clientY: number };
+  const getDistance = (touch1: MinimalTouch, touch2: MinimalTouch) => {
     const dx = touch1.clientX - touch2.clientX;
     const dy = touch1.clientY - touch2.clientY;
     return Math.hypot(dx, dy);
@@ -47,14 +48,14 @@ export default function Project({ projects }: any) {
 
   const onTouchStart = (e: React.TouchEvent) => {
     if (e.touches.length === 2) {
-      const d = getDistance(e.touches[0], e.touches[1]);
+      const d = getDistance(e.touches[0] as any, e.touches[1] as any);
       pinchState.current = { distance: d, columnsAtStart: columns };
     }
   };
 
   const onTouchMove = (e: React.TouchEvent) => {
     if (e.touches.length === 2 && pinchState.current?.distance) {
-      const d = getDistance(e.touches[0], e.touches[1]);
+      const d = getDistance(e.touches[0] as any, e.touches[1] as any);
       const scale = d / pinchState.current.distance;
       // Inverted mapping: zoom in (scale>1) -> fewer columns; zoom out (scale<1) -> more columns
       const alpha = 1.2;
