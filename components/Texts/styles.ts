@@ -8,6 +8,7 @@ export const Container = styled.div`
   overflow-y: scroll;
 
   background: #111;
+  background-color: #111;
   color: #ddd;
 
   &::-webkit-scrollbar {

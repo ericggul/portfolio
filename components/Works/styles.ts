@@ -6,6 +6,7 @@ export const Container = styled.div`
   width: 100%;
   position: relative;
   background: #111;
+  background-color: #111;
   font-family: "Times New Roman", Times, serif;
   transition: all 0.3s ease-in-out;
 `;

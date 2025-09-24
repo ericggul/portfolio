@@ -24,11 +24,13 @@ export const metadata: Metadata = {
   viewport: {
     width: "device-width",
     initialScale: 1,
+    viewportFit: 'cover',
   },
   robots: {
     index: true,
     follow: true,
   },
+  themeColor: "#111",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

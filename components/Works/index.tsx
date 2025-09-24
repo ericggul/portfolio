@@ -6,43 +6,33 @@ import Image from "next/image";
 //styles
 import * as S from "./styles";
 
-export default function Project({ allImages }: any) {
-  // Remove artificial sequential loading; render all items and lazy-load when in view
-  const images = allImages;
+export default function Project({ projects }: any) {
+  // Re-implement the original image generation and sorting logic on the client-side
+  const allImages = useMemo(() => {
+    if (!projects) return [];
+    return projects
+      .reduce((acc: any, curr: any) => {
+        const imageCount = parseInt(curr.imageNumber, 10) || 0;
+        const projectImages = new Array(imageCount).fill(0).map((_, i: number) => ({
+          ...curr,
+          url: `/assets${curr.imageURLBase}/${i + 1}.webp`,
+          imgIdx: i + 1,
+          uniqueKey: `${curr.id}-${i + 1}`,
+        }));
+        return [...acc, ...projectImages];
+      }, [])
+      .sort((a: any, b: any) => Math.floor(a.imgIdx / a.rating) / a.rating - Math.floor(b.imgIdx / b.rating) / b.rating);
+  }, [projects]);
 
   // compute how many items are above the fold for priority
   const priorityCount = 10; // prioritize roughly first two rows in 5-col layout
 
-  // sequential loading queue with limited concurrency
-  const [allowedIndex, setAllowedIndex] = useState(0);
-  const loadedFlagsRef = useRef<boolean[]>([]);
-  const concurrencyWindow = 3; // allow up to 3 ahead of the last fully loaded index
-
-  const handleItemLoaded = (idx: number) => {
-    loadedFlagsRef.current[idx] = true;
-    setAllowedIndex((prev) => {
-      let next = prev;
-      while (loadedFlagsRef.current[next]) {
-        next += 1;
-      }
-      return next;
-    });
-  };
-
   const memorisedImages = useMemo(
     () =>
-      images.map((el: any, i: number) => (
-        <SingleEl
-          el={el}
-          idx={i}
-          key={el.id ?? el.url ?? i}
-          priority={i < priorityCount}
-          allowedIndex={allowedIndex}
-          concurrencyWindow={concurrencyWindow}
-          onLoaded={handleItemLoaded}
-        />
+      allImages.map((el: any, i: number) => (
+        <SingleEl el={el} key={el.uniqueKey} priority={i < priorityCount} />
       )),
-    [images, allowedIndex]
+    [allImages]
   );
 
   // pinch-to-zoom column control (mobile)
@@ -114,28 +104,13 @@ function useInView(options?: IntersectionObserverInit) {
   return { ref, inView } as const;
 }
 
-const SingleEl = React.memo(({ el, priority = false, idx, allowedIndex, concurrencyWindow, onLoaded }: any) => {
+const SingleEl = React.memo(({ el, priority = false }: any) => {
   const [hovered, setHovered] = useState(false);
-  const [showedEl, setShowedEl] = useState<any>(null);
-  const [change, setChange] = useState(false);
   const [appear, setAppear] = useState(false);
   const { ref, inView } = useInView();
-  const canLoad = inView && idx <= allowedIndex + concurrencyWindow;
 
-  useEffect(() => {
-    if (!el) return;
-    setChange(true);
-    setAppear(false);
-    //after 1s, set change to false
-    const timeout = setTimeout(() => {
-      setChange(false);
-      setHovered(false);
-      setShowedEl(el);
-    }, 300);
-    return () => clearTimeout(timeout);
-  }, [el]);
-
-  const linkTo = useMemo(() => (showedEl ? showedEl.mdxOrSeperateLink || `/works/${showedEl.id}` : "/works"), [showedEl]);
+  const linkTo = useMemo(() => (el ? el.mdxOrSeperateLink || `/works/${el.id}` : "/works"), [el]);
+  const imageUrl = el.url;
 
   return (
     <Link href={linkTo} target={linkTo.includes("http") || linkTo.includes("https") ? "_blank" : undefined}>
@@ -144,19 +119,16 @@ const SingleEl = React.memo(({ el, priority = false, idx, allowedIndex, concurre
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{
-          opacity: change || !appear ? 0 : 1,
+          opacity: !appear ? 0 : 1,
         }}
       >
-        {showedEl && canLoad && (
+        {inView && (
           <>
-            {showedEl.url && (
+            {imageUrl && (
               <Image
-                onLoad={() => {
-                  setAppear(true);
-                  if (typeof idx === "number") onLoaded?.(idx);
-                }}
-                src={showedEl.url}
-                alt={showedEl.title}
+                onLoad={() => setAppear(true)}
+                src={imageUrl}
+                alt={el.title}
                 fill
                 priority={priority}
                 sizes="(min-width: 769px) 20vw, 100vw"
@@ -167,10 +139,10 @@ const SingleEl = React.memo(({ el, priority = false, idx, allowedIndex, concurre
                 opacity: hovered ? 1 : 0,
               }}
             >
-              <S.Title>{showedEl.title}</S.Title>
+              <S.Title>{el.title}</S.Title>
               <S.Year>
-                <p>{showedEl.type}</p>
-                <p>{showedEl.year}</p>
+                <p>{el.type}</p>
+                <p>{el.year}</p>
               </S.Year>
             </S.Info>
 

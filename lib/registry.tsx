@@ -35,12 +35,19 @@ export default function StyledComponentsRegistry({ children }: { children: React
 }
 
 const GlobalStyle = createGlobalStyle`
+  html {
+    background: #111;
+    background-color: #111;
+  }
+
   body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Times New Roman";
     overflow: hidden;
+    background: #111;
+    background-color: #111;
 
 
     -webkit-touch-callout: none; /* iOS Safari */

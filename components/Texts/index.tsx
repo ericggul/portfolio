@@ -18,7 +18,7 @@ export default function Texts({ texts }: any) {
       <S.Contents>
         <S.Items>
           {texts.map((el: any, i: number) => (
-            <SingleItem key={i} el={el} isEvenRow={Math.floor(i / itemsPerRow) % 2 === 0} imgWidth={imgWidth} />
+            <SingleItem key={el.id ?? i} el={el} idx={i} isEvenRow={Math.floor(i / itemsPerRow) % 2 === 0} imgWidth={imgWidth} />
           ))}
         </S.Items>
       </S.Contents>
@@ -26,22 +26,21 @@ export default function Texts({ texts }: any) {
   );
 }
 
-function SingleItem({ el, isEvenRow, imgWidth }: any) {
+function SingleItem({ el, idx, isEvenRow, imgWidth }: any) {
   const [imgLoaded, setImgLoaded] = useState(false);
 
   return (
-    <Link href={`/text/${el.id}`}>
+    <Link href={`/text/${el.id}`} prefetch={false}>
       <S.SingleItem>
         {isEvenRow && (
-          <Image src={el.imgURL} alt={el.title} width={imgWidth} height={imgWidth} />
-          // <img
-          //   src={el.imgURL}
-          //   alt={el.title}
-          //   style={{
-          //     opacity: imgLoaded ? 1 : 1,
-          //   }}
-          //   onLoad={() => setImgLoaded(true)}
-          // />
+          <Image
+            src={el.imgURL}
+            alt={el.title}
+            width={imgWidth}
+            height={imgWidth}
+            sizes="(min-width: 769px) 16.6vw, 50vw"
+            priority={idx < 6}
+          />
         )}
 
         <S.Inner>
@@ -55,13 +54,13 @@ function SingleItem({ el, isEvenRow, imgWidth }: any) {
         </S.Inner>
 
         {!isEvenRow && (
-          <img
+          <Image
             src={el.imgURL}
             alt={el.title}
-            style={{
-              opacity: imgLoaded ? 1 : 1,
-            }}
-            onLoad={() => setImgLoaded(true)}
+            width={imgWidth}
+            height={imgWidth}
+            sizes="(min-width: 769px) 16.6vw, 50vw"
+            priority={idx < 6}
           />
         )}
       </S.SingleItem>

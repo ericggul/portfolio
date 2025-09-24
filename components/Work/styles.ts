@@ -1,11 +1,13 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 import { FlexCenterStyle, WholeContainer } from "@/styles/common";
 
 export const Container = styled.div`
   ${FlexCenterStyle}
   justify-content: space-between;
   overflow-y: scroll !important;
+  overflow-x: hidden !important;
   background: #111;
+  background-color: #111;
   min-height: calc(${({ theme }) => theme.windowHeight}px - 4.5rem);
 `;
 
@@ -15,11 +17,21 @@ export const Contents = styled.div`
   padding-bottom: 5rem;
   margin-left: 1.5rem;
   overflow-y: scroll !important;
+  overflow-x: hidden !important;
   font-size: ${({ theme }) => (theme.windowWidth > 768 ? "1rem" : ".8rem")};
   font-weight: 300;
   transition: opacity 0.3s ease-in-out;
 
   color: #bbb;
+
+  /* prevent horizontal overflow for all text */
+  p, h1, h2, h3, h4, h5, h6, a, span, li, blockquote {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+    white-space: normal;
+    max-width: 100%;
+  }
 
   a {
     cursor: pointer;
@@ -147,5 +159,35 @@ export const SingleEl = styled.div`
     font-style: italic;
     color: #bbb;
     text-decoration: none !important;
+  }
+`;
+
+const shimmer = keyframes`
+  100% {
+    transform: translateX(100%);
+  }
+`;
+
+export const SkeletonPlaceholder = styled.div`
+  position: relative;
+  overflow: hidden;
+  background-color: #333;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0,
+      rgba(255, 255, 255, 0.1) 20%,
+      rgba(255, 255, 255, 0.3) 60%,
+      rgba(255, 255, 255, 0)
+    );
+    animation: ${shimmer} 2s infinite;
   }
 `;

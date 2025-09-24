@@ -8,19 +8,16 @@ export default async function TextPage() {
     select: {
       id: true,
       title: true,
-      tags: true,
       imgURL: true,
       createdAt: true,
     },
+    orderBy: { createdAt: "desc" },
+    take: 100,
   });
 
   return (
     <>
-      <Texts
-        texts={texts.sort((a: any, b: any) => {
-          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-        })}
-      />
+      <Texts texts={texts} />
     </>
   );
 }
