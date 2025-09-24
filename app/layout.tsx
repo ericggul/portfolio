@@ -46,6 +46,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </Script>
       <head>
         <meta name="naver-site-verification" content="0cc6a64e8cffc3303071773ec9aa5fb26dd09ba8" />
+        <link rel="preload" href="/assets/fonts/Anton-Regular.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
+        <link rel="preload" href="/assets/fonts/ComingSoon-Regular.ttf" as="font" type="font/ttf" crossOrigin="anonymous" />
       </head>
       <html lang="en">
         <body>

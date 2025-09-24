@@ -10,6 +10,7 @@ export const Container = styled.div<Level>`
   ${WholeContainer};
   ${FlexCenterStyle}
   cursor: pointer;
+  background: white;
 
   ${({ $level }) => $level >= 5 && "background: hsl(0, 0%, 5%)"};
   opacity: 1;
@@ -47,6 +48,7 @@ export const Title = styled.div<Level>`
   transition: all 0.4s ease-in;
   position: relative;
   height: 0;
+  will-change: transform, opacity, width, height;
 
   ${FlexCenterStyle};
   cursor: pointer;
@@ -90,9 +92,7 @@ export const SmallEl = styled.div.attrs<SmallEl>((props) => ({
     left: `${props.$pos.x}px`,
     transform: props.$popOut ? undefined : `rotate(${props.$rotation}turn)`,
     background: `hsl(${props.$colorHue}, 100%, 50%)`,
-    boxShadow: `0 0 .3rem white, 0 0 .5rem hsl(${(180 + props.$colorHue) % 360}, 100%, 50%), 0 0 1rem hsl(${(180 + props.$colorHue) % 360}, 100%, 50%), 0 0 2rem hsl(${
-      (180 + props.$colorHue) % 360
-    }, 100%, 50%)`,
+    boxShadow: `0 0 .3rem white, 0 0 .5rem hsl(${(180 + props.$colorHue) % 360}, 100%, 50%), 0 0 1rem hsl(${(180 + props.$colorHue) % 360}, 100%, 50%), 0 0 2rem hsl(${(180 + props.$colorHue) % 360}, 100%, 50%)`,
   },
 }))<SmallEl>`
   opacity: 0;
@@ -101,11 +101,13 @@ export const SmallEl = styled.div.attrs<SmallEl>((props) => ({
   font-family: Anton;
 
   position: absolute;
-  transition: all 0.4s ease-out;
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
   font-size: 1.5rem;
   border-radius: 4rem;
   padding: 0.3rem 1rem;
   border: 0.3rem solid black;
+  backface-visibility: hidden;
+  will-change: transform, opacity;
 
   @keyframes appear {
     from {
