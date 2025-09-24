@@ -13,6 +13,7 @@
     "@next/third-parties": "^14.0.4",
     "@prisma/client": "^5.8.1",
     "axios": "^1.6.8",
+    "jszip": "^3.10.1",
     "loplat-ui": "^1.11.1-rc",
     "next": "14.0.4",
     "openai": "^4.29.2",
@@ -22,6 +23,7 @@
     "styled-components": "^6.1.8"
   },
   "devDependencies": {
+    "@types/jszip": "^3.4.1",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
