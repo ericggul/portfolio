@@ -30,7 +30,7 @@ export default function Project({ projects }: any) {
   const memorisedImages = useMemo(
     () =>
       allImages.map((el: any, i: number) => (
-        <SingleEl el={el} key={el.uniqueKey} priority={i < priorityCount} />
+        <SingleEl el={el} key={el.uniqueKey} priority={i < priorityCount} forceLoad={i < priorityCount} />
       )),
     [allImages]
   );
@@ -96,7 +96,7 @@ function useInView(options?: IntersectionObserverInit) {
           }
         });
       },
-      { root: null, rootMargin: "200px", threshold: 0.01, ...(options || {}) }
+      { root: null, rootMargin: "600px", threshold: 0.01, ...(options || {}) }
     );
     observer.observe(node);
     return () => observer.disconnect();
@@ -105,13 +105,15 @@ function useInView(options?: IntersectionObserverInit) {
   return { ref, inView } as const;
 }
 
-const SingleEl = React.memo(({ el, priority = false }: any) => {
+const SingleEl = React.memo(({ el, priority = false, forceLoad = false }: any) => {
   const [hovered, setHovered] = useState(false);
   const [appear, setAppear] = useState(false);
   const { ref, inView } = useInView();
 
   const linkTo = useMemo(() => (el ? el.mdxOrSeperateLink || `/works/${el.id}` : "/works"), [el]);
   const imageUrl = el.url;
+
+  const shouldLoad = forceLoad || inView;
 
   return (
     <Link href={linkTo} target={linkTo.includes("http") || linkTo.includes("https") ? "_blank" : undefined}>
@@ -123,7 +125,7 @@ const SingleEl = React.memo(({ el, priority = false }: any) => {
           opacity: !appear ? 0 : 1,
         }}
       >
-        {inView && (
+        {shouldLoad && (
           <>
             {imageUrl && (
               <Image
