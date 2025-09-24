@@ -10,14 +10,16 @@ export const Container = styled.div`
   transition: all 0.3s ease-in-out;
 `;
 
-export const Wrapper = styled.div`
+export const Wrapper = styled.div<{ $columns?: number }>`
   ${WholeContainer}
   overflow-y: scroll;
   // min-height: ${({ theme }) => theme.windowHeight}px;
   background: #111;
   display: grid;
   grid-row-gap: 0 !important;
-  grid-template-columns: ${({ theme }) => (theme.windowWidth > 768 ? "repeat(5, 1fr)" : "repeat(2, 1fr)")};
+  grid-template-columns: ${({ theme, $columns }) =>
+    theme.windowWidth > 768 ? "repeat(5, 1fr)" : `repeat(${($columns || 1)}, 1fr)`};
+  touch-action: pan-y;
 
   &::-webkit-scrollbar {
     display: none !important;
@@ -43,8 +45,8 @@ export const Wrapper = styled.div`
 `;
 
 export const SingleEl = styled.div`
-  width: ${({ theme }) => (theme.windowWidth > 768 ? "20vw" : "50vw")};
-  height: ${({ theme }) => (theme.windowWidth > 768 ? "11.25vw" : "28.125vw")};
+  width: 100%;
+  aspect-ratio: 16 / 9;
   position: relative;
   background: #111;
   transition: all 0.3s ease-in-out;

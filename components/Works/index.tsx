@@ -1,77 +1,126 @@
 "use client";
-import React, { useState, useMemo, useEffect, use } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import useResize from "@/utils/hooks/useResize";
 
 //styles
 import * as S from "./styles";
 
 export default function Project({ allImages }: any) {
-  const [shuffledImagesArray, setShuffledImagesArray] = useState<any>([]);
+  // Remove artificial sequential loading; render all items and lazy-load when in view
+  const images = allImages;
 
-  useEffect(() => {
-    loadAllImages();
-  }, [allImages]);
+  // compute how many items are above the fold for priority
+  const priorityCount = 10; // prioritize roughly first two rows in 5-col layout
 
-  async function loadAllImages() {
-    for (const element of allImages) {
-      await loadImage(element);
+  // sequential loading queue with limited concurrency
+  const [allowedIndex, setAllowedIndex] = useState(0);
+  const loadedFlagsRef = useRef<boolean[]>([]);
+  const concurrencyWindow = 3; // allow up to 3 ahead of the last fully loaded index
+
+  const handleItemLoaded = (idx: number) => {
+    loadedFlagsRef.current[idx] = true;
+    setAllowedIndex((prev) => {
+      let next = prev;
+      while (loadedFlagsRef.current[next]) {
+        next += 1;
+      }
+      return next;
+    });
+  };
+
+  const memorisedImages = useMemo(
+    () =>
+      images.map((el: any, i: number) => (
+        <SingleEl
+          el={el}
+          idx={i}
+          key={el.id ?? el.url ?? i}
+          priority={i < priorityCount}
+          allowedIndex={allowedIndex}
+          concurrencyWindow={concurrencyWindow}
+          onLoaded={handleItemLoaded}
+        />
+      )),
+    [images, allowedIndex]
+  );
+
+  // pinch-to-zoom column control (mobile)
+  const [columns, setColumns] = useState(1);
+  const pinchState = useRef<{ distance: number | null; columnsAtStart: number } | null>(null);
+
+  const getDistance = (touch1: Touch, touch2: Touch) => {
+    const dx = touch1.clientX - touch2.clientX;
+    const dy = touch1.clientY - touch2.clientY;
+    return Math.hypot(dx, dy);
+  };
+
+  const onTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length === 2) {
+      const d = getDistance(e.touches[0], e.touches[1]);
+      pinchState.current = { distance: d, columnsAtStart: columns };
     }
-  }
+  };
 
-  const delay = (ms: number) => new Promise((res) => setTimeout(res, ms));
+  const onTouchMove = (e: React.TouchEvent) => {
+    if (e.touches.length === 2 && pinchState.current?.distance) {
+      const d = getDistance(e.touches[0], e.touches[1]);
+      const scale = d / pinchState.current.distance;
+      // Inverted mapping: zoom in (scale>1) -> fewer columns; zoom out (scale<1) -> more columns
+      const alpha = 1.2;
+      const raw = pinchState.current.columnsAtStart / Math.pow(scale || 1, alpha);
+      const mapped = Math.round(Math.min(5, Math.max(1, raw)));
+      setColumns(mapped);
+    }
+  };
 
-  async function loadImage(el: any) {
-    // const img = new Image();
-    // img.src = el.url;
-    // img.onload = () => {
-    //   setShuffledImagesArray(
-    //     (
-    //       prev: any //upload except for redundant images
-    //     ) => (prev.find((ele: any) => ele && ele.url === el.url) ? prev : [...prev, el])
-    //   );
-    // };
-
-    setShuffledImagesArray(
-      (
-        prev: any //upload except for redundant images
-      ) => (prev.find((ele: any) => ele && ele.url === el.url) ? prev : [...prev, el])
-    );
-
-    await delay(100);
-  }
-
-  /////sizing
-  const [windowWidth, windowHeight] = useResize();
-
-  const imgSize = useMemo(() => {
-    const width = windowWidth > 768 ? windowWidth * 0.2 : windowWidth * 0.5;
-    const height = windowWidth > 768 ? windowWidth * 0.1125 : windowWidth * 0.28125;
-    return { width, height };
-  }, [windowWidth]);
-
-  // Use useMemo to memoize the shuffledImagesArray
-  const memorisedImages = useMemo(() => shuffledImagesArray.map((el: any, i: number) => <SingleEl el={el} key={i} imgSize={imgSize} />), [shuffledImagesArray]);
+  const onTouchEnd = (e: React.TouchEvent) => {
+    if (e.touches.length < 2) {
+      pinchState.current = null;
+    }
+  };
 
   return (
     <S.Container>
-      <S.Wrapper>
+      <S.Wrapper $columns={columns} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
         {memorisedImages}
-
-        {new Array(20).fill(null).map((_, i) => (
-          <SingleEl key={i} imgSize={imgSize} />
-        ))}
       </S.Wrapper>
     </S.Container>
   );
 }
 
-const SingleEl = React.memo(({ el, imgSize }: any) => {
+function useInView(options?: IntersectionObserverInit) {
+  const ref = useRef<HTMLDivElement | null>(null);
+  const [inView, setInView] = useState(false);
+
+  useEffect(() => {
+    const node = ref.current;
+    if (!node) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setInView(true);
+            observer.disconnect();
+          }
+        });
+      },
+      { root: null, rootMargin: "200px", threshold: 0.01, ...(options || {}) }
+    );
+    observer.observe(node);
+    return () => observer.disconnect();
+  }, [options]);
+
+  return { ref, inView } as const;
+}
+
+const SingleEl = React.memo(({ el, priority = false, idx, allowedIndex, concurrencyWindow, onLoaded }: any) => {
   const [hovered, setHovered] = useState(false);
   const [showedEl, setShowedEl] = useState<any>(null);
   const [change, setChange] = useState(false);
   const [appear, setAppear] = useState(false);
+  const { ref, inView } = useInView();
+  const canLoad = inView && idx <= allowedIndex + concurrencyWindow;
 
   useEffect(() => {
     if (!el) return;
@@ -91,16 +140,28 @@ const SingleEl = React.memo(({ el, imgSize }: any) => {
   return (
     <Link href={linkTo} target={linkTo.includes("http") || linkTo.includes("https") ? "_blank" : undefined}>
       <S.SingleEl
+        ref={ref}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
         style={{
           opacity: change || !appear ? 0 : 1,
         }}
       >
-        {showedEl && (
+        {showedEl && canLoad && (
           <>
-            {/* {showedEl.url && <img onLoad={() => setAppear(true)} src={showedEl.url} alt={showedEl.title} />} */}
-            {showedEl.url && <Image onLoad={() => setAppear(true)} src={showedEl.url} alt={showedEl.title} width={imgSize.width} height={imgSize.height} />}
+            {showedEl.url && (
+              <Image
+                onLoad={() => {
+                  setAppear(true);
+                  if (typeof idx === "number") onLoaded?.(idx);
+                }}
+                src={showedEl.url}
+                alt={showedEl.title}
+                fill
+                priority={priority}
+                sizes="(min-width: 769px) 20vw, 100vw"
+              />
+            )}
             <S.Info
               style={{
                 opacity: hovered ? 1 : 0,
