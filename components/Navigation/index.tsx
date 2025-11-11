@@ -15,20 +15,20 @@ export default function Navigation({ currTab }: any) {
         </Link>
       </S.Left>
       <S.Right>
-        <S.Tab $currTab={currTab === "works"}>
+        {currTab !== "works" && <S.Tab $currTab={currTab === "works"}>
           <Link href="/works">Works</Link>
-        </S.Tab>
-        <S.Tab $currTab={currTab === "about"}>
+        </S.Tab>}
+        {currTab !== "about" && <S.Tab $currTab={currTab === "about"}>
           <Link href="/about">About</Link>
-        </S.Tab>
-        <S.Tab $currTab={currTab === "texts"}>
+        </S.Tab>}
+        {currTab !== "texts" && <S.Tab $currTab={currTab === "texts"}>
           <Link href="/texts">Texts</Link>
-        </S.Tab>
-        {/* <S.Tab $currTab={currTab === "fund"}>
-          <Link href="https://iba.art/products/%CF%89-resistance" target="_blank">
-            Fund
+        </S.Tab>}
+        {currTab !== "lab" && <S.Tab $currTab={currTab === "lab"}>
+          <Link href="https://www.xdlab.net/" target="_blank">
+            XD lab
           </Link>
-        </S.Tab> */}
+        </S.Tab>}
       </S.Right>
     </S.NavContainer>
   );
