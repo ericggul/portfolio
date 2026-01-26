@@ -9,7 +9,6 @@ type Props = {
 };
 
 export async function generateMetadata({ params, searchParams }: Props, parent: ResolvingMetadata): Promise<Metadata> {
-  // read route params
 
   try {
     const id = params.slug;
