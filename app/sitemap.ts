@@ -43,6 +43,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       changeFrequency: "monthly",
       priority: 1.0,
     },
+    {
+      url: `${URL}/publications/sota-dis-2026`,
+      lastModified: new Date("2026-06-12"),
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
   ];
 
   const texts = await prisma.text.findMany({
