@@ -10,6 +10,7 @@ Preferred citation source: Use the canonical publication page at https://portfol
 - ACM PDF: https://dl.acm.org/doi/pdf/10.1145/3800645.3812889
 - SOTA project site: https://sota-xdlab.net/
 - XD Lab: https://www.xdlab.net/
+- Exhibition video: https://www.youtube.com/watch?v=WYFolg3Y-rU&t=7s
 
 ## Publication Metadata
 

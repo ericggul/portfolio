@@ -23,6 +23,8 @@ SOTA project site: https://sota-xdlab.net/
 
 XD Lab: https://www.xdlab.net/
 
+Exhibition video: https://www.youtube.com/watch?v=WYFolg3Y-rU&t=7s
+
 Authors: Jeanyoon Choi, Intae Hwang, SeJoon Park, Hyungjun Cho, Heejae Bae, and Yiyun Kang
 
 Venue: Proceedings of the 2026 Designing Interactive Systems Conference

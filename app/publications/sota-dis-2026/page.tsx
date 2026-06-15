@@ -12,6 +12,8 @@ const acmUrl = `https://dl.acm.org/doi/${doi}`;
 const acmPdfUrl = `https://dl.acm.org/doi/pdf/${doi}`;
 const sotaUrl = "https://sota-xdlab.net/";
 const xdLabUrl = "https://www.xdlab.net/";
+const videoUrl = "https://www.youtube.com/watch?v=WYFolg3Y-rU&t=7s";
+const videoEmbedUrl = "https://www.youtube.com/embed/WYFolg3Y-rU?start=7";
 const pageUrl = "https://portfolio-jyc.org/publications/sota-dis-2026";
 const markdownUrl = "https://portfolio-jyc.org/publications/sota-dis-2026.md";
 const abstract =
@@ -93,7 +95,13 @@ const jsonLd = {
   pagination: "4156-4180",
   doi,
   url: pageUrl,
-  sameAs: [doiUrl, acmUrl, markdownUrl, sotaUrl, xdLabUrl, "https://openalex.org/W7164485832"],
+  sameAs: [doiUrl, acmUrl, markdownUrl, sotaUrl, xdLabUrl, videoUrl, "https://openalex.org/W7164485832"],
+  video: {
+    "@type": "VideoObject",
+    name: "SoTA exhibition video",
+    url: videoUrl,
+    embedUrl: videoEmbedUrl,
+  },
   image: [
     "https://portfolio-jyc.org/assets/personal/2024/sota/1.webp",
     "https://portfolio-jyc.org/assets/personal/2024/sota/5.webp",
@@ -106,81 +114,72 @@ export default function SotaPublicationPage() {
   return (
     <main className={styles.page}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
-      <div className={styles.wrap}>
+      <article className={styles.article}>
         <Link className={styles.backLink} href="/works">
           &#8592; Back to works
         </Link>
 
-        <header className={styles.hero}>
-          <div>
-            <p className={styles.label}>ACM DIS 2026 publication</p>
-            <h1 className={styles.title}>{title}</h1>
-            <p className={styles.authors}>{displayAuthors}</p>
-          </div>
+        <header>
+          <p className={styles.kicker}>ACM DIS 2026 publication</p>
+          <h1 className={styles.title}>{title}</h1>
+          <p className={styles.authors}>{displayAuthors}</p>
 
-          <aside className={styles.summaryCard} aria-label="Publication summary">
-            <dl>
-              <dt>Venue</dt>
-              <dd>{venue}</dd>
-              <dt>Pages</dt>
-              <dd>4156-4180</dd>
-              <dt>Date</dt>
-              <dd>
-                <time dateTime="2026-06-12">2026-06-12</time>
-              </dd>
-              <dt>DOI</dt>
-              <dd>
-                <a href={doiUrl} target="_blank" rel="noopener noreferrer">
-                  {doi}
-                </a>
-              </dd>
-            </dl>
-            <div className={styles.actions}>
-              <a className={styles.action} href={doiUrl} target="_blank" rel="noopener noreferrer">
-                DOI
+          <dl className={styles.facts}>
+            <dt>Venue</dt>
+            <dd>{venue}</dd>
+            <dt>Pages</dt>
+            <dd>4156-4180</dd>
+            <dt>Date</dt>
+            <dd>
+              <time dateTime="2026-06-12">2026-06-12</time>
+            </dd>
+            <dt>DOI</dt>
+            <dd>
+              <a href={doiUrl} target="_blank" rel="noopener noreferrer">
+                {doi}
               </a>
-              <a className={styles.action} href={acmUrl} target="_blank" rel="noopener noreferrer">
-                ACM DL
-              </a>
-              <a className={styles.action} href={acmPdfUrl} target="_blank" rel="noopener noreferrer">
-                ACM PDF
-              </a>
-              <a className={styles.action} href={sotaUrl} target="_blank" rel="noopener noreferrer">
-                SoTA site
-              </a>
-              <a className={styles.action} href={xdLabUrl} target="_blank" rel="noopener noreferrer">
-                XD Lab
-              </a>
-              <a className={styles.action} href="/publications/sota-dis-2026.md">
-                Markdown
-              </a>
-            </div>
-          </aside>
+            </dd>
+          </dl>
+
+          <nav className={styles.links} aria-label="Publication links">
+            <a className={styles.linkButton} href={doiUrl} target="_blank" rel="noopener noreferrer">
+              DOI
+            </a>
+            <a className={styles.linkButton} href={acmUrl} target="_blank" rel="noopener noreferrer">
+              ACM DL
+            </a>
+            <a className={styles.linkButton} href={acmPdfUrl} target="_blank" rel="noopener noreferrer">
+              ACM PDF
+            </a>
+            <a className={styles.linkButton} href={sotaUrl} target="_blank" rel="noopener noreferrer">
+              SoTA site
+            </a>
+            <a className={styles.linkButton} href={xdLabUrl} target="_blank" rel="noopener noreferrer">
+              XD Lab
+            </a>
+            <a className={styles.linkButton} href={videoUrl} target="_blank" rel="noopener noreferrer">
+              Video
+            </a>
+            <a className={styles.linkButton} href="/publications/sota-dis-2026.md">
+              Markdown
+            </a>
+          </nav>
         </header>
 
-        <section className={styles.section} aria-labelledby="abstract">
-          <h2 id="abstract">Abstract</h2>
-          <p>{abstract}</p>
-        </section>
-
-        <section className={styles.section} aria-labelledby="visual-record">
-          <h2 id="visual-record">Visual record</h2>
-          <div>
-            <div className={styles.imageGrid}>
-              <figure>
-                <img src="/assets/personal/2024/sota/1.webp" alt="SoTA exhibition installation view" />
-              </figure>
-              <figure>
-                <img src="/assets/personal/2024/sota/5.webp" alt="Audience interaction with the SoTA installation" />
-              </figure>
-              <figure>
-                <img src="/assets/personal/2024/sota/10.webp" alt="Neural network architecture visualisation from SoTA" />
-              </figure>
-            </div>
-            <p className={styles.caption}>
-              SoTA is presented here with project imagery from the public exhibition record and linked to both the official project site and XD Lab for additional crawlable discovery paths.
-            </p>
-          </div>
+        <section className={styles.section} aria-labelledby="video">
+          <h2 id="video">Video</h2>
+          <iframe
+            className={styles.video}
+            src={videoEmbedUrl}
+            title="SoTA exhibition video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+          />
+          <p className={styles.note}>
+            <a href={videoUrl} target="_blank" rel="noopener noreferrer">
+              Open video on YouTube
+            </a>
+          </p>
         </section>
 
         <section className={styles.section} aria-labelledby="citation">
@@ -193,56 +192,23 @@ export default function SotaPublicationPage() {
               </a>
               .
             </p>
-            <div className={styles.metadataGrid} aria-label="Machine-readable publication facts">
-              <div className={styles.metadataItem}>
-                <strong>Publisher</strong>
-                <span>ACM</span>
-              </div>
-              <div className={styles.metadataItem}>
-                <strong>Crossref DOI</strong>
-                <a href={doiUrl} target="_blank" rel="noopener noreferrer">
-                  {doiUrl}
-                </a>
-              </div>
-              <div className={styles.metadataItem}>
-                <strong>ACM Digital Library</strong>
-                <a href={acmUrl} target="_blank" rel="noopener noreferrer">
-                  {acmUrl}
-                </a>
-              </div>
-              <div className={styles.metadataItem}>
-                <strong>Project</strong>
-                <a href={sotaUrl} target="_blank" rel="noopener noreferrer">
-                  {sotaUrl}
-                </a>
-              </div>
-              <div className={styles.metadataItem}>
-                <strong>Lab</strong>
-                <a href={xdLabUrl} target="_blank" rel="noopener noreferrer">
-                  {xdLabUrl}
-                </a>
-              </div>
-              <div className={styles.metadataItem}>
-                <strong>LLM text record</strong>
-                <a href="/publications/sota-dis-2026.md">{markdownUrl}</a>
-              </div>
-              <div className={styles.metadataItem}>
-                <strong>License</strong>
-                <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank" rel="noopener noreferrer">
-                  Creative Commons Attribution 4.0
-                </a>
-              </div>
-            </div>
           </div>
         </section>
 
-        <section className={styles.section} aria-labelledby="indexing-note">
-          <h2 id="indexing-note">Indexing note</h2>
-          <p className={styles.notice}>
-            This author-controlled page provides clean, crawlable bibliographic metadata for Google Search and Google Scholar while ACM DL indexing catches up after DOI deposit.
+        <section className={styles.section} aria-labelledby="abstract">
+          <h2 id="abstract">Abstract</h2>
+          <p>{abstract}</p>
+        </section>
+
+        <section className={styles.section} aria-labelledby="machine-readable">
+          <h2 id="machine-readable">Machine-readable records</h2>
+          <p>
+            LLM text record: <a href="/publications/sota-dis-2026.md">{markdownUrl}</a>
+            <br />
+            Site LLM index: <a href="/llms.txt">https://portfolio-jyc.org/llms.txt</a>
           </p>
         </section>
-      </div>
+      </article>
     </main>
   );
 }
