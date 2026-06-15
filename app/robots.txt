@@ -1,5 +1,17 @@
-User-Agent: *
+User-agent: OAI-SearchBot
 Allow: /
 Disallow: /private/
 
-Sitemap: https://www.portfolio-jyc.org/sitemap.xml
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /private/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /private/
+
+User-agent: *
+Allow: /
+Disallow: /private/
+
+Sitemap: https://portfolio-jyc.org/sitemap.xml

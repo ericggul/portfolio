@@ -13,6 +13,7 @@ const acmPdfUrl = `https://dl.acm.org/doi/pdf/${doi}`;
 const sotaUrl = "https://sota-xdlab.net/";
 const xdLabUrl = "https://www.xdlab.net/";
 const pageUrl = "https://portfolio-jyc.org/publications/sota-dis-2026";
+const markdownUrl = "https://portfolio-jyc.org/publications/sota-dis-2026.md";
 const abstract =
   "We introduce SoTA, a multi-device interactive artwork on artificial intelligence (AI). It visualises 118 neural network architectures as artistic objects that can be experienced at an immersive scale, allowing audiences to select, explore, and navigate different models interactively. The installation is also characterised by an intentional narrative shift that moves from open-ended exploration to abstract visualisation. We exhibited SoTA in a public art museum and conducted an in-situ study with 33 participants to investigate how aesthetic experiences foster affective and critical reflection, complementing technical explanation in public AI engagement. Our findings reveal how aesthetic environments create emotional conditions that foster deeper inquiry, leading to enhanced understanding, productive ambivalence, and ultimately personal, philosophical, and societal reflection on AI. We conclude by discussing the opportunities of artistic exhibitions for public AI engagement and suggest three concrete design strategies grounded in our evaluation of SoTA.";
 
@@ -60,6 +61,7 @@ export const metadata: Metadata = {
     citation_abstract: abstract,
     citation_pdf_url: acmPdfUrl,
     citation_online_date: "2026/06/12",
+    "llm-source": markdownUrl,
   },
 };
 
@@ -91,7 +93,7 @@ const jsonLd = {
   pagination: "4156-4180",
   doi,
   url: pageUrl,
-  sameAs: [doiUrl, acmUrl, sotaUrl, xdLabUrl, "https://openalex.org/W7164485832"],
+  sameAs: [doiUrl, acmUrl, markdownUrl, sotaUrl, xdLabUrl, "https://openalex.org/W7164485832"],
   image: [
     "https://portfolio-jyc.org/assets/personal/2024/sota/1.webp",
     "https://portfolio-jyc.org/assets/personal/2024/sota/5.webp",
@@ -148,6 +150,9 @@ export default function SotaPublicationPage() {
               </a>
               <a className={styles.action} href={xdLabUrl} target="_blank" rel="noopener noreferrer">
                 XD Lab
+              </a>
+              <a className={styles.action} href="/publications/sota-dis-2026.md">
+                Markdown
               </a>
             </div>
           </aside>
@@ -216,6 +221,10 @@ export default function SotaPublicationPage() {
                 <a href={xdLabUrl} target="_blank" rel="noopener noreferrer">
                   {xdLabUrl}
                 </a>
+              </div>
+              <div className={styles.metadataItem}>
+                <strong>LLM text record</strong>
+                <a href="/publications/sota-dis-2026.md">{markdownUrl}</a>
               </div>
               <div className={styles.metadataItem}>
                 <strong>License</strong>

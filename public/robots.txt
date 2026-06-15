@@ -1,10 +1,19 @@
-# Allow all user agents to crawl the site
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /private/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /private/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /private/
+
+# Allow all other user agents to crawl the site
 User-agent: *
 Allow: /
-
-# Disallow specific paths if necessary, e.g.:
-# Disallow: /admin/
-# Disallow: /private/
+Disallow: /private/
 
 # Point to the sitemap location
-Sitemap: https://portfolio-jyc.org/sitemap.xml 
+Sitemap: https://portfolio-jyc.org/sitemap.xml
